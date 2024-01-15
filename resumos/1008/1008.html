@@ -1,0 +1,673 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumo 10/08 - Be Happy</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="12a4e5fb-59ed-4f6f-a1c0-bbf34d7adddf" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_10.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🕥</span></div><h1 class="page-title">Resumo 10/08 - Be Happy</h1></header><div class="page-body"><p id="a575bcde-713a-41f1-8ded-782fc02c559d" class="">Resumo matemática - Torce para dar bom irmão (ass: Magon)</p><hr id="e14756be-0253-41c5-bf7e-8c29b7740915"/><h1 id="37cd4ac2-2cec-475d-97cf-511f238b780a" class="block-color-teal_background">Física</h1><p id="019d2661-8a2a-4662-9cef-bf034f97ea17" class="">Definimos como força normal a força que o chão faz na pessoa, contrária ao peso, sendo esse a força que a pessoa faz no chão. “A balança pesa a força normal”.</p><p id="0c90eef2-60f6-4644-9689-7db37bb5b1d2" class="">Se a força resultante do elevador está para cima (acelerando a subida ou brecando a queda), a força normal será maior que o peso (N&gt;P), ou seja, seu “peso” na balança será maior. Nesse caso, teremos que N - P = Fr = m . a</p><p id="82615e54-dff7-4279-bbfc-1a6bbaef404e" class="">Se a força resultante do elevador está para baixo(acelerando a descida ou brecando a subida), a força normal será menor que o peso (P&gt;N), ou seja, seu “peso” na balança será menor. Nesse caso, teremos que P - N = Fr = m . a</p><hr id="d84ccc1f-efe7-4833-9bff-171275c3ae87"/><h1 id="be8a40c0-fc23-4b26-9b9b-db8d7d237eef" class="block-color-red_background">Química</h1><p id="2ea85309-3e80-4ee5-b619-cac8ded66cb6" class="">A<strong> unidade padrão de massa atômica</strong> é a unidade usada para medir e comparar a massa de átomos e moléculas em relação a 1u que é <strong>1/12</strong> da massa do átomo do <strong>Carbono-12</strong></p><p id="b679970b-01a4-4041-806d-5fb2b5358a2b" class="">A massa total de uma molécula é a soma da massa de todos os seus átomos</p><hr id="79aa83df-b604-43b0-9955-32169b417e07"/><h1 id="0eb26da1-e4bc-437f-8cf6-f9b1dfd59dad" class="block-color-teal_background">Biologia</h1><h3 id="7703f4f4-ea82-43b4-a640-b48f929f3297" class="">Sistema Nervoso</h3><p id="fae2512e-c9c2-4718-924a-099641412ba2" class="">Controla e coordena o organismo através da recepção e condução de impulsos nervosos</p><p id="23435c9f-8eba-471a-ba7a-2989eee70881" class="">É composto por neurônios e células da Glia </p><h3 id="d6f81bf3-ab33-4560-a9d9-1ba43635b5b4" class="">Neurônio</h3><figure id="446c2bcd-4744-4b25-bdae-5c9aaad63048" class="image" style="text-align:left"><a href="Untitled.png"><img style="width:528px" src="Untitled.png"/></a></figure><p id="eabb732f-5a58-40e3-9807-8faac038c42b" class="">Os neurônios são as células básicas do sistema. São formados por:</p><ul id="90a73fc4-3b6e-4e8c-8ee6-a2e5b22d76b2" class="bulleted-list"><li style="list-style-type:disc">Dendritos - ramificado e curto que recebe o impulso (neurotransmissores)</li></ul><ul id="ec79c67c-5fea-4586-a2af-ba2ad2fd13ba" class="bulleted-list"><li style="list-style-type:disc">Corpo celular - contém o núcleo, as mitocôndrias que produzem a energia necessária para a condução de impulsos e a substância de Nissl, que age como o retículo endoplasmático rugoso, produzindo proteína.</li></ul><ul id="6b7ca8a3-bb12-4500-ab3c-04e97cb2fbe0" class="toggle"><li><details open=""><summary>Axônio - prolongamento único ramificado na extremidade</summary><p id="c62eb37b-7495-4ff6-93d9-2a21dbdbd80f" class="">Possui:</p><ul id="0aa02410-e7a1-4610-ad77-22faeb73eb82" class="bulleted-list"><li style="list-style-type:disc">Bainha de Mielina (interna): formada por gordura e ajuda a transmissão</li></ul><ul id="d7b40149-c84f-4f9f-ae3a-f71303fc02e5" class="bulleted-list"><li style="list-style-type:disc">Células de Schwann (externa): Cicatrização (A maioria das fibras no encéfalo e na medula não possui células de Schwann)</li></ul><ul id="e15f69c2-7365-4fa5-94c8-b1b704e47605" class="bulleted-list"><li style="list-style-type:disc">Nódulos de Ranvier: Estrangulamentos da bainha de Mielina e das células de Schwann</li></ul></details></li></ul><p id="32070875-72ce-42a6-8e97-1b8b7e150ac3" class=""><strong>Direção dos impulsos nervosos:</strong> <mark class="highlight-blue">Dendritos → Corpo celular → Axônios</mark></p><h3 id="bff97452-c0c7-4dc9-9bf3-15949adfd4ee" class="">Neuróglias (células da glia)</h3><p id="f7489d47-82f2-4d94-98e7-974eed7bc9f9" class="">São responsáveis por nutrir e sustentar os neurônios</p><h3 id="43271730-6ae3-4854-88e4-7707b6902f4c" class="">Nervos</h3><p id="e1975ff1-844a-4846-ba68-825c9c02a5c1" class="">Nervos são extensões dos neurônios formados por axônios e envoltos por camadas de tecido conjuntivo: endoneuro, perineuro e epineuro</p><figure id="86bafd73-a960-4ad7-accc-1c0d4deb96ca" class="image" style="text-align:left"><a href="Untitled%201.png"><img style="width:384px" src="Untitled%201.png"/></a></figure><hr id="7b221823-767e-4213-8cb1-e0db1a908c85"/><h1 id="313c6f40-462f-43e0-9ce7-3935421096cc" class="block-color-brown_background">Literatura</h1><h3 id="357ad863-5d49-485e-b768-563f4088c704" class="">Contexto histórico</h3><p id="803c0a8b-23c2-45ea-bd21-13a363fa85c2" class="">Absolutismo + Economia mercantilista + Reforma protestante vs Contrarreforma católica + Renascimento</p><h3 id="1794828b-770a-4ed9-b1b4-31cf9e84118a" class="">Dualidades</h3><p id="effc1b6f-e5df-4a83-a091-add54b2b47da" class=""><strong><mark class="highlight-yellow_background">Renascimento</mark></strong><mark class="highlight-yellow_background">(paganismo) X </mark><strong><mark class="highlight-yellow_background">Catolicismo(</mark></strong><mark class="highlight-yellow_background">teocentrismo</mark><strong><mark class="highlight-yellow_background">)</mark></strong></p><p id="137c7cc0-478a-43b0-9396-c978a9876f81" class="">Vida X morte</p><p id="72128472-93a2-4662-a1f2-f6e516c9dc25" class="">Matéria X espírito </p><p id="2a8f90f3-d5a1-4297-8591-cf7c639adc80" class="">Amor carnal X amor platônico</p><h3 id="4239b61c-ded3-43fc-94ad-92cc364a8f96" class="">Dualidade refletida na literatura na forma de:</h3><ul id="99e1967f-07ec-49ec-90a0-0af2f9299d28" class="bulleted-list"><li style="list-style-type:disc">Inversões nas orações</li></ul><ul id="11ceeeb6-00d9-451f-9791-5c37db04389d" class="bulleted-list"><li style="list-style-type:disc">Figuras de linguagem (Antítese e Paradoxo)</li></ul><ul id="624e9858-f3fc-4fe3-a55f-360014d8805b" class="bulleted-list"><li style="list-style-type:disc">Linguagem rebuscada e difícil</li></ul><ul id="fa963cad-e05b-4281-9e20-72e6e069a040" class="bulleted-list"><li style="list-style-type:disc">Jogo de lógica e palavra </li></ul><h3 id="d47a119c-6132-4545-9ed7-b3b59b87b9bf" class="">Efemeridade do tempo</h3><p id="f99b5ec4-a1ee-46fb-bcd1-1e44b568c850" class="">“Carpe diem” do mal → Todos vamos morrer, não sabemos se confiamos na igreja ou na razão, então dane-se: APROVEITEMOS</p><hr id="16557b7f-bb17-4fd6-a546-fede4b138302"/><h1 id="0858ab79-d90f-42a3-8da9-f3f226c46282" class="block-color-brown_background">História</h1><p id="d665d581-c1fd-41c7-b646-6533f65a9fac" class=""><strong>Feudo:</strong> Sistema em que um senhor do feudo da proteção e propriedades a um vassalo que trabalha gerando comida para ele e para o senhor</p><p id="8cdfc775-1307-458f-b95d-aa77305cf034" class="">Feudalismo surge com a união da cultura germânica de Comitatus e Beneficium com a cultura Romana de vilas fortificadas e <strong>colonato</strong>.</p><p id="6db8eb20-4ee7-4a2d-bf60-9cef6ca98f14" class=""><strong>Colonato</strong> → Com a crise agrária em Roma, patrícios oferecem terra para os plebeus em troca de trabalho, com isso surge o feudalismo.</p><h3 id="b4b5b454-079f-4089-b266-b37d4625fef9" class="">Sociedade Estamental (quase impossível mudar)</h3><figure id="4bf62772-16c8-4b9f-8de4-d1154fa6b886" class="image" style="text-align:left"><a href="Untitled%202.png"><img style="width:236px" src="Untitled%202.png"/></a></figure><p id="3639de51-c945-44ba-b879-8d1824c1879f" class="">No comando da sociedade estava a igreja (clero), abaixo deles estavam o senhor feudal → rei e a nobreza; e na base os vassalos (vilões e servos)</p><p id="76932253-2790-4abb-b428-7089028086cf" class="">Reis eram figuras decorativas e não usufruíam de poder real.</p><p id="182484ce-8548-46a8-84bf-4ca112ddce6d" class="">Igreja usava a religião como forma de conformismo social.</p><h3 id="4384710d-d47d-4f77-a2d4-c68a11dfaa70" class="">Economia</h3><p id="3fe865b9-6d5c-4b12-9ba8-eb7264c525f2" class="">Economia amonetária, feita à base de trocas naturais</p><p id="be6522b1-9de0-4387-ba56-e1911b2721ce" class="">Economia agrária de subsistência e autossuficiente</p><h3 id="1c422d78-fec5-4cf3-93e7-ecac9fb51166" class="">Cultura </h3><ul id="f548e8a2-b0ea-48b2-bb21-168d9f0bed40" class="bulleted-list"><li style="list-style-type:disc">Teocentrismo (dava poder a igreja)</li></ul><ul id="e5b7c467-3690-471f-9a58-2c533f4829e3" class="bulleted-list"><li style="list-style-type:disc">Monopólio do conhecimento pela igreja (mosteiros: bibliotecas na idade média)</li></ul><ul id="f408c850-4f31-48c7-8f98-13e5497420f1" class="bulleted-list"><li style="list-style-type:disc">Igreja onipotente, onisciente e onipresente</li></ul><hr id="1753ad68-8068-40f2-8046-3a8900cf3100"/><h1 id="df614b98-a5ef-4843-beec-e4d13aa905b1" class="block-color-yellow_background">Filosofia</h1><h2 id="f15d0aeb-0505-4e63-b7c0-1d2879b0f2bc" class="">Sócrates</h2><ul id="9e8c494c-98a9-42e6-903d-3e1e30874967" class="bulleted-list"><li style="list-style-type:disc">Acreditava na <strong>Aletheia </strong>(verdade absoluta) e ajudava as pessoas a alcançarem-na através da <strong>Maiêutica</strong>, definida pelo método de perguntas retóricas com a intenção de gerar reflexão e debate para pessoa “conhecer a ela mesma”</li></ul><ul id="8d35312f-ba35-43f3-8a90-3f1a01eec90b" class="bulleted-list"><li style="list-style-type:disc">Diferente dos sofistas que ensinavam a verdade individual e a <strong>Doxa</strong> (argumentação) </li></ul><ul id="45a626d7-efc5-4176-b9d4-1725813b837c" class="bulleted-list"><li style="list-style-type:disc">“Só sei que nada sei”: Reconhecendo a ignorância para aprender mais sempre</li></ul><ul id="8a965b0f-d777-4959-b60b-b1d57bad04f5" class="bulleted-list"><li style="list-style-type:disc">Morto pela democracia ateniense</li></ul><h2 id="83639755-3ef7-4881-9e9b-1649070ab543" class="">Platão</h2><ul id="989e0bd4-9226-4005-a62d-821042a278e3" class="bulleted-list"><li style="list-style-type:disc"><strong>Mundo das Ideias:</strong> perfeito, verdadeiro e a forma de todas as coisas</li></ul><ul id="57a1071c-b3f4-4f91-a879-a5cc655f6d11" class="bulleted-list"><li style="list-style-type:disc"><strong>Mundo dos sentidos</strong>: falso, imperfeito e cópia do mundo das ideias</li></ul><ul id="a38fb6cd-d0e3-4839-884c-0f1569200d17" class="bulleted-list"><li style="list-style-type:disc"><strong>Alma</strong>: vinha do mundo das ideia e te “lembra” dele</li></ul><ul id="6bd6ef19-bc05-49b9-a652-aa9bed7f6e9f" class="bulleted-list"><li style="list-style-type:disc"><strong>Mimese</strong>: Arte é a copia da copia, logo, é inútil</li></ul><ul id="b228c664-5ae4-48ac-a257-f35f570d0b43" class="bulleted-list"><li style="list-style-type:disc"><strong>Cidade ideal</strong> (sistema fixo): Pessoas categorizadas com base na alma através da educação depois de 20 anos (<strong>Racional</strong> - Rei-filósofo |<strong> Irascível</strong> - guarda | <strong>Concupiscente</strong> - Trabalhador) </li></ul><h2 id="8eed1b31-4f39-4722-b57b-f8503f8acd1d" class="">Aristóteles</h2><p id="be433969-3440-4a9e-b424-46a032e8e7c8" class="">Contrariou Platão, dizendo que o conhecimento advém dos sentidos e da experiência, criando conceitos gerais.</p><ul id="7c0b5787-1bc8-4c27-93ce-32d04976633e" class="toggle"><li><details open=""><summary>Silogismo Aristotélico - Forma de classificar os seres vivos criada por Aristóteles</summary><ul id="4382dd56-d5fb-4f49-a67a-6015f1fbf5b1" class="bulleted-list"><li style="list-style-type:disc">Premissa A universal (Arvores tem folhas)</li></ul><ul id="3aadc248-dbf5-41e4-bf07-a4e23862f856" class="bulleted-list"><li style="list-style-type:disc">Premissa B particular (Mangueira tem folhas)</li></ul><ul id="78b2e2da-666f-4a82-8faf-0afac998d969" class="bulleted-list"><li style="list-style-type:disc">Conclusão: Junção das duas premissas (Mangueira é uma árvore)</li></ul></details></li></ul><ul id="6acaf297-b4a3-4673-a865-8f8be2a39f9a" class="bulleted-list"><li style="list-style-type:disc">Ética: busca pela felicidade com virtude (morais e dianoéticas), equilíbrio e pensando nos outros</li></ul><ul id="63a94e95-c357-4db9-af41-115c92896e7c" class="bulleted-list"><li style="list-style-type:disc">Política: busca coletiva pela felicidade sem um modelo ideal (bom ou ruim) </li></ul><figure id="f949684c-4148-40b3-9215-7b3d989f7562" class="image" style="text-align:left"><a href="Untitled%203.png"><img style="width:624px" src="Untitled%203.png"/></a></figure><hr id="23dad740-7bb9-477e-b121-b84594a0d0ed"/><h1 id="11efcdba-c271-411f-b829-fd0da913c379" class="block-color-teal_background">Física do Cosmo</h1><h3 id="f9da6d4a-6cd1-49d6-811d-74fa9e3ae230" class="">Geocentrismo</h3><p id="48359cbc-a8de-4519-ba5d-c17551828d99" class="">Modelo apoiado por Aristóteles e depois melhor desenvolvido por Ptolomeu que acreditava que a Terra era o centro do universo</p><h3 id="28c67b9d-ba68-420d-8ff3-0ce869a89984" class="">Vantagens</h3><ul id="e578a361-b7da-4fae-b788-a9617aca8bc1" class="bulleted-list"><li style="list-style-type:disc">Intuitivo (conforme os sentidos)</li></ul><ul id="9885b23e-355a-4b04-9fe5-a11f2633ea1d" class="bulleted-list"><li style="list-style-type:disc">Ajudava a navegação</li></ul><ul id="4af4f7e1-99f1-419e-9ce0-bf1079501d9e" class="bulleted-list"><li style="list-style-type:disc">Permite criar medidas de tempo</li></ul><h3 id="aeb2f3e5-2d35-4e6c-b8b0-f5bb488152f4" class="">Desvantagens</h3><ul id="39819cfa-2b5f-452f-9cd3-1f095486841e" class="bulleted-list"><li style="list-style-type:disc">Não explica o movimento aparente dos planetas</li></ul><ul id="65e468b5-d87c-4cb4-8443-8c56f7ef80f4" class="bulleted-list"><li style="list-style-type:disc">Não explica as estações/eclipses</li></ul><hr id="1328b4e2-d667-46a3-8188-9eee0de91784"/><h1 id="33855d9c-1a61-407b-b969-e2233f65ff2d" class="block-color-pink_background">Inglês</h1><p id="04cb179f-7fab-4f0d-bbc8-1191514920ce" class="">Caso genitivo: Uso do ‘s ou ‘ para indicar posse (objetos <strong>não </strong>possuem coisas<strong>)</strong></p><h3 id="0c2f4a53-901e-4bec-800a-095a02b09f15" class="">Geral: Uso do ‘s no substantivo possuidor seguido do possuído:<mark class="highlight-blue_background"> ‘s </mark></h3><p id="ed17eb30-6fac-4cb0-8cd0-ba2ba3710518" class=""> The child’s toy</p><h3 id="66f5d59a-26e7-4324-8797-49ca27ae48f2" class="">Substantivo plural terminado em “s”:<mark class="highlight-blue_background"> ‘ </mark></h3><p id="9eaef84e-2bb6-45a8-8159-6e580cd53465" class="">Girls’ purse</p><h3 id="a61e0eb7-35eb-4e1b-9ab4-9f9ef131b348" class="">Nomes clássicos terminados em s:<mark class="highlight-blue_background"> ‘ </mark></h3><p id="debd1a87-b550-4970-96b8-b7c6bc1b6ff8" class="">Socrates’ words</p><p id="48c9c31f-97b1-4469-a113-31e6009edfbe" class="">
+</p><p id="ecc9b9de-53c3-48e2-b8d7-ecfd7f102111" class=""><strong>Obs:</strong> Se houver um item para cada possuidor coloca-se ‘s em ambos: </p><p id="2c7fb796-b458-4166-8688-5dbf500ae53e" class="">Henry’s and Paul’s fathers (amigos)</p><p id="98b4fe6a-6a60-4d50-ac00-6e5d644819b0" class="">Henry and Paul’s father (irmãos)</p><p id="368d6ac1-c9ab-4819-b324-d016ed61fd10" class=""><strong>Obs2:</strong> Coloca ‘s no último elemento do substantivo composto</p><p id="e21df932-249a-411c-ae5d-f024c6c10752" class="">father-in-law’s house</p><hr id="a83b1931-2d98-4c41-a160-8674d6c7ae02"/><p id="237a54bd-5b8b-482c-9c17-560ec666f30e" class="">Heitor e Magon © 2022, all rights reserved
+</p><p id="7403b21e-4504-48f6-a140-47bd86d22e33" class="">
+</p><p id="5646bd1a-6b8c-4e1c-8799-4786563f59a7" class="">
+</p></div></article></body></html>

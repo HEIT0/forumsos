@@ -1,0 +1,673 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumo - 02/05</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="a4431dfa-d5a4-4564-923b-55599410ee4d" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_11.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">😆</span></div><h1 class="page-title">Resumo - 02/05</h1></header><div class="page-body"><h1 id="c8ea0f8d-2dd6-443c-968b-475c4d7ad589" class="block-color-brown_background">Matemática</h1><figure id="35c10213-7a28-49ca-90dd-c7173c97d25c" class="image" style="text-align:left"><a href="Resumo%20-%2002%2005%20a4431dfad5a44564923b55599410ee4d/Untitled.png"><img style="width:432px" src="Resumo%20-%2002%2005%20a4431dfad5a44564923b55599410ee4d/Untitled.png"/></a></figure><h1 id="d67d100a-1736-44e5-8d21-a02fa36c7739" class="block-color-teal_background">Física</h1><h3 id="4c0322e6-0d0b-4ed3-8bd7-e7033451f105" class="">Calor latente</h3><ul id="98ea1493-1f78-423d-ab7a-567e4b37ad9c" class="bulleted-list"><li style="list-style-type:disc">Calor na mudança de estado</li></ul><ul id="1b7a5861-2d9c-4d91-aa9d-88979d4c0c38" class="bulleted-list"><li style="list-style-type:disc">Não muda temperatura</li></ul><ul id="6e30de20-d954-4e58-9d79-c8167a3ad3d3" class="bulleted-list"><li style="list-style-type:disc">Q = m . L</li></ul><ul id="bef4d701-0d1c-418c-8e77-e1f636a823ba" class="bulleted-list"><li style="list-style-type:disc">1 g água ↔ 1 g vapor (560 cal)</li></ul><ul id="b150493c-eede-428e-967b-6c1bd36876e7" class="bulleted-list"><li style="list-style-type:disc">1 g gelo ↔ 1g água (80 cal)</li></ul><figure id="d7ed9086-403f-41b8-b371-29e789a8118d" class="image" style="text-align:left"><a href="Resumo%20-%2002%2005%20a4431dfad5a44564923b55599410ee4d/Untitled%201.png"><img style="width:390px" src="Resumo%20-%2002%2005%20a4431dfad5a44564923b55599410ee4d/Untitled%201.png"/></a></figure><h1 id="9e10a3ee-6de0-4d79-a09b-bbb849c89fd3" class="block-color-orange_background">Química</h1><h3 id="8d12d874-7b22-49f7-9309-381023d4437f" class="">Ligação covalente dativa </h3><ul id="98ddbdad-b44d-4f49-b96f-0cd02ce48c56" class="bulleted-list"><li style="list-style-type:disc">Átomo já estável compartilha 2 elétrons com outro átomo</li></ul><ul id="9016311b-6006-45d5-9d76-d552a4f0fdc8" class="bulleted-list"><li style="list-style-type:disc">É feita pelo átomo central já estabilizado pela ligação covalente normal</li></ul><ul id="53a8b696-8084-48a9-8c1c-49eb03a572e1" class="bulleted-list"><li style="list-style-type:disc">Átomo deve ter 1 par de elétrons livres</li></ul><ul id="a5d772aa-fce3-4dc9-90e3-4a53d7581015" class="bulleted-list"><li style="list-style-type:disc">Átomo central é o menos eletronegativo (FONCLBRISCPH)</li></ul><figure id="b7f0c55d-afc5-4ce8-9320-6356d38dcd51" class="image" style="text-align:left"><a href="Resumo%20-%2002%2005%20a4431dfad5a44564923b55599410ee4d/Untitled%202.png"><img style="width:295px" src="Resumo%20-%2002%2005%20a4431dfad5a44564923b55599410ee4d/Untitled%202.png"/></a></figure><h1 id="c7c6f99d-2cb0-4e7e-a4d2-bbbb3572680e" class="block-color-blue_background">Biologia</h1><h3 id="50acd1a3-4d4b-42ae-a0de-49f9c9a0d1b3" class="">Respiração Aeróbia</h3><ul id="342925a0-a0b2-44d3-b1ee-7d88d769b0de" class="bulleted-list"><li style="list-style-type:disc">Processo que libera energia (ATP) para as atividades celulares</li></ul><ul id="44266ab1-c945-4f54-8486-e5be3e783366" class="bulleted-list"><li style="list-style-type:disc">Ocorre na presença de <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>O</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">O_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></li></ul><ul id="66903429-34ab-445a-a18a-d72430b32b3e" class="toggle"><li><details open=""><summary>Fases</summary><ol type="1" id="ee7124bd-fa44-4ea7-921b-b70ba66dff73" class="numbered-list" start="1"><li>Glicólise → ocorre no citosol e libera 2 ATP</li></ol><ol type="1" id="658376e8-c5b1-4f12-95df-b446b7acb1ef" class="numbered-list" start="2"><li>Ciclo de Krebs ou ciclo do ácido cítrico → ocorre na matriz (estroma da mitocôndria) e libera 2 ATP</li></ol><ol type="1" id="4e6fadf0-41a4-4ca7-a1cb-837d56c054d1" class="numbered-list" start="3"><li>Cadeia  transportadora de elétrons ou cadeia respiratória → ocorre na membrana interna da mitocôndria e libera 34 ATP</li></ol></details></li></ul><h1 id="81773cf4-6c5e-47a2-bb8a-97729f6b8473" class="block-color-purple_background">Literatura</h1><h3 id="c8d2c208-c8d6-485f-af62-7226f543d081" class="">Parnasianismo</h3><ul id="cebfcb71-bf84-4f27-8470-4dd5dc1161b5" class="bulleted-list"><li style="list-style-type:disc">Escola contemporânea ao Realismo-Naturalismo</li></ul><ul id="9edf813f-e347-4fb0-a611-74779d1f7f86" class="bulleted-list"><li style="list-style-type:disc">Destaque para a poesia</li></ul><ul id="3b9ed9d4-fd2f-4370-9714-1d0ed1a340fb" class="bulleted-list"><li style="list-style-type:disc">Soneta, perfeição formal, vocabulário sofisticado</li></ul><ul id="4e15f136-039d-4308-a896-bf55aa4c9fed" class="bulleted-list"><li style="list-style-type:disc">Objetivismo e racionalismo</li></ul><ul id="c6643ecd-bdd8-4965-b053-e5c19fcccb28" class="bulleted-list"><li style="list-style-type:disc">Referências à mitologia greco-latina  (Parnaso → monte de Apolo na Grécia)</li></ul><ul id="2346aad8-e54a-4e70-a99e-b366264a3d8f" class="bulleted-list"><li style="list-style-type:disc">Arte pela arte: desligamento das questões sociais</li></ul><h1 id="8e70e13d-086e-4ea9-8f7a-040f284b595f" class="block-color-yellow_background">Filosofia</h1><h3 id="5c901dd8-b759-4861-bccf-9102bf550492" class="">Friedrich Hegel</h3><ul id="12d4db6d-2ccf-44fc-a2e3-602236be2a45" class="toggle"><li><details open=""><summary>Idealismo hegeliano</summary><ul id="a3f92ff5-343d-43da-8ddd-564bba3ffc26" class="bulleted-list"><li style="list-style-type:disc">critica a noção Kantiana de consciência fixa (o homem muda de acordo com a época histórica)</li></ul><ul id="a202ae77-5de6-432d-bfff-52d3a25ae0c7" class="bulleted-list"><li style="list-style-type:disc">“O homem é um ser histórico”</li></ul></details></li></ul><ul id="7c8ab9f9-0e8e-4d97-87b2-3dcd202cafcf" class="toggle"><li><details open=""><summary>Fenomenologia do espírito</summary><ul id="229f4076-bf6f-4cbb-9553-057741cd3136" class="bulleted-list"><li style="list-style-type:disc">A consciência humana lida com conceitos opostos e forma a consciência do mundo</li></ul><ul id="a7f27a35-598c-44d3-be46-5b8c901b63e6" class="bulleted-list"><li style="list-style-type:disc">A consciência, as ideias e a verdade são mutáveis</li></ul></details></li></ul><ul id="fd713b93-ab19-4639-bfc0-0c02f05e9fb0" class="toggle"><li><details open=""><summary>Zeitgeist (espírito do mundo / espírito da época)</summary><ul id="c5ccd184-4e0a-4aad-ac04-6518a373e44a" class="bulleted-list"><li style="list-style-type:disc">conjunto do clima intelectual e cultural do mundo</li></ul><ul id="c671db9a-0632-48cf-8a89-82ff53d59c38" class="bulleted-list"><li style="list-style-type:disc">Cresce devido ao devir e dialética, resultando em uma razão superior à anterior</li></ul></details></li></ul><ul id="33a66dc3-9098-4c80-927a-4d76e485694a" class="toggle"><li><details open=""><summary>Ser / realidade = dinâmicas</summary><ul id="225009d4-22d5-4fa1-9c39-13792a62d4ef" class="bulleted-list"><li style="list-style-type:disc">Devir → constante estado de mudança do mundo</li></ul><ul id="5a75148a-a5e9-4ff3-bd11-3b21cfe7f946" class="bulleted-list"><li style="list-style-type:disc">Dialética → tese (proposição) é confrontada pela antítese (ideia contrária) e gera síntese (conclusão)</li></ul><ul id="23c975be-62e7-4e4d-b10a-73ae111d05c9" class="bulleted-list"><li style="list-style-type:disc">Síntese se torna uma tese superior à tese inicial</li></ul><p id="d5a8eb6b-c067-4704-8c35-43336470b294" class="">
+</p></details></li></ul><h1 id="652609c5-6180-4de7-b9fd-7efd411a181d" class="block-color-yellow_background">História</h1><h3 id="2399961a-5fdf-4a60-9098-eec47bd37c48" class="">Inconfidência mineira</h3><ul id="19f7d380-4872-41e8-a2c6-4bc57fb2994a" class="toggle"><li><details open=""><summary>Causas </summary><ul id="a1ce1267-b69b-4f34-b8a2-e889ec58a7b0" class="toggle"><li><details open=""><summary>Externas</summary><ul id="7a97ee35-9eb1-4f77-adc0-056a3a747dae" class="bulleted-list"><li style="list-style-type:disc">Crise do sistema colonial </li></ul><ul id="a22203a3-64e4-4076-aa45-8e45bfaeece2" class="bulleted-list"><li style="list-style-type:disc">Iluminismo</li></ul><ul id="1d240c1f-b88e-4be6-a53b-da73cf70f068" class="bulleted-list"><li style="list-style-type:disc">Independência dos EUA</li></ul><ul id="17eee8b5-ff54-4ae9-a999-995b9e952571" class="bulleted-list"><li style="list-style-type:disc">Revolução Francesa</li></ul></details></li></ul><ul id="6bd7ebb4-d451-47d5-9eaa-2329f4b664cc" class="toggle"><li><details open=""><summary>Internas</summary><ul id="9632ce4b-fd3f-44dd-9bae-dbd688986cfa" class="bulleted-list"><li style="list-style-type:disc">Abusos fiscais</li></ul><ul id="4135576e-580e-45ed-89b3-7dc92a970c8e" class="bulleted-list"><li style="list-style-type:disc">Endividamento da população (revolução acabaria com dívidas)</li></ul><ul id="5212cefc-9366-4728-883c-6825f6dfb56c" class="bulleted-list"><li style="list-style-type:disc">Minas era o Estado mais oprimido pela coroa portuguesa</li></ul><ul id="0a82c36b-c6a5-4c82-adb0-59b0f707d8bc" class="bulleted-list"><li style="list-style-type:disc">Medo da derrama</li></ul></details></li></ul></details></li></ul><ul id="b31f695e-eeae-4900-b7b7-85e1fdecdfbd" class="bulleted-list"><li style="list-style-type:disc">Inconfidentes eram ricos </li></ul><ul id="6bc7aacf-51f5-472d-84a8-1a0f28eaa233" class="bulleted-list"><li style="list-style-type:disc">Revolta separatista</li></ul><ul id="ba5596b3-cb95-479f-8b29-252f1af5be19" class="toggle"><li><details open=""><summary>Proposta</summary><ul id="53a4c0fd-2332-431c-ac8b-c21748b88d04" class="bulleted-list"><li style="list-style-type:disc">República</li></ul><ul id="5a095d77-2821-4a34-825b-e5fe9a4611c0" class="bulleted-list"><li style="list-style-type:disc">Liberdade de indústria</li></ul><ul id="c8f8e736-9864-4f8b-aee9-928ebb3e6a64" class="bulleted-list"><li style="list-style-type:disc">Universidades</li></ul><ul id="06a1648c-ba40-4098-b25b-01b3da46508a" class="bulleted-list"><li style="list-style-type:disc">Capital em São João del Rei</li></ul></details></li></ul><ul id="db009d30-29c9-4fb4-89fd-c559691def4f" class="bulleted-list"><li style="list-style-type:disc">Não abolicionistas </li></ul><ul id="70b70279-aa51-450a-a56a-f94afa55e8ab" class="bulleted-list"><li style="list-style-type:disc">Foram delatados</li></ul><ul id="e1e86b0e-d5af-439a-9c62-bcb5af694eb3" class="bulleted-list"><li style="list-style-type:disc">Condenados à forca (Tiradentes foi um deles)</li></ul><ul id="ea0f8765-628e-4d81-8713-ff7961fc7da9" class="bulleted-list"><li style="list-style-type:disc">Cristificação de Tiradentes → 100 anos depois, durante a República proclamada por militares, é transformado em mártir (Tiradentes era militar)</li></ul><h3 id="954cc5f3-a2aa-44c4-85b2-e003f2a41208" class="">Inconfidência Bahiana (1798)</h3><ul id="a99f368f-397e-45e7-9baa-f0611e82dc15" class="bulleted-list"><li style="list-style-type:disc">Influência Iluministas e jacobina</li></ul><ul id="69b20c43-0206-463e-b9d1-1bbcb265bb31" class="bulleted-list"><li style="list-style-type:disc">“Cavaleiros da luz” → integrantes</li></ul><ul id="edbcf672-45d0-4fe1-9a52-f4e659b55450" class="bulleted-list"><li style="list-style-type:disc">Mulatos e classes populares</li></ul><ul id="1777c057-9f56-45f2-b6ce-a76a0e6e9928" class="bulleted-list"><li style="list-style-type:disc">Abolicionistas</li></ul><ul id="067c2530-f640-45fa-8fd4-33bc061bd1b6" class="bulleted-list"><li style="list-style-type:disc">Foram delatados</li></ul><ul id="904c7717-2b02-43e9-92b7-0322da23142d" class="bulleted-list"><li style="list-style-type:disc">4 execuções (2 soldados e 2 alfaiates)</li></ul><h1 id="b69883d3-ddfd-44ec-8df8-9f488af90cbd" class="block-color-brown_background">Aprofundamento Matemática</h1><p id="14ebfb0e-dad2-4248-8eb6-4f1551ab155f" class="">Equação da geral da reta:</p><ul id="51dac4cb-1ca8-40b6-b636-1ae96c321509" class="bulleted-list"><li style="list-style-type:disc">É escrita na forma ax + by + c = 0.</li></ul><p id="c1b9612b-081c-4d63-8eb8-330a368ede4b" class="">Equação da reta reduzida:</p><ul id="3bf5dd43-4870-4c37-ab06-e3809f91f335" class="bulleted-list"><li style="list-style-type:disc">É escrita na forma y = mx + b.</li></ul><p id="7f6493fe-02bb-481c-af0d-7ba1db05691d" class="">Equação da reta segmentária:</p><figure id="b4665097-a025-4bf0-8e46-17452863f08e" class="image" style="text-align:left"><a href="Resumo%20-%2002%2005%20a4431dfad5a44564923b55599410ee4d/Untitled%203.png"><img style="width:240px" src="Resumo%20-%2002%2005%20a4431dfad5a44564923b55599410ee4d/Untitled%203.png"/></a></figure><p id="a06f99e3-00b0-4226-be2b-27a010754aa0" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>x</mi><mi>p</mi></mfrac><mo>+</mo><mfrac><mi>y</mi><mi>q</mi></mfrac><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\frac{x}{p}+\frac{y}{q}=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1764999999999999em;vertical-align:-0.481108em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.481108em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.228608em;vertical-align:-0.481108em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7475em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.481108em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></span><span>﻿</span></span></p><h1 id="b6e5708d-bd53-48d1-adee-f9576f421332" class="block-color-purple_background">Geografia</h1><h3 id="7fad290e-0a48-4ed5-8d6a-114bb3babc39" class="">Migração</h3><ul id="b85cdd73-e110-4cbb-8905-cf3f11dbd619" class="toggle"><li><details open=""><summary>Movimento migratório</summary><ul id="6e1a10ec-8cf9-4c34-8f56-bcbc225a4ca1" class="bulleted-list"><li style="list-style-type:disc">Facilitado pela globalização (transporte, informação)</li></ul><ul id="3ec57636-21a9-403a-b752-97ebde2ad573" class="bulleted-list"><li style="list-style-type:disc">Emigrante → sai de um país</li></ul><ul id="475338a1-de0d-407b-8d52-64db30c4c4fc" class="bulleted-list"><li style="list-style-type:disc">Imigrante → chega no país</li></ul><p id="aeafc831-997e-4760-9505-86e1226bb585" class="">
+</p></details></li></ul><ul id="48ed9dcf-5f69-4008-8b2e-ff726d6f0f58" class="toggle"><li><details open=""><summary>Causas</summary><ul id="4c61cf90-8c14-4eb9-a446-ffcbac44f885" class="bulleted-list"><li style="list-style-type:disc">Situação econômica</li></ul><ul id="a21a9b57-8ba8-4f94-8ebf-ab1445838eb6" class="bulleted-list"><li style="list-style-type:disc">Guerras</li></ul><ul id="2e883991-deb0-4b3b-ba26-1be0ce5e7ac7" class="bulleted-list"><li style="list-style-type:disc">Perseguições políticas</li></ul><ul id="7e8d126b-869d-48da-9e53-1f3c4e433422" class="bulleted-list"><li style="list-style-type:disc">Religiosas</li></ul><ul id="0e1417fa-cdaf-4e36-8b84-3d16b447f484" class="bulleted-list"><li style="list-style-type:disc">Questões ambientais (furacões, terremotos, etc)</li></ul><ul id="19d60816-34b8-473e-9a37-9270b0008af7" class="bulleted-list"><li style="list-style-type:disc">Segurança</li></ul></details></li></ul><ul id="e2a9293b-1e03-4eaa-9c47-6bebb734820c" class="toggle"><li><details open=""><summary>Tipos de migração</summary><ul id="be3af334-b22b-4bd4-8e4b-9e45d42f9273" class="toggle"><li><details open=""><summary>Externas</summary><ul id="13e3f047-813c-4b83-85b1-e706dd1a02ce" class="bulleted-list"><li style="list-style-type:disc">Internacional</li></ul><ul id="9b59e5ca-6b8f-4542-91e6-16722278c387" class="bulleted-list"><li style="list-style-type:disc">Migração de cérebros (migração de pessoas especializadas em um trabalho)</li></ul></details></li></ul><ul id="4016b5b7-6f08-4f41-88f5-ff794bea3d5f" class="toggle"><li><details open=""><summary>Internas</summary><ul id="3019bbc8-5f56-47f6-b6a5-6bfb3e9aa132" class="bulleted-list"><li style="list-style-type:disc">Êxodo rural e urbano (migração campo-cidade)</li></ul><ul id="25e4e723-5e68-4634-9818-70275413a6da" class="bulleted-list"><li style="list-style-type:disc">Transumância → migração a trabalho com expectativa de retorno</li></ul><ul id="adcf3e92-edbe-4006-89df-b665b276a236" class="bulleted-list"><li style="list-style-type:disc">Movimento pendular → movimento diário / semanal entre trabalho e residência (não é migratório)</li></ul><p id="13015969-8afc-4308-b8c0-760e7697b5f6" class="">
+</p></details></li></ul></details></li></ul><p id="eac34ff1-bc91-4a73-a9e1-e7b82d959ee1" class="">
+</p></div></article></body></html>

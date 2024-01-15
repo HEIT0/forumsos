@@ -1,0 +1,710 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumo - 01/03 Fine</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b9573754-f437-412f-8447-bcb16ae2dfc7" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_11.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🏏</span></div><h1 class="page-title">Resumo - 01/03 Fine</h1></header><div class="page-body"><h1 id="1e447a10-139d-41b3-855e-8fde9eba525d" class="block-color-brown_background">Matemática A</h1><figure id="ee971a83-483f-41f4-979f-17d999b2ea87" class="image" style="text-align:left"><a href="Resumo%20-%2001%2003%20Fine%20b9573754f437412f8447bcb16ae2dfc7/Untitled.png"><img style="width:384px" src="Resumo%20-%2001%2003%20Fine%20b9573754f437412f8447bcb16ae2dfc7/Untitled.png"/></a></figure><p id="aafbd3b0-65d5-4803-9c33-66b8bd6eb47b" class="">Dado duas retas paralelas r//s e uma reta cortando as duas</p><h3 id="5bbb5e6a-62d5-4951-a1a2-2b3b096ddfc9" class="">Ângulos Alternos </h3><p id="565ec6aa-5929-40b4-a3e5-3c8189a0af4c" class="">Sempre congruentes (mesma medida)</p><p id="217c7853-92fa-45e4-ab4d-f9279248a5ac" class="">Internos: e c , d f</p><p id="437e8a26-afb5-4f0a-9e17-c61c8f3ccbe9" class="">Externos: b h , a g</p><h3 id="dc7db89f-d760-47b6-9f9f-1273ebcd5da2" class="">Ângulos Colaterais</h3><p id="71104239-7629-4818-91f7-8a9e2ca44c47" class="">Sempre suplementares (180 - x)</p><p id="0077ac90-fd53-43f2-b7fd-a02b170f8251" class="">Internos: d e , f c</p><p id="fa6384e0-d353-4cec-9a20-d8a998e46e9e" class="">Externos: h a , g b</p><h3 id="0f8aee4b-cc31-49e7-a366-0e7ab968d9a3" class="">Ângulos Correspondentes</h3><p id="67f1c9d4-37df-41a7-919e-536a1d6fdd25" class="">Sempre congruentes</p><p id="10a3d3c9-1e3c-43c6-bb7b-00df69cbd182" class="">a e , b f , c g , d h </p><h1 id="afed4f9b-cf86-4287-84df-00d177f08700" class="block-color-orange_background">Química</h1><h3 id="0cb2f887-87e0-4629-9898-cd5e0fbdaa0c" class="">Partículas fundamentais</h3><table id="377413d7-4c37-4d24-aae7-fa3ebee3e7ee" class="simple-table"><tbody><tr id="9680fd9a-1474-4467-a5db-edf770f2eb76"><td id="tMel" class="">Partícula</td><td id="X:Jj" class="">Carga</td><td id="GF}^" class="">Massa</td><td id="p:lF" class="">Localização</td></tr><tr id="57b0871e-aa83-4d3f-94be-15712f6d44fd"><td id="tMel" class="">Próton</td><td id="X:Jj" class="">1</td><td id="GF}^" class="">1</td><td id="p:lF" class="">núcleo</td></tr><tr id="04ef1cd9-e6e6-4a99-83af-3df2e52cda02"><td id="tMel" class="">Nêutron</td><td id="X:Jj" class="">0</td><td id="GF}^" class="">1</td><td id="p:lF" class="">núcleo</td></tr><tr id="7769c1e6-25f1-428f-883e-0b2c769130f0"><td id="tMel" class="">Elétron</td><td id="X:Jj" class="">-1</td><td id="GF}^" class="">aprox. 0</td><td id="p:lF" class="">eletrosfera</td></tr></tbody></table><ul id="b1d6ae86-d93a-4add-affb-f01a475b9b99" class="bulleted-list"><li style="list-style-type:disc">Número atômica (Z): Número total de prótons no núcleo</li></ul><ul id="fd2498ca-e783-44f2-8d5d-f5273ee7bf5b" class="bulleted-list"><li style="list-style-type:disc">Número de massa (A): Soma de prótons e nêutrons no núcleo</li></ul><ul id="d2401ead-1249-44b9-967e-bd70140f9067" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>X</mi><mi>Z</mi><mi>A</mi></msubsup></mrow><annotation encoding="application/x-tex">X^A_Z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1166619999999998em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-2.424669em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">Z</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></li></ul><ul id="7c0f4f96-9a9e-40ea-be17-e5496c0dd59c" class="bulleted-list"><li style="list-style-type:disc">Átomo neutro: quantidade de prótons = elétrons</li></ul><h3 id="cc6327ad-f296-4c9c-a82b-d5c12c3ef61c" class="">Elemento químico</h3><p id="91f9af92-8b97-416c-9e47-99e3ed95f231" class="">Conjunto de átomos de um mesmo número atômico</p><ul id="8c152fe6-921f-40a0-9d0d-b3599914479e" class="bulleted-list"><li style="list-style-type:disc">Cada elemento químico possui seu próprio número atômico</li></ul><h3 id="19531076-2050-42b4-8a57-7236704b7bec" class="">Modelo de Dalton</h3><p id="e509abe7-6525-4ff6-8c58-1fd4993e0c4f" class="">Átomos são esferas maciças e indivisíveis e indestrutíveis (bola de bilhar)</p><h1 id="1ba2ed81-9d3e-475b-b8fc-bef5cc838d2f" class="block-color-teal_background">Física</h1><h3 id="49b4870e-2aa4-4b8b-9eb5-14ee8bea1997" class="">Escalas termométricas</h3><ul id="7c76fe07-5ff6-4eff-b1a2-bc3f0d5394d2" class="bulleted-list"><li style="list-style-type:disc">Escalas que medem a temperatura</li></ul><ul id="b872ef8a-6ef8-4cba-96b9-2158f4f4e093" class="bulleted-list"><li style="list-style-type:disc">Temperatura = agitação das moléculas</li></ul><ul id="f81bb476-5a0c-438e-a2ed-1639dca97603" class="bulleted-list"><li style="list-style-type:disc">Principais: Celsius, Kelvin e Fahrenheit</li></ul><table id="b8c5b028-461d-44ab-bc48-b43a30a437c6" class="simple-table"><tbody><tr id="dd3dde20-b46d-40ba-b4df-c0f26daf4561"><td id=":qy}" class=""></td><td id="FRu&gt;" class="">Solidificação</td><td id="FF?C" class="">Ebulição</td></tr><tr id="93632add-e548-444f-942e-cd7e8431d387"><td id=":qy}" class="">Celsius</td><td id="FRu&gt;" class="">0</td><td id="FF?C" class="">100</td></tr><tr id="dd664519-9043-455c-a223-71983f6b703f"><td id=":qy}" class="">Kelvin</td><td id="FRu&gt;" class="">32</td><td id="FF?C" class="">212</td></tr><tr id="2542c840-919c-4f2a-9b8b-ee5ea1fee8c0"><td id=":qy}" class="">Fahrenheit</td><td id="FRu&gt;" class="">273</td><td id="FF?C" class="">373</td></tr></tbody></table><h3 id="533eb637-4867-4187-85be-37f3a390eecf" class="">Conversão</h3><h2 id="235212f9-2d97-4585-9cde-ebf3655c83d7" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi mathvariant="normal">Θ</mi><mi>C</mi></msub><mn>5</mn></mfrac><mtext> </mtext><mo>=</mo><mtext> </mtext><mfrac><mrow><msub><mi mathvariant="normal">Θ</mi><mi>F</mi></msub><mo>−</mo><mn>32</mn></mrow><mn>9</mn></mfrac><mtext> </mtext><mo>=</mo><mtext> </mtext><mfrac><mrow><msub><mi mathvariant="normal">Θ</mi><mi>K</mi></msub><mo>−</mo><mn>273</mn></mrow><mn>5</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{Θ_C}{5} \ =\ \frac{Θ_F-32}{9} \ = \ \frac{Θ_K-273}{5}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2336359999999997em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8886359999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">5</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.410305em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mtight">Θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567071428571427em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.14329285714285717em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"> </span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.2336359999999997em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8886359999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">9</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.410305em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mtight">Θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567071428571427em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.14329285714285717em;"><span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight">32</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"> </span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.2336359999999997em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8886359999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">5</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.410305em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mtight">Θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567071428571427em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">K</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.14329285714285717em;"><span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight">273</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></h2><h1 id="bca1b27a-bfcb-4415-a5b4-5f6202e5bde5" class="block-color-blue_background">Biologia</h1><h3 id="80b41b02-6110-459a-8e1b-52964b98ee9b" class="">Teoria Endossimbiótica </h3><figure id="e98ea873-1dbc-44db-9a8e-e28970410927" class="image" style="text-align:left"><a href="Resumo%20-%2001%2003%20Fine%20b9573754f437412f8447bcb16ae2dfc7/Untitled%201.png"><img style="width:576px" src="Resumo%20-%2001%2003%20Fine%20b9573754f437412f8447bcb16ae2dfc7/Untitled%201.png"/></a></figure><p id="617e5864-1354-44dd-bdc7-9cdf4ebd1258" class="">Célula procariótica → perde parede celular → começa a crescer e fazer endocitose → Invaginação da membrana plasmática forma carioteca e outros organoides citoplasmáticos → Fagocitose de bactérias → Cria-se mitocôndrias a partir da bactéria →  Fagocitose de cianobactérias → cria-se cloroplasto a partir da cianobactéria → célula eucariótica autótrofa</p><ul id="9fb824df-47f5-4051-b0a7-dca47749884f" class="toggle"><li><details open=""><summary><strong>Evidências da teoria (foco nisso)</strong></summary><ul id="87fe3afb-be7e-4918-aeb4-9e76d3c983d8" class="bulleted-list"><li style="list-style-type:disc">Presença de DNA circular</li></ul><ul id="26eacdcb-690b-4f26-9888-10d1f86c4cbd" class="bulleted-list"><li style="list-style-type:disc">Presença de ribossomos para síntese de suas proteínas</li></ul><ul id="bb66b9ef-341f-494f-b381-48d87bf18b48" class="bulleted-list"><li style="list-style-type:disc">Capacidade de autoduplicação</li></ul><ul id="193976f7-7dd2-4f65-abdc-37c8639d4512" class="bulleted-list"><li style="list-style-type:disc">Dupla membrana como evidência de fagocitose (1 da bactéria + 1 do englobamento) </li></ul></details></li></ul><h1 id="7c0dd8a4-315f-42a7-8f7f-7f3e48187811" class="block-color-pink_background">Literatura</h1><h2 id="64eaad16-adc7-4701-be9e-37a3309322a2" class="">Realismo em Portugal</h2><ul id="52fe9c1a-3d3f-4d74-9cdd-94c8a6ef5c94" class="bulleted-list"><li style="list-style-type:disc">Literatura portuguesa “atrasada” no século XIX</li></ul><ul id="358c126a-fcba-4748-9e0b-850a28de42df" class="bulleted-list"><li style="list-style-type:disc">Forma-se questão de coimbrã por jovens querendo literatura realista</li></ul><ul id="dad9adc1-fa63-49f0-ad8a-5d9f39a34884" class="bulleted-list"><li style="list-style-type:disc">São inicialmente atacados pelos românticos</li></ul><ul id="42fa27bd-3db2-4ae7-b812-c4df0bc756a5" class="bulleted-list"><li style="list-style-type:disc">Antero de Quental escreve “bom senso e bom gosto” como resposta, dizendo que romantismo é velho e que o realismo deve chegar a Portugal</li></ul><ul id="e8463744-7149-4b0d-9b8f-0f6136b7c43e" class="bulleted-list"><li style="list-style-type:disc">Realistas foram censurados por “atacar a religião e as instituições do Estado”</li></ul><h3 id="187a8361-55b4-4a31-a74b-bb9a048cf0fc" class="">Antero de Quental</h3><ul id="cbcd4448-88db-4257-98f6-99ebc8118245" class="bulleted-list"><li style="list-style-type:disc">Poesia engajada, de crítica social e poesia metafísica </li></ul><ul id="400463f1-d115-432a-bf35-c013fe5b6795" class="bulleted-list"><li style="list-style-type:disc">Excelente sonetista, 3 núcleos:</li></ul><ul id="e19aeffd-5dbd-4cff-a8b8-824c8ae127d7" class="bulleted-list"><li style="list-style-type:disc">lirismo amoroso, erotismo e religiosidade</li></ul><ul id="68de3da0-d41b-4919-b37c-d73dc4bde1f8" class="bulleted-list"><li style="list-style-type:disc">Poesia realista, engajamento político e irreverência</li></ul><ul id="bc3f28af-5d4f-49a5-a2dc-355e6fcfec48" class="bulleted-list"><li style="list-style-type:disc">Reflexão metafísica (existencialista) e pessimismo</li></ul><h3 id="e1272fb5-2366-48e3-b64a-99490766f0b3" class="">Eça de Queirós</h3><ul id="18a8591a-75b5-416f-bb05-6adfe69e697f" class="bulleted-list"><li style="list-style-type:disc">Principal escritor do realismo português</li></ul><ul id="955247b4-7cf8-4182-a721-55faa4cbd12a" class="bulleted-list"><li style="list-style-type:disc">Não participou da questão de coimbrã, mas participava de reuniões literárias</li></ul><ul id="cc6d5738-8102-4ddd-814f-ad51b53f7830" class="toggle"><li><details open=""><summary>Obra dividida em 3 fases:</summary><ul id="5d069e20-5c71-480c-8f8f-c3e6b4db567f" class="bulleted-list"><li style="list-style-type:disc">1ª fase - ainda ligado ao romantismo, romance folhetinesco </li></ul><ul id="2dacc304-4ac2-4933-8d33-de4f891c1e72" class="bulleted-list"><li style="list-style-type:disc">2ª fase - prosa realista, irreverente, irônico, explora os aspectos psicológicos do ser humano, retrato pessimista da burguesia (”O primo Brasilio” e “O crime do padre Amaro”)</li></ul><ul id="ac995b79-96e8-407a-b0e2-e4374d228e00" class="bulleted-list"><li style="list-style-type:disc">3ª fase - “faz as pazes com Portugal → ironia mais branda, sem pessimismo, mais esperançoso (”A cidade e as serras”)</li></ul></details></li></ul><h1 id="0d6aaef7-de40-4372-a659-bda9420099e9" class="block-color-yellow_background">Filosofia</h1><h3 id="4312a8be-75f9-4be9-beb9-8a33638fad80" class="">Renê Descartes (Racionalista)</h3><p id="0df93f5f-dc02-4bb4-9be8-01a9faa1e2d9" class="">Para ele o conhecimento verdadeiro vinha da razão</p><ul id="422b8eb0-54db-4fb6-b38e-857edc6e7858" class="toggle"><li><details open=""><summary>Divisão das ideias</summary><ul id="b866fa26-0a75-423e-b6de-df511dfa329c" class="bulleted-list"><li style="list-style-type:disc">Ideias adventícias → advindas dos sentidos</li></ul><ul id="2c71a09a-3fe7-463d-afc1-e4c8291120ba" class="bulleted-list"><li style="list-style-type:disc">Ideias ficticias → advindas da imaginação</li></ul><ul id="2f4e98a5-9fc6-4e92-ae61-0a01e29c7fc6" class="bulleted-list"><li style="list-style-type:disc">Ideias inatas → advindas da razão, nascem conosco</li></ul></details></li></ul><ul id="c27cbdc4-8ba2-4852-8f43-866e66fcab8d" class="toggle"><li><details open=""><summary>Método</summary><ul id="79d85467-a91a-4d72-bc33-60998e344fd2" class="bulleted-list"><li style="list-style-type:disc">1ª etapa Evidência - é verdade aquilo que não pode ser posto em dúvida (penso, logo existo)</li></ul><ul id="5a0e12a2-e3ff-438d-a993-9721bc0bfb46" class="bulleted-list"><li style="list-style-type:disc">2ª etapa Análise / Divisão - dividir problemas em parcelas menores para resolver por partes</li></ul><ul id="ab58f0e6-5bf6-49b7-8921-7625ec0c2a2f" class="bulleted-list"><li style="list-style-type:disc">3ª etapa Ordem - partir dos fatos mais simples para os mais complexos</li></ul><ul id="a24c129a-44f5-450e-a999-0d066c64b54c" class="bulleted-list"><li style="list-style-type:disc">4ª etapa Enumeração - revisão e todo processo para garantir que nada foi omitido</li></ul></details></li></ul><ul id="0f8d28b7-c0a1-4148-82d5-ad376d8e2e4b" class="toggle"><li><details open=""><summary>Dualismo cartesiano</summary><ul id="afaae542-6897-4727-a542-faa8444493e9" class="bulleted-list"><li style="list-style-type:disc">Res Cogitans → substância pensante</li></ul><ul id="4aaad543-566b-4530-a83e-a9d24052099d" class="bulleted-list"><li style="list-style-type:disc">Res Extensa → substância extensa</li></ul></details></li></ul><h1 id="b4400da0-9eb2-4aa1-b543-e22619c5467c" class="block-color-pink_background">Gramática</h1><h3 id="6205b74c-1a0c-43f9-bf78-40a357c05243" class="">Sujeito</h3><ul id="895d62cb-84ba-4708-a047-1136f77c0632" class="bulleted-list"><li style="list-style-type:disc">Termo com qual o verbo concorda em número e pessoa</li></ul><ul id="7bb705c4-3b13-4a5d-8377-d98bc8bd4ec3" class="bulleted-list"><li style="list-style-type:disc">Sujeito simples → 1 único sujeito (João pulou corda)</li></ul><ul id="eabe523d-5d3e-4097-b70b-8d1b199eb79f" class="bulleted-list"><li style="list-style-type:disc">Sujeito composto → 2 ou mais sujeitos (João e Maria pularam corda)</li></ul><h3 id="ed758464-db87-4b56-bd22-638005491436" class=""><details open=""><summary>Exercícios</summary></details></h3><div class="indented"><p id="6d8817ea-d424-4931-95a4-aa3db18bea86" class="">TEXTO PARA A PRÓXIMA QUESTÃO:
+Leia o trecho inicial do romance O Ateneu, de Raul Pompeia (1863-1895), para responder à(s)
+questão(ões) a seguir.
+“Vais encontrar o mundo, disse-me meu pai, à porta do Ateneu. Coragem para a luta.”
+Bastante experimentei depois a verdade deste aviso, que me despia, num gesto, das
+ilusões de criança educada exoticamente na estufa de carinho que é o regime do amor
+doméstico; diferente do que se encontra fora, tão diferente, que parece o poema dos cuidados
+maternos um artifício sentimental, com a vantagem única de fazer mais sensível a criatura à
+impressão rude do primeiro ensinamento, têmpera brusca da vitalidade na influência de um
+novo clima rigoroso. Lembramo-nos, entretanto, com saudade hipócrita dos felizes tempos;
+como se a mesma incerteza de hoje, sob outro aspecto, não nos <span style="border-bottom:0.05em solid"><strong>houvesse</strong></span> perseguido outrora,
+e não <span style="border-bottom:0.05em solid"><strong>viesse</strong></span> de longe a enfiada das decepções que nos ultrajam.
+Eufemismo, os felizes tempos, eufemismo apenas, igual aos outros que nos alimentam,
+a saudade dos dias que correram como melhores. Bem considerando, a atualidade é a mesma
+em todas as datas. Feita a compensação dos desejos que variam, das aspirações que se
+transformam, alentadas perpetuamente do mesmo ardor, sobre a mesma base fantástica de
+esperanças, a atualidade é uma. Sob a coloração cambiante das horas, um pouco de ouro
+mais pela manhã, um pouco mais de púrpura ao crepúsculo – a paisagem é a mesma de cada
+lado, beirando a estrada da vida.
+Eu tinha onze anos.
+Frequentara como externo, durante alguns meses, uma escola familiar do Caminho
+Novo, onde algumas senhoras inglesas, sob a direção do pai, distribuíam educação à infância
+como melhor lhes parecia. Entrava às nove horas timidamente, ignorando as lições com a
+maior regularidade, e bocejava até às duas, torcendo-me de insipidez sobre os carcomidos
+bancos que o colégio comprara, de pinho e usados, lustrosos do contato da malandragem de
+não sei quantas gerações de pequenos. Ao meio-dia, davam-nos pão com manteiga. Esta
+recordação gulosa é o que mais pronunciadamente me ficou dos meses de externato; com a
+lembrança de alguns companheiros – um que gostava de fazer rir à aula, espécie interessante
+de mono louro, arrepiado, vivendo a morder, nas costas da mão esquerda, uma protuberância
+calosa que tinha; outro adamado, elegante, sempre retirado, que vinha à escola de branco,
+engomadinho e radioso, fechada a blusa em diagonal do ombro à cinta por botões de
+madrepérola. Mais ainda: a primeira vez que ouvi certa injúria crespa, um palavrão cercado de
+terror no estabelecimento, que os partistas denunciavam às mestras por duas iniciais como em
+monograma.
+Lecionou-me depois um professor em domicílio.
+Apesar deste ensaio da vida escolar a que me sujeitou a família, antes da verdadeira
+provação, eu estava perfeitamente virgem para as sensações novas da nova fase. O internato!
+Destacada do conchego placentário da dieta caseira, vinha próximo o momento de se definir a
+minha individualidade.</p><p id="719e70bb-5471-4497-a0bb-1a0c1a84fea5" class="">(O Ateneu, 1999.)</p><ol type="1" id="57c3c690-4ded-4d2b-9505-fd40f99c91c9" class="numbered-list" start="1"><li>(Unesp 2019)</li></ol><p id="259d981d-9f4e-4f4a-ae61-b722ca9193d0" class="">a) Identifique os sujeitos dos verbos “houvesse” e “viesse”, sublinhados no
+segundo parágrafo.</p><p id="d5b7f937-a984-4bea-acc5-b91ae02a0513" class="">Houvesse → A mesma incerteza de hoje 
+Viesse → a enfiada das decepções que nos ultrajam</p><p id="86af209b-335e-4efe-b23c-abf75fc53d42" class="">
+</p></div><h1 id="4003c3c5-feb7-426b-81bd-d83176e9cbeb" class="block-color-brown_background">História</h1><h3 id="c9898fc7-a2f4-4fbf-ba8e-9152ea83aaf3" class="">Período pré-colonial (1500 - 1530)</h3><p id="2f71f6f9-fbd6-44d9-a183-4de1fe28f8d6" class="">→ Portugueses queriam chegar à Índia praticar comércio</p><p id="c439b427-392b-40b7-9678-fe07da44dcf5" class="">→ Encontraram o Brasil e seus nativos</p><p id="cbd5e3ba-b8d9-49a9-8efd-edfc17e6f540" class="">→ Nativos não praticavam comércio nem extraiam metais, o que gerou um desinteresse em Portugal</p><p id="fa921602-ae52-4660-a126-d4bd99a2bf9d" class="">→ Só se interessaram no Pau-Brasil, usado para fazer tintura</p><p id="70b1dfb8-1085-4e00-a839-3f548d20c153" class="">→ Fernando de Noronha recebeu Estanco (permissão para explorar o Brasil)</p><p id="3923f124-702b-4a1d-b2aa-b077b0fb4220" class="">→ Praticaram extrativismo predatório do Pau-Brasil, usando escambo para fazer os Índios trabalharem para eles.</p><h3 id="2512c7fe-1665-4678-b1ef-e90ef1a03669" class="">Capitanias Hereditárias</h3><p id="d5d1f791-d632-4da2-b7e1-4386dfeec796" class="">→ Inglaterra e França ameaçavam invadir o Brasil, forçando Portugal a iniciar o processo de colonização</p><p id="fe5a1ea2-f46c-4e92-bbfe-6a156193dda4" class="">→ 1532 - Martin Afonso vem com a primeira expedição colonizadora</p><p id="a6c2643b-55e9-4bd0-9686-957bae012f35" class="">→ Rei de Portugal dividiu o Brasil em 15 capitanias hereditárias, que eram dadas através da carta de doação (quem recebe capitania = donatário)</p><p id="63e31da2-5fe1-4f7a-bf73-dd0ca7749103" class="">→ Com isso, Portugal não gastaria dinheiro na colonização</p><ul id="0fcbb640-79e1-4124-83ea-b864396ccfbc" class="toggle"><li><details open=""><summary>Foral: Conjunto de direitos e deveres do donatário</summary><ul id="278420a0-c628-4b4c-80d2-ceafe768d1d7" class="bulleted-list"><li style="list-style-type:disc">Donatário recebia o direito sobre a terra da capitania </li></ul><ul id="30129a9a-372b-45c4-bdc1-951488b7f361" class="bulleted-list"><li style="list-style-type:disc">Donatário deveria colonizar a capitania, entregar 20% dos metais extraídos e 10% do lucro do comércio ao rei</li></ul></details></li></ul><p id="634e60e8-fb5b-4f54-b7af-4efa019ceeea" class="">→ Sesmaria: Grandes pedaços de terra dentro da capitania que era dado pelo donatário para outros</p><h3 id="caf361f1-3c3a-4867-bb5e-221d741ed25a" class="">Colapso das Capitanias Hereditárias</h3><ul id="3ce1625d-4bf3-42b4-8cf3-b9c1933ce670" class="toggle"><li><details open=""><summary>Capitanias não estavam apresentando o resultado esperado</summary><ul id="e2943d9d-14db-463f-805b-2d7724bd207e" class="bulleted-list"><li style="list-style-type:disc">Falta de coordenação geral entre as capitanias</li></ul><ul id="ca066be1-ad9c-4971-9da2-42629712d3c9" class="bulleted-list"><li style="list-style-type:disc">Falta de investimento dos donatários nas capitanias </li></ul><ul id="566eab21-c219-4d11-97cc-c3b67571dbbc" class="bulleted-list"><li style="list-style-type:disc">Resistência dos indígenas</li></ul><ul id="22ee6712-f44a-4fec-bf4e-8bc441da4a6a" class="bulleted-list"><li style="list-style-type:disc">Problemas de comunicação entre metrópole e colônia</li></ul><ul id="42cb416e-79bd-4354-b5e4-e3880a48a8a0" class="bulleted-list"><li style="list-style-type:disc">Dificuldades com a lavoura</li></ul></details></li></ul><p id="a9d0ff54-0752-4fca-8b20-9ec5b5694dd5" class="">→ Portugal cria os governos gerais</p><h1 id="59dcf061-ecb4-4e7c-96fd-e916ffba9eeb" class="block-color-red_background">Matemática B</h1><h2 id="87828937-02c6-49fd-ba49-164f94e2b928" class="">Ele pediu sistema de coordenadas, dos pares ordenados lá…Gráfico Ox e Oy e tals</h2><h1 id="49e1267d-0432-47c1-873e-a17812f74141" class="block-color-purple_background">Aprofundamento Geografia</h1><h3 id="c479d776-a2ee-4bc7-b46a-3a0ddda6b6e4" class="">População Brasileira</h3><ul id="9b6d0313-ece8-4fba-91c6-0e4f7b914d26" class="bulleted-list"><li style="list-style-type:disc">Povo = conjunto de pessoas com uma característica própria dentro de uma nação (uma nação pode ter vários povos)</li></ul><ul id="383db116-b276-452a-8d5e-8a1dac851c68" class="bulleted-list"><li style="list-style-type:disc">Povo miscigenado (imigração de vários outros povos)</li></ul><ul id="b907e47c-f276-45c3-8c70-a76e3df979ca" class="bulleted-list"><li style="list-style-type:disc">Etnias principais: Brancos, Indígenas e negros</li></ul><ul id="127f8a3d-7bfd-467f-b890-ad217e0ba0f1" class="bulleted-list"><li style="list-style-type:disc">Diferença salarial brancos-pretos e homens-mulheres</li></ul><ul id="27bbbe39-006e-49af-90e0-b9b42c293311" class="bulleted-list"><li style="list-style-type:disc">Branco + indígenas = mamelucos (caipira/caiçara)</li></ul><ul id="5d21ac21-2744-4cb7-96ff-d3c6d45e3fa1" class="bulleted-list"><li style="list-style-type:disc">Branco + negro = mulatos</li></ul><ul id="2fe3e550-bb73-457a-8448-b654f6fd7693" class="bulleted-list"><li style="list-style-type:disc">Negro + índio = cafuzos</li></ul><ul id="18550bd7-6251-43e5-b1bc-c852286b4d79" class="bulleted-list"><li style="list-style-type:disc">Grande parte da etnia indígena foi morta</li></ul></div></article></body></html>

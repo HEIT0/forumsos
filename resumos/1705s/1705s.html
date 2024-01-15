@@ -1,0 +1,716 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumo - 17/05</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="cd801634-d295-4b17-be96-d42af0548115" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1538370965046-79c0d6907d47?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🚣🏻</span></div><h1 class="page-title">Resumo - 17/05</h1></header><div class="page-body"><h1 id="2ef9671c-459c-4465-8913-b6523c3e6889" class="block-color-brown_background">Matemática</h1><figure id="6f71d2dd-ab2a-4141-8071-2b5b85a410e6" class="image"><a href="Resumo%20-%2017%2005%20cd801634d2954b17be96d42af0548115/Untitled.png"><img style="width:864px" src="Resumo%20-%2017%2005%20cd801634d2954b17be96d42af0548115/Untitled.png"/></a></figure><p id="6154523f-55dc-45e6-920e-6361fb0cea38" class="">Entender as semelhanças de triângulo pode ajudar a não ter que decorar as fórmulas (Porém cuidado ao relacionar os lados por semelhança. Os lados proporcionais são aqueles que ficam entre os ângulos congruentes)</p><h1 id="7b8317e7-5f9a-4de2-a019-281dff1804aa" class="block-color-teal_background">Física</h1><h3 id="2d760909-6ed5-4031-bdfa-c967d7108d44" class="">Mudança de Estado Ⅱ</h3><p id="b2e15c2f-ab7f-4918-bb24-5bc681256528" class="">O diagrama de fases é um gráfico utilizado para indicar as condições de temperatura e pressão necessárias para obter uma substância em um determinado estado físico (sólido, líquido ou gasoso).</p><figure id="8dca32cb-b0d6-4c05-96f0-4507ef6afe0a" class="image"><a href="Resumo%20-%2017%2005%20cd801634d2954b17be96d42af0548115/Untitled%201.png"><img style="width:370px" src="Resumo%20-%2017%2005%20cd801634d2954b17be96d42af0548115/Untitled%201.png"/></a><figcaption>Como vemos no gráfico, quanto maior a pressão maior será o ponto de fusão e ebulição</figcaption></figure><ol type="1" id="bad4d63f-1451-4784-ba55-efc347edeb8a" class="numbered-list" start="1"><li>Fusão</li></ol><ol type="1" id="59bb3bd7-5eda-408c-86c4-be24e6e0ad7a" class="numbered-list" start="2"><li>Solidificação</li></ol><ol type="1" id="50756690-8951-4397-8839-497652c59569" class="numbered-list" start="3"><li>Vaporização (Ebulição)</li></ol><ol type="1" id="9cc81dda-d008-4596-a109-72b4aac16dc8" class="numbered-list" start="4"><li>Condensação</li></ol><ol type="1" id="8a913377-204d-45aa-bcd6-2cc3489baf1b" class="numbered-list" start="5"><li>Sublimação</li></ol><ol type="1" id="aca64f82-e56a-4667-8f82-8a171a1a8013" class="numbered-list" start="6"><li>Ressublimação</li></ol><h3 id="92dc9aa4-cba3-4e1d-87a7-99a414e92139" class="">Temperatura</h3><p id="d3a42e82-1de0-44c9-9936-4efbb803af09" class="">Durante uma mudança de estado físico, o calor usado é o latente, ou seja, a temperatura do sistema não varia. Se tivermos uma bacia de água com gelo a 0° C, todo calor colocado servirá para derreter o gelo até que só tenha água na bacia e ai sim, terminado a mudança de estado, a temperatura da água começa a mudar. </p><figure id="4e5d5342-337c-484e-8ae6-f32056a5e6a3"><a href="https://www.youtube.com/watch?v=ASTyZV8r6k4" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">PRESSÃO E MUDANÇA DE FASE: DIAGRAMA p versus T | Resumo de Física para o Enem</div><div class="bookmark-description">📚 E-book gratuito com o que mais cai em Matemática e Ciências da Natureza no Enem: http://bit.ly/35OYaeg
+
+A pressão é outro fator que pode alterar o estado físico de uma substância. Para exemplificar, vamos pensar no botijão de gás. Dentro do botijão, ao contrário do que seu nome diz, não encontramos gás, mas sim um líquido (GLP – gás liquefeito de petróleo).
+
+Isso porque o gás foi pressionado para dentro desse recipiente, espremido lá dentro. Dessa maneira, a pressão exercida pelo recipiente faz com que as moléculas do gás fiquem muito próximas. Assim, elas acabam tento maior atração umas sobre as outras, fazendo com que o gás se torne líquido.
+
+Na aula de hoje, o prof Marcelo te ensina a interpretar um diagrama de pressão X temperatura :)
+
+#Enem #Física #DiagramaDeFases
+
+Conheça nosso curso gratuito: https://goo.gl/2rebsa
+
+Aula escrita deste conteúdo: https://cursoenemgratuito.com.br/mudancas-de-estado/
+
+Simulado deste conteúdo: https://cursoenemgratuito.com.br/simulado-de-mudancas-de-estado/
+
+Descrição:
+
+00:00 - Na aula anterior,  vimos como ocorre a mudança de fase dependendo do acréscimo de energia no objeto. Vimos também que a água congela a 0ºC e entra em ebulição a 100ºC. Porém, será que a água vai mudar de fase sempre nessas duas temperaturas? Não! E é sobre isso que vamos falar hoje.
+
+00:39 - Aquelas mudanças que vimos anteriormente ocorrem somente quando a água está no estado normal de temperatura e pressão (1atm). Caso a pressão se altere, essa temperatura de fusão e de ebulição também vai mudar. 
+
+1:05 - Podemos ver essas mudanças no diagrama de pressão X temperatura. Observe a interpretação do professor. 
+
+2:27 - Aqui o prof exemplifica o que ele acabou de dizer, mostrando o que representa cada curva.
+
+4:29 - O ponto T do diagrama corresponde ao ponto triplo, no qual a substância estará nos 3 estados ao mesmo tempo.
+
+5:07 - A linha pontilhada corresponde à temperatura crítica.  A partir dela, a substância não sofre mais mudança de fase e permanece sendo gás.
+
+6:12 - Como isso ocorre com uma substância anômala? Nesse caso, o diagrama tem um comportamento diferente. Veja a explicação do professor. 
+
+GOSTOU DO VÍDEO? 
+// Inscreva-se no canal
+// Dá um joinha 
+// Deixe seu comentário
+// Compartilhe com os amigos
+
+REDES SOCIAIS
+// FACE /cursoenemgratuito/
+// INSTA @cursoenemgratuito
+// TWITTER @enemgratuito
+
+Música da vinheta: &quot;Summer&quot; - Royalty Free Music from Bensound
+
+O Curso Enem Gratuito é um canal independente de difusão de conteúdos de apoio à aprendizagem e de informações sobre programas e oportunidades de acesso ao Ensino Superior.</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/994ec74a/img/favicon_144x144.png" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=ASTyZV8r6k4</div></div><img src="https://i.ytimg.com/vi/ASTyZV8r6k4/sddefault.jpg" class="bookmark-image"/></a></figure><p id="f8dd69b2-faf1-46f8-b11c-003345dd46ca" class="">
+</p><h1 id="9fe4c40a-6b9f-41d1-9dc7-de2f06d29acb" class="block-color-orange_background">Química</h1><h3 id="7b20fecc-667f-48ea-8295-1f01628396c7" class="">Polaridade das moléculas</h3><ul id="a19b1e22-4481-403f-a2a6-54a6a1f24de6" class="bulleted-list"><li style="list-style-type:disc">Polaridade → formação de polaridade na molécula (polo + e polo -) causado pela diferença de eletronegatividade dos elementos.</li></ul><ul id="a90a2f9a-466a-4f82-a984-5702802cd64b" class="bulleted-list"><li style="list-style-type:disc">F O N Cl Br I S C P H       (ordem decrescente de eletronegatividade)</li></ul><ul id="b23528b6-e50d-4de6-822e-25cf5f500c30" class="bulleted-list"><li style="list-style-type:disc">Ex: H(+) - Cl (-)                 elétrons ficam próximos do Cl</li></ul><h3 id="c5fb869d-f892-4b75-9a68-9ee6e13ab30f" class="">Moléculas diatômicas</h3><ul id="4de1e2b4-bd35-444b-b4dc-b6b62524db7f" class="bulleted-list"><li style="list-style-type:disc">Átomos iguais → apolares (<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>O</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>N</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>F</mi><mn>2</mn></msub><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">H_2, O_2, N_2, F_2,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span></span></span></span></span><span>﻿</span></span> etc)</li></ul><ul id="99b8ea40-5ccc-4555-b826-97902891d1ee" class="bulleted-list"><li style="list-style-type:disc">Átomos diferentes → polares </li></ul><h3 id="0819e4f2-4a76-4ed3-9a4e-de7a3adb45f7" class="">Moléculas com 3 ou mais átomos</h3><ul id="61964c1e-e7b6-4b5f-98ad-fdf77daa5f09" class="bulleted-list"><li style="list-style-type:disc">Calcular o momento dipolo (M)</li></ul><ul id="910677d3-3bb8-4a90-bf2f-65c6b9c5e608" class="bulleted-list"><li style="list-style-type:disc">M = 0 (apolar)  (quando as setas se cancelam)</li></ul><ul id="026f83ff-7bec-4ddd-84a7-772312d8b258" class="bulleted-list"><li style="list-style-type:disc">M ≠ 0 (polar)</li></ul><figure id="7d8a8f51-d168-4de8-a0a1-49bb78152cc7" class="image" style="text-align:left"><a href="Resumo%20-%2017%2005%20cd801634d2954b17be96d42af0548115/Untitled%202.png"><img style="width:382px" src="Resumo%20-%2017%2005%20cd801634d2954b17be96d42af0548115/Untitled%202.png"/></a></figure><h1 id="57ccfb81-6469-4cdc-8710-79b99bdc459e" class="block-color-blue_background">Biologia</h1><h3 id="dd92d7c4-642b-4e2d-8d2d-67dce5e40558" class="">Absorção de água</h3><ul id="cff04239-a673-4e88-9139-67bf11064594" class="bulleted-list"><li style="list-style-type:disc">Feita pela raiz na região pilífera (onde tem micro pelos que aumentam a área de absorção)</li></ul><ul id="f5dbf884-0523-416a-9fca-e45809149c94" class="toggle"><li><details open=""><summary>Condições ideais</summary><ul id="0dc4fa64-57d0-4794-b4dd-8371eb53c611" class="bulleted-list"><li style="list-style-type:disc">A raiz deve estar em um meio hipotônico</li></ul><ul id="e720c194-b272-4397-93c1-bbf951feeab6" class="bulleted-list"><li style="list-style-type:disc">Solo deve reter água (solo argiloso retém mais água que arenoso)</li></ul><ul id="98bcb4c6-1b8e-474b-b824-e3e74b5d3a86" class="bulleted-list"><li style="list-style-type:disc">Em solos com determinadas composições químicas, a água pode ser retida por partículas hidrófilas, ficando inaproveitável pelas plantas (no solo arenoso, 100% da água é aproveitada, e no solo argiloso, apenas 50% é aproveitado)</li></ul><ul id="0966cc40-953f-4a80-8fae-259ad65f0133" class="bulleted-list"><li style="list-style-type:disc">Seca fisiológica → Quando há água aproveitável no solo, mas a planta é incapaz de absorvê-la</li></ul></details></li></ul><h1 id="8fc84bb4-0ccb-487b-bc76-fb9e0350953c" class="block-color-pink_background">Literatura</h1><h3 id="3b50fb79-6650-4d42-8587-3ded10e44994" class="">Simbolismo</h3><ul id="dcec9c85-32cd-416c-a94c-d408d26eaf84" class="bulleted-list"><li style="list-style-type:disc">Em meio ao cientificismo do século XIX, surge um questionamento: e se a ciência não der conta de tudo?</li></ul><ul id="d2a5f745-9629-402c-afde-4760a229a9dc" class="bulleted-list"><li style="list-style-type:disc">Surge a estética simbolista com seu misticismo</li></ul><ul id="cb510182-5134-4776-90fe-dadbfcbc6e38" class="toggle"><li><details open=""><summary>Características gerais</summary><ul id="54e48edc-3d9f-4ac8-a9dd-2bedb506798d" class="bulleted-list"><li style="list-style-type:disc">subjetivismo</li></ul><ul id="37e24e60-db34-4bec-abb0-fb3e0b7eab54" class="bulleted-list"><li style="list-style-type:disc">linguagem vaga, fluida e sugestiva</li></ul><ul id="76f4906c-f221-42ce-8fec-6a9380b67270" class="bulleted-list"><li style="list-style-type:disc">abundância de metáforas, comparações, aliterações, assonância e sinestesias</li></ul><ul id="cf96767c-30cb-4524-b4bd-d70c8f8f049a" class="bulleted-list"><li style="list-style-type:disc">uso do soneto e outras formas fixas</li></ul><ul id="abe73683-30d9-42ef-9843-7e74981c42fb" class="bulleted-list"><li style="list-style-type:disc">Antimaterialismo e antirracionalismo</li></ul><ul id="4f9c7b4c-b35b-4119-be6d-9f8cb5ec3999" class="bulleted-list"><li style="list-style-type:disc">misticismo e religiosidade</li></ul><ul id="09ebaa22-4851-40e0-8cf7-2bcfd2281a14" class="bulleted-list"><li style="list-style-type:disc">interesse pela psique humana</li></ul><ul id="d88a9f12-6969-462a-b1f1-a824d38db611" class="bulleted-list"><li style="list-style-type:disc">pessimismo</li></ul><ul id="159a35d8-8768-4ed3-baf4-3a08cbe4963b" class="bulleted-list"><li style="list-style-type:disc">dor de existir</li></ul><ul id="4404ff8d-2dd1-43b0-8d1e-826cca684aa6" class="bulleted-list"><li style="list-style-type:disc">interesse pelo noturno, pela morte e pelo mistério (retomada de ideias românticas)</li></ul><ul id="a62ea442-e8a7-4ef2-8d12-bb601fef7736" class="bulleted-list"><li style="list-style-type:disc">musicalidade</li></ul></details></li></ul><h3 id="4e129769-8031-44d0-9b99-56f28c6ca2b5" class="">Camilo Pessanha </h3><p id="1e6beb5c-b230-4b51-a3ea-295b2a6c0729" class="">→ Principal simbolista português</p><ul id="2d55ef1a-e3f0-4e15-afb6-42f27f52fe05" class="bulleted-list"><li style="list-style-type:disc">“viveu o simbolismo” → vício em ópio e decadentismo existencial </li></ul><h3 id="8000630b-0f76-46e6-a709-197ae4812e5c" class="">Cruz e Souza</h3><ul id="19b80ace-026f-4c83-9607-9bceca761cc2" class="bulleted-list"><li style="list-style-type:disc">Principal nome do poesia simbolista brasileira</li></ul><ul id="4a3c03ae-19b4-4e86-ae8d-cecc0d280a1d" class="bulleted-list"><li style="list-style-type:disc">Muito fiel às características gerais do movimento</li></ul><ul id="6132785a-2dda-4758-86c4-31615d9a722b" class="bulleted-list"><li style="list-style-type:disc">Simbolismo no Brasil não teve o sucesso esperado, e isso se juntou ao fato de que ele sofreu preconceito racial, resultando no isolamento do autor pela elite intelectual da época</li></ul><ul id="4642b16c-1585-43bb-9f9a-6031fd023038" class="bulleted-list"><li style="list-style-type:disc">Predileção pelas formas do Parnasianismo (soneto)</li></ul><h3 id="ae9752b0-521d-4e7e-8644-ac4bac935e10" class="">Alphonsus de Guimaraens</h3><ul id="60fc3c20-280f-4f04-b81d-30a18ac73a1b" class="bulleted-list"><li style="list-style-type:disc">Vida marcada pela perda da mulher amada</li></ul><ul id="55d55f0a-37a3-4493-b277-b30d9c1748cc" class="bulleted-list"><li style="list-style-type:disc">Trata quase exclusivamente dos temas de amor e morte</li></ul><ul id="f48c107c-3d32-4d42-84eb-1ad8366f182d" class="bulleted-list"><li style="list-style-type:disc">Formas: sonetos e redondilhas</li></ul><h1 id="2b6c46d7-90f4-4d07-abb4-24cc12739da0" class="block-color-yellow_background">Filosofia</h1><h2 id="c981db22-8841-47be-8839-1a366f8854e3" class=""><strong>Karl Marx</strong></h2><ul id="80c9c068-069a-4017-9a27-e9d0574cf7bd" class="bulleted-list"><li style="list-style-type:disc">Inspirado por Hegel</li></ul><h3 id="ff549467-ea34-4ace-8a2f-7c854ecbdbbb" class=""><strong>Diferença</strong></h3><ul id="e898b90a-dd41-4ee1-ba5c-d1cec09e6e4b" class="bulleted-list"><li style="list-style-type:disc">Hegel → interpreta o mundo sem transformá-lo, restringindo-se ao plano das representações</li></ul><ul id="833118ba-33f5-477c-af05-9d2b69b015c6" class="bulleted-list"><li style="list-style-type:disc">Marx → busca transformar o mundo utilizando a dialética, mas rejeita o idealismo</li></ul><ul id="e7c96da7-281c-42e0-8348-e061246c3ac6" class="bulleted-list"><li style="list-style-type:disc">Para Marx, as ideias da sociedade são determinadas pelas relações dos modos e meios de produção</li></ul><h3 id="b99fae56-a44e-4018-9a2e-629af3bd0144" class="">Infraestrutura e superestrutura</h3><ul id="39ebe8e9-53bc-41b1-bae9-6c4d839b3cfb" class="bulleted-list"><li style="list-style-type:disc">Superestrutura → São as ideias da sociedade (normas jurídicas, comportamentos políticos, manifestações religiosas, etc) → são reflexo da superestrutura</li></ul><ul id="2fc33da8-4fde-4541-b3d0-1720de24d48a" class="bulleted-list"><li style="list-style-type:disc">Infraestrutura → Conjunto de relações e modos de produção → base material da sociedade</li></ul><h3 id="ada58422-e24f-483f-a0f6-ba3ebbb1759c" class="">Luta de classe</h3><p id="5ab981dc-1767-4fda-aa15-8e6859ce93c0" class="">Explorados X Proprietários dos meios de produção </p><h1 id="61dab6a5-3044-4966-b25d-a52dda5b8d36" class="block-color-pink_background">Gramática</h1><h3 id="0e68d797-219f-4187-8b9e-d2edaee5390f" class="">Adjuntos adverbiais</h3><ul id="ef4031b7-2f4b-497f-9fde-dc608e6f659a" class="bulleted-list"><li style="list-style-type:disc">Termo sintático que atua como modificador do sintagma verbal no contexto frasal</li></ul><p id="07cf8371-57a1-4a9b-8f4a-1706fd09ef63" class="">“<strong>Aqui</strong>, <strong>hoje</strong>, João dança <strong>bem</strong>”</p><p id="aa645535-cf54-4b5f-aa51-69bd0233d03e" class="">aqui → lugar</p><p id="127f0dac-c590-4d79-992b-e8fc3c4cbbd2" class="">hoje → tempo</p><p id="281666b1-d258-4134-b4de-580376f3fbb4" class="">bem → modo</p><p id="cf0a49d7-aa2b-43a9-a01f-bbc273a01d7f" class="">advérbio → (classe morfológica) modifica adverbio, adjetivo ou verbo</p><h1 id="5b1470dd-6717-4442-95bc-dbee0d9469aa" class="block-color-yellow_background">História</h1><h3 id="6e9a88c8-cb6d-407e-a62b-204632863fe1" class="">Transferência de Coroa Portuguesa (1808)</h3><ul id="451693cc-f84f-465d-a667-f39118a5855a" class="bulleted-list"><li style="list-style-type:disc">1806 → Bloqueio continental </li></ul><ul id="ba57aafe-dbca-4ae6-b942-5877133daf2e" class="bulleted-list"><li style="list-style-type:disc">Se Portugal aderisse Inglaterra invadiria o Brasil</li></ul><ul id="9a175578-08f2-40e2-a08d-97170c5be973" class="bulleted-list"><li style="list-style-type:disc">Se Portugal não aderisse a França invadia Portugal</li></ul><ul id="0450f3cd-55cb-481a-b24c-c7a24d867f7c" class="bulleted-list"><li style="list-style-type:disc">Portugal não aderiu, França invade Portugal</li></ul><ul id="4f792280-79d8-4f19-8fdd-ba988780c2c6" class="bulleted-list"><li style="list-style-type:disc">Família real + nobres fogem pro Brasil</li></ul><h3 id="5a8c927e-db0d-4414-8a80-770ed760fdef" class="">Governo Joanino </h3><ul id="30386273-bfac-4208-8077-9dfa4606acc0" class="bulleted-list"><li style="list-style-type:disc">Governo da família real no Brasil</li></ul><ul id="37da3331-e028-455e-ab12-f99578a0f404" class="toggle"><li><details open=""><summary>Ações </summary><ul id="83532ee9-7a08-4f82-91c6-99cd9f306e23" class="bulleted-list"><li style="list-style-type:disc">Abertura dos portos do Brasil (fim do pacto colonial) → pedido da Inglaterra </li></ul><ul id="b888c20b-0887-44f4-86e2-4cfef59b1a4d" class="bulleted-list"><li style="list-style-type:disc">Permitiu a instalação de indústrias</li></ul><ul id="9183a030-8617-436b-a4dd-36e8c9b16985" class="bulleted-list"><li style="list-style-type:disc">Criação de cursos universitários</li></ul><ul id="eaa7e4ff-5bf5-454d-a70c-90e99bf8543c" class="bulleted-list"><li style="list-style-type:disc">Criação do Banco do Brasil</li></ul><ul id="f500ef7c-6855-4712-a377-2a7aa2a13e04" class="bulleted-list"><li style="list-style-type:disc">1810 → Tratado de Comércio e Navegação → Portugal e Inglaterra pagam 15% ao importar produtos para o Brasil, outros países pagam 24% (Bom para Brasil e Inglaterra, ruim para burguesia portuguesa)</li></ul></details></li></ul><ul id="74cf6e6d-c7cd-4082-8fd3-546baf17fc5a" class="bulleted-list"><li style="list-style-type:disc">Burguesia portuguesa irritou-se com as ações da família real</li></ul><ul id="1e24d835-061e-4174-ad4d-0447352055c7" class="bulleted-list"><li style="list-style-type:disc">Burguesia portuguesa exige o retorno do rei, ele não volta</li></ul><ul id="d2c4b26a-738c-4920-9dad-c1e06a3981bf" class="bulleted-list"><li style="list-style-type:disc">1820 Revolução do Porto (liderado pela burguesia) → exige retorno do rei e fim do absolutismo</li></ul><ul id="ba747781-1fea-438a-a502-949bd560c5c0" class="bulleted-list"><li style="list-style-type:disc">Filho D. Pedro fica no Brasil, se houvesse independência ele deveria ser o novo imperador</li></ul><h1 id="afb01acd-baed-418a-847d-d4683573005c" class="block-color-brown_background">Aprofundamento de Matemática</h1><p id="342904b2-18db-4d79-a80b-0e5099de988e" class="">Não sabemos, amanhã ele fala, mas deve ser isso:</p><h3 id="be18a34d-7d35-4b4f-9f8c-520fa01c1f5b" class="">Retas paralelas e Perpendiculares</h3><p id="fd82d7c3-234d-4fa7-958b-fd65293250d3" class="">Transformar em equação reduzida da reta: <strong>y = mx + b</strong> (y completamente isolado)</p><ul id="c138e68d-9b4e-4477-9cfe-ae4a5fe43853" class="toggle"><li><details open=""><summary>Paralela coincidente</summary><ul id="5bffc12c-3536-4aaa-bca9-b94cfa8cff42" class="bulleted-list"><li style="list-style-type:disc">mr = ms</li></ul><ul id="44bd5472-6244-4167-8105-1284bf8b87ab" class="bulleted-list"><li style="list-style-type:disc">br = bs</li></ul></details></li></ul><ul id="ea5df44c-027d-4eb6-b7cc-b3978e3fcbc9" class="toggle"><li><details open=""><summary>Paralela</summary><ul id="bb233a90-15c3-45bd-b33f-7044f95e2f1c" class="bulleted-list"><li style="list-style-type:disc">mr = ms</li></ul><ul id="c60785ed-a402-4413-8ea8-a23f74cb00df" class="bulleted-list"><li style="list-style-type:disc">br ≠ bs </li></ul></details></li></ul><ul id="7c6499da-9e67-47b7-b8df-5c1fe95d7ca1" class="toggle"><li><details open=""><summary>Secante</summary><ul id="6bd01510-8312-4626-a38d-18d29d0083b1" class="bulleted-list"><li style="list-style-type:disc">mr ≠ ms</li></ul><ul id="0966e197-d82a-4bbb-9b01-63d92fb43d1e" class="bulleted-list"><li style="list-style-type:disc">br ≠ bs</li></ul></details></li></ul><ul id="8f81e76e-846c-44ce-b7ca-78aa30fc5afe" class="toggle"><li><details open=""><summary>Secantes perpendiculares</summary><ul id="5a8bd472-8a85-4edc-aca4-d54824492559" class="bulleted-list"><li style="list-style-type:disc">mr = - <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mrow><mi>m</mi><mi>s</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{ms}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mord mathnormal mtight">s</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></li></ul><ul id="67d512b5-f530-489f-978b-afefc6f36940" class="bulleted-list"><li style="list-style-type:disc">br ≠ bs</li></ul></details></li></ul><h1 id="f3d19401-6fb8-4682-9092-0b8c391ef910" class="block-color-purple_background">Geografia</h1><ul id="2fb435a9-df5b-4dc0-aed5-627f8c45d592" class="toggle"><li><details open=""><summary>Externas</summary><ul id="ba48b0e5-7543-4489-8ce6-1ff208f73d3c" class="bulleted-list"><li style="list-style-type:disc">Internacional</li></ul><ul id="c710b9c8-261b-4190-8ab7-03d8ef9c1e28" class="bulleted-list"><li style="list-style-type:disc">Migração de cérebros (migração de pessoas especializadas em um trabalho)</li></ul></details></li></ul><ul id="9fd2f64f-4ae1-40b3-8d6f-81c51167cc51" class="toggle"><li><details open=""><summary>Internas</summary><ul id="edf060fa-6191-41fb-baac-8be1d926e05f" class="bulleted-list"><li style="list-style-type:disc">Êxodo rural e urbano (migração campo-cidade)</li></ul><ul id="d1bd5d6a-e1ee-4b4d-a666-507d860f3f84" class="bulleted-list"><li style="list-style-type:disc">Transumância → migração a trabalho com expectativa de retorno (como no café, construção de Brasília, indústrias no sudeste, borracha, mineração)</li></ul></details></li></ul><p id="c7867010-0713-4895-8adb-ce28285a32ad" class="">
+</p><p id="bdff25e2-fd2c-4a60-9b63-d35611f26387" class=""><em>Xenofobia </em>é uma forma de <strong>preconceito contra pessoas de outras origens nacionais e de outras culturas</strong>.<em> </em></p></div></article></body></html>

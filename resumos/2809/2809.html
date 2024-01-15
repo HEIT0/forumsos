@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumo 28/09 - Dino</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="7b55ac85-1734-4cba-b196-31304b7f0ccb" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_10.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🦖</span></div><h1 class="page-title">Resumo 28/09 - Dino</h1></header><div class="page-body"><p id="7c159d39-81ed-4b28-9910-b7f42051a2ea" class=""><em>Nós, da firma Resumos&amp;CIA, nos isentamos de qualquer responsabilidade quanto a este resumo e possíveis ausências de conteúdo para a prova. Use por sua própria conta e risco.</em></p><ul id="ae83748f-32ca-484b-b4ad-9b249f7ac687" class="toggle"><li><details open=""><summary>Conteúdo</summary><nav id="c626d10f-d246-4770-b168-21eac6867c03" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#db9d15b7-202c-48d5-9f5f-2abab17e80b1">Matemática</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a197265e-192f-482d-ace4-90105ef76b62">Física</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#e221d018-7568-4930-bd08-12c40c182963">Máquina de Atwood</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1dda8366-0082-44da-bac6-534e4a4a5bdf">Química</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#375976b5-1bf6-40ec-b44f-c00f49e386ad">Fórmula mínima</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#59366b04-c532-44cd-93f2-59e0a7d33ced">Fórmula percentual</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#c862ab6d-3171-422c-a227-777595ec6111">Fórmula mínima a partir da percentual</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#674da442-813e-4136-a075-13a16ca9c70c">Fórmula molecular a partir da mínima</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1533b329-64dd-48f0-8d90-09399c9f0e3a">Biologia</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#0328629a-02b4-4352-8d06-18dcfccc2f3d">Literatura</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ed9eed18-f7a6-4a5e-90bb-e4e1c0732eec">História</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ffc09a05-ef09-4872-83a7-2e23fca8e46d">Reforma Protestante</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#5d610c1b-cbc1-4fcd-b46c-b93568ae6f72">Reforma Luterana</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#67e10961-4e54-4cb2-a0eb-dac6a61563be">Calvinismo</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#f46d7376-afeb-4cf2-9012-26403c779035">Anglicanismo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#b969bed8-42d6-4710-ad2e-f26f71a748a0">Filosofia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#4711011a-08f2-482b-b8ce-2201012dcd69">Diferença entre Santo Agostinho e Tomas de Aquino </a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#6e5ef71a-cc65-4e74-9ef1-db5ecc017188">Física do Cosmo</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#4ae43f0c-0c96-4eac-b316-f5263a0873ad">Leis de Kepler</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0a2265ad-1df8-4f46-8f21-e901f313db85">Gravitação</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#3e5b0af9-45fc-49a9-b187-13a8f61c8f93">Aprofundamento de Inglês</a></div></nav></details></li></ul><h1 id="db9d15b7-202c-48d5-9f5f-2abab17e80b1" class="block-color-yellow_background">Matemática</h1><div id="e839a4f4-3e1f-448c-903c-cc765d1b0aef" class="column-list"><div id="7bc71077-f972-40ed-879b-af3543cd4116" style="width:50%" class="column"><figure id="d13b5d4a-89a9-4a9f-8a68-40f3d545def6" class="image"><a href="Resumo%2028%2009%20-%20Dino%207b55ac8517344cbab19631304b7f0ccb/Untitled.png"><img style="width:528px" src="Resumo%2028%2009%20-%20Dino%207b55ac8517344cbab19631304b7f0ccb/Untitled.png"/></a></figure></div><div id="4a6ae7fc-6e64-4ee7-a257-90d9a6e775c6" style="width:50%" class="column"><figure id="806dc8c2-e729-4dfa-b303-859dc392f491" class="image"><a href="Resumo%2028%2009%20-%20Dino%207b55ac8517344cbab19631304b7f0ccb/Untitled%201.png"><img style="width:336px" src="Resumo%2028%2009%20-%20Dino%207b55ac8517344cbab19631304b7f0ccb/Untitled%201.png"/></a></figure></div></div><hr id="2d52ad1c-cc15-4dc5-8edb-5c8c1f580959"/><h1 id="a197265e-192f-482d-ace4-90105ef76b62" class="block-color-teal_background">Física</h1><h2 id="e221d018-7568-4930-bd08-12c40c182963" class="">Máquina de Atwood</h2><p id="8c11b1e0-904a-4513-9549-48110d5bd39c" class="">É um sistema de quando dois corpos estão suspensos por um fio inextensível e de massa desprezível, de modo que este fio esteja apoiado sobre uma roldana também de massa desprezível.</p><p id="6913091d-ea6f-4eed-b95e-16871f12f35d" class="">Cada um dos corpos sofre a ação da <strong>força peso</strong> <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>P</mi><mo>=</mo><mi>m</mi><mi mathvariant="normal">.</mi><mi>g</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(P = m.g)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mord">.</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span> e também a ação de uma <strong>tração T </strong>exercida pelo fio.</p><p id="a0d16c30-a7ca-4f27-94b7-fcc1bd78dd93" class=""><strong>Referencial: </strong><strong><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>↑</mo></mrow><annotation encoding="application/x-tex">↑</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mrel">↑</span></span></span></span></span><span>﻿</span></span></strong><strong> = + </strong><em>(positivo)</em> <strong>/  </strong><strong><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>↓</mo></mrow><annotation encoding="application/x-tex">↓</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mrel">↓</span></span></span></span></span><span>﻿</span></span></strong><strong> = - </strong><em>(negativo)</em></p><p id="14c061c2-cc65-435b-acd4-f6dbafb375ad" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="0.9em"><mtext>Obs: (Lembrando que o referencial pode ser alterado, mas o Danilo passou assim)</mtext></mstyle></mrow><annotation encoding="application/x-tex">\small \text{Obs: (Lembrando que o referencial pode ser alterado, mas o Danilo passou assim)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9em;vertical-align:-0.225em;"></span><span class="mord text sizing reset-size6 size5"><span class="mord">Obs: (Lembrando que o referencial pode ser alterado, mas o Danilo passou assim)</span></span></span></span></span></span><span>﻿</span></span></p><figure id="76751eb8-8cc0-4d90-9f39-142904c004b3" class="image" style="text-align:left"><a href="Resumo%2028%2009%20-%20Dino%207b55ac8517344cbab19631304b7f0ccb/Untitled%202.png"><img style="width:192px" src="Resumo%2028%2009%20-%20Dino%207b55ac8517344cbab19631304b7f0ccb/Untitled%202.png"/></a></figure><p id="849b6dfd-2db9-4e76-a60f-db7461e83b96" class=""><strong>M &gt; m, </strong>ou seja, o Bloco A tem mais massa que o Bloco B, logo tem maior força peso também</p><p id="ce804cbf-aa36-477a-b8f2-fa4a912de683" class=""><strong>No bloco A temos que:</strong></p><p id="550ed1de-e05e-45b6-ac6c-d39cb953aca5" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>A</mi></msub><mo>−</mo><mi>T</mi><mo>=</mo><msub><mi>m</mi><mi>A</mi></msub><mi mathvariant="normal">.</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">P_A - T = m_A.a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">.</span><span class="mord mathnormal">a</span></span></span></span></span><span>﻿</span></span></p><p id="e0d8f7e3-8c45-46dd-b1f2-7dd84f094a07" class=""><strong>No bloco B temos que:</strong></p><p id="e0e1140c-54d5-41cd-bf95-aa327f89be77" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><msub><mi>P</mi><mi>B</mi></msub><mo>+</mo><mi>T</mi><mo>=</mo><msub><mi>m</mi><mi>B</mi></msub><mi mathvariant="normal">.</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">-P_B + T = m_B . a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord">−</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">.</span><span class="mord mathnormal">a</span></span></span></span></span><span>﻿</span></span>, então…</p><p id="43725819-ba1b-49df-86bc-f18c0cf59302" class=""><strong>Formula geral:</strong></p><p id="7998a8d1-1e02-4b04-9049-10e319d33ec0" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>g</mi><mo>−</mo><mi>m</mi><mi>g</mi><mo>=</mo><mi>a</mi><mo stretchy="false">(</mo><mi>M</mi><mo>+</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Mg - mg = a(M+m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">a</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span></p><p id="8a36e2be-dc85-46f6-b692-0db35d69a183" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>r</mi><mo>=</mo><mi>P</mi><mo>−</mo><mi>T</mi><mo>=</mo><mi>m</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">Fr = P - T =ma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">ma</span></span></span></span></span><span>﻿</span></span></p><p id="c8a229f6-488a-4b07-8e08-6f9ecb4540ea" class="">É difícil explicar/resumir física então sugiro que assista uma <strong><a href="https://youtu.be/o0AgIV-r5Gc">vídeo aula</a></strong></p><hr id="174ffcd2-9c1b-45ed-aef0-56cfc5d08fb5"/><h1 id="1dda8366-0082-44da-bac6-534e4a4a5bdf" class="block-color-red_background">Química</h1><h2 id="375976b5-1bf6-40ec-b44f-c00f49e386ad" class="">Fórmula mínima</h2><ul id="1472a70b-ca33-41d8-8152-edd733afe99b" class="bulleted-list"><li style="list-style-type:disc">Indica a proporção entre os números de átomos de cada elemento </li></ul><ul id="e7892277-6a27-4929-9b36-1c23c9c50c92" class="bulleted-list"><li style="list-style-type:disc">Fórmula molecular dividida pelo máximo divisor comum.</li></ul><h2 id="59366b04-c532-44cd-93f2-59e0a7d33ced" class="">Fórmula percentual</h2><ul id="6650a153-925c-4300-866b-ec536acccc9e" class="bulleted-list"><li style="list-style-type:disc">indica a porcentagem de cada elemento na fórmula da substância</li></ul><ul id="c7816370-ff0b-4203-b31c-abdecb7bb21e" class="bulleted-list"><li style="list-style-type:disc">Massa molar da substância = 100%</li></ul><ul id="5c3edf00-f4df-4b90-8665-9e689faf9e39" class="bulleted-list"><li style="list-style-type:disc">Regra de 3 com a massa de cada elemento</li></ul><h2 id="c862ab6d-3171-422c-a227-777595ec6111" class="">Fórmula mínima a partir da percentual</h2><p id="b58723d3-68f1-4e99-b0f9-c6df14aceb0f" class="">1- calcular o nº de mols de cada elemento considerando 100g do composto</p><p id="2d371d9d-2734-4bbc-9cee-caa2ddadcf3b" class="">2- dividir pelo menor valor</p><h2 id="674da442-813e-4136-a075-13a16ca9c70c" class="">Fórmula molecular a partir da mínima</h2><p id="1475e2c8-81a6-448f-a500-cebc46b80c34" class="">1- dividir a massa molar da molécula pela massa molar da fórmula mínima</p><p id="be7f6def-d4ea-464e-ba88-b450d25f38cf" class="">2- multiplicar a fórmula mínima pelo resultado</p><hr id="be64ad27-cdbb-41f7-b322-3bee06887749"/><h1 id="1533b329-64dd-48f0-8d90-09399c9f0e3a" class="block-color-teal_background">Biologia</h1><table id="d6bba26a-e89d-47c2-a924-06ecded3d562" class="simple-table"><thead class="simple-table-header"><tr id="704c01c1-e056-4d4d-b123-b71833b630f1"><th id="=BTj" class="simple-table-header-color simple-table-header"></th><th id="{&lt;Q[" class="simple-table-header-color simple-table-header">Briófitas</th><th id="vaU^" class="simple-table-header-color simple-table-header">Pteridófitas</th><th id="Fq`@" class="simple-table-header-color simple-table-header">Gimnospermas</th><th id=";\Lq" class="simple-table-header-color simple-table-header">Angiospermas</th></tr></thead><tbody><tr id="4913bc97-6ddd-45c2-8a8b-048f8d8a7e3e"><th id="=BTj" class="simple-table-header-color simple-table-header">Exemplos</th><td id="{&lt;Q[" class="">Musgo e Hepáticas</td><td id="vaU^" class="">Samambaia e Avenca</td><td id="Fq`@" class="">Pinheiro e Araucária e Sequoia</td><td id=";\Lq" class="">Com fruto</td></tr><tr id="40b270a1-3ee0-43a5-bc2f-e76075b968a5"><th id="=BTj" class="simple-table-header-color simple-table-header">Vaso condutor</th><td id="{&lt;Q[" class="">Não </td><td id="vaU^" class=""><mark class="highlight-orange_background">Sim</mark></td><td id="Fq`@" class="">Sim</td><td id=";\Lq" class="">Sim</td></tr><tr id="0c773d36-6d45-43dc-b019-d588da10c4fa"><th id="=BTj" class="simple-table-header-color simple-table-header">Água para fecundação</th><td id="{&lt;Q[" class="">Sim</td><td id="vaU^" class="">Sim</td><td id="Fq`@" class=""><mark class="highlight-orange_background">Não</mark></td><td id=";\Lq" class="">Não</td></tr><tr id="9cff7280-abaa-46ae-a21c-200fb13dd19c"><th id="=BTj" class="simple-table-header-color simple-table-header">Sementes</th><td id="{&lt;Q[" class="">Não</td><td id="vaU^" class="">Não</td><td id="Fq`@" class=""><mark class="highlight-orange_background">Sim</mark></td><td id=";\Lq" class="">Sim</td></tr><tr id="15911994-8079-4d5e-8deb-ae80f1fb111b"><th id="=BTj" class="simple-table-header-color simple-table-header">Flor/Fruto</th><td id="{&lt;Q[" class="">Não</td><td id="vaU^" class="">Não</td><td id="Fq`@" class="">Não</td><td id=";\Lq" class=""><mark class="highlight-orange_background">Sim</mark></td></tr><tr id="9139a6f1-627f-468f-bb50-ca5cf8c290b6"><th id="=BTj" class="simple-table-header-color simple-table-header">Fase Duradoura</th><td id="{&lt;Q[" class="">Gametófito </td><td id="vaU^" class="">Esporófito </td><td id="Fq`@" class="">Esporófito</td><td id=";\Lq" class="">Esporófito </td></tr></tbody></table><hr id="edb36d57-1f50-474c-9648-3120bb53dc73"/><h1 id="0328629a-02b4-4352-8d06-18dcfccc2f3d" class="block-color-brown_background">Literatura</h1><ul id="32e6757d-62f4-4aeb-a61f-af6caa8e6f29" class="bulleted-list"><li style="list-style-type:disc">Leonardo, personagem de memórias de um sargento de milícia, é um anti-herói, ou seja, é do bem, mas malandro</li></ul><ul id="5d2e59f2-a61b-4d41-be1c-b331083a6cf0" class="bulleted-list"><li style="list-style-type:disc">Amor e mulher não idealizadas </li></ul><ul id="6ed89eb1-f626-420d-ac06-a0bbcc4f3413" class="bulleted-list"><li style="list-style-type:disc">Final feliz</li></ul><ul id="4cb40d73-8e13-487c-987c-d04f578882e4" class="bulleted-list"><li style="list-style-type:disc">Figuras não complexas e é engraçado</li></ul><hr id="37961fd7-536a-4567-8bd2-9fba1779daad"/><h1 id="ed9eed18-f7a6-4a5e-90bb-e4e1c0732eec" class="block-color-brown_background">História</h1><h2 id="ffc09a05-ef09-4872-83a7-2e23fca8e46d" class="">Reforma Protestante</h2><ul id="aa761c32-1e29-4477-9f3a-42b3eb7ecfd7" class="bulleted-list"><li style="list-style-type:disc">Questionou o monopólio da igreja sobre a fé</li></ul><ul id="5f37201f-e5b7-49b7-9ba1-67819e4115ee" class="bulleted-list"><li style="list-style-type:disc">Indulgências</li></ul><ul id="8cbc6e8d-d67a-46d9-8a6c-75969b5cdce0" class="bulleted-list"><li style="list-style-type:disc">Simonia (relíquias para salvação) </li></ul><ul id="62b1ee9d-07de-426f-adc3-2652907ef22d" class="bulleted-list"><li style="list-style-type:disc">Imoralidade do Clero</li></ul><h3 id="5d610c1b-cbc1-4fcd-b46c-b93568ae6f72" class="">Reforma Luterana</h3><ul id="11d73aff-1f67-4965-88be-e23eeed14f8f" class="bulleted-list"><li style="list-style-type:disc"><strong>95 teses contra venda de indulgência</strong></li></ul><ul id="64be964e-d77f-4183-aebb-1b52b0194e2e" class="bulleted-list"><li style="list-style-type:disc"><strong>Justificação pela Fé</strong></li></ul><ul id="ee05010c-5c43-488f-8991-ff8043abb01d" class="bulleted-list"><li style="list-style-type:disc">Sem santos e imagens</li></ul><ul id="43dccb20-ff6d-49c6-8623-af075318c884" class="bulleted-list"><li style="list-style-type:disc">Celibato Opcional </li></ul><ul id="886bb1f8-37bd-4238-bebb-db585e5b0273" class="bulleted-list"><li style="list-style-type:disc">Eucaristia → Substanciação</li></ul><ul id="70fdcbe4-0552-4682-ac7b-2764cd52df29" class="bulleted-list"><li style="list-style-type:disc">Batismo → Imersão</li></ul><ul id="564a9cf0-a545-4ee3-858b-973ca76416b8" class="bulleted-list"><li style="list-style-type:disc">Simplicidade</li></ul><h3 id="67e10961-4e54-4cb2-a0eb-dac6a61563be" class="">Calvinismo</h3><p id="8fe6933b-fe43-4ebd-acb4-db6da0128be8" class="">Idem Lutero - Teoria da predestinação absoluta demonstrada pelo enriquecimento honesto</p><h3 id="f46d7376-afeb-4cf2-9012-26403c779035" class="">Anglicanismo</h3><p id="cfa3fb29-80c4-4b51-b4ac-03e549a8e2b2" class="">Atos de supremacia → Celibato e casamento </p><hr id="c4ee62c2-04ca-4163-8f6d-eb9073d85f2e"/><h1 id="b969bed8-42d6-4710-ad2e-f26f71a748a0" class="block-color-yellow_background">Filosofia</h1><h3 id="4711011a-08f2-482b-b8ce-2201012dcd69" class="">Diferença entre Santo Agostinho e Tomas de Aquino </h3><ul id="0f93d438-c074-47cd-862c-4a210e124a40" class="bulleted-list"><li style="list-style-type:disc">Santo Agostinho cristianizou o dualismo platônico <strong>|</strong> São Tomás de Aquino usou como base a lógica aristotélica (realidade)</li></ul><ul id="8bda3e7f-1ddb-41e9-90d7-08ed56393493" class="bulleted-list"><li style="list-style-type:disc">Santo Agostinho acreditava apenas por meio da fé (iluminação divina) <strong>|</strong> São Tomas de Aquino acreditava que poderia chegar na crença pela razão</li></ul><hr id="811e2a75-a06a-433c-b54a-8105c90dc1b1"/><h1 id="6e5ef71a-cc65-4e74-9ef1-db5ecc017188" class="block-color-teal_background">Física do Cosmo</h1><h3 id="4ae43f0c-0c96-4eac-b316-f5263a0873ad" class="">Leis de Kepler</h3><p id="84c95a18-00d6-4aa6-a8b6-50a166a58fb9" class="">1 - Tudo é elipse</p><p id="e85bc4a7-ba9b-4295-b53c-a1cf3b14a90e" class="">2- Áreas iguais em tempos iguais ⇒ mais rápido no periastro</p><p id="60c4ebda-515e-4f2c-a7ee-1c190cfadb5f" class="">3- <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>T</mi><mtext>²</mtext></mrow><mrow><mi>R</mi><mtext>³</mtext></mrow></mfrac><mo>=</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">\frac{T²}{R³} = k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="mord mtight">³</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mtight">²</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span><span>﻿</span></span></p><h3 id="0a2265ad-1df8-4f46-8f21-e901f313db85" class="">Gravitação</h3><p id="b8767a03-c25e-4371-a09a-1d468bef3fc5" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><mi>G</mi><mi>M</mi><mi>m</mi></mrow><mrow><mi>d</mi><mtext>²</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">F = \frac{GMm}{d²}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mtight">²</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">GM</span><span class="mord mathnormal mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></p><hr id="ef5261f7-2cda-417e-8bca-8ab25a7bb024"/><h1 id="3e5b0af9-45fc-49a9-b187-13a8f61c8f93" class="block-color-pink_background">Aprofundamento de Inglês</h1><p id="7507bebf-22cd-4703-b72f-cb9eb22beec2" class=""><strong>Games</strong> → Jogos</p><p id="34151d21-8d59-4e20-93c8-49d90b4418b7" class=""><strong>Outdoor</strong> → ao ar livre</p><p id="4cf4cbb6-604e-447d-9615-95370d4bd032" class=""><strong>Jumps</strong> → saltos</p><p id="9da946cd-cbf0-474c-8dce-0d7389009f29" class=""><strong>Blind</strong> → cego</p><p id="f3775498-18c3-4193-ae6e-f947fc676cbc" class=""><strong>Step</strong> → degrau</p><hr id="2db207a9-eec9-430c-b92d-e706b7f503c7"/><p id="d11c2155-7606-414b-8824-43a2e2d4ccd7" class="">Heitor e Magon e Wilson © 2022, all rights reserved</p><p id="2562502f-785f-41b2-93ff-6c1dae8b7781" class="">
+</p></div></article></body></html>

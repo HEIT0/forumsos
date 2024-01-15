@@ -1,0 +1,675 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumo 24/08 - BOOM!</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c7eccf3b-407a-40bf-bb64-86fc15e6ca34" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_10.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">💣</span></div><h1 class="page-title">Resumo 24/08 - BOOM!</h1></header><div class="page-body"><p id="a5e46be6-9c8d-4953-a7ae-2c745524283b" class=""><em>Nós, da firma Resumos&amp;CIA, nos isentamos de qualquer responsabilidade quanto a este resumo e possíveis ausências de conteúdo para a prova. Use por sua própria conta e risco.</em></p><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Matemática</label> - <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Física</label> - <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Química </label><br>
+<input type="checkbox" id="vehicle2" name="vehicle2" value="Car"><label for="vehicle2"> Biologia</label> - <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Literatura</label> - <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> História </label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Filosofia</label> - <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Itinerário</label> - <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Aprofundamento de Inglês</label><br><ul id="97eb9dba-08e8-4ecd-8794-0aa7b93f0688" class="toggle"><li><details open=""><summary>Conteúdo</summary><nav id="41f5296b-d674-494f-a23b-77781f20586e" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#22468965-490e-486e-9ca5-0779028870e9">Matemática</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#5d4c602d-0d88-430e-8979-612b0e3a533c">Física</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#87215345-907a-4fd3-a6f3-03335ed7c23c">Elevadores</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#71ebb866-4d7b-4f64-92a0-577b7049ec48">Química</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#c083e9d4-436b-48bf-821f-902c69d61fa1">Mol</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#148398a9-c189-421a-adfc-c6a5f227316e">Massa molar</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#45e6d273-2626-4a66-b318-db281034561b">Biologia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#c2cf1c4e-2f53-4fe3-a36d-257ff0119d41">Vírus</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a448a015-4cca-4497-abc6-6c9c9bafac86">Exemplos:</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#73ef35cd-82c1-4e08-b08e-8d9641a32bc9">Literatura</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#41949963-f020-4c89-8cab-c506f10cbd49">Arcadismo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#6ec9651b-a9c6-470b-98df-f46f6fa4d6fe">História</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#de8d2276-402c-4a3a-8947-5a83b5056e23">Cruzadas</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#81b35e02-ea75-4ce1-897f-5ca3d08a0b46">Filosofia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a56e1f20-97d7-4167-a365-c53ff6561eae">Estoicismo</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0264d3a4-8816-4975-a503-765b61e90380">Ceticismo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#9bbdcd79-0bc5-4658-8c8e-585c57ee6ead">Física do Cosmo</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ec6d6eb1-2fbc-4596-a52c-746e4ad9daec">Geocentrismo</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a9bc5c1a-c2c2-4591-b001-421700860bed">Vantagens</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#eb46518b-8ed5-49a6-aaea-4a48e50913da">Desvantagens</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#93165fad-b389-4923-9732-f68cc2725b73">Aprofundamento de Inglês</a></div></nav></details></li></ul><h1 id="22468965-490e-486e-9ca5-0779028870e9" class="block-color-yellow_background">Matemática</h1><div id="10ed18dd-807a-48d1-81f9-27a77330185b" class="column-list"><div id="e6bdbeef-8c10-47b4-a798-468c528deacb" style="width:50%" class="column"><figure id="5b1e9b95-6e8d-4238-9da0-2dcab8e67d56" class="image" style="text-align:right"><a href="Resumo%2024%2008%20-%20BOOM!%205b1e9b956e8d42389da02dcab8e67d56/Untitled.png"><img style="width:480px" src="Resumo%2024%2008%20-%20BOOM!%205b1e9b956e8d42389da02dcab8e67d56/Untitled.png"/></a></figure><p id="1b015cfb-32c9-4897-9116-39ac8f745c83" class="">
+</p></div><div id="7b0f48c8-1988-4f6d-89ef-28a28732bc4f" style="width:50%" class="column"><figure id="18e3d976-cf37-440f-8325-68f5a509a5f0" class="image"><a href="Resumo%2024%2008%20-%20BOOM!%205b1e9b956e8d42389da02dcab8e67d56/Untitled%201.png"><img style="width:336px" src="Resumo%2024%2008%20-%20BOOM!%205b1e9b956e8d42389da02dcab8e67d56/Untitled%201.png"/></a></figure></div></div><p id="8f4e1571-e255-483e-938d-6206b9d162aa" class="">A tangente de um ângulo é a distância do o eixo x até um ponto G, formado da intersecção da reta OP com a perpendicular tangente ao circulo.. </p><p id="a48fa1dc-f0aa-4c68-a038-1b078bf2ca00" class="">Dica: Desenho o ciclo e analise-o tendo em mente a imagem 1 e 2 | Vídeo: <a href="https://youtu.be/TQO34tILYKE">https://youtu.be/TQO34tILYKE</a></p><p id="7467c2e0-d810-4e62-b08e-0b6764d135e7" class=""><strong>Obs:</strong> Não existe tangente de 90° e 270° </p><hr id="1d2b0319-9721-432d-8fe8-68c99ffcda37"/><h1 id="5d4c602d-0d88-430e-8979-612b0e3a533c" class="block-color-teal_background">Física</h1><h3 id="87215345-907a-4fd3-a6f3-03335ed7c23c" class="">Elevadores</h3><p id="ecb37e70-8e68-4f7d-9de1-5697fb2cbfea" class="">Definimos como força normal a força que o chão faz na pessoa, contrária ao peso, sendo esse a força que a pessoa faz no chão. “A balança pesa a força normal”.</p><p id="b7668cfb-275f-46ca-a3b8-69afe0b4236b" class="">Se a força resultante do elevador está para cima (acelerando a subida ou brecando a queda), a força normal será maior que o peso (N&gt;P), ou seja, seu “peso” na balança será maior. Nesse caso, teremos que N - P = Fr = m . a</p><p id="c7313e01-eec1-4b3a-a40f-df30945ed693" class="">Se a força resultante do elevador está para baixo(acelerando a descida ou brecando a subida), a força normal será menor que o peso (P&gt;N), ou seja, seu “peso” na balança será menor. Nesse caso, teremos que P - N = Fr = m . a</p><figure id="687e84a3-324d-45f0-bcc8-97972e9f402a"><div class="source"><a href="https://youtu.be/REH_Hz9MVO8">https://youtu.be/REH_Hz9MVO8</a></div></figure><hr id="a22b1549-d6bc-4118-a1ac-52eb4111085f"/><h1 id="71ebb866-4d7b-4f64-92a0-577b7049ec48" class="block-color-red_background">Química</h1><h3 id="c083e9d4-436b-48bf-821f-902c69d61fa1" class="">Mol</h3><p id="0b1b8d5f-a246-4827-bc62-d9894a6037af" class="">Um mol é um <strong>número</strong> que representa uma grande quantidade de <strong>partículas</strong></p><p id="f173c051-9d58-456b-b17d-cd660938e56d" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>m</mi><mi>o</mi><mi>l</mi><mo>=</mo><mn>6</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>23</mn></msup><mtext> </mtext><mi>u</mi><mi>n</mi><mi>i</mi><mi>d</mi><mi>a</mi><mi>d</mi><mi>e</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">1 mol = 6 × 10^{23}\ unidades </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord mathnormal">m</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">6</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">23</span></span></span></span></span></span></span></span></span><span class="mspace"> </span><span class="mord mathnormal">u</span><span class="mord mathnormal">ni</span><span class="mord mathnormal">d</span><span class="mord mathnormal">a</span><span class="mord mathnormal">d</span><span class="mord mathnormal">es</span></span></span></span></span><span>﻿</span></span></p><h3 id="148398a9-c189-421a-adfc-c6a5f227316e" class="">Massa molar</h3><p id="c63a4f8f-9758-45a8-af94-87c22ce9aa23" class=""><strong>A massa molar é quantos gramas 1 mol de uma partícula pesa</strong>. Ex: 1 mol de água tem o mesmo peso em gramas, numericamente,  do que o peso de apenas 1 molécula de água em unidades padrão de massa (u)</p><p id="553abe0d-6721-462e-b07c-95bb1ac2cfbb" class="">Então, se <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow><annotation encoding="application/x-tex">H_2O</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span></span></span></span></span><span>﻿</span></span> sendo <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>=</mo><mn>1</mn><mi>u</mi></mrow><annotation encoding="application/x-tex">H = 1u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord mathnormal">u</span></span></span></span></span><span>﻿</span></span> e <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo>=</mo><mn>16</mn><mi>u</mi></mrow><annotation encoding="application/x-tex">O = 16u </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">16</span><span class="mord mathnormal">u</span></span></span></span></span><span>﻿</span></span> temos que um mol de moléculas de água equivale a x gramas: </p><p id="105f1f30-1263-408f-a1cd-6ffeafa165d0" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi><mo>=</mo><mn>18</mn><mi>u</mi></mrow><annotation encoding="application/x-tex">H_2O = 18 u </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">18</span><span class="mord mathnormal">u</span></span></span></span></span><span>﻿</span></span></p><p id="3aa931e7-75c4-4745-84d5-38da482afda0" class="">1 mol de <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow><annotation encoding="application/x-tex">H_2O</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span></span></span></span></span><span>﻿</span></span> pesa 18 gramas (18g/mol)</p><p id="b8dbccee-0a4d-41ab-9cc6-be911323ccc6" class=""><strong>Obs: Muita regra de 3</strong></p><hr id="9787761a-fb7c-4f36-932d-f3be128c1333"/><h1 id="45e6d273-2626-4a66-b318-db281034561b" class="block-color-teal_background">Biologia</h1><h3 id="c2cf1c4e-2f53-4fe3-a36d-257ff0119d41" class="">Vírus</h3><p id="b2defbbb-7521-4807-bdf3-7a6da8473f03" class="">Não seres (porque não têm célula), formados por material genético (RNA ou DNA) e cápsula proteica, não são afetados por antibiótico pois esses são voltados para bactérias.</p><h3 id="a448a015-4cca-4497-abc6-6c9c9bafac86" class="">Exemplos:</h3><p id="657168fe-4d09-48cf-88ed-063b12ec20fc" class="">Hepatite | Herpes | Varíola | Aids | Encefalite | Ebola | Poliomielite | Sarampo | Catapora | Rubéola | Febre Amarela | COVID | Influenza </p><hr id="5dbadc56-23ee-45d9-b733-5cf994e85fdb"/><h1 id="73ef35cd-82c1-4e08-b08e-8d9641a32bc9" class="block-color-brown_background">Literatura</h1><h2 id="41949963-f020-4c89-8cab-c506f10cbd49" class="">Arcadismo</h2><p id="cc88abb7-6e45-4490-b75e-f982db4b3bc9" class="">Iluminismo → Se propaga pelo país através da elite brasileira que vai estudar em Portugal e influenciará a inconfidência mineira</p><p id="25af08a3-c70f-4a3c-a2d4-e982e8da0a1f" class="">“Obras poéticas” → Inicia o Arcadismo no Brasil (Cláudio Manuel da Costa) </p><ul id="a16ef4b2-57c3-4d25-bc08-42f98757338e" class="toggle"><li><details open=""><summary>Características </summary><ul id="3dded1c2-4d8a-4008-a67b-5a7d379f901c" class="bulleted-list"><li style="list-style-type:disc">Equilíbrio e Harmonia</li></ul><ul id="9d0ee05e-622e-4785-a8e5-d0ef5379fb51" class="bulleted-list"><li style="list-style-type:disc">Fuga da cidade</li></ul><ul id="f8206c56-e227-46a6-8faf-37017b4eabbd" class="bulleted-list"><li style="list-style-type:disc">Carpe diem (otimista)</li></ul><ul id="33a5ba05-461b-4bd9-ad7c-8a96bad31471" class="bulleted-list"><li style="list-style-type:disc">Critica os exageros Barrocos (rebuscamento na linguagem)</li></ul><ul id="4ac0e7ac-9caf-4d5a-be2c-4fa25b026011" class="bulleted-list"><li style="list-style-type:disc">Referência a mitologia greco-latina</li></ul><ul id="19c6c06b-998b-4fd8-9acd-0448122f7a01" class="bulleted-list"><li style="list-style-type:disc">Pseudônimos Pastoris: Marília, Dirceu e Glauceste </li></ul><ul id="8007deaa-5031-49e0-8914-e2e82ebc7fc7" class="bulleted-list"><li style="list-style-type:disc">Poetas do Arcadismo foram inconfidentes e participavam de assuntos políticos</li></ul></details></li></ul><hr id="d8dd4c9e-90e7-49f2-b548-1cbf5d28cbea"/><h1 id="6ec9651b-a9c6-470b-98df-f46f6fa4d6fe" class="block-color-brown_background">História</h1><h2 id="de8d2276-402c-4a3a-8947-5a83b5056e23" class="">Cruzadas</h2><p id="7674e73a-558a-4dd2-8fe7-e35976f85212" class="">As cruzadas foram 8 marchas formadas por cristãos promovidas pelo Papa Urbano II para reconquistar Jerusalém (”Terra Santa”) dos mulçumanos e conter o islamismo. Devido as dificuldades com clima e localização além de um forte exército otomano, as cruzadas falharam. No final, ao menos o mar mediterrâneo foi reaberto em Genova e Veneza e feiras medievais começaram a se formar.  </p><hr id="c687023c-7f21-434d-8a46-7f4d8254cd26"/><h1 id="81b35e02-ea75-4ce1-897f-5ca3d08a0b46" class="block-color-yellow_background">Filosofia</h1><h2 id="a56e1f20-97d7-4167-a365-c53ff6561eae" class="">Estoicismo</h2><ul id="0e88638f-f2c3-4194-b780-a58c7e017814" class="bulleted-list"><li style="list-style-type:disc">Principal filósofo: Zenão de Cítio </li></ul><ul id="db4b2cf2-43bc-4f1d-bb04-e5fd16253b1f" class="bulleted-list"><li style="list-style-type:disc">No Estoicismo a filosofia é o conhecimento que se baseia na Physis (natureza) que gera a lógica que gera a ética: Tronco → Galhos → Frutos</li></ul><ul id="8a0f32db-7d04-4446-af21-0fd6de524616" class="bulleted-list"><li style="list-style-type:disc">Desprezar os prazeres</li></ul><ul id="c28797b9-ffff-4cc8-b1e5-b2083d4c9899" class="bulleted-list"><li style="list-style-type:disc">Não sofrer por coisas que não controlamos </li></ul><ul id="b6751107-da31-4bb3-921f-4bb8be95de0a" class="bulleted-list"><li style="list-style-type:disc">Busca da harmonia com a natureza (cosmo) </li></ul><h2 id="0264d3a4-8816-4975-a503-765b61e90380" class="">Ceticismo</h2><ul id="d945d87d-5878-4124-ae69-62d2d1bd1058" class="bulleted-list"><li style="list-style-type:disc">Principal filósofo: Pirro de Eléia</li></ul><ul id="8d2821f5-feea-46e2-b588-8b9fb7a5f729" class="bulleted-list"><li style="list-style-type:disc">Nenhum conhecimento é confiável, tudo é incerto</li></ul><ul id="f6a0bec5-dcf3-4439-aa60-6b6e789f82a5" class="bulleted-list"><li style="list-style-type:disc">Não se pode alcançar a verdade</li></ul><ul id="f739c803-35b3-4a0a-9cac-8c5e9870cbf8" class="bulleted-list"><li style="list-style-type:disc">Devemos apenas nos importar com o superficial sem buscar a essência</li></ul><ul id="39049e55-7566-4314-9aae-bd8223575e97" class="toggle"><li><details open=""><summary>Ordem</summary><p id="89547e47-8512-4b00-8095-b77608ab22e4" class="">Busca pela verdade → conflito entre as teorias → equivalência das teorias → suspensão de juízo → ATARAXIA (paz) </p></details></li></ul><hr id="8ea1a051-392f-40f8-bba3-fdf8c47f7775"/><h1 id="9bbdcd79-0bc5-4658-8c8e-585c57ee6ead" class="block-color-teal_background">Física do Cosmo</h1><h3 id="ec6d6eb1-2fbc-4596-a52c-746e4ad9daec" class="">Geocentrismo</h3><p id="ed9733b5-edd3-4ab4-a58e-411aed8838f2" class="">Modelo apoiado por Aristóteles e depois melhor desenvolvido por Ptolomeu que acreditava que a Terra era o centro do universo</p><h3 id="a9bc5c1a-c2c2-4591-b001-421700860bed" class="">Vantagens</h3><ul id="b62a352c-3e07-448e-87f8-92bd1ca574d0" class="bulleted-list"><li style="list-style-type:disc">Intuitivo (conforme os sentidos)</li></ul><ul id="16e1bcfe-e0a3-42df-9a00-dbcb99bfb4de" class="bulleted-list"><li style="list-style-type:disc">Ajudava a navegação</li></ul><ul id="1e2a2c78-8d81-4295-992d-336c1d538fd9" class="bulleted-list"><li style="list-style-type:disc">Permite criar medidas de tempo</li></ul><h3 id="eb46518b-8ed5-49a6-aaea-4a48e50913da" class="">Desvantagens</h3><ul id="4a9956fa-212d-485e-a08d-aa791568ebf6" class="bulleted-list"><li style="list-style-type:disc">Não explica o movimento aparente dos planetas</li></ul><ul id="c268b03f-9196-4717-a65e-c1db61226376" class="bulleted-list"><li style="list-style-type:disc">Não explica as estações/eclipses</li></ul><hr id="00fbad44-9cc4-44ef-ae72-69aa9b7f90ce"/><h1 id="93165fad-b389-4923-9732-f68cc2725b73" class="block-color-pink_background">Aprofundamento de Inglês</h1><p id="988bda69-b7fa-4582-9629-bbda94b306f4" class="">Interpretação ; ) </p><hr id="e1ffea70-1fd5-4cfc-ab94-ee17f94c3e3a"/><p id="884097fa-9f31-4ae8-928a-750848f30721" class="">Heitor e Magon © 2022, all rights reserved
+</p><p id="813b248b-4166-461a-9ac4-40bfe1f4e6ae" class="">
+</p><p id="09266b1b-6857-418e-b848-52d5f6f1246f" class="">
+</p></div></article></body></html>

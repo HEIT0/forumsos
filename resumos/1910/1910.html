@@ -1,0 +1,677 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumo 05/10 - Tarantula</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="7c1d5de9-f86f-44c2-a174-8e30670eefe2" class="page sans"><header><img class="page-cover-image" src="Resumo%2005%2010%20-%20Tarantula%207c1d5de9f86f44c2a1748e30670eefe2/nebula.jpg" style="object-position:center 42.989999999999995%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🔭</span></div><h1 class="page-title">Resumo 05/10 - Tarantula</h1></header><div class="page-body"><blockquote id="662d4a1c-1cb9-4edd-9093-ee0d1957958c" class=""><strong><em>Nós, da firma Resumos&amp;CIA, nos isentamos de qualquer responsabilidade quanto a este resumo e possíveis ausências de conteúdo para a prova. Use por sua própria conta e risco.</em></strong></blockquote><ul id="6aa0b986-f0e9-4495-b9ae-c91aefeb292d" class="toggle"><li><details open=""><summary>Conteúdo</summary><nav id="ca886498-f7b0-4b86-b7c1-4dac8b45ff94" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e28958c0-7753-411b-9da1-35fe39027767">Matemática</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7b8a5339-4a71-4b73-9405-ca49d9a0dbaa">Progressão Aritmética</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#014c5bc3-4c83-4341-9c90-ab5ef448f839">Propriedade de 3 Termos Consecutivos</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7dfae482-f213-4678-a151-e36337c54279">Demonstração Gráfica </a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a47907c3-1ece-4b51-a7f4-d6a31d86cd37">Física</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#400eee59-d08d-45b9-93ce-12539974ba13">Quantidade de Movimento (ou momento linear)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#952d41a8-3220-4e8b-b460-829e0b14591d">Impulso</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#f51eeba9-3cfc-43f3-9b5a-cff768c19590">Química</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#6810d714-3664-4033-a88c-d748caff9e6b">Gás</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#aa4c121f-90a8-4bf7-9587-d9855f6aaa07">Pressão</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#433af527-c68f-4626-a458-508bacff53cd">Volume</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#d80b70df-17f9-4aa4-8f84-e5dd3c187aab">Temperatura</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0664babb-93c3-445b-9750-cd534f509af9">Gases Ideais</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#8d4ab2ca-2739-446d-b598-43960c61ed23">Teoria Cinética dos Gases</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c5a47c2e-37ce-48a9-84e0-e47bb7f31a39">Biologia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#e1b8a648-7606-4943-8bcd-713295603de6">Pteridófitas</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#4056eb36-e6b4-48a8-9f16-83c3e86ed372">Literatura</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#97b36f1e-0d40-4249-984b-e6d2c37f8e8a">Segunda Fase do Romantismo (Ultrarromantismo)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#6c991557-2265-42e9-8273-685e6ce13172">Álvares de Azevedo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#d19684c1-80d4-4363-a185-a7c1fb7ea05b">História</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ed7057b3-c424-402e-a289-3ed52ca5c3fa">Consequências do Expansionismo Marítimo </a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#6c3969a2-1c19-49c8-a1c0-776f98037b46">Filosofia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#9faba82b-2c91-4164-a8de-514dd9afc3bc">Revolução Científica </a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#afe4269d-1c33-4e23-a317-31bac64554fe">Astronomia</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#b679e5aa-9795-46a1-aa6e-6de809652f0b">Galileu</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#7db89fe4-489e-4b0f-ad23-1f84d14cc29e">Física do Cosmo</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0e0ac959-4519-4948-b1d0-21ce9f1915ff">Unificação na Física</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b7062162-1462-4512-ae6e-3e40e7ff8ce1">Gravidade Zero</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#6b7b3892-b7d4-4e93-99c8-37dad1c04e21">Aprofundamento de Inglês</a></div></nav></details></li></ul><h1 id="e28958c0-7753-411b-9da1-35fe39027767" class="block-color-yellow_background">Matemática</h1><h2 id="7b8a5339-4a71-4b73-9405-ca49d9a0dbaa" class="">Progressão Aritmética</h2><div id="21ec17f3-a389-4bc6-af96-5fed6f7157a0" class="column-list"><div id="6b7e082f-2e4f-477a-bf31-e2a83770732f" style="width:50%" class="column"><p id="20d3e485-3d41-4340-abe5-d0b6a3f4f8f4" class="">Uma progressão aritmética é uma sequência numérica em que cada termo, a partir do segundo, é igual à soma do termo anterior com uma constante r. O número r é chamado de razão ou diferença comum da progressão aritmética</p><p id="b0e35ae2-6a32-4315-9ce9-904210cd1ddd" class=""><strong>Sequência crescente:</strong> (2,5,8,11…) R=3</p><p id="730a49a7-2e68-4887-b46e-6869dab8a613" class=""><strong>Sequência decrescente: </strong>(10,7,4,…) R=-3</p><p id="4a18b56e-dd4a-4e25-91ff-749b0dff8738" class=""><strong>Sequência constante:</strong> (8,8,8…) R=0</p></div><div id="245b8633-6b21-4a31-b903-f53bb469fc3d" style="width:50%" class="column"><figure id="c1b16075-9ff8-4397-b956-84229cc46a59" class="image"><a href="Resumo%2005%2010%20-%20Tarantula%207c1d5de9f86f44c2a1748e30670eefe2/Untitled.png"><img style="width:240px" src="Resumo%2005%2010%20-%20Tarantula%207c1d5de9f86f44c2a1748e30670eefe2/Untitled.png"/></a></figure></div></div><h2 id="014c5bc3-4c83-4341-9c90-ab5ef448f839" class="">Propriedade de 3 Termos Consecutivos</h2><p id="762a0aea-7ccd-4432-a4ea-11e9e3402bdc" class="">Dado um elemento qualquer <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">a_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>, podemos representá-lo como sendo a média do termo posterior e anterior</p><p id="9774506f-7b46-48e0-8bdf-689853450057" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">a_n = \frac{a_{n-1}+a_{n+1}}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.205096em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.860096em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.451765em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173142857142857em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.20252142857142857em;"><span></span></span></span></span></span></span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173142857142857em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.20252142857142857em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></p><h2 id="7dfae482-f213-4678-a151-e36337c54279" class="">Demonstração Gráfica </h2><p id="8df7340c-b460-4573-ad15-9fb6373791f2" class=""><strong>(só pra quem quiser entender visualmente o pq)</strong></p><div id="2e3287e9-8338-435f-87bd-4f0b644afa11" class="column-list"><div id="111757c2-1f76-443d-9ad7-e45e7af740e9" style="width:33.333333333333336%" class="column"><figure id="b4765ea6-6025-4212-b692-2a2db6e1fbeb" class="image"><a href="Resumo%2005%2010%20-%20Tarantula%207c1d5de9f86f44c2a1748e30670eefe2/Untitled%201.png"><img style="width:528px" src="Resumo%2005%2010%20-%20Tarantula%207c1d5de9f86f44c2a1748e30670eefe2/Untitled%201.png"/></a><figcaption>P.A com razão r = 5</figcaption></figure></div><div id="0149b273-f4be-4aa0-a870-aa52c2614614" style="width:33.333333333333336%" class="column"><figure id="2726b1a7-ccb0-4790-b842-535c97fe0e02" class="image"><a href="Resumo%2005%2010%20-%20Tarantula%207c1d5de9f86f44c2a1748e30670eefe2/Untitled%202.png"><img style="width:528px" src="Resumo%2005%2010%20-%20Tarantula%207c1d5de9f86f44c2a1748e30670eefe2/Untitled%202.png"/></a><figcaption>Tirando a média dos “extremos”, alcançamos exatamente o valor do termo médio</figcaption></figure><p id="0016c0ef-7a20-4d73-9cda-46972b11c01c" class="">
+</p></div><div id="6210c98c-e282-41f4-a645-13f260767975" style="width:33.33333333333333%" class="column"><figure id="cc7a3807-df8f-4ca8-8c9d-40d9369467fd" class="image"><a href="Resumo%2005%2010%20-%20Tarantula%207c1d5de9f86f44c2a1748e30670eefe2/Untitled%203.png"><img style="width:749px" src="Resumo%2005%2010%20-%20Tarantula%207c1d5de9f86f44c2a1748e30670eefe2/Untitled%203.png"/></a></figure><p id="c61bccf0-d056-4421-b2f8-390e2cd2a82f" class="">
+</p></div></div><p id="b90e1590-f337-4b24-bde7-8d444c1aefdc" class=""><strong>Link aqui (blz friends): </strong></p><figure id="3fde7788-d2b8-43c3-a347-9fb4133a37a6"><a href="https://www.youtube.com/watch?v=zoFC82aPq1A&amp;t=752s" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href"><img src="https://www.google.com/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=zoFC82aPq1A&amp;t=752s</div></div><img src="http://i.ytimg.com/vi/zoFC82aPq1A/hqdefault.jpg" class="bookmark-image"/></a></figure><hr id="cd015fab-f407-4ce7-9e63-a727022244d1"/><h1 id="a47907c3-1ece-4b51-a7f4-d6a31d86cd37" class="block-color-teal_background">Física</h1><h2 id="400eee59-d08d-45b9-93ce-12539974ba13" class="">Quantidade de Movimento (ou momento linear)</h2><p id="14eef0be-a4ac-4535-8986-f7d020fa8082" class="">É o produto da massa pela velocidade:</p><figure id="a16d9b4f-2dbf-4d95-bf1c-aff992153b00" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>Q</mi><mo>=</mo><mi>m</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">Q = mv</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span></span></div></figure><h2 id="952d41a8-3220-4e8b-b460-829e0b14591d" class="">Impulso</h2><p id="84120f7f-2d08-462c-9511-83624cf193fb" class="">É a grandeza que mede o quanto a quantidade de movimento de um corpo variou:</p><figure id="64b9c540-275a-439d-8a65-c072c4c4e5c5" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>I</mi><mo>=</mo><msub><mi>Q</mi><mi>f</mi></msub><mo>−</mo><msub><mi>Q</mi><mi>i</mi></msub><mo>=</mo><mi>m</mi><msub><mi>v</mi><mi>f</mi></msub><mo>−</mo><mi>m</mi><msub><mi>v</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">I = Q_f -Q_i=mv_f-mv_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8694379999999999em;vertical-align:-0.286108em;"></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></div></figure><p id="93af9978-ffd6-46b3-8777-fa926b4b8b7c" class="">Ele pode ser calculado pela força vezes o tempo de atuação</p><figure id="f7b21ed1-1170-4fa4-a762-f99d7a39f61f" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>I</mi><mo>=</mo><mi>F</mi><mo>×</mo><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">I = F×\Delta t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span><span class="mord mathnormal">t</span></span></span></span></span></div></figure><p id="86b6c6f2-2ea7-4211-8a7e-11f3b3465ef4" class=""><strong>Obs</strong>: Usar sempre as unidades do S.I da forma correta → <strong>Kg</strong> (massa) | <strong>m</strong> (comprimento) |<strong> s</strong> (tempo) | <strong>N</strong> (força)</p><p id="f60d1b3d-76c4-4871-ae99-d8dca0017fa7" class=""><strong>Links aqui: </strong></p><figure id="35960178-fa2b-48b9-a0bf-de6143139b03"><a href="https://www.youtube.com/watch?v=stUK4mZ_NrA" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Impulso de uma força - Aula 01</div><div class="bookmark-description">Fala galera do Youtube!!! Nesse vídeo vou iniciar o estudo do Impulso de uma força. Explanando a teoria e trabalhando com alguns exemplos básicos para fixar o conteúdo. Espero que gostem o/ Quer aprender tudo sobre Impulso e Quantidade de Movimento? Inscreva-se! Grande abraço e bons estudos!</div></div><div class="bookmark-href"><img src="https://www.google.com/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=stUK4mZ_NrA</div></div><img src="https://i.ytimg.com/vi/stUK4mZ_NrA/hqdefault.jpg" class="bookmark-image"/></a></figure><figure id="1263c1f0-726c-4b83-a09d-6af8ac91819a"><a href="https://www.youtube.com/watch?v=pkiJoVcVMsM" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Quantidade de Movimento - Aula 02</div><div class="bookmark-description">Fala galera do Youtube!!! Nesse vídeo vou dar continuidade à playlist de Impulso e Quantidade de Movimento (Momento Linear). Explanando a teoria e trabalhando com alguns exemplos básicos para fixar o conteúdo. Espero que gostem o/ Quer aprender tudo sobre Impulso e Quantidade de Movimento? Inscreva-se! Grande abraço e bons estudos!</div></div><div class="bookmark-href"><img src="https://www.google.com/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=pkiJoVcVMsM</div></div><img src="https://i.ytimg.com/vi/pkiJoVcVMsM/hqdefault.jpg" class="bookmark-image"/></a></figure><hr id="3f15e70f-31bb-42b2-a21a-73902679fecb"/><h1 id="f51eeba9-3cfc-43f3-9b5a-cff768c19590" class="block-color-red_background">Química</h1><h2 id="6810d714-3664-4033-a88c-d748caff9e6b" class="">Gás</h2><p id="13009cc0-d4be-47c0-af14-d8f0fae47880" class="">Estado da matérias com moléculas livres que se deslocam caoticamente preenchendo o espaço do recipiente em que estão</p><h3 id="aa4c121f-90a8-4bf7-9587-d9855f6aaa07" class="">Pressão</h3><p id="d6abbe53-9e61-48f4-9d66-db05349adfe2" class="">Força pela superfície produzida a partir das colisões das moléculas contra as paredes e elas mesmas (1 atm = 760 mmHg = 760 Torr)</p><h3 id="433af527-c68f-4626-a458-508bacff53cd" class="">Volume</h3><p id="d2e71864-f489-4c62-88a4-1fce1cda5823" class="">Indefinido para os gases, pois ocupam o volume do recipiente (L, m³)</p><h3 id="d80b70df-17f9-4aa4-8f84-e5dd3c187aab" class="">Temperatura</h3><p id="519ab340-651a-43d2-a51c-45c24759d191" class="">É proporcional a energia cinética média das moléculas (C° e K)</p><p id="ceed74cc-ce51-43dc-b194-e4cb7efb4db3" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>k</mi></msub><mo>=</mo><msub><mi>T</mi><mi>c</mi></msub><mo>+</mo><mn>273</mn><mi mathvariant="normal">°</mi></mrow><annotation encoding="application/x-tex">T_k = T_c + 273°</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">273°</span></span></span></span></span><span>﻿</span></span></p><h2 id="0664babb-93c3-445b-9750-cd534f509af9" class="">Gases Ideais</h2><p id="1ad1fa20-499d-46b0-9311-746b71ad684a" class="">Gases em que o <strong>volume da molécula </strong>é desprezível e as <strong>forças atrativas</strong> entre elas também (gases ideias ≠ gases reais)</p><p id="482e7285-f494-4811-afea-8e12204d6e76" class="">É apenas uma aproximação para o gás real (melhor aproximação com baixas pressões e altas temperaturas)</p><h2 id="8d4ab2ca-2739-446d-b598-43960c61ed23" class="">Teoria Cinética dos Gases</h2><ul id="1094cb3d-0289-473f-a111-b171a28e7fa1" class="bulleted-list"><li style="list-style-type:disc">Volume das moléculas desprezíveis</li></ul><ul id="753921e9-1399-4aad-8080-e77ba4b40233" class="bulleted-list"><li style="list-style-type:disc">Movimento aleatório</li></ul><ul id="6a1c5e9d-84c5-4bf6-9f69-7e06b3248117" class="bulleted-list"><li style="list-style-type:disc">Pressão gerada por colisões elásticas (sem perda de energia)</li></ul><ul id="4380c371-1ccb-4dec-9c4f-a360d2bbd55a" class="bulleted-list"><li style="list-style-type:disc">Energia Cinética média proporcional a temperatura (<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>m</mi><mo>×</mo><mi>v</mi><mtext>²</mtext></mrow><mn>2</mn></mfrac><mtext> </mtext><mi>α</mi><mtext> </mtext><mi>T</mi></mrow><annotation encoding="application/x-tex">\frac{m×v²}{2}\  \alpha\  T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1473309999999999em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.802331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span><span class="mord mtight">²</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"> </span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace"> </span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span></span><span>﻿</span></span>)</li></ul><hr id="96cceec3-1e9a-4878-842c-91b471e88ee9"/><h1 id="c5a47c2e-37ce-48a9-84e0-e47bb7f31a39" class="block-color-teal_background">Biologia</h1><h3 id="e1b8a648-7606-4943-8bcd-713295603de6" class="">Pteridófitas</h3><table id="4f095fbe-71a7-476a-b12c-b25d55ca8fc9" class="simple-table"><thead class="simple-table-header"><tr id="b1351b72-aa6d-47b0-8f48-a5f5aba6b954"><th id="=BTj" class="simple-table-header-color simple-table-header"></th><th id="{&lt;Q[" class="simple-table-header-color simple-table-header" style="width:336.15625px">Pteridófitas</th></tr></thead><tbody><tr id="e20a58a8-6879-4446-84ca-f50c156c5c27"><th id="=BTj" class="simple-table-header-color simple-table-header">Exemplos</th><td id="{&lt;Q[" class="" style="width:336.15625px">Avenca - Samambaia </td></tr><tr id="2e6051f5-ecc5-45c8-ba56-134145ff8cb2"><th id="=BTj" class="simple-table-header-color simple-table-header">Vaso condutor</th><td id="{&lt;Q[" class="" style="width:336.15625px">Sim</td></tr><tr id="62b2633d-a013-4ac6-8998-3308928ea83b"><th id="=BTj" class="simple-table-header-color simple-table-header">Água para fecundação</th><td id="{&lt;Q[" class="" style="width:336.15625px">Sim</td></tr><tr id="d03d8978-fb01-4268-b441-b534ae8ba70e"><th id="=BTj" class="simple-table-header-color simple-table-header">Sementes</th><td id="{&lt;Q[" class="" style="width:336.15625px">Não</td></tr><tr id="4f53a03c-59dc-4546-9476-fa4d7a4e0f29"><th id="=BTj" class="simple-table-header-color simple-table-header">Flor/Fruto</th><td id="{&lt;Q[" class="" style="width:336.15625px">Não</td></tr><tr id="2bdd034a-d83f-4e47-9aa1-a3541ad51861"><th id="=BTj" class="simple-table-header-color simple-table-header">Fase Duradoura</th><td id="{&lt;Q[" class="" style="width:336.15625px">Esporófito</td></tr></tbody></table><ul id="c83fa16d-a0d7-4fe3-b77d-f2479bf09cc3" class="bulleted-list"><li style="list-style-type:disc">Vivem em ambientes terrestres úmidos</li></ul><ul id="8697f955-a689-4f33-ab0d-fa2642ff52db" class="bulleted-list"><li style="list-style-type:disc">São vasculares com vasos para o transporte de seiva (e por isso crescem)</li></ul><ul id="51307f30-25d8-48d1-a478-5d1e65ff57c8" class="bulleted-list"><li style="list-style-type:disc">Esporófito verde, complexo e duradouro</li></ul><ul id="7a7dd4f7-7900-48f0-84d4-e999b057abba" class="bulleted-list"><li style="list-style-type:disc">Gametófito pouco complexo, transitório (prótalo)</li></ul><hr id="23687412-d8dc-412e-860d-30bfb7d1519e"/><h1 id="4056eb36-e6b4-48a8-9f16-83c3e86ed372" class="block-color-brown_background">Literatura</h1><h2 id="97b36f1e-0d40-4249-984b-e6d2c37f8e8a" class="">Segunda Fase do Romantismo (Ultrarromantismo)</h2><p id="7b8904d6-3612-4a82-a33d-ec9ac2a168d1" class="">→ “Geração perdida” descrente com os ideais da Revolução Francesa</p><ul id="78fffc6c-b490-48f5-9182-4c51addaac0c" class="bulleted-list"><li style="list-style-type:disc">Pessimismo (apreço pela morte)</li></ul><ul id="4ca1b480-57a9-4115-9a2e-376b54a16127" class="bulleted-list"><li style="list-style-type:disc">Vida desregrada</li></ul><ul id="ef8f94c9-d354-40fd-91df-68468257fa28" class="bulleted-list"><li style="list-style-type:disc">Subjetividade e Sentimentalismo ainda maiores </li></ul><ul id="e5bb33e7-f3c0-40fd-a43c-65d63d027fd8" class="bulleted-list"><li style="list-style-type:disc">Egocentrismo</li></ul><ul id="de24900f-d7e7-41f9-b248-2e1a9fe35832" class="bulleted-list"><li style="list-style-type:disc">Satanismo</li></ul><ul id="caf141b3-a941-4d40-b7f0-51786618aa7d" class="bulleted-list"><li style="list-style-type:disc">Inadequação</li></ul><ul id="24e97574-587d-4637-b3cb-707436062367" class="bulleted-list"><li style="list-style-type:disc">“Mal do Século”</li></ul><h2 id="6c991557-2265-42e9-8273-685e6ce13172" class="">Álvares de Azevedo</h2><p id="7ddf1801-b51d-4a30-a90d-5f5f32a329c8" class="">→ Principal autor, que morreu cedo por não se cuidar</p><ul id="92cd7273-f7c2-4ff6-bd0e-ef73759f5ef7" class="bulleted-list"><li style="list-style-type:disc">Mulher idealizada e ora imaculada ora sensual (mas sem realização)</li></ul><ul id="781618c6-cd95-4d25-ac82-8f8b0245ebfe" class="bulleted-list"><li style="list-style-type:disc">“Lira dos Vinte anos” → Principal Obra</li></ul><ul id="0cbf793b-baec-4564-a4a9-b11199d4cc47" class="bulleted-list"><li style="list-style-type:disc">“Noites na Taverna” → Mundo Decadente</li></ul><ul id="99acd101-50c2-43fb-8a8d-9c16a7e1751b" class="bulleted-list"><li style="list-style-type:disc">“Macário” → Satanismo</li></ul><ul id="36ece078-1516-4f63-bfe9-3686a8e50419" class="bulleted-list"><li style="list-style-type:disc">“Namoro a cavalo” → Ironizando o próprio romantismo</li></ul><hr id="8a5bd268-84fe-4a65-8dca-ef70e81fe94e"/><h1 id="d19684c1-80d4-4363-a185-a7c1fb7ea05b" class="block-color-brown_background">História</h1><h2 id="ed7057b3-c424-402e-a289-3ed52ca5c3fa" class="">Consequências do Expansionismo Marítimo </h2><ul id="aa44e3fb-f027-465d-aae0-cce901fd1b0a" class="bulleted-list"><li style="list-style-type:disc">Tratado de Tordesilhas (1494): Repartindo as descobertas no oceano atlântico entre Portugal e Espanha </li></ul><ul id="bd4df2d3-8197-4b28-a3e8-7da92a7c03c0" class="bulleted-list"><li style="list-style-type:disc">Massacre Físico (doenças, e outros) e Cultural de povos nativos</li></ul><ul id="f69e4ab9-8fd4-43fd-8b0a-7583216dc04a" class="bulleted-list"><li style="list-style-type:disc">Novas rotas comerciais e novos produtos</li></ul><ul id="ea557e71-830b-4c57-9779-6585231ba865" class="bulleted-list"><li style="list-style-type:disc">Intensificação do Tráfico negreiro</li></ul><ul id="0eaf605f-8fb8-4696-9983-1fecc3fbb651" class="bulleted-list"><li style="list-style-type:disc">Exploração Colonial</li></ul><ul id="bd08860d-7ecb-428e-9bcf-fe20880310df" class="bulleted-list"><li style="list-style-type:disc">Transferência do Eixo Econômico do mediterrâneo para o atlântico</li></ul><p id="029c5c66-b20a-4ea5-b1b8-68ef5a827449" class="">Link da vídeo aula do Hilário: </p><figure id="ab5c7023-1c59-40a3-a418-8b4fcdb6cde2"><a href="https://www.youtube.com/watch?v=KzSAOsL6E7g" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Curso Preparatório ESA 2020 - 2021 : Expansão Marítima e Comercial</div><div class="bookmark-description">Contatos Profissionais ou parcerias: hilarioxavier@zipmail.com.br A expansão marítima: Portugal foi o reino pioneiro da expansão marítima, lançando seus primeiros navios ao mar ainda no século XV. A tomada de Ceuta, marco da expansão marítima portuguesa, data de 1415. Isso, porque além de sua posição geográfica privilegiada, sua formação como Estado centralizado aconteceu de forma precoce, ainda na Idade Média.</div></div><div class="bookmark-href"><img src="https://www.google.com/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=KzSAOsL6E7g</div></div><img src="https://i.ytimg.com/vi/KzSAOsL6E7g/hqdefault.jpg" class="bookmark-image"/></a></figure><hr id="3d7c7d09-f57e-4e31-8fc1-c604c48aff46"/><h1 id="6c3969a2-1c19-49c8-a1c0-776f98037b46" class="block-color-yellow_background">Filosofia</h1><h2 id="9faba82b-2c91-4164-a8de-514dd9afc3bc" class="">Revolução Científica </h2><ul id="c3c06a3b-7772-4799-841b-9c906e5086ad" class="bulleted-list"><li style="list-style-type:disc">Idade Média → Moderna</li></ul><ul id="cfb2d10a-07b7-43a1-9744-630ccfb86cf0" class="bulleted-list"><li style="list-style-type:disc">Antropocentrismo e Superação do pensamento escolástico (religioso: que unia fé e razão)</li></ul><h3 id="afe4269d-1c33-4e23-a317-31bac64554fe" class="">Astronomia</h3><ul id="2fd5292a-d238-4c7c-ab38-b1bdc7d2b284" class="bulleted-list"><li style="list-style-type:disc">Heliocentrismo → Por Nicolau Copérnico e defendido por outros (inclusive Galileu) ⇒ Retirava a Terra do centro (ideia de Ptolomeu) o que irritaria a igreja católica por tirar o homem do centro da criação</li></ul><h3 id="b679e5aa-9795-46a1-aa6e-6de809652f0b" class="">Galileu</h3><ul id="ddae6ae6-9cbd-49d3-8c4d-2951db3d247b" class="bulleted-list"><li style="list-style-type:disc">Fez o telescópio e usou ele para observações astronômicas validando o heliocentrismo</li></ul><ul id="54fe1770-d4e6-4892-bb87-6ec0cd9d89dc" class="bulleted-list"><li style="list-style-type:disc">Perseguido pela inquisição</li></ul><hr id="57db0694-1948-4341-b99c-db1106115ffb"/><p id="475380f2-43a8-4148-8954-18d6f3407569" class="">
+</p><h1 id="7db89fe4-489e-4b0f-ad23-1f84d14cc29e" class="block-color-teal_background">Física do Cosmo</h1><h3 id="0e0ac959-4519-4948-b1d0-21ce9f1915ff" class="">Unificação na Física</h3><p id="87b18068-c1ad-4cd7-919c-13a17739a5e8" class="">O que Newton fez para explicar a gravidade, unificando os movimentos gravitacionais e descrevendo matematicamente, influenciou físicos posteriores que trouxeram modelos que também eram unificadores (e.g. Maxwell, Einstein, etc..)</p><h3 id="b7062162-1462-4512-ae6e-3e40e7ff8ce1" class="">Gravidade Zero</h3><p id="24b17ba1-01c4-4b6c-b3b2-5903b2c1b3f4" class="">É quando temos a <strong>sensação </strong>de ausência de peso, mas na realidade é só a ausência da força normal em uma situação de queda por exemplo. </p><p id="6968d9a8-6c1c-4bf5-b2e9-2c474e3c47ce" class="">Isso ocorre, pois no referencial em que estamos inseridos, está se movimentando da mesma forma que nós, logo parecerá que estamos flutuando sem a influência da gravidade</p><p id="c1385dbc-1b0c-4dc5-a41c-1699819e2b4f" class="">
+</p><hr id="e1fe8e9b-b791-4789-b933-f6f7102c8cdf"/><h1 id="6b7b3892-b7d4-4e93-99c8-37dad1c04e21" class="block-color-pink_background">Aprofundamento de Inglês</h1><p id="38edce0a-0685-43d3-b236-058017a6c663" class="">To pay → pagar
+To hit → Acertar
+Stole → Roubar (simple past)
+Given → dar (particípio)</p><hr id="ba3a385c-5f2c-41c8-b6bd-442d2b91fa65"/><p id="ab0213b3-7746-4edd-8d9e-9ed1b6f8eb10" class="">Heitor e Magon e Wilson © 2022, all rights reserved</p><p id="02362d01-6f0d-4bfc-87c6-607457ad8b9d" class="">
+</p></div></article></body></html>

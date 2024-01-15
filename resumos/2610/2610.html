@@ -1,0 +1,683 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumo 26/10 - Kant</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="73aa571e-2605-497f-a27d-d76b27c8ad2b" class="page sans"><header><img class="page-cover-image" src="Resumo%2026%2010%20-%20Kant%2073aa571e2605497fa27dd76b27c8ad2b/nebula.jpg" style="object-position:center 42.989999999999995%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">👀</span></div><h1 class="page-title">Resumo 26/10 - Kant</h1></header><div class="page-body"><blockquote id="9c2b6001-b0f5-4882-bcbd-b6ffa337b093" class=""><strong><em>Nós, da firma Resumos&amp;CIA, nos isentamos de qualquer responsabilidade quanto a este resumo e possíveis ausências de conteúdo para a prova. Use por sua própria conta e risco.</em></strong></blockquote><ul id="011b4940-ba19-4728-bc1e-5314d39cfdf3" class="toggle"><li><details open=""><summary>Conteúdo</summary><nav id="b42175ec-52de-458a-a750-49145ab0e5e1" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#59a10120-0d3f-4861-a6f9-14289faf9ea2">Matemática</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#770d4f4a-23b5-4d23-899f-d0f1a0287f7d">Física</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a76c26c8-f44e-45a1-9986-5ea4242ccb60">Quantidade de Movimento (ou momento linear)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#19919970-e43d-46c4-930b-be302cfdc0fc">Impulso</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1fbe1222-1bec-4c67-8f29-4fe50607b03c">Química</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#c41e1383-abf9-45d2-b0f3-9ec86b82846b">Transformações gasosas</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#a68c6d4e-2eb7-4973-b1db-f7036fb381a1">Transformações Isotérmicas (Lei de Boyle)</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#f67f1e5b-45c7-4912-bbd0-b91e3a49ce25">Transformação Isobáricas (Lei de Charles)</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#dc447470-b71d-4d72-befc-054c894b22a1">Transformação Isovolumétrica</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#7b9d69fb-1049-4582-afd6-bc7a7cf07297">Biologia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#aa5a9f34-0c18-4509-a189-3b01c2ffbbb9">Gimnospermas</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#7b68a469-857b-4301-bb74-cac2d01d0d91">Literatura</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b09dffe9-8078-40ac-b2ee-742ec21c3c84">Terceira Fase do Romantismo (”Condoreirismo” → Liberdade)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b850355c-a6d7-4abc-8633-27e4f3f970ee">Castro Alves</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#869803af-66ca-4958-b67d-d8b7c50a3979">História</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7c0ba6d4-7fa6-4830-ae31-eced306828d0">Características Mercantilismo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#4ea974e2-9063-4118-a959-394fee79c214">Filosofia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ea6cd722-18c9-42e6-b9da-bb2e4f1a1144">Francis Bacon</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#a7f23bd1-aed3-4339-9866-d77e81b22df1">Teoria dos Ídolos </a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#90825a9f-c032-40e9-80e5-d85bc6e9dc81">Física do Cosmo</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#842588aa-21bc-4576-929e-6fe177e63441">Guerra Fria</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#94f8ca33-c53c-40fb-8c2e-c8aa00166764">Astronáutica</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#8b0881e3-8d02-4a1b-9f5e-83d9a6b89ae2">Velocidade Orbital</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f9beed3d-7103-4fa7-88a1-0f632d5fd0b0">Tipos de Órbitas</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#05b29786-c08b-4283-a8ef-58eab430e9e2">Aprofundamento de Inglês</a></div></nav></details></li></ul><h1 id="59a10120-0d3f-4861-a6f9-14289faf9ea2" class="block-color-yellow_background">Matemática</h1><div id="5fdfd6be-ea21-4c50-914c-ee8b0a483fd7" class="column-list"><div id="92538a22-36a7-4722-a68a-1d54d349f65a" style="width:50%" class="column"><figure id="009e829b-7c78-4a9e-841d-7367ad9a0ca8" class="image"><a href="Resumo%2026%2010%20-%20Kant%2073aa571e2605497fa27dd76b27c8ad2b/Untitled.png"><img style="width:1024px" src="Resumo%2026%2010%20-%20Kant%2073aa571e2605497fa27dd76b27c8ad2b/Untitled.png"/></a></figure></div><div id="b09713e3-bf20-4a92-b102-ebeb1e80d259" style="width:50%" class="column"><p id="c6b075f2-4a05-4283-b657-4c18ae0f64ec" class="">
+</p></div></div><hr id="9007da75-dadf-4030-a6ea-9c3321a24e9c"/><h1 id="770d4f4a-23b5-4d23-899f-d0f1a0287f7d" class="block-color-teal_background">Física</h1><h2 id="a76c26c8-f44e-45a1-9986-5ea4242ccb60" class="">Quantidade de Movimento (ou momento linear)</h2><p id="cc031372-3a74-4ab6-8a9b-1858e26d9ffd" class="">É o produto da massa pela velocidade:</p><figure id="bfd34bc3-6b16-45cf-b33a-7891af49544b" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>Q</mi><mo>=</mo><mi>m</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">Q = mv</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span></span></div></figure><h2 id="19919970-e43d-46c4-930b-be302cfdc0fc" class="">Impulso</h2><p id="a6166348-47a4-48a3-9d69-8108c7724978" class="">É a grandeza que mede o quanto a quantidade de movimento de um corpo variou:</p><figure id="b484de2a-73d8-4e09-af42-1569e25facf4" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>I</mi><mo>=</mo><msub><mi>Q</mi><mi>f</mi></msub><mo>−</mo><msub><mi>Q</mi><mi>i</mi></msub><mo>=</mo><mi>m</mi><msub><mi>v</mi><mi>f</mi></msub><mo>−</mo><mi>m</mi><msub><mi>v</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">I = Q_f -Q_i=mv_f-mv_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8694379999999999em;vertical-align:-0.286108em;"></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></div></figure><p id="ec7da934-5c30-4ff1-a776-2dfd1ef95e6c" class="">Ele pode ser calculado pela força vezes o tempo de atuação</p><figure id="4fe04ee2-11d3-4f6e-adcd-fbdf05563eb3" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>I</mi><mo>=</mo><mi>F</mi><mo>×</mo><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">I = F×\Delta t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span><span class="mord mathnormal">t</span></span></span></span></span></div></figure><p id="aa51aec8-2acc-4f31-990f-a9db82998740" class=""><strong>Obs</strong>: Usar sempre as unidades do S.I da forma correta → <strong>Kg</strong> (massa) | <strong>m</strong> (comprimento) |<strong> s</strong> (tempo) | <strong>N</strong> (força)</p><p id="b63edbe2-fd38-421d-a4e4-61cad257a8dd" class=""><strong>Links aqui: </strong></p><figure id="03113c30-f317-4525-8542-7f7ae3bab787"><a href="https://www.youtube.com/watch?v=stUK4mZ_NrA" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Impulso de uma força - Aula 01</div><div class="bookmark-description">Fala galera do Youtube!!! Nesse vídeo vou iniciar o estudo do Impulso de uma força. Explanando a teoria e trabalhando com alguns exemplos básicos para fixar o conteúdo. Espero que gostem o/ Quer aprender tudo sobre Impulso e Quantidade de Movimento? Inscreva-se! Grande abraço e bons estudos!</div></div><div class="bookmark-href"><img src="https://www.google.com/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=stUK4mZ_NrA</div></div><img src="https://i.ytimg.com/vi/stUK4mZ_NrA/hqdefault.jpg" class="bookmark-image"/></a></figure><figure id="24a5cfc1-a05a-4eed-bf01-0c279040c9f2"><a href="https://www.youtube.com/watch?v=pkiJoVcVMsM" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Quantidade de Movimento - Aula 02</div><div class="bookmark-description">Fala galera do Youtube!!! Nesse vídeo vou dar continuidade à playlist de Impulso e Quantidade de Movimento (Momento Linear). Explanando a teoria e trabalhando com alguns exemplos básicos para fixar o conteúdo. Espero que gostem o/ Quer aprender tudo sobre Impulso e Quantidade de Movimento? Inscreva-se! Grande abraço e bons estudos!</div></div><div class="bookmark-href"><img src="https://www.google.com/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=pkiJoVcVMsM</div></div><img src="https://i.ytimg.com/vi/pkiJoVcVMsM/hqdefault.jpg" class="bookmark-image"/></a></figure><hr id="fa672d6c-955f-4419-add0-cf5b073a9f7c"/><h1 id="1fbe1222-1bec-4c67-8f29-4fe50607b03c" class="block-color-red_background">Química</h1><h2 id="c41e1383-abf9-45d2-b0f3-9ec86b82846b" class="">Transformações gasosas</h2><p id="0d5c4cbc-5968-4aad-9bbd-b5a9d9da73f6" class=""> </p><h3 id="a68c6d4e-2eb7-4973-b1db-f7036fb381a1" class="">Transformações Isotérmicas (Lei de Boyle)</h3><ul id="edf6f25b-58c4-459f-9667-7af35e0d1294" class="bulleted-list"><li style="list-style-type:disc">Transformação com temperatura constante</li></ul><ul id="7621e6bd-efb0-40bc-be71-e2ae63284ae0" class="bulleted-list"><li style="list-style-type:disc">Pressão inversamente proporcional ao volume</li></ul><ul id="49d2a07e-3f41-492b-865f-adfd7cd70956" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>1</mn></msub><mo>×</mo><msub><mi>V</mi><mn>1</mn></msub><mo>=</mo><msub><mi>P</mi><mn>2</mn></msub><mo>×</mo><msub><mi>V</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">P_1 ×V_1 = P_2×V_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></li></ul><figure id="9c5fcdcf-cb68-43cd-9802-36502a65b884" class="image" style="text-align:left"><a href="Resumo%2026%2010%20-%20Kant%2073aa571e2605497fa27dd76b27c8ad2b/Untitled%201.png"><img style="width:240px" src="Resumo%2026%2010%20-%20Kant%2073aa571e2605497fa27dd76b27c8ad2b/Untitled%201.png"/></a></figure><h3 id="f67f1e5b-45c7-4912-bbd0-b91e3a49ce25" class="">Transformação Isobáricas (Lei de Charles)</h3><ul id="c0293c97-63ee-4893-8df7-67d17bd5e0ff" class="bulleted-list"><li style="list-style-type:disc">Transformação com pressão constante</li></ul><ul id="546b26ff-27bc-44b1-bc50-3706e3a0c648" class="bulleted-list"><li style="list-style-type:disc">Temperatura diretamente proporcional ao volume</li></ul><ul id="25e7a88a-3201-4a48-bf36-9a172e9e5554" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>V</mi><mn>1</mn></msub><msub><mi>T</mi><mn>1</mn></msub></mfrac><mo>=</mo><mfrac><msub><mi>V</mi><mn>2</mn></msub><msub><mi>T</mi><mn>2</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\frac{V_1}{T_1}=\frac{V_2}{T_2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3335309999999998em;vertical-align:-0.44509999999999994em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8884309999999999em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.13889em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4101em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.22222em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.44509999999999994em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.3335309999999998em;vertical-align:-0.44509999999999994em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8884309999999999em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.13889em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4101em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.22222em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.44509999999999994em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span><figure id="f32480c3-a2a7-4053-9891-a50d00ad217d" class="image" style="text-align:left"><a href="Resumo%2026%2010%20-%20Kant%2073aa571e2605497fa27dd76b27c8ad2b/Untitled%202.png"><img style="width:240px" src="Resumo%2026%2010%20-%20Kant%2073aa571e2605497fa27dd76b27c8ad2b/Untitled%202.png"/></a></figure></li></ul><h3 id="dc447470-b71d-4d72-befc-054c894b22a1" class="">Transformação Isovolumétrica</h3><ul id="931a3b2f-9159-4302-bff4-f65bb83a99e4" class="bulleted-list"><li style="list-style-type:disc">Transformação com volume constante</li></ul><ul id="c78a83c8-c82a-4274-a729-9d1d7a7f0a44" class="bulleted-list"><li style="list-style-type:disc">Temperatura diretamente proporcional à pressão</li></ul><ul id="bd725c19-c2f3-46a9-9f4a-a10cf59cb20f" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>P</mi><mn>1</mn></msub><msub><mi>T</mi><mn>1</mn></msub></mfrac><mo>=</mo><mfrac><msub><mi>P</mi><mn>2</mn></msub><msub><mi>T</mi><mn>2</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\frac{P_1}{T_1}=\frac{P_2}{T_2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3335309999999998em;vertical-align:-0.44509999999999994em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8884309999999999em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.13889em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4101em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.13889em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.44509999999999994em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.3335309999999998em;vertical-align:-0.44509999999999994em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8884309999999999em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.13889em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4101em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.13889em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.44509999999999994em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></li></ul><figure id="198dcbac-cd42-4c29-93df-b4cacb2782bb" class="image" style="text-align:left"><a href="Resumo%2026%2010%20-%20Kant%2073aa571e2605497fa27dd76b27c8ad2b/Untitled%203.png"><img style="width:288px" src="Resumo%2026%2010%20-%20Kant%2073aa571e2605497fa27dd76b27c8ad2b/Untitled%203.png"/></a></figure><p id="c1a27c0f-c435-477d-affd-e6cbe405361e" class="">  </p><hr id="32b8c074-cdb3-468b-9e9b-6eb312b05fae"/><h1 id="7b9d69fb-1049-4582-afd6-bc7a7cf07297" class="block-color-teal_background">Biologia</h1><h3 id="aa5a9f34-0c18-4509-a189-3b01c2ffbbb9" class="">Gimnospermas</h3><table id="99079be5-f701-4b9d-8078-c3b3e79bffa4" class="simple-table"><thead class="simple-table-header"><tr id="ee127198-d675-4f9a-9797-4edafe0684cb"><th id="=BTj" class="simple-table-header-color simple-table-header"></th><th id="{&lt;Q[" class="simple-table-header-color simple-table-header" style="width:336.15625px">Gimnospermas</th></tr></thead><tbody><tr id="53229a91-acb9-442d-8af6-221325f94776"><th id="=BTj" class="simple-table-header-color simple-table-header">Exemplos</th><td id="{&lt;Q[" class="" style="width:336.15625px">Sequoia - Araucária</td></tr><tr id="9b86c5ed-dc8a-4b52-bd32-787ee7c18733"><th id="=BTj" class="simple-table-header-color simple-table-header">Vaso condutor</th><td id="{&lt;Q[" class="" style="width:336.15625px">Sim</td></tr><tr id="b1a10bd6-68e4-4317-947b-02c97cad938c"><th id="=BTj" class="simple-table-header-color simple-table-header">Água para fecundação</th><td id="{&lt;Q[" class="" style="width:336.15625px">Não</td></tr><tr id="d25bad40-87eb-4ea7-9e01-c6962c83492f"><th id="=BTj" class="simple-table-header-color simple-table-header">Sementes</th><td id="{&lt;Q[" class="" style="width:336.15625px">Sim</td></tr><tr id="c6949a78-b057-48f1-a437-41f901583840"><th id="=BTj" class="simple-table-header-color simple-table-header">Flor/Fruto</th><td id="{&lt;Q[" class="" style="width:336.15625px">Não</td></tr><tr id="2c4d0b59-fe8b-475e-b589-3e78d0400b4a"><th id="=BTj" class="simple-table-header-color simple-table-header">Fase Duradoura</th><td id="{&lt;Q[" class="" style="width:336.15625px">Esporófito</td></tr></tbody></table><ul id="ebdc5568-4b40-414e-9174-8c463c705ad4" class="bulleted-list"><li style="list-style-type:disc">Vivem em ambientes secos e frios</li></ul><ul id="98b7ed2d-ee83-4c24-ad61-4890c285ff59" class="bulleted-list"><li style="list-style-type:disc">Possuem sementes e não necessitam de água para a reprodução</li></ul><ul id="04f9a59d-70db-44c2-8264-9d68c0b86d82" class="bulleted-list"><li style="list-style-type:disc">Esporófito verde, complexo e duradouro</li></ul><ul id="c293396e-24e7-43d5-af24-17a38264b7d1" class="bulleted-list"><li style="list-style-type:disc">Gametófito pouco complexo, transitório </li></ul><ul id="2b56b905-e63f-43d5-8107-804cc454caf8" class="bulleted-list"><li style="list-style-type:disc">Pinhão com Reserva nutritiva para o embrião e pra dispersão através da Gralha (pássaro)</li></ul><hr id="66993935-3def-457b-81a9-29a9e308af53"/><h1 id="7b68a469-857b-4301-bb74-cac2d01d0d91" class="block-color-brown_background">Literatura</h1><h2 id="b09dffe9-8078-40ac-b2ee-742ec21c3c84" class="">Terceira Fase do Romantismo (”Condoreirismo” → Liberdade)</h2><p id="538be29c-dc4f-4bb8-b735-a768444dd21b" class="">→ Inspirado em Vitor Hugo</p><ul id="632be633-b157-4fd8-9cff-f1974f7b947c" class="bulleted-list"><li style="list-style-type:disc">Abolicionista e Republicano (Liberdade dos Escravos) → Quebra o Egocentrismo</li></ul><h2 id="b850355c-a6d7-4abc-8633-27e4f3f970ee" class="">Castro Alves</h2><p id="2a7be066-3946-48c2-8238-1afa1142e210" class="">→ Principal autor</p><ul id="8c00eb1d-43f8-4a28-8268-a3fa359bc0e0" class="bulleted-list"><li style="list-style-type:disc">Poesia Social</li></ul><ul id="22754228-be47-4c11-ad29-e4d9a517c30d" class="bulleted-list"><li style="list-style-type:disc">Transformar a Realidade Escravista e de opressão e ignorância no Brasil</li></ul><ul id="0df663be-93a1-4984-b8b1-ff9341d030cd" class="bulleted-list"><li style="list-style-type:disc">Linguagem Grandiosa, Hipérboles e espaços amplos</li></ul><ul id="400cf29c-d8d5-4eb7-a1f9-ba34ac075518" class="bulleted-list"><li style="list-style-type:disc">Se aproxima do Realismo </li></ul><hr id="f54daca9-47bd-41ec-b4dd-52d71a42d9a7"/><h1 id="869803af-66ca-4958-b67d-d8b7c50a3979" class="block-color-brown_background">História</h1><h2 id="7c0ba6d4-7fa6-4830-ae31-eced306828d0" class="">Características Mercantilismo</h2><ul id="7e655833-bd94-45b2-a752-b6886d5d27c5" class="bulleted-list"><li style="list-style-type:disc">Metalismo (extração de Prata e Ouro)</li></ul><ul id="17aea1f6-4633-4027-9acc-fb9e5b043172" class="bulleted-list"><li style="list-style-type:disc">Monopólio (exclusivismo de certas áreas econômicas)</li></ul><ul id="3f15a49a-6ee0-49a9-abc0-48cf9fe94d3d" class="bulleted-list"><li style="list-style-type:disc">Pacto Colonial (domínio da metrópole sobre a colônia)</li></ul><ul id="df3ecd25-7494-4697-ade3-5114fe510fd1" class="bulleted-list"><li style="list-style-type:disc">Protecionismo (Proteger mercado interno com tarifa alfandegária)</li></ul><ul id="2cd5c3b1-de0f-45d3-85bd-c7f1c1729ba4" class="bulleted-list"><li style="list-style-type:disc">Balança Comercial Favorável</li></ul><p id="1c3e81f9-e421-44e4-880c-bcb4c792aae1" class="">
+</p><hr id="abb6dc0f-dee7-4195-b3a8-264befd11bd9"/><h1 id="4ea974e2-9063-4118-a959-394fee79c214" class="block-color-yellow_background">Filosofia</h1><h2 id="ea6cd722-18c9-42e6-b9da-bb2e4f1a1144" class="">Francis Bacon</h2><blockquote id="9b0d80ce-29f4-4b5d-b40d-062bb4d208fb" class="">“Saber é poder”</blockquote><ul id="5e96510d-0067-45c7-a7d6-60d216f173d1" class="bulleted-list"><li style="list-style-type:disc">O ser humano, por ser detentor do conhecimento, está acima da natureza, e pode explorar os recursos naturais.</li></ul><ul id="7b5ffdea-1755-4974-b39a-b1c26afff5fd" class="bulleted-list"><li style="list-style-type:disc">Na busca pelo conhecimento, deve-se usar o empirismo e o método da indução (partir de conhecimentos particulares para gerais).</li></ul><h3 id="a7f23bd1-aed3-4339-9866-d77e81b22df1" class="">Teoria dos Ídolos </h3><p id="3e76e761-9592-4ffa-a3ed-2e11d8dbe81b" class="">Superar os Ídolos para chegarmos ao conhecimento verdadeiro</p><ul id="94406e1a-8522-481a-9b4d-9f599463f703" class="bulleted-list"><li style="list-style-type:disc">Tribo → falsos conhecimento gerais transmitidos de uma pessoa a outra (manga com leite mata)</li></ul><ul id="862e180b-32c8-4e78-b1dc-c89ae5d1c682" class="bulleted-list"><li style="list-style-type:disc">Caverna → falsos conhecimentos gerados pelos sentidos humanos (sem achismo)</li></ul><ul id="ed5afd75-057f-40b2-981a-8b6d2674c41a" class="bulleted-list"><li style="list-style-type:disc">Foro → mau uso da linguagem que passa conhecimento errado (fake news)</li></ul><ul id="34063b3b-da91-4d42-af63-7d454cbac3f5" class="bulleted-list"><li style="list-style-type:disc">Teatro → falsas concepções científicas / filosóficas (astrologia e escolástica)</li></ul><p id="bcb5def5-7912-4a68-a555-3e90133dbbcc" class="">Para superar os ídolos, devemos utilizar o empirismo</p><hr id="d1d2874f-88e3-45cd-8897-c9801826f912"/><h1 id="90825a9f-c032-40e9-80e5-d85bc6e9dc81" class="block-color-teal_background">Física do Cosmo</h1><h3 id="842588aa-21bc-4576-929e-6fe177e63441" class="">Guerra Fria</h3><p id="b0d728db-37cb-4a91-a5c3-fe9e7dddddda" class="">Disputa de demonstração de poder entre EUA e URSS</p><p id="1e9b9123-d77a-4ad5-86f7-3837c0e5eacc" class="">Representado pela corrida espacial → Quem chega no espaço primeiro </p><p id="c04b3200-83d0-4723-aaf2-00e1ba2bd42b" class="">URSS: Primeiro satélite | Animal | humano no espaço </p><p id="0b52df25-65e3-46ee-91a4-225c2d2861cd" class="">EUA: Primeiro Homem a pisar na Lua </p><h3 id="94f8ca33-c53c-40fb-8c2e-c8aa00166764" class="">Astronáutica</h3><p id="b2d8f2ef-112a-4f10-901d-18d2d25d0889" class="">Conjunto de técnicas (ciência) que, através de estudos, permitem a exploração do espaço com artefatos construídos pela humanidade  </p><h3 id="8b0881e3-8d02-4a1b-9f5e-83d9a6b89ae2" class="">Velocidade Orbital</h3><figure id="82b4653c-501d-4542-97f0-1fd05e0f891a" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>V</mi><mo>=</mo><msqrt><mfrac><mrow><mi>G</mi><mi>M</mi></mrow><mi>R</mi></mfrac></msqrt></mrow><annotation encoding="application/x-tex">V = \sqrt{\frac{GM}{R}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.44em;vertical-align:-0.7689599999999999em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.67104em;"><span class="svg-align" style="top:-4.4em;"><span class="pstrut" style="height:4.4em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">GM</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.6310400000000005em;"><span class="pstrut" style="height:4.4em;"></span><span class="hide-tail" style="min-width:1.02em;height:2.48em;"><svg width='400em' height='2.48em' viewBox='0 0 400000 2592' preserveAspectRatio='xMinYMin slice'><path d='M424,2478
+c-1.3,-0.7,-38.5,-172,-111.5,-514c-73,-342,-109.8,-513.3,-110.5,-514
+c0,-2,-10.7,14.3,-32,49c-4.7,7.3,-9.8,15.7,-15.5,25c-5.7,9.3,-9.8,16,-12.5,20
+s-5,7,-5,7c-4,-3.3,-8.3,-7.7,-13,-13s-13,-13,-13,-13s76,-122,76,-122s77,-121,77,-121
+s209,968,209,968c0,-2,84.7,-361.7,254,-1079c169.3,-717.3,254.7,-1077.7,256,-1081
+l0 -0c4,-6.7,10,-10,18,-10 H400000
+v40H1014.6
+s-87.3,378.7,-272.6,1166c-185.3,787.3,-279.3,1182.3,-282,1185
+c-2,6,-10,9,-24,9
+c-8,0,-12,-0.7,-12,-2z M1001 80
+h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7689599999999999em;"><span></span></span></span></span></span></span></span></span></span></div></figure><h3 id="f9beed3d-7103-4fa7-88a1-0f632d5fd0b0" class="">Tipos de Órbitas</h3><ul id="3150b77b-b17f-4295-8c19-39f53bc801f1" class="bulleted-list"><li style="list-style-type:disc">Circular</li></ul><ul id="321def2b-9fb6-4d29-90c4-7f8dc403eac5" class="bulleted-list"><li style="list-style-type:disc">Elíptica</li></ul><ul id="51d992c1-fa5c-4aab-9edf-4283f1246289" class="bulleted-list"><li style="list-style-type:disc">Parabólica</li></ul><ul id="1b9328db-36b8-4645-ba4d-9cc639b416ca" class="bulleted-list"><li style="list-style-type:disc">Hiperbólica</li></ul><p id="7e2dabe0-3bca-4027-a80c-e9085f2e21fb" class="">
+</p><hr id="e16cda6f-aef3-4099-baf5-2f1a0dd94d36"/><h1 id="05b29786-c08b-4283-a8ef-58eab430e9e2" class="block-color-pink_background">Aprofundamento de Inglês</h1><p id="4b3e94de-2b0f-43eb-88a2-431c719693c4" class=""><strong>Prejudice </strong>→ Preconceito</p><p id="cbed5e38-5abd-4c9d-9572-36523081e61c" class=""><strong>Policy </strong>→ Política</p><p id="89023e19-8ba2-4090-a1aa-7091e31be5d7" class=""><strong>Novel </strong>→ romance</p><p id="a1eb9517-1ec9-4f62-9eef-b4458161f93f" class=""><strong>Injury</strong>→ ferimento</p><hr id="5798843d-6c63-49cf-acf9-5cdfa46de5f2"/><p id="80de2f2b-3c35-4755-a5e6-8bb1fd706192" class="">Heitor e Magon e Wilson © 2022, all rights reserved</p><p id="c09bf4c4-aeb4-4562-9335-da9539b37ba8" class="">
+</p></div></article></body></html>

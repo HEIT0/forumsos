@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Fórum SOS</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link rel="icon" href="home/jonas.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+
+  <script src="https://replit.com/public/js/repl-auth-v2.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!--────────────────Header───────────────-->
+    <header>
+      <a class="logo" href="#home">
+        <img class="circle" src="home/logo.png" alt="repl logo" />
+      </a>
+
+      <nav>
+
+
+        <ul class="nav-bar">
+          <div class="bg"></div>
+          <li><a class="nav-link active" href="#home">Menu</a></li>
+          <li><a class="nav-link" href="#projects">Cálculos</a></li>
+          <li><a class="nav-link" href="#contact">Resumos</a></li>
+          <li><a class="nav-link" href="horarios.html">Horários</a></li>
+          <li><a class="nav-link" href="site.html">Sites</a></li>
+          <!--<li><button onclick="LoginWithReplit()"> Login </button></li>-->
+        </ul>
+
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!--─────────────────Home────────────────-->
+      <div id="home">
+        <div class="filter"></div>
+        <section class="intro">
+          <h3>Fórum SOS
+            <hr>
+          </h3>
+          <p>Divirta-se com resumos para</p>
+          <p>provas e cálculos de média</p>
+          <p> </p>
+
+          <!--────social media links─────-->
+
+          <div class="social-media">
+
+          </div>
+
+        </section>
+      </div>
+
+      <!--───────────────Projects───────────────-->
+      <div id="projects">
+        <h3>Cáculos e Médias
+          <hr>
+        </h3>
+        <p>Escolha a conta que deseja fazer</p>
+        <div class="work-box">
+          <div class="work">
+            <!--───────────────card───────────────-->
+            <ul><a href="mediabim.html">
+                <div class="card">
+                  <img class="work-img"
+                    src="https://images.unsplash.com/photo-1518611507436-f9221403cca2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1225&q=80">
+                  <!--Link to project-->
+                  <div class="work-content">Média Bimestral<br>1 Frente</div>
+                </div>
+              </a></ul>
+
+            <ul><a href="mediabim2.html">
+                <div class="card">
+                  <img class="work-img"
+                    src="https://images.unsplash.com/photo-1462642109801-4ac2971a3a51?ixlib=rb-1.2.1&auto=format&fit=crop&w=1266&q=80">
+
+                  <!--Link to project-->
+                  <div class="work-content">Média Bimestral<br>2 Frentes</div>
+
+                </div>
+              </a></ul>
+
+            <!--   <div class="card">
+              <img class="work-img"
+                src="https://images.unsplash.com/photo-1485815457792-d1a966f9bde0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+              <a href="" target="_blank">
+                
+                <div class="work-content">Calcule sua nota de redação</div>
+              </a>
+            </div>-->
+
+            <ul><a href="mediatest.html">
+                <div class="card">
+                  <img class="work-img"
+                    src="https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+
+                  <!--Link to project-->
+                  <div class="work-content">Calcule quanto preciso tirar numa prova</div>
+
+                </div>
+              </a></ul>
+
+            <!--  <div class="card">
+              <img class="work-img"
+                src="https://images.unsplash.com/photo-1483546416237-76fd26bbcdd1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+              <a href="" target="_blank">
+                
+                <div class="work-content">Lorem ipsum dolor sit amet consectetur.</div>
+              </a>
+            </div>-->
+          </div>
+        </div>
+      </div>
+
+      <!--──────────────Contact────────────────-->
+      <div id="contact">
+        <!--────social media links─────-->
+        <h3>Resumos
+          <hr>
+        </h3>
+        <label for="shirt-colors"></label><br>
+
+        <select class="seleta" onchange="javascript:mostraAlerta(this);">
+          <option>1° EM</option>
+          <option value="2911e">29/11 Exercícios</option>
+          <option value="2911">29/11 Testão 4B</option>
+          <option value="2811e">28/11 Exercícios</option>
+          <option value="2811">28/11 Testão 4A</option>
+          <option value="2511">25/11</option>
+          <option value="1111">11/11</option>
+          <option value="0911">09/11</option>
+          <option value="0411">04/11</option>
+          <option value="2810">28/10</option>
+          <option value="2610">26/10</option>
+          <option value="1910">19/10</option>
+          <option value="1410">14/10</option>
+          <option value="0710">07/10</option>
+          <option value="0510">05/10</option>
+          <option value="3009">30/09</option>
+          <option value="2909">29/09</option>
+          <option value="2809">28/09</option>
+          <option value="0909">09/09</option>
+          <option value="0209">02/09</option>
+          <option value="3108">31/08</option>
+          <option value="2608">26/08</option>
+          <option value="2408">24/08</option>
+          <option value="1908">19/08</option>
+          <option value="1708">17/08</option>
+          <option value="1208">12/08</option>
+          <option value="1008">10/08</option>
+
+        </select>
+        <select class="seleta" onchange="javascript:mostraAlerta(this);">
+          <option>2° EM</option>
+          <option value="https://heit0.notion.site/Test-o-4B-5a60008a679c4c619fceac5d2256e3cd?pvs=4">Testão 4B</option>
+          <option value="https://heit0.notion.site/Test-o-4A-6732bf0d8652416287e0984f73df15d9?pvs=4">Testão 4A</option>
+          <option value="https://heit0.notion.site/Resumo-01-12-37ab8b910aa64ee685db59adc6f465e8?pvs=4">01/12</option>
+
+          <option value="https://heit0.notion.site/Resumo-29-11-2271bf7977e14e7fa74feb672cb946e6?pvs=4">29/11</option>
+
+          <option value="https://heit0.notion.site/Resumo-24-11-f50076f0fdbe4bcda52be6d327a14191?pvs=4">24/11</option>
+
+          <option value="https://heit0.notion.site/Resumo-22-11-84f8e3a87585448a9008e39e0fb7f32f?pvs=4">22/11</option>
+          <option value="https://heit0.notion.site/Resumo-17-11-8d8a1ff84e0f4245bd56f097e4c183a2?pvs=4">17/11</option>
+          <option value="https://heit0.notion.site/Resumo-10-11-1785a24ff2c0443ead245f4ee7cb10e1?pvs=4">10/11</option>
+          <option value="https://heit0.notion.site/Resumo-08-11-49d4a55f4a524739b56f77e45997d552?pvs=4">08/11</option>
+          <option value="https://heit0.notion.site/Resumo-01-11-fcd34d76f37d42ed90765519c885c33c?pvs=4">01/11</option>
+          <option value="https://heit0.notion.site/Resumo-27-10-34c6fe3f2be34ceab4d12474aaebc389?pvs=4">27/10</option>
+          <option value="https://heit0.notion.site/Resumo-25-10-08f511eb26ed412c9f9bc87ac9c6aa0d?pvs=4">25/10</option>
+
+          <option value="https://heit0.notion.site/Resumo-20-10-9034c7c4af1f4c85a90a733280568f5b?pvs=4">20/10</option>
+          <option value="https://heit0.notion.site/Resumo-18-10-419ace1e005b446aa2eb126461fc73c2?pvs=4">18/10</option>
+
+          <option value="https://heit0.notion.site/Resumo-11-10-851d31083edd465ba6224264a7ab8625?pvs=4">11/10</option>
+          <option value="https://heit0.notion.site/Resumo-06-10-4f8d67b985684e09a5cf166e185097a4?pvs=4">06/10</option>
+
+          <option value="https://heit0.notion.site/Test-o-3B-344a412264314ff686d84de40a6fce04?pvs=4">Testão 3B - 04/10
+          </option>
+          <option value="https://heit0.notion.site/Test-o-3A-6e59d2b85be349f89ff3c7ee32ad4eba?pvs=4">Testão 3A - 03/10
+          </option>
+
+          <option value="https://heit0.notion.site/Resumo-29-09-e1580d5905bc477a83f8422fd576df93?pvs=4">29/09</option>
+
+          <option value="https://heit0.notion.site/Resumo-27-09-9e16d51374e646bca2efa56e822b13e6?pvs=4">27/09</option>
+
+          <option value="https://heit0.notion.site/22-09-94baff14ac464e98b7e23c99add6a45d?pvs=4">22/09</option>
+
+          <option value="https://heit0.notion.site/Resumo-20-09-2958c2ec426e4e8aab8d22ae338edb19?pvs=4">20/09</option>
+
+          <option value="https://heit0.notion.site/Resumo-15-09-d4cb1f696cee4734b636652d319bb55c?pvs=4">15/09</option>
+
+          <option value="https://heit0.notion.site/Resumo-13-09-ee61e407b6e64dbbbd0f3c5aa27c9273?pvs=4">13/09</option>
+
+          <option value="https://heit0.notion.site/06-09-62f39b89f6eb4d208898d83cc60388e3?pvs=4">06/09</option>
+
+          <option value="https://heit0.notion.site/Resumo-01-09-a5815ae4d33248549b53ec9a78d0ba81?pvs=4">01/09</option>
+
+          <option value="https://heit0.notion.site/Resumo-30-08-740be9c69b3249c5ac5ec6bee2771745?pvs=4">30/08</option>
+
+          <option value="https://heit0.notion.site/Resumo-25-08-19746e45e2dd4e3b80ad6abb63341676?pvs=4">25/08</option>
+          <option value="https://heit0.notion.site/Resumo-23-08-330d9fdc364f4fdb8e5da8798f28b968?pvs=4">23/08</option>
+          <option value="https://heit0.notion.site/Resumos-18-08-656f19a3b6414feba4d53f8694febb15?pvs=4">18/08</option>
+          <option value="https://heit0.notion.site/Resumo-16-08-ec928d5e725541a9b5d1453a02c900fa?pvs=4">16/08</option>
+          <option value="https://heit0.notion.site/Resumo-10-08-12291d73331e4f86b5b4e3af73e1e246?pvs=4">10/08</option>
+          <option value="https://heit0.notion.site/Test-o-2B-28-06-e6eb752ae78f4bc492f0d371d731228c?pvs=4">Testão 2B
+          </option>
+          <option value="https://heit0.notion.site/Teste-1A-27-06-2d50ed9c674e4a8fb98a0e3c4162da01?pvs=4">Testão 2A
+          </option>
+          <option value="https://heit0.notion.site/Resumo-23-06-3bcd8db27c944127af025a3ce138a62d?pvs=4">23/06</option>
+          <option value="https://heit0.notion.site/Resumo-21-06-680075ec53ba4df9ba0e628ff2c11754?pvs=4">21/06</option>
+          <option value="https://heit0.notion.site/Resumo-16-06-c1eb9a4fa30042269c66683cbffe12d4?pvs=4">16/06</option>
+          <option value="https://heit0.notion.site/Resumo-14-06-4be4cdc9e8b048e1a2d5171145a88323?pvs=4">14/06</option>
+          <option value="https://heit0.notion.site/Resumo-02-06-bc1e8404880b4e8896af89fe6904c60e">02/06</option>
+          <option value="https://heit0.notion.site/Resumo-31-05-ad6eff237ab945d9a12d3947d6d85f5f">31/05</option>
+          <option value="https://heit0.notion.site/Resumo-26-04-f5a5d9dd846d43feaaa34278881a4725">26/05</option>
+          <option value="https://heit0.notion.site/Resumo-24-05-907dcb5388cc4f00a4d74a31f414c50f">24/05</option>
+          <option value="https://heit0.notion.site/Resumo-19-05-4761a5fd1d054e569fc2c7d57587e179">19/05</option>
+          <option value="1705s">17/05</option>
+          <option value="1205s">12/05</option>
+          <option value="1005s">10/05</option>
+          <option value="0505s">05/05</option>
+          <option value="0305s">03/05</option>
+          <option value="2804s">Testão 1B</option>
+          <option value="2704s">Testão 1A</option>
+          <option value="2604s">26/04</option>
+          <option value="1904s">19/04</option>
+          <option value="3103s">31/03</option>
+          <option value="2903s">29/03</option>
+          <option value="2403s">24/03</option>
+          <option value="2203s">22/03</option>
+          <option value="1003s">10/03</option>
+          <option value="0803s">08/03</option>
+          <option value="0303s">03/03</option>
+          <option value="0103s">01/03</option>
+
+
+
+
+
+        </select>
+
+        <select class="seleta" onchange="javascript:mostraAlerta(this);">
+
+          <option>3° EM</option>
+          <option value="https://heit0.notion.site/Test-o-4B-5a60008a679c4c619fceac5d2256e3cd?pvs=4">---</option>
+        
+
+        </select>
+
+        <script type="text/javascript">
+
+          function mostraAlerta(elemento) {
+
+
+            
+            var h = elemento.value.toString()
+
+            //const audio = new Audio('meu_audio.mp3');
+            //audio.play();
+            
+            if (h.length < 6) {
+
+              window.location.href = "resumos/" + h + "/" + h + ".html";
+            } else {
+              window.location.href = h;
+            }
+          }
+        </script>
+
+
+
+      </div>
+
+  </div>
+
+
+
+  </main>
+  <footer class="copyright">Heitor © 2022
+    <a href="https://repl.it/@lilykhan" target="_blank"> </a>
+  </footer>
+
+  </div>
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+</body>
+
+</html>

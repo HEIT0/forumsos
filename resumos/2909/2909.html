@@ -1,0 +1,678 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Simples</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2adfdb78-94aa-455b-89b9-2e59d299f16f" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_10.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🥥</span></div><h1 class="page-title">Simples</h1></header><div class="page-body"><p id="f3e6e3b5-49bc-4f9d-a550-252854e55bb2" class=""><em>Nós, da firma Resumos&amp;CIA, nos isentamos de qualquer responsabilidade quanto a este resumo e possíveis ausências de conteúdo para a prova. Use por sua própria conta e risco.</em></p><ul id="8b7ab100-f29e-431f-8cdc-620c03385696" class="toggle"><li><details open=""><summary>Conteúdo</summary><nav id="e55408e0-d59e-4b8e-8302-5d14420110b0" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2a4e3d79-d75e-4a51-88d6-8b24123405ec">Matemática</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#311fcf24-dfaf-4cbe-8218-9aca7f4b28a2">Lei dos Senos</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0840bb20-2cb1-485d-8432-79f7d5be084a">Lei dos Cossenos</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#5d030f67-9cd5-49a5-9964-dc11fb93024d">Adição e subtração de arcos </a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7f82faef-41cf-46e0-b749-9be47b4c0cbb">Exercícios</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#9793c4c0-46e5-4285-b386-160d76075cb3">Física</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#c9a89671-0b9f-48e7-9480-b9febb7ca4b5">Exercícios</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a8d57553-5c67-4b1d-ad45-81c6e683573c">Química</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#fe578253-3b3f-4a17-913a-852ee668b3ba">Fórmula mínima</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d5de3626-afc5-45c3-99e2-808889901940">Fórmula percentual</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#746fcb50-20fd-4ca2-95a4-aa6b1731544e">Fórmula mínima a partir da percentual</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f72da6bf-e508-426c-8e26-7ade20d89475">Fórmula molecular a partir da mínima</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#f90b50e4-b16d-42ee-894e-39bedf9edc20">Exercícios</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#33d023e6-0867-40af-8971-8fec83980c2c">Biologia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#681c4b24-a18c-4b9f-b494-085682213a50">Ciclo reprodutor</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#9199e8ec-d63c-4157-856d-d60d5219b857">Seres vivos haplobiontes</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#2806e01d-ce48-4551-be61-a82732004df7">Seres vivos diplobiontes</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#ff105fe8-f975-45c0-8622-ec61054463c2">Seres vivos haplodiplobiontes</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#764e323f-ffe0-4faa-98de-1abc4148f889">Exercícios</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#fb229e1e-6cd7-4620-8cf3-52ae4d5955a7">Literatura</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#25ef4764-6d39-469e-b0d0-6eb0544aec69">Arcadismo</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#936e6ef1-2820-4ba5-8527-633bde4462e8">Exercícios</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#19e49027-6937-4a9a-954e-75430e54ade5">História</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#41413119-8369-457b-b26b-7627ae436ce2">Renascimento Cultural</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#74520963-2d3f-4c29-8b97-0f46aa5d60d5">Origem</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#cc2bf74f-764f-43b1-a6a1-c5d806a3d585">Características</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d7f36518-44b0-411b-bff1-34998de874a9">Renascimento Artístico</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#ca067a74-f65d-4bb0-a2c5-91ea2f784f56">Michelangelo (pintor / escultor)</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#85256cd3-2288-4434-9f7a-6fa6f2cf2783">Leonardo Da Vinci</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0820e27a-4fae-4a08-980c-64cf0b0a078d">Renascimento Literário</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#5077c1a5-0f79-42d3-a9cb-d065a5c11d92">Nicolau Maquiavel - O Príncipe</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#ec9005c4-0743-4f98-97d8-8af6bd4343bf">Miguel de Cervantes - Dom Quixote</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0ab3866f-b4fb-47d0-9a54-aad7b22f1231">Renascimento Científico</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#5102040d-d988-4c10-9a38-a612b07c03bb">Nicolau Copérnico</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#b8bf5c71-adc0-40f2-aff2-061b0cc64be6">Galileu </a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#d1c297bb-12e3-410d-a7f9-aff2499ecf2a">Crise do Renascimento</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#d63fb526-be09-41d3-aa59-69144d3ea116">Exercícios</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#01fa5bb2-f3f3-4b07-ad5e-8dcd23213612">Filosofia</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#d7472db5-9553-4b39-b6a4-cedddf7352d3">Patrística (“dos santos padres”)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#6192470f-c0b5-431c-9164-34b2d6da9644">Santo Agostinho</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e93b6845-3dbe-494e-9fe0-e98dd4b4a16a">Eclesiástica</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#be54863d-b45d-42dc-a3f8-7027a1b092a8">São Tomás de Aquino </a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f6589ea7-d6db-4d0d-b131-313e53cb6d06">Cinco vias para a crença em Deus</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#5f022677-057c-4eba-8b02-d383cd8cd4eb">Primeiro motor imóvel </a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#5f2c5b6a-4b24-4c32-849b-b7ae544da6b8">Primeira causa eficiente</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#324a4814-9c12-475c-bfc2-33660ef1455b">Ser necessário</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#fd54582a-94cb-48ab-b35b-ec1934328c9c">Graus de perfeição</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#a44e86e6-511e-4c6f-baa7-e771efd981f8">Governo Supremo (inteligência ordenadora) </a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#ae45e6d2-2c24-4b48-a9c4-f27135e130df">Exercícios</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#12c1c473-2d55-4557-8aee-ea5a08992aa3">Física do Cosmo</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#8aff50fb-c5a7-469c-8c81-6d56aef30d25">Leis de Kepler</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#626bc00d-4ea8-4eb4-8b69-ad897e54d904">Gravitação</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#01f83180-6123-4c8e-ae11-feb16da43ded">Exercícios</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#fac28b88-acce-4765-8db9-818c69bce85d">Aprofundamento de Inglês</a></div></nav></details></li></ul><h1 id="2a4e3d79-d75e-4a51-88d6-8b24123405ec" class="block-color-yellow_background">Matemática</h1><div id="e5b08e47-dafa-4c62-9bfb-ae700380ab1b" class="column-list"><div id="6bec8767-192c-48f2-a30c-4319c22b1f9b" style="width:100%" class="column"><h3 id="311fcf24-dfaf-4cbe-8218-9aca7f4b28a2" class="">Lei dos Senos</h3></div><div id="5955a239-d828-428f-9e0c-0344bcedcc86" style="width:100%" class="column"><h3 id="0840bb20-2cb1-485d-8432-79f7d5be084a" class="">Lei dos Cossenos</h3></div><div id="eb9c374e-2dd4-4ce0-be89-f013d8c87bb1" style="width:100%" class="column"><h3 id="5d030f67-9cd5-49a5-9964-dc11fb93024d" class="">Adição e subtração de arcos </h3></div></div><div id="6eea0f84-e199-43bf-9bbb-69ec5b0f8320" class="column-list"><div id="de2289f1-1439-4ff3-ae7c-71a44da36f46" style="width:33.33333333333333%" class="column"><figure id="cc9993a9-0830-46bf-bcc2-24710b27dcb7" class="image"><a href="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled.png"><img style="width:384px" src="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled.png"/></a></figure><p id="f635f2fa-bd6b-4ee9-9551-667f3d91bb4c" class="">
+</p></div><div id="ec1b651e-0056-4347-b575-191e4f5dccd2" style="width:33.33333333333334%" class="column"><figure id="762c1f85-7018-4db3-864b-d8eabfd5690a" class="image"><a href="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%201.png"><img style="width:288px" src="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%201.png"/></a></figure><p id="a5079b47-23b9-4e60-95eb-e1895bf366aa" class="">
+</p></div><div id="7859f469-b34e-40bb-8948-cdd82cfcf4ed" style="width:33.33333333333333%" class="column"><figure id="f67d21bd-821d-4e83-9ff5-36f0300de08f" class="image"><a href="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%202.png"><img style="width:384px" src="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%202.png"/></a></figure><figure id="8604e9df-d1c8-42c1-9c8e-39f8da83ee0e" class="image"><a href="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%203.png"><img style="width:336px" src="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%203.png"/></a></figure><p id="f1acaeee-3671-4ef0-8170-b7010f72dd5d" class="">
+</p></div></div><div id="3dac050d-36a5-4d29-b396-b5a2be97b064" class="column-list"><div id="30a390d9-3e41-4fd8-9c89-fb0768680382" style="width:100%" class="column"><h3 id="7f82faef-41cf-46e0-b749-9be47b4c0cbb" class="">Exercícios</h3></div><div id="368392c5-594a-48d6-8869-d5682d03c93f" style="width:100%" class="column"><p id="cf076fa7-ce26-405d-b6d1-51ef35f73af1" class="">
+</p></div></div><div id="67d346d5-4a89-41f1-b857-c115eec4f626" class="column-list"><div id="b6d06bb4-f9f3-4318-ae68-4917e26000cb" style="width:50%" class="column"><figure id="98887c79-1fb4-4b41-8859-dd0d9024076d" class="image" style="text-align:left"><a href="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%204.png"><img style="width:679px" src="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%204.png"/></a><figcaption>Dica: Use lei dos senos e soma de arcos</figcaption></figure><ul id="fe23f164-c190-4163-b2de-0a17d586755e" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid">Resposta</span></summary><figure id="20fca0c1-29ce-418d-ae5a-fe9aedd6d398" class="image"><a href="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%205.png"><img style="width:215px" src="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%205.png"/></a></figure></details></li></ul></div><div id="9967f719-b28b-404a-91aa-264566988ea8" style="width:50%" class="column"><figure id="ed2c1266-85e2-475f-a36c-3b1fbdcb03c1" class="image"><a href="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%206.png"><img style="width:432px" src="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%206.png"/></a></figure><ul id="87ffe6cc-4fef-4307-995a-4cd096f1dfed" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid">Resposta</span></summary><figure id="ee2cef10-df7f-4f77-a5e4-e0e4fddec120" class="image"><a href="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%207.png"><img style="width:485px" src="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%207.png"/></a></figure></details></li></ul></div></div><hr id="ff915506-8857-42b6-b6d5-375882867ed2"/><h1 id="9793c4c0-46e5-4285-b386-160d76075cb3" class="block-color-teal_background">Física</h1><figure id="827f1128-7551-4915-972c-6e1f53c6abeb" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>F</mi><mrow><mi>a</mi><mi>t</mi></mrow></msub><mo>=</mo><mi>N</mi><msub><mi>μ</mi><mrow><mi>e</mi><mi mathvariant="normal">/</mi><mi>c</mi></mrow></msub></mrow><annotation encoding="application/x-tex">F_{at} = N\mu_{e/c} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.03853em;vertical-align:-0.3551999999999999em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mtight">/</span><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"><span></span></span></span></span></span></span></span></span></span></span></div></figure><figure id="097f0e12-9dd2-48f8-a2d7-2514fdc16be2" class="image" style="text-align:center"><a href="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%208.png"><img style="width:432px" src="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%208.png"/></a></figure><div id="11059a09-e102-43bf-8019-1f76ae06de52" class="column-list"><div id="3eeeb7ef-8978-4183-9dbc-aff79e89cd50" style="width:100%" class="column"><h3 id="c9a89671-0b9f-48e7-9480-b9febb7ca4b5" class="">Exercícios</h3><ul id="643f71da-9206-4486-a36c-c6b13e6d81ff" class="bulleted-list"><li style="list-style-type:disc">Um bloco com massa de 3 kg está em movimento com aceleração constante na superfície de uma mesa. Sabendo que o coeficiente de atrito dinâmico entre o bloco e a mesa é 0,4, calcule a força de atrito entre os dois. Considere g = 10 m/s2.</li></ul><ul id="41384024-20bf-4d75-9546-c20934a005d0" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid"><strong>Resposta</strong></span></summary><figure id="4263f184-4c3f-4a85-8db3-6b3b072928e9" class="image"><a href="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%209.png"><img style="width:140px" src="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%209.png"/></a></figure></details></li></ul></div><div id="5f0ffe88-e22e-45ce-b91f-7a9a1f1895d4" style="width:100%" class="column"><p id="41657377-b710-4fc9-a22b-30419127259c" class="">
+</p></div></div><hr id="976a965e-e62d-4b4b-877e-91cb1d59a058"/><h1 id="a8d57553-5c67-4b1d-ad45-81c6e683573c" class="block-color-red_background">Química</h1><h2 id="fe578253-3b3f-4a17-913a-852ee668b3ba" class="">Fórmula mínima</h2><ul id="dd46dfb8-f93a-41d8-9068-12950115333d" class="bulleted-list"><li style="list-style-type:disc">Indica a proporção entre os números de átomos de cada elemento </li></ul><ul id="02685684-1ff9-46b1-a1cc-c9916703edf7" class="bulleted-list"><li style="list-style-type:disc">Fórmula molecular dividida pelo máximo divisor comum.</li></ul><h2 id="d5de3626-afc5-45c3-99e2-808889901940" class="">Fórmula percentual</h2><ul id="574763d8-b895-43f6-b3ab-63b22db95dcf" class="bulleted-list"><li style="list-style-type:disc">indica a porcentagem de cada elemento na fórmula da substância</li></ul><ul id="647b50be-60f7-44f5-a4e5-161054209cf3" class="bulleted-list"><li style="list-style-type:disc">Massa molar da substância = 100%</li></ul><ul id="4b6abd0f-7766-47c7-aad5-27032b414cd5" class="bulleted-list"><li style="list-style-type:disc">Regra de 3 com a massa de cada elemento</li></ul><h2 id="746fcb50-20fd-4ca2-95a4-aa6b1731544e" class="">Fórmula mínima a partir da percentual</h2><p id="3c802557-44db-40b2-a262-7f23eef849ce" class="">1- calcular o nº de mols de cada elemento considerando 100g do composto</p><p id="51c6c9e5-537e-46cb-9c1b-d70387db436e" class="">2- dividir pelo menor valor</p><h2 id="f72da6bf-e508-426c-8e26-7ade20d89475" class="">Fórmula molecular a partir da mínima</h2><p id="78f36357-bdfc-4021-a9ec-1dbadd8c05fd" class="">1- dividir a massa molar da molécula pela massa molar da fórmula mínima</p><p id="78d31c77-25a4-40cb-941a-7db6f3aa451a" class="">2- multiplicar a fórmula mínima pelo resultado</p><h3 id="f90b50e4-b16d-42ee-894e-39bedf9edc20" class="">Exercícios</h3><div id="c6f5520c-30e4-44a8-84e1-5bec51d9a03c" class="column-list"><div id="5020b309-e5a8-4261-b901-fd83d372d6ff" style="width:100%" class="column"><ul id="7b419ba0-fd71-47b3-bb0b-7779afb9f845" class="bulleted-list"><li style="list-style-type:disc">A análise de uma substância desconhecida revelou a seguinte composição centesimal: 62,1% de carbono, 10,3% de hidrogênio e 27,5% de oxigênio. Pela determinação experimental de sua massa molar, obteve-se o valor 116,0 g/mol. É correto concluir que se trata de um composto orgânico de fórmula molecular: (Massas atômicas: C = 12, H = 1, O = 16)</li></ul><ul id="65f46f19-1ffe-4293-93da-f23a7b3e7f97" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid"><strong>Resposta</strong></span></summary><p id="fbba8ab2-c65e-4cf2-bc36-01258424da73" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="1.2em"><msub><mi>C</mi><mn>6</mn></msub><msub><mi>H</mi><mn>12</mn></msub><msub><mi>O</mi><mn>2</mn></msub></mstyle></mrow><annotation encoding="application/x-tex">\large C_6H_{12}O_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9999959999999999em;vertical-align:-0.18em;"></span><span class="mord sizing reset-size6 size7"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2796266666666667em;"><span style="top:-2.65em;margin-left:-0.07153em;margin-right:0.04166666666666667em;"><span class="pstrut" style="height:2.8em;"></span><span class="sizing reset-size7 size4 mtight"><span class="mord mtight">6</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord sizing reset-size6 size7"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2796266666666667em;"><span style="top:-2.65em;margin-left:-0.08125em;margin-right:0.04166666666666667em;"><span class="pstrut" style="height:2.8em;"></span><span class="sizing reset-size7 size4 mtight"><span class="mord mtight"><span class="mord mtight">12</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord sizing reset-size6 size7"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2796266666666667em;"><span style="top:-2.65em;margin-left:-0.02778em;margin-right:0.04166666666666667em;"><span class="pstrut" style="height:2.8em;"></span><span class="sizing reset-size7 size4 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></p></details></li></ul></div><div id="4d498e1a-75d7-47ac-9e3a-79e3d55af22e" style="width:100%" class="column"><p id="2815b06f-2bea-46ed-9a4c-0f2f6b9b2ad5" class="">
+</p></div></div><hr id="aa888d65-e4b6-4a3e-a8e0-fdf4c8f58cbe"/><h1 id="33d023e6-0867-40af-8971-8fec83980c2c" class="block-color-teal_background">Biologia</h1><table id="32ee7272-9e27-4455-9de2-c481ad0651dc" class="simple-table"><thead class="simple-table-header"><tr id="2c3e26f7-30e2-4ec1-b27a-95443550137c"><th id="=BTj" class="simple-table-header-color simple-table-header"></th><th id="{&lt;Q[" class="simple-table-header-color simple-table-header">Briófitas</th><th id="vaU^" class="simple-table-header-color simple-table-header">Pteridófitas</th><th id="Fq`@" class="simple-table-header-color simple-table-header">Gimnospermas</th><th id=";\Lq" class="simple-table-header-color simple-table-header">Angiospermas</th></tr></thead><tbody><tr id="e5e0eb64-5b17-43d6-9f96-1a34e8e6e212"><th id="=BTj" class="simple-table-header-color simple-table-header">Exemplos</th><td id="{&lt;Q[" class="">Musgo e Hepáticas</td><td id="vaU^" class="">Samambaia e Avenca</td><td id="Fq`@" class="">Pinheiro e Araucária e Sequoia</td><td id=";\Lq" class="">Com fruto</td></tr><tr id="bd6c2e75-f932-4705-a7bf-d5d2818f62e2"><th id="=BTj" class="simple-table-header-color simple-table-header">Vaso condutor</th><td id="{&lt;Q[" class="">Não </td><td id="vaU^" class="">Sim</td><td id="Fq`@" class="">Sim</td><td id=";\Lq" class="">Sim</td></tr><tr id="6026d1ff-d589-42c8-b6c4-b5842ef8e747"><th id="=BTj" class="simple-table-header-color simple-table-header">Água para fecundação</th><td id="{&lt;Q[" class="">Sim</td><td id="vaU^" class="">Sim</td><td id="Fq`@" class="">Não</td><td id=";\Lq" class="">Não</td></tr><tr id="222a0dcc-d9d0-4020-a326-9e859134e0ce"><th id="=BTj" class="simple-table-header-color simple-table-header">Sementes</th><td id="{&lt;Q[" class="">Não</td><td id="vaU^" class="">Não</td><td id="Fq`@" class="">Sim</td><td id=";\Lq" class="">Sim</td></tr><tr id="31a4d1e7-a700-40e4-b4ba-157c093fa0cc"><th id="=BTj" class="simple-table-header-color simple-table-header">Flor/Fruto</th><td id="{&lt;Q[" class="">Não</td><td id="vaU^" class="">Não</td><td id="Fq`@" class="">Não</td><td id=";\Lq" class="">Sim</td></tr><tr id="2c072a51-8bd7-4b57-816f-de440fd90c66"><th id="=BTj" class="simple-table-header-color simple-table-header">Fase Duradoura</th><td id="{&lt;Q[" class="">Gametófito </td><td id="vaU^" class="">Esporófito </td><td id="Fq`@" class="">Esporófito</td><td id=";\Lq" class="">Esporófito </td></tr></tbody></table><h2 id="681c4b24-a18c-4b9f-b494-085682213a50" class="">Ciclo reprodutor</h2><p id="2a304f09-0355-4407-a947-5698885220b3" class="">Dividido de acordo com a meiose:</p><ul id="146725a2-9322-4b55-8ec4-baddda292e47" class="bulleted-list"><li style="list-style-type:disc">Meiose inicial ou zigótica → meiose ocorre no zigoto diplóide</li></ul><ul id="1514f5d9-3899-45d8-93d9-ed689c951add" class="bulleted-list"><li style="list-style-type:disc">Meiose final ou gamética → meiose ocorre na formação do gameta</li></ul><ul id="cc92803a-a0a4-4867-96ee-84157f3f9456" class="bulleted-list"><li style="list-style-type:disc">Meiose intermediária ou espórica →meiose ocorre na formação dos esporos</li></ul><h3 id="9199e8ec-d63c-4157-856d-d60d5219b857" class="">Seres vivos haplobiontes</h3><ul id="f70addf8-1dd8-4db4-b0f3-081fc656250c" class="bulleted-list"><li style="list-style-type:disc">Algas</li></ul><ul id="ec335c0b-a230-4b54-9174-3006bc736fe6" class="bulleted-list"><li style="list-style-type:disc">meiose zigótica</li></ul><p id="6c0ca106-76f3-4ad1-85a0-83e4266f22fe" class="">Organismo adulto haploide (n) → gameta (n) + gameta (n) → fecundação → zigoto (2n) → MEIOSE  →células haploides → adulto haploide</p><h3 id="2806e01d-ce48-4551-be61-a82732004df7" class="">Seres vivos diplobiontes</h3><ul id="af89ae33-1ed8-41bd-bbf6-70e17667de60" class="bulleted-list"><li style="list-style-type:disc">Animais</li></ul><ul id="72df9f9b-884d-4ec9-8f24-c5ae8a34d62d" class="bulleted-list"><li style="list-style-type:disc">Meiose gamética</li></ul><p id="eee012b5-adaf-405f-8a74-17234ab5ab25" class="">Organismo adulto diploide (2n) → MEIOSE → gameta (n) + gameta (n) → fecundação → zigoto (2n) → células diploides → adulto diploide</p><h3 id="ff105fe8-f975-45c0-8622-ec61054463c2" class="">Seres vivos haplodiplobiontes</h3><ul id="b06d5d6e-e319-489e-9524-f8fcfe220871" class="bulleted-list"><li style="list-style-type:disc">Plantas e fungos</li></ul><ul id="de31d575-0c9f-4e17-af55-6c40bb5fee69" class="bulleted-list"><li style="list-style-type:disc">Meiose espórica</li></ul><p id="b8e1ab28-5d54-47a3-8ce1-6b70d21120f6" class="">Organismo gametófito (n) → gameta (n) + gameta (n) → fecundação → zigoto (2n) → mitose → esporófito (2n) → MEIOSE → esporos (n) → mitose → germinação → gametófito (n)</p><h3 id="764e323f-ffe0-4faa-98de-1abc4148f889" class="">Exercícios</h3><ol type="1" id="261bf8af-089f-4e6c-88f2-3c670535fa3d" class="numbered-list" start="1"><li>Como já se sabe as plantas em sua maioria são seres haplodiplobiontes, sabendo disso cite em quais fazes da reprodução ocorre a meiose:</li></ol><ul id="ac9d3dcc-6dff-4dda-bc1a-7d36d55b7d31" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid"><strong>Resposta</strong></span></summary><p id="5ea77ed4-079c-4b1d-a9a8-fc1facd01a7e" class="">A meiose ocorre na fase do esporófito (2n) e que ele se torna os esporos (n)</p></details></li></ul><ol type="1" id="34a36123-7afe-4837-a46a-8ef175d2604e" class="numbered-list" start="2"><li>Cite as características evolutivas marcante de cada classe do filo das plantas</li></ol><p id="2f6db249-06cf-4bab-82c8-20e12215c05a" class="">Pteridófitas = </p><p id="ed2a135f-63dc-466e-b5ec-f5bad60f15ae" class="">Gimnospermas = </p><p id="252fc72a-50f8-4889-9024-12853da402ac" class="">Angiospermas = </p><ul id="87bd46fa-b524-41ef-8d5f-8e2910a317a2" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid"><strong>Resposta</strong></span></summary><p id="af8dc83e-e199-420e-8015-dfd988b18679" class="">Pteridoftas = Vasos Condutores</p><p id="2926691c-d9fb-438b-9915-0d0387a6d02a" class="">Gimnospermas = Sementes / Não precisam de água pra fecundação</p><p id="1674bbee-2a78-4b15-9aa8-d628e91b5735" class="">Angiospermas = Flor / Fruto</p></details></li></ul><hr id="0db08edc-4eb1-43f2-bceb-485a69ed0c20"/><h1 id="fb229e1e-6cd7-4620-8cf3-52ae4d5955a7" class="block-color-brown_background">Literatura</h1><h2 id="25ef4764-6d39-469e-b0d0-6eb0544aec69" class="">Arcadismo</h2><p id="a3ea0267-051c-4a85-9b70-0d814769d0e9" class="">→ Centro econômico no Brasil era MG (Ouro preto/Vila rica)</p><ul id="3b3748bf-95bf-4716-963d-381726c004f1" class="bulleted-list"><li style="list-style-type:disc">Iluminismo vem para o Brasil (pois ainda tem gente que vai pra Portugal estudar) e influencia a Inconfidência mineira por exemplo</li></ul><ul id="93ccb443-678c-450f-a1fc-7830957b1623" class="bulleted-list"><li style="list-style-type:disc">Cláudio Manuel da Costa marca o início no Brasil com “Obras Poéticas”</li></ul><ul id="e7555289-f712-4ac9-99d1-08dce0e1ecb7" class="bulleted-list"><li style="list-style-type:disc">Equilíbrio | Harmonia | Moderação | Fuga para o Campo | Carpe diem do bem | Resgate à cultura greco-romana | Crítica aos exageros do barroco </li></ul><ul id="9eb3c137-af06-49fd-b9ac-f28561687e6a" class="bulleted-list"><li style="list-style-type:disc">Pseudônimos Pastoris: Marília, Dirceu e Glauceste</li></ul><h3 id="936e6ef1-2820-4ba5-8527-633bde4462e8" class="">Exercícios</h3><ul id="0a499d37-0e01-463c-9bd0-40357bc788ed" class="bulleted-list"><li style="list-style-type:disc">Sobre o Arcadismo é correto afirmar:</li></ul><p id="60c63b47-3519-4dc4-b8f4-890068f11ebd" class="">I. É uma escola literária que, no Brasil, compreendeu o período entre 1768-1808, e antecede o Romantismo</p><p id="4177b5ad-2d19-4dd5-8e27-eed057c1ce0e" class="">II. Também é conhecido como Neoclassicismo.</p><p id="bb9cd53d-937e-4a75-825a-b2b007421f61" class="">III. <em>Carpe diem é uma</em> expressões em latim que expressam tendências árcades.</p><p id="017dae10-ef7b-49e9-ae88-8d904be80620" class=""><strong>Alternativas</strong></p><p id="1e4d77c3-35ca-482e-9aa6-ea981011072b" class="">a) Apenas III está correta.</p><p id="285d5822-0ff8-45a1-a428-2b5df03a9c8b" class="">b) Nenhuma está correta.</p><p id="7fa10a71-18ca-4ce6-8a46-1cea865c8c8a" class="">c) Apenas II está correta.</p><p id="b14a809f-d4d4-4489-b3a9-c392f10341d5" class="">d) I e II estão corretas.</p><p id="144d8097-39f0-48e9-8053-a486d94dce17" class="">e) Todas estão corretas.</p><ul id="66e3fb3c-d720-458a-bbf6-11a143f52e02" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid"><strong>Resposta:</strong></span></summary><p id="9165b854-4c0c-4d79-815b-4aa8bc714523" class="">Alternativa <strong>“e”</strong> </p></details></li></ul><hr id="02441fb3-9440-4ace-a452-4c533d24d4a9"/><h1 id="19e49027-6937-4a9a-954e-75430e54ade5" class="block-color-brown_background">História</h1><h2 id="41413119-8369-457b-b26b-7627ae436ce2" class="">Renascimento Cultural</h2><p id="3e598d7a-af0d-48e3-9892-3b861f7f84b9" class="">Movimento artístico e cultural que pretendia resgatar os valores clássicos da cultura Greco-Romana. </p><p id="2e5e6717-8bae-485f-a69e-9a41abb86b58" class="">Renascentistas desprezavam os valores Medievais (teocentrismo)</p><h3 id="74520963-2d3f-4c29-8b97-0f46aa5d60d5" class="">Origem</h3><p id="069bc055-b2a9-466d-a831-34e7839bc131" class="">Genova - Veneza - Florença</p><p id="c766b57c-2c37-414d-b450-c524984502fb" class="">Foram cidades que abrigaram sábios bizantinos, mecenas (burgueses que financiavam as obras) e eram o berço da cultura clássica </p><h3 id="cc2bf74f-764f-43b1-a6a1-c5d806a3d585" class="">Características</h3><ul id="38bd26e9-d657-4fb9-878b-a65cd3263dd9" class="bulleted-list"><li style="list-style-type:disc">Resgate da cultura clássica greco-romana</li></ul><ul id="2fde0b3d-b901-4a87-ab5c-fa199c6b5f0f" class="bulleted-list"><li style="list-style-type:disc">Antropocentrismo (homem é o centro e a medida do universo)</li></ul><ul id="789c5e2b-c1ac-4512-a329-937fd4479396" class="bulleted-list"><li style="list-style-type:disc">Racionalismo (uso da razão)</li></ul><ul id="9b113cda-b869-4f72-aa0b-5edbaef63824" class="bulleted-list"><li style="list-style-type:disc">Empirismo (conhecimento pela experiência) </li></ul><ul id="401deb21-f163-4971-9db5-70d8e24b19d3" class="bulleted-list"><li style="list-style-type:disc">Hedonismo (prazer na arte da criação)</li></ul><ul id="23552241-3118-495d-9247-3a6b6b4d6113" class="bulleted-list"><li style="list-style-type:disc">Humanismo (valorização da temática humana) </li></ul><ul id="138b497d-7efb-43ee-b23c-72116b0ab55d" class="bulleted-list"><li style="list-style-type:disc">Universalismo (conhecimento de tudo) </li></ul><ul id="ff788238-4421-4ff6-abe0-32a4cbd279d1" class="bulleted-list"><li style="list-style-type:disc">Heliocentrismo</li></ul><h2 id="d7f36518-44b0-411b-bff1-34998de874a9" class="block-color-gray_background">Renascimento Artístico</h2><h3 id="ca067a74-f65d-4bb0-a2c5-91ea2f784f56" class="">Michelangelo (pintor / escultor)</h3><ul id="fb31917a-3cd4-47c4-b80d-38f08f05ce1b" class="bulleted-list"><li style="list-style-type:disc">Capela Cistina</li></ul><ul id="c2ae8077-ca15-4886-b56d-09c140decebf" class="bulleted-list"><li style="list-style-type:disc">Davi + Moisés + Pietá</li></ul><h3 id="85256cd3-2288-4434-9f7a-6fa6f2cf2783" class="">Leonardo Da Vinci</h3><ul id="87761d70-5402-4722-8ef9-747d76ce073f" class="bulleted-list"><li style="list-style-type:disc">Mona lisa</li></ul><ul id="1841cfb5-49a5-4aec-8de9-cc03759045eb" class="bulleted-list"><li style="list-style-type:disc">Santa Ceia</li></ul><h2 id="0820e27a-4fae-4a08-980c-64cf0b0a078d" class="block-color-gray_background">Renascimento Literário</h2><h3 id="5077c1a5-0f79-42d3-a9cb-d065a5c11d92" class="">Nicolau Maquiavel - O Príncipe</h3><ul id="a1c4ed21-7abe-43a8-a331-2e43a290616e" class="bulleted-list"><li style="list-style-type:disc">Manual de Liderança escrito por Maquiavel para Lourenço de Médici.</li></ul><ul id="ecd0113d-8d8b-4c23-ac71-19ac07584c7e" class="bulleted-list"><li style="list-style-type:disc">“Os fins justificam os meios”</li></ul><h3 id="ec9005c4-0743-4f98-97d8-8af6bd4343bf" class="">Miguel de Cervantes - Dom Quixote</h3><ul id="00f15f9d-e456-4915-99cb-2b81813cb58e" class="bulleted-list"><li style="list-style-type:disc">Sátira da irracionalidade do período medieval, representada por Dom Quixote</li></ul><ul id="f1ca2fee-eb14-40ea-bf9d-59e21bcdbdcb" class="bulleted-list"><li style="list-style-type:disc">Elogio da racionalidade do renascimento, representada por Sancho Pança </li></ul><h2 id="0ab3866f-b4fb-47d0-9a54-aad7b22f1231" class="block-color-gray_background">Renascimento Científico</h2><h3 id="5102040d-d988-4c10-9a38-a612b07c03bb" class="">Nicolau Copérnico</h3><ul id="b735d3f4-2463-46a6-93cb-7d7ce640ef3e" class="bulleted-list"><li style="list-style-type:disc">Heliocentrismo</li></ul><h3 id="b8bf5c71-adc0-40f2-aff2-061b0cc64be6" class="">Galileu </h3><ul id="26580cff-c847-4147-81d4-b68d408a4b6d" class="bulleted-list"><li style="list-style-type:disc">Mapeamento do Sistema Solar</li></ul><h3 id="d1c297bb-12e3-410d-a7f9-aff2499ecf2a" class="block-color-gray_background">Crise do Renascimento</h3><ul id="d50d3637-2260-496a-9f92-3a35f9a30c69" class="bulleted-list"><li style="list-style-type:disc">Grandes Navegações (investimento sai do renascimento e passa pras navegações) </li></ul><ul id="a2ff2021-206d-4e11-887d-e52b0b41029c" class="bulleted-list"><li style="list-style-type:disc">Reforma protestante (Proibiu imagem de santos (muito usado pelos pintores))</li></ul><ul id="821a051b-0945-4c12-bca1-3a0b19245d5c" class="bulleted-list"><li style="list-style-type:disc">Contra reforma (INDEX proibiu diversos livros renascentistas)</li></ul><h3 id="d63fb526-be09-41d3-aa59-69144d3ea116" class="">Exercícios</h3><ul id="1d11252c-db37-4ce4-97c2-5cdf26b3a6b2" class="bulleted-list"><li style="list-style-type:disc">Cite porque as cidades de italianas de Genova, Veneza e Florença foram o berço do Renascimento e cite 3 características marcantes do Renascimento</li></ul><ul id="31353026-db61-4539-82e8-fbdc910c50b1" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid"><strong>Resposta</strong></span></summary><p id="14e6ec5b-0283-4824-984c-673626b51c46" class="">A razão destas cidades serem consideradas o berço do Renascimento, é que lá foi o berço da cultura greco-romana e devido ao financiamento dos burgueses (mecenas)</p><ul id="de0eb0e2-284d-4693-acfb-b756010450cb" class="bulleted-list"><li style="list-style-type:disc">Racionalismo</li></ul><ul id="38654c4f-3e99-4635-886e-e1fd3420d735" class="bulleted-list"><li style="list-style-type:disc">Antropocentrismo</li></ul><ul id="45799a59-da82-4f85-94d0-0b591ea32de9" class="bulleted-list"><li style="list-style-type:disc">Empirismo</li></ul></details></li></ul><hr id="4b5d59ac-531a-4b6f-9dc4-745e00cc14b8"/><h1 id="01fa5bb2-f3f3-4b07-ad5e-8dcd23213612" class="block-color-yellow_background">Filosofia</h1><h1 id="d7472db5-9553-4b39-b6a4-cedddf7352d3" class="">Patrística (“dos santos padres”)</h1><ul id="2185378f-ee0e-4034-b29a-f3b259a27381" class="bulleted-list"><li style="list-style-type:disc">É a base religiosa do catolicismo</li></ul><h3 id="6192470f-c0b5-431c-9164-34b2d6da9644" class="">Santo Agostinho</h3><ul id="dddd899b-ed04-474b-b0cc-b0bc2c87d956" class="bulleted-list"><li style="list-style-type:disc">Maniqueísta (ou o bem ou o mal) </li></ul><table id="a8999958-5227-42ce-8689-820a5a2a4018" class="simple-table"><thead class="simple-table-header"><tr id="6a5c4ef0-4dfa-4936-92c2-84f2522342e2"><th id="[UnZ" class="simple-table-header-color simple-table-header" style="width:148.640625px"><strong>Platão</strong></th><th id="sLeZ" class="simple-table-header-color simple-table-header" style="width:212.359375px"><strong>Agostinho</strong></th></tr></thead><tbody><tr id="c85acfe9-4649-4b65-a7aa-3e1a5e11b328"><td id="[UnZ" class="" style="width:148.640625px">Mundo das Ideias</td><td id="sLeZ" class="" style="width:212.359375px">Cidade de Deus (céu)</td></tr><tr id="c81f058e-08ff-4cce-afa0-862a9f810b14"><td id="[UnZ" class="" style="width:148.640625px">Mundo dos sentidos</td><td id="sLeZ" class="" style="width:212.359375px">Cidade dos homens (Terra)</td></tr><tr id="5cc7ed04-c415-436b-b0c1-d8a74e62e2a0"><td id="[UnZ" class="" style="width:148.640625px">Ideias</td><td id="sLeZ" class="" style="width:212.359375px">Pensamento de Deus</td></tr><tr id="bd726171-fd16-4ebf-b676-56b54da5906b"><td id="[UnZ" class="" style="width:148.640625px">Cópias</td><td id="sLeZ" class="" style="width:212.359375px">Criação de Deus</td></tr><tr id="8b608f0e-1c17-4e92-934a-0994d0e4a798"><td id="[UnZ" class="" style="width:148.640625px">Alma</td><td id="sLeZ" class="" style="width:212.359375px">Sopro Divino</td></tr><tr id="48854569-82b1-44af-8dd9-9395c046418a"><td id="[UnZ" class="" style="width:148.640625px">Homem</td><td id="sLeZ" class="" style="width:212.359375px">Imagem e semelhança de Deus</td></tr></tbody></table><ul id="0bee68aa-0ab4-42f8-aee4-b13aa90944f9" class="bulleted-list"><li style="list-style-type:disc">Cristianizou as ideias de Platão e correntes do helenismo</li></ul><ul id="bb400211-1429-470e-bb7d-43e03738788b" class="bulleted-list"><li style="list-style-type:disc">Teoria da Iluminação Divina - As verdades (eternas e imutáveis) foram colocadas em nós por Deus</li></ul><ul id="a38eb6eb-07f6-496a-8f1a-83d4e3579eed" class="bulleted-list"><li style="list-style-type:disc">Alma/Sopro Divino trás a verdade para dentro de nós. Quanto mais perto de Deus, mais perto da verdade, mais “iluminado”.</li></ul><ul id="257ebd23-3094-43c1-acae-3e2c835b125b" class="bulleted-list"><li style="list-style-type:disc">Livre arbítrio: Seres humanos tem a liberdade de exercer sua racionalidade entre o bem e o mal. Portanto Deus não é a origem do mal, o ser humano que é.</li></ul><h1 id="e93b6845-3dbe-494e-9fe0-e98dd4b4a16a" class="">Eclesiástica</h1><p id="637d9aae-5876-4570-856d-679233b99ffc" class="">Juntar a fé e a razão (fé &gt; razão) </p><h3 id="be54863d-b45d-42dc-a3f8-7027a1b092a8" class="">São Tomás de Aquino </h3><ul id="5f89d4ea-a08e-41a6-8a4b-53c649cdce90" class="bulleted-list"><li style="list-style-type:disc">Cristianizou a Lógica de Aristóteles</li></ul><ul id="a7e530ed-519a-4f6d-b793-1c69f28b5e4f" class="bulleted-list"><li style="list-style-type:disc">Entender para crer (fé) </li></ul><h2 id="f6589ea7-d6db-4d0d-b131-313e53cb6d06" class="">Cinco vias para a crença em Deus</h2><h3 id="5f022677-057c-4eba-8b02-d383cd8cd4eb" class=""><details open=""><summary>Primeiro motor imóvel </summary></details></h3><div class="indented"><p id="e4148b77-7c5a-4c13-960a-571fe521b6c9" class="">motor que iniciou o movimento</p></div><h3 id="5f2c5b6a-4b24-4c32-849b-b7ae544da6b8" class=""><details open=""><summary>Primeira causa eficiente</summary></details></h3><div class="indented"><p id="bb63bae4-073d-48f0-a624-05e072c6c35c" class="">Tudo tem causa, então voltando até um infinito achamos uma causa não causada</p></div><h3 id="324a4814-9c12-475c-bfc2-33660ef1455b" class=""><details open=""><summary>Ser necessário</summary></details></h3><div class="indented"><p id="c8f2eddf-287d-4fef-8c36-71f173180a64" class="">Do nada, nada vem (não podemos nos criar do nada). Precisa de um ser pra fundamentar a existência</p></div><h3 id="fd54582a-94cb-48ab-b35b-ec1934328c9c" class=""><details open=""><summary>Graus de perfeição</summary></details></h3><div class="indented"><p id="6ea5767f-0f7b-4a87-9442-ca173d8f889a" class="">Existe um grau máximo de perfeição para podemos comparar </p></div><h3 id="a44e86e6-511e-4c6f-baa7-e771efd981f8" class=""><details open=""><summary>Governo Supremo (inteligência ordenadora) </summary></details></h3><div class="indented"><p id="241328dd-e897-4bf6-aca1-168f07b92549" class="">Há alguém que deu finalidade às coisas</p></div><h3 id="ae45e6d2-2c24-4b48-a9c4-f27135e130df" class="">Exercícios</h3><div id="5e1e7547-eba9-4c79-a439-662ca7e230ac" class="column-list"><div id="baf9a48b-0de6-4fb2-be7f-e791f19ebc62" style="width:100%" class="column"><figure id="ed1d3b63-53d7-4124-b17d-547a25b9cb88" class="image"><a href="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%2010.png"><img style="width:822px" src="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%2010.png"/></a></figure><ul id="845be7d6-f169-4100-9c5e-6099932ca659" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid"><strong>Resposta</strong></span></summary><p id="8048c6d9-017c-4a1c-a6fe-c6c16e07c8c9" class="">Alternativa <strong>b</strong></p></details></li></ul></div><div id="609850b2-5e6a-4bbe-bfb7-8f3f59fa2a29" style="width:100%" class="column"><figure id="f9290804-bde5-455d-b121-9ee3c50dd126" class="image"><a href="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%2011.png"><img style="width:832px" src="Simples%202adfdb7894aa455b89b92e59d299f16f/Untitled%2011.png"/></a></figure><ul id="0226536b-a862-4f0f-8d5c-35b90369467f" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid"><strong>Resposta</strong></span></summary><p id="5acd7bd7-c9ef-41bc-8b35-350c01b4b7b0" class="">Alternativa <strong>c</strong></p></details></li></ul></div></div><hr id="8a79a479-6762-45bd-ab9f-5a8e1d3fe1c3"/><h1 id="12c1c473-2d55-4557-8aee-ea5a08992aa3" class="block-color-teal_background">Física do Cosmo</h1><h3 id="8aff50fb-c5a7-469c-8c81-6d56aef30d25" class="">Leis de Kepler</h3><p id="6298a990-9fb4-4b63-a36f-cbb52c0653d7" class="">1 - Tudo é órbita</p><p id="a0117570-40bb-4169-8966-97d30a5292ea" class="">2- Áreas iguais em tempos iguais ⇒ mais rápido no periastro</p><p id="71c1ca6a-46f7-4172-a901-6f6a74c49422" class="">3- <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>T</mi><mtext>²</mtext></mrow><mrow><mi>R</mi><mtext>³</mtext></mrow></mfrac><mo>=</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">\frac{T²}{R³} = k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="mord mtight">³</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mtight">²</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span><span>﻿</span></span></p><h3 id="626bc00d-4ea8-4eb4-8b69-ad897e54d904" class="">Gravitação</h3><p id="c81838cf-cde9-46c7-8f6a-179c3b8e10cf" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><mi>G</mi><mi>M</mi><mi>m</mi></mrow><mrow><mi>d</mi><mtext>²</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">F = \frac{GMm}{d²}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mtight">²</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">GM</span><span class="mord mathnormal mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></p><h3 id="01f83180-6123-4c8e-ae11-feb16da43ded" class="">Exercícios</h3><ul id="9fa8d069-b1b9-4c29-a259-ecbadfd4a32f" class="bulleted-list"><li style="list-style-type:disc">Explique a oque é a Lei da Gravitação de Newton</li></ul><ul id="22232d92-b844-4593-be65-3ec32d36ff11" class="toggle"><li><details open=""><summary><strong><span style="border-bottom:0.05em solid">Resposta</span></strong></summary><p id="c0015678-4f2a-4cfc-bda6-09534038a427" class="">A Lei da Gravitação diz que dois corpos exercem uma força gravitacional entre si, diretamente proporcional a suas massas e inversamente proporcional ao quadrado da distância</p></details></li></ul><hr id="9720c625-9a99-4745-a8f9-002861df10b8"/><h1 id="fac28b88-acce-4765-8db9-818c69bce85d" class="block-color-pink_background">Aprofundamento de Inglês</h1><p id="6f6df55a-9b99-4fb4-ae6e-bb8b5f442814" class=""><strong>Instead of </strong>- ao invés de</p><p id="8341eb99-552c-47b3-b5b7-6f8a23558b35" class=""><strong>Job </strong>- trabalho</p><p id="9775dd1c-14a5-4b8e-b137-a3ef9948de7c" class=""><strong>Blind</strong> - cego</p><p id="dbacbd28-0e90-4faa-9f35-6b9020081081" class=""><strong>Games</strong> - jogos</p><p id="27cebdc0-7f7c-4a66-8502-3d844667e556" class=""><strong>Cave</strong> - caverna</p><hr id="2ceae043-d184-43d9-bbba-f4f44c1874db"/><p id="f7e09238-c010-4683-b093-5f65bd9bb3c4" class="">Heitor, Magon e Wilson © 2022, all rights reserved
+</p><p id="6f6e7080-d665-4729-b573-40dc4a522e0b" class="">
+</p><p id="b7560c0e-ea3b-4ea2-b461-a6f638a8dd53" class="">
+</p></div></article></body></html>

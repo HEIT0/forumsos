@@ -1,0 +1,671 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumo - 10/03 :) </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="78629949-fcde-4a8a-8a67-d4f9294bfa31" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_11.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">😆</span></div><h1 class="page-title">Resumo - 10/03 :) </h1></header><div class="page-body"><h1 id="14ff7127-cc2c-41cf-a9a7-2f0084215913" class="block-color-brown_background">Matemática</h1><h3 id="4b9b32eb-8601-43f5-8595-676c79b0f027" class="">Soma e subtração de matrizes</h3><ul id="b4b98266-3ffa-41f4-a31a-1429bd2861eb" class="bulleted-list"><li style="list-style-type:disc">As matrizes devem ser da mesma ordem</li></ul><ul id="ec35ae90-0a7f-4e17-8ab5-10c32292206a" class="bulleted-list"><li style="list-style-type:disc">Soma ou subtrai os elementos da mesma posição (na ordem apresentada)</li></ul><h3 id="48469b30-913f-4294-ace6-af026650ff6c" class="">Multiplicação de matriz por escalar</h3><ul id="465fa456-2d9b-449b-8e59-51bf25d8d928" class="bulleted-list"><li style="list-style-type:disc">Multiplica cada elemento pelo escalar</li></ul><h1 id="548d1efc-4e71-410a-8af0-0fc6c8c9608e" class="block-color-teal_background">Física B</h1><h2 id="3a9db437-8653-4826-a189-8abec38c14e4" class="">Espelhos planos</h2><p id="f0e2b9b3-6cce-43e6-933f-f007ce6cc7ec" class=""><strong>1- Leis da reflexão</strong></p><figure id="a39647f3-e880-400d-8fdf-decc69df15a6" class="image" style="text-align:left"><a href="Resumo%20-%2010%2003%20)%2078629949fcde4a8a8a67d4f9294bfa31/Untitled.png"><img style="width:400px" src="Resumo%20-%2010%2003%20)%2078629949fcde4a8a8a67d4f9294bfa31/Untitled.png"/></a></figure><p id="724a8afa-27e7-4253-bb34-a1bd87691368" class="">1ª lei: i = r</p><p id="969a8481-9753-4534-81c0-8dc8c95494d4" class="">2ª lei: o raio i e o raio r pertencem ao mesmo plano</p><p id="37fe2003-34ca-4542-908b-6cfba8b62a53" class="">
+</p><p id="ca256f7a-c4ca-4c3d-aea9-993e1ef3b6bb" class=""><strong>2- Tipos de reflexão</strong></p><ul id="d2aa4ed3-a78b-4ecd-9065-8896886be82a" class="bulleted-list"><li style="list-style-type:disc">Regular → forma imagem nítida</li></ul><ul id="c0b78d64-fa26-42cb-abd9-6f5e812a92d8" class="bulleted-list"><li style="list-style-type:disc">Difusa → superfícies irregulares, imagens não nítidas</li></ul><p id="7d1f87e1-cf07-476b-86af-15509d1a8be6" class="">
+</p><p id="50d6e5c0-4d20-4441-b76b-618b24abfb18" class=""><strong>3- Características da Imagem</strong></p><ul id="08c4a9b1-3d71-4e97-b37e-3ff56422aa28" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mrow><mi>o</mi><mi>b</mi><mi>j</mi></mrow></msub><mo>=</mo><msub><mi>d</mi><mrow><mi>i</mi><mi>m</mi><mi>g</mi></mrow></msub></mrow><annotation encoding="application/x-tex">d_{obj} = d_{img}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">bj</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">im</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></li></ul><ul id="3cdcd9de-817c-45df-9a09-9abd3f0131b6" class="bulleted-list"><li style="list-style-type:disc">Imagem igual (mesmo tamanho)</li></ul><ul id="ed39e332-ae67-4e65-92ac-fda0810b8d9b" class="bulleted-list"><li style="list-style-type:disc">Direita (não é invertida)</li></ul><ul id="1f2a198a-171d-4be9-a7b8-577a1b48233f" class="bulleted-list"><li style="list-style-type:disc">Virtual (atrás do espelho)</li></ul><ul id="952e45a2-1b8f-48ca-988e-a8acc8b73bd7" class="bulleted-list"><li style="list-style-type:disc">Enantiomorfa</li></ul><h1 id="98206b23-9a6a-472e-a820-4186bb3e998f" class="block-color-orange_background">Química</h1><h3 id="ac04f3be-6bde-4ad4-becb-6448edf66ab8" class="">Poluição da água</h3><ul id="d7808df3-21e9-4d20-9b97-56c60c45bfff" class="bulleted-list"><li style="list-style-type:disc">Matéria orgânica → presença de organismos naturais (algas etc), esgoto doméstico, restos de alimentos e biomassa (restos da agricultura, madeira, palhas etc). A oferta de matéria orgânica na água eleva a população de microrganismos anaeróbicos, aumentando a demanda bioquímica de oxigênio (DBO) afetando peixes e outros organismos aquáticos.</li></ul><ul id="7eeeaef2-d412-41ec-8453-00cdcdf50356" class="bulleted-list"><li style="list-style-type:disc">Compostos orgânicos não biodegradáveis (plástico, resíduo de petróleo, pesticidas, resíduos industriais (remédios, corante, etc)).</li></ul><ul id="f9b7b004-2f1d-4b16-b6ae-fc7bf8f3e400" class="bulleted-list"><li style="list-style-type:disc">Alteração do PH da água por resíduos ácidos ou básicos. Ph ideal para esgoto 5,3 &lt; Ph &lt; 7,7</li></ul><ul id="80889654-7eb7-4425-8796-89189a823122" class="bulleted-list"><li style="list-style-type:disc">Poluição por variação de temperatura → devolver água aquecida ao leito pode causar efeitos ambientais (Usinas térmicas e nucleares)</li></ul><ul id="2616eb94-b9db-4dbe-82a0-980aaf20bbae" class="bulleted-list"><li style="list-style-type:disc">Metais pesados, tais como mercúrio, cádmio, chumbo, etc podem acumular na cadeia trófica de energia. Causado principalmente pelas indústrias de alta tecnologia</li></ul><ul id="117967d9-4b7f-4f5c-ac6b-9d8447bf6c95" class="bulleted-list"><li style="list-style-type:disc">OBS: Aquecimento global elevou comprovadamente em 1ºC as águas do oceano</li></ul><h1 id="a2d3285d-1027-4e0e-846d-983162853ec1" class="block-color-blue_background">Biologia</h1><ul id="3d914200-5b35-4ed0-a10f-cf71f8b8f43c" class="bulleted-list"><li style="list-style-type:disc">Adenina liga-se a Timina</li></ul><ul id="da0df008-9657-46a0-bd19-183d3a1d26ea" class="bulleted-list"><li style="list-style-type:disc">Guanina liga-se a Citosina</li></ul><ul id="29a54858-b026-468c-83a0-146da9d3d0fb" class="bulleted-list"><li style="list-style-type:disc">OBS: no DNA o mesmo número de nucleotídeos de Adenina será o de Timina e o mesmo número de Guanina será o de Citosina</li></ul><ul id="510d3674-59c7-4400-a4ba-42cae673c3bf" class="bulleted-list"><li style="list-style-type:disc">Se tiver quantidades diferentes de cada, é DNA/RNA viral</li></ul><h1 id="2cdd44a5-4554-496e-bd48-1e22865a882f" class="block-color-brown_background">Geografia</h1><h3 id="ecf258c4-7a72-4cea-9c3d-43e3adb1d198" class="">Fronteiras brasileiras</h3><p id="db4d8127-502f-41b5-806e-46821ed22fd7" class="">Região → Espaço territorial delimitado por fronteiras, e engloba características semelhantes de acordo com o critério utilizado</p><p id="70e04685-4496-4c68-8acc-3cd9b23adb8c" class="">Território federal → Durante a primeira divisão regional, eram territórios que eram governados pelo Estado federal</p><p id="ab6b8dc3-470b-473b-b26d-3d0cf18d204a" class="">Divisões regionais → Ao longo da história, houve diversas divisões do Brasil em regiões, até chegar na atual</p><p id="4520b846-c14b-41a2-9491-7cb4a35cc536" class="">Divisões geoeconômicas → Feita por Pinchas, divide o Brasil em 3 regiões geoeconômicas: Amazônia, centro-sul e Nordeste</p><p id="56a75a1e-9060-4142-8071-12d09df3d761" class="">Divisão de Milton Santos (ver slide) → Divide o país em 4 regiões de acordo com sua capacidade tecnológica-informacional: Amazônica, Centro-sul, Nordeste e concentrada. Sendo a região concentrada a mais tecnológica.</p><h3 id="34656604-aa64-426c-8a8f-f13309106bd7" class="">Fuso horário</h3><ul id="2abfeb3c-1b0e-46b6-8a4a-7b2a3f10f5c4" class="bulleted-list"><li style="list-style-type:disc">Mundo dividido verticalmente pelos meridianos (1 a cada 15º), com diferentes horários em cada faixa</li></ul><ul id="82888b78-ded0-40a3-91ba-892034a8e7b1" class="bulleted-list"><li style="list-style-type:disc">leste +1 hora, oeste -1 hora</li></ul><ul id="c4226998-59c4-41c5-9e42-18e39712f24e" class="bulleted-list"><li style="list-style-type:disc">Brasil → 45º Oeste (-3h GMT)</li></ul><ul id="741e26d1-9935-4b23-b9eb-e6d55ad5206a" class="bulleted-list"><li style="list-style-type:disc">Brasil possui 4 fusos</li></ul><h1 id="24b40401-1e59-4c5b-be38-11b79462138d" class="block-color-pink_background">Sociologia</h1><h3 id="4c5aa965-744d-494d-96b1-34f84ee3fd6a" class=""><details open=""><summary>Antes da antropologia</summary></details></h3><div class="indented"><ul id="62ab1d30-eed7-4aa0-9585-da33b2179e85" class="bulleted-list"><li style="list-style-type:disc">Etnocentrismo</li></ul><ul id="41bbd31a-4259-4f2e-b9d2-fcc44eaa39e7" class="bulleted-list"><li style="list-style-type:disc">Minha cultura = melhor</li></ul><ul id="49b6ecb0-f3ce-4d83-a041-44104c948e4b" class="bulleted-list"><li style="list-style-type:disc">Eurocentrismo</li></ul><ul id="7f6e0f4f-c888-402d-9d94-cc4d96b17599" class="bulleted-list"><li style="list-style-type:disc">séc XV - XVI → dominação da África, Ásia e América</li></ul></div><h3 id="62f50819-7416-4732-ae95-203b48fa8da0" class=""><details open=""><summary>O surgimento da antropologia</summary></details></h3><div class="indented"><ul id="fafb9033-dda1-4d32-9503-9567fe1d238a" class="bulleted-list"><li style="list-style-type:disc">séc XIX</li></ul><ul id="c912c663-626e-4d37-8b3a-30f9a4cdcb21" class="bulleted-list"><li style="list-style-type:disc">Evolucionismo antropológico</li></ul><ul id="b512750c-9f7e-4cde-b8b4-b258d62e4ca9" class="bulleted-list"><li style="list-style-type:disc">Edward Tylor</li></ul><ul id="4a351a0a-e408-4131-8f33-e47949a6bd29" class="bulleted-list"><li style="list-style-type:disc">A diferença entre as pessoas está no acesso a cultura</li></ul><ul id="2dde2b12-f155-49f7-8d55-6b24d6022cb8" class="bulleted-list"><li style="list-style-type:disc">Existem culturas mais avançadas e outras atrasadas</li></ul><ul id="bbd18c80-47ec-4f00-9ce8-82da58ea7dff" class="bulleted-list"><li style="list-style-type:disc">Justifica o imperialismo </li></ul></div><h3 id="02c289a8-709d-4e70-8d1c-230aec51fc2e" class=""><details open=""><summary>A verdadeira antropologia</summary></details></h3><div class="indented"><ul id="b64c6c36-508d-4c59-bef2-bc11c4f8252c" class="bulleted-list"><li style="list-style-type:disc">final do séc XIX - início do séc XX</li></ul><ul id="45a3088c-140b-4e3c-ac56-a46078abe3ea" class="bulleted-list"><li style="list-style-type:disc">Franz Boas</li></ul><ul id="8c9553e1-346d-47a1-bb4d-0423553ea92d" class="bulleted-list"><li style="list-style-type:disc">Relativismo cultural</li></ul><ul id="65aef9cd-c93d-4e4c-9302-2bc1f38111bf" class="bulleted-list"><li style="list-style-type:disc">Toda cultura é única e diferente</li></ul><ul id="1cacf09e-8add-444c-8d8f-bf56c8c87eea" class="bulleted-list"><li style="list-style-type:disc">Não é possível comparar culturas</li></ul></div><h1 id="54cc63dc-2d2e-4265-a156-c4aaeae31eb2" class="block-color-yellow_background">História</h1><h3 id="06d8b8e6-8f84-4607-9de2-f52dd72f700b" class="">Movimento Ludista</h3><ul id="5428a3eb-c137-4f20-9257-e903130f5101" class="bulleted-list"><li style="list-style-type:disc">Líder King Ludd foi demitido e saiu quebrando a fábrica (foi ajudado por outros funcionários)</li></ul><ul id="78f816a8-ea3d-407b-8af3-f72badda9fbe" class="bulleted-list"><li style="list-style-type:disc">Época de transição trabalho homem → máquina</li></ul><ul id="34f933db-7298-47cf-a849-476d68113a75" class="bulleted-list"><li style="list-style-type:disc">Movimento de quebradores de máquinas inspirados pelo ato de Ludd</li></ul><ul id="39b8f73f-5e3d-4171-b994-816b676d17df" class="bulleted-list"><li style="list-style-type:disc">Criado lei de pena de morte para ludistas (Ludd foi morto)</li></ul><h3 id="df561142-45f5-4008-961f-380b620a786f" class="">Trade Unions</h3><ul id="5e90b5bd-e030-408d-bcf5-6092cfafe338" class="bulleted-list"><li style="list-style-type:disc">Primeiros sindicatos da história</li></ul><ul id="5803ae95-30d7-439b-9165-eb22d234c94c" class="bulleted-list"><li style="list-style-type:disc">Greves</li></ul><ul id="a7fa6b42-022f-4fcc-9cb5-8b45ab34653c" class="bulleted-list"><li style="list-style-type:disc">Assistência social</li></ul><h3 id="683f6913-454c-41d5-ab5f-fa8641611e50" class="">Consequências da revolução industrial</h3><ul id="cf5e10a3-eebd-419d-acf2-238cd544a77f" class="bulleted-list"><li style="list-style-type:disc">Substituição do homem pela máquina</li></ul><ul id="cb1bd226-3a68-4a3e-aa9b-fc2c5d304ac3" class="bulleted-list"><li style="list-style-type:disc">Desemprego</li></ul><ul id="174c307e-513a-4caf-ada4-3b53a90fb054" class="bulleted-list"><li style="list-style-type:disc">Crise social (ausência de leis trabalhistas, êxodo rural, problemas urbanos, etc)</li></ul><ul id="affbdbe5-fd8f-4ccd-856b-ebea32e519fb" class="bulleted-list"><li style="list-style-type:disc">Luta de classes (Burguesia X Proletariado)</li></ul><ul id="31e6d51f-bb74-4d9a-b96d-1ae5b35c613e" class="bulleted-list"><li style="list-style-type:disc">Degradação do meio ambiente</li></ul><h1 id="5260538b-3e8b-4a3f-be70-b43117a1cf8a" class="block-color-teal_background">Aprofundamento Física</h1><p id="7215ea92-6ef8-4a98-b1dc-65f1a2db3c74" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>λ</mi><mtext> </mtext><mo>×</mo><mi>f</mi></mrow><annotation encoding="application/x-tex">V = \lambda \ × f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">λ</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span></span><span>﻿</span></span></p><h2 id="6ddeaf6c-edb5-45c2-82ae-cbc76cfeaf97" class="">Espectro eletromagnético</h2><ul id="708c29b3-f184-41fb-a820-d6bbdb784056" class="bulleted-list"><li style="list-style-type:disc">Classifica as ondas eletromagnéticas de acordo com sua frequência <figure id="f8eb5723-c12d-4a60-bef6-67e75aa9aa1b" class="image"><a href="Resumo%20-%2010%2003%20)%2078629949fcde4a8a8a67d4f9294bfa31/Untitled%201.png"><img style="width:384px" src="Resumo%20-%2010%2003%20)%2078629949fcde4a8a8a67d4f9294bfa31/Untitled%201.png"/></a></figure></li></ul><ul id="8c12a76b-a396-4abc-8c4d-8eb715d306de" class="bulleted-list"><li style="list-style-type:disc">Todas as ondas eletromagnéticas possuem a mesma velocidade no vácuo</li></ul><ul id="d03509ea-5805-4938-80dd-8c593b514cc2" class="bulleted-list"><li style="list-style-type:disc">lambda inversamente proporcional à frequência</li></ul><ul id="15c61e2b-2627-4409-8215-572f6312fab6" class="bulleted-list"><li style="list-style-type:disc">Fotón é o pacote / partícula de luz</li></ul><ul id="163e7753-3b92-4901-8973-71af68061e13" class="bulleted-list"><li style="list-style-type:disc">E = h . f              unid [ J ]</li></ul><ul id="5de38749-6025-4e79-ba2e-1d9589b69e6d" class="bulleted-list"><li style="list-style-type:disc">h → constante de planck</li></ul><h2 id="1aaa7703-8091-48e8-9cda-17d685c1e565" class="block-color-pink_background">Inglês</h2><p id="9238c78b-6fd2-4dcd-9a44-ce3e80a3b5ef" class="">De maneira geral, <strong>as </strong><em><strong>question tags </strong></em><strong>seguem o tempo verbal da frase principal</strong>, ou seja, se a frase principal está no <span style="border-bottom:0.05em solid">passado</span>, a <em>question tag </em>também deve vir no passado. A segunda regra é sobre a presença do verbo <span style="border-bottom:0.05em solid">auxiliar</span>, pois, se tem algum na frase principal, a <em>question tag </em>será formada somente pelo verbo auxiliar. No entanto, se a frase principal for constituída por um tempo verbal simples, deve-se utilizar na <em>question tag </em>o verbo auxiliar <em>do</em> correspondente ao tempo verbal.</p><p id="6ec124ad-b50c-4c9c-8e90-e4e3ee00091e" class="">Frase Positiva - Question Tag Negativa | Frase Negativa → Question Tag Positiva</p></div></article></body></html>

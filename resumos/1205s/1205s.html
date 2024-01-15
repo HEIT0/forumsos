@@ -1,0 +1,711 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumo - 12/05</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="5a20a830-7208-4cdd-9215-274d63159223" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk_2.jpg" style="object-position:center 49.63999999999999%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">✍🏻</span></div><h1 class="page-title">Resumo - 12/05</h1></header><div class="page-body"><h1 id="430c11f2-b0bb-40fb-a787-23d9c52ddaea" class="block-color-brown_background">Matemática</h1><h3 id="e0b7c57d-f638-4ab4-ab02-b594f4850ba7" class="">Matriz inversa</h3><ul id="11a90ba8-6af5-4e62-813c-d13dcd724567" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>M</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">M^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></li></ul><ul id="4abbe34f-bd27-45a2-b992-41cd4de79ef1" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi mathvariant="normal">.</mi><msup><mi>M</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">M . M^{-1} = I</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord">.</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span></span><span>﻿</span></span></li></ul><ul id="bf2f257c-36bf-43f0-b704-d94771a79610" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>e</mi><mi>t</mi><msup><mi>M</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mfrac><mn>1</mn><mrow><mi>d</mi><mi>e</mi><mi>t</mi><mi>M</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">Det M^{-1} = \frac{1}{detM}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord mathnormal">De</span><span class="mord mathnormal">t</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">tM</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></li></ul><figure id="e47ce22b-9a7c-4f68-884a-fed493575ba3" class="image" style="text-align:left"><a href="Resumo%20-%2012%2005%205a20a83072084cdd9215274d63159223/Untitled.png"><img style="width:432px" src="Resumo%20-%2012%2005%205a20a83072084cdd9215274d63159223/Untitled.png"/></a></figure><ul id="7b45551a-1de1-4f38-9fa0-29ad765a5e91" class="bulleted-list"><li style="list-style-type:disc">Condição de existência → Para possuir matriz inversa, det ≠ 0 </li></ul><ul id="39faf0bf-4093-42d3-8113-e198bb1bab99" class="toggle"><li><details open=""><summary>Elemento bij da matriz inversa de A (<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A^{-1} = B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></span><span>﻿</span></span>)</summary><p id="a216fea2-8424-4c3f-ac48-3882e1105c9c" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>c</mi><mi>o</mi><mi>f</mi><mi>a</mi><mi>t</mi><mi>o</mi><mi>r</mi><mtext> </mtext><msub><mi>a</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub></mrow><mrow><mi>d</mi><mi>e</mi><mi>t</mi><mi>A</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">b_{ij} = \frac{cofator \ a_{ji}}{det A}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">ij</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.338428em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.993428em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">A</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.50732em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">co</span><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">or</span><span class="mspace mtight"><span class="mtight"> </span></span><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ji</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2818857142857143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span> repare que é cofator de j i <strong>nessa ordem</strong></p></details></li></ul><ul id="b196910c-a996-461d-b806-143bc4b3aec3" class="toggle"><li><details open=""><summary>Propriedades</summary><ul id="ec59d216-20df-4e4d-b805-c518206a7c76" class="bulleted-list"><li style="list-style-type:disc">(<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mi>t</mi></msup><msup><mo stretchy="false">)</mo><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mo stretchy="false">(</mo><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><msup><mo stretchy="false">)</mo><mi>t</mi></msup></mrow><annotation encoding="application/x-tex">A^t)^{-1}=(A^{-1})^t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7935559999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7935559999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></li></ul><ul id="65280101-fd34-4c9d-9016-6920702e08c6" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>e</mi><mi>t</mi><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mfrac><mn>1</mn><mrow><mi>d</mi><mi>e</mi><mi>t</mi><mi>A</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">Det A^{-1} =  \frac{1}{det A}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord mathnormal">De</span><span class="mord mathnormal">t</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">A</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></li></ul><ul id="63bada15-a8b5-44a2-83a4-ab9e9a73291b" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mi mathvariant="normal">.</mi><mi>B</mi><msup><mo stretchy="false">)</mo><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi mathvariant="normal">.</mi><msup><mi>B</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">(A . B)^{-1}= A^{-1} . B^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mord">.</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mord">.</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></li></ul></details></li></ul><p id="587363ed-7402-407b-baf0-01ca6f1102d2" class="">É de extrema importância fazer exercício para esse assunto vendo na prática como funciona e tirar dúvida antes de chegar na prova e se deparar pela primeira vez com o problema***</p><p id="2de1af7e-2d7d-4433-9db4-8a5e5de12a61" class="">Na prova provavelmente vai cair para encontrar apenas um elemento da matriz inversa 3x3, então basta usar a fórmula do elemento (complicada que é fácil de errar) ou fazer a multiplicação apenas da coluna do elemento desejado e resolver o sistema (também é complicado, mas é a vida)*** </p><figure id="9cf6974b-1939-46da-b07f-874bfecebe74"><a href="https://youtu.be/2rtwh5-eHEk?t=136" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Rápido e Fácil | Matriz Inversa</div><div class="bookmark-description">Aprenda em poucos minutos matriz inversa, matriz transposta e matriz identidade.
+ACESSE A PLATAFORMA :
+👉  https://www.dicasdemat.com.br
+
+🚨 Vou acabar com sua dificuldade em matemática.
+
+Métodologia única de fácil entendimento e rápida absorção. Esse é o Método Curió 🏆
+
+Friend ajuda Friend: inscreva-se no canal e compartilhe o vídeo.
+
+📙 E-BOOK para o Enem: https://hotm.art/ebooknectarsupremo
+
+Siga-me nas redes: 
+
+🔗 Me siga no Instagram
+https://www.instagram.com/sandrocuriodicasdemat/
+
+🔗 Me siga no TikTok 
+https://www.tiktok.com/@matematicasandrocurio/
+
+Com o Método Curió você aprende matriz inversa de forma fácil e rápida através da resolução de exercícios.
+
+Vamos juntos rumo ao topo!
+
+#sandrocurio #matrizinversa #matrizes</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/a3aebd16/img/favicon_144x144.png" class="icon bookmark-icon"/>https://youtu.be/2rtwh5-eHEk?t=136</div></div><img src="https://i.ytimg.com/vi/2rtwh5-eHEk/maxresdefault.jpg" class="bookmark-image"/></a></figure><h1 id="e8bf157f-7c35-4a31-a206-914124f03978" class="block-color-teal_background">Física</h1><h3 id="795a3582-cda7-4897-ab4c-90a2f910d3a7" class="">Espelhos esféricos</h3><div id="dd040b56-cb6c-444f-a682-5d15e298117f" class="column-list"><div id="f9dd2029-319e-4ec7-88b4-67cecd74588e" style="width:50%" class="column"><figure id="f38a7234-9b0e-4687-8b75-393ad1ecc483" class="image" style="text-align:left"><a href="Resumo%20-%2012%2005%205a20a83072084cdd9215274d63159223/Untitled%201.png"><img style="width:300px" src="Resumo%20-%2012%2005%205a20a83072084cdd9215274d63159223/Untitled%201.png"/></a></figure></div><div id="6d1d235e-1a88-47f0-af80-3b710e9dd6f9" style="width:50%" class="column"><figure id="b3a57d1e-0c61-4b0f-86f6-bbe8149ab88e" class="image" style="text-align:left"><a href="Resumo%20-%2012%2005%205a20a83072084cdd9215274d63159223/Untitled%202.png"><img style="width:384px" src="Resumo%20-%2012%2005%205a20a83072084cdd9215274d63159223/Untitled%202.png"/></a><figcaption>O Centro de Curvatura C é o centro da circunferência do espelho sendo o Foco F ≈ metade da distância entre o Vértice e o centro</figcaption></figure></div></div><p id="b299a159-a912-4523-baab-24d9a777380a" class=""><strong>1 – </strong><em><strong>Raio incidente paralelo ao eixo principal</strong></em></p><p id="4259ece9-7e04-4c3d-9644-fff275bfa42e" class="">Quando o raio incidente chega ao espelho esférico paralelamente ao eixo principal, ele é refletido na direção do foco principal do espelho esférico.</p><figure id="2e0d2be0-240f-4d83-bfd9-cfbedd729dd7" class="image"><a href="https://mundoeducacao.uol.com.br/upload/conteudo/images/raio-incidente-paralelo.jpg"><img style="width:384px" src="https://mundoeducacao.uol.com.br/upload/conteudo/images/raio-incidente-paralelo.jpg"/></a></figure><p id="ef6f91c0-9379-45e0-b400-1d66e425896e" class=""><strong>2 – </strong><em><strong>Raio incidente na direção do foco </strong></em></p><p id="423c3dc9-ab18-48bd-a2f9-ea150ae9a9b8" class="">Quando o raio incidente chega ao espelho esférico na direção do foco principal, é refletido paralelamente ao eixo principal.</p><p id="f43db1de-c47c-4ace-a421-22fcf93f60b0" class=""><em><strong>(perceba que pelo princípio óptico da reversibilidade essa regra é igual a regra 1)</strong></em></p><figure id="8e8271e3-692d-4d02-8d58-e90137fe9885" class="image"><a href="https://mundoeducacao.uol.com.br/upload/conteudo/images/raio-passando-pelo-foco.jpg"><img style="width:377px" src="https://mundoeducacao.uol.com.br/upload/conteudo/images/raio-passando-pelo-foco.jpg"/></a></figure><p id="957fdd09-4e6e-43bc-9221-94c3fd0e5a6e" class=""><strong>3 –</strong> <em><strong>Raio incidente na direção do centro de curvatura</strong></em></p><p id="9505258a-2db8-4ea1-97ac-fa59b9dcdffb" class="">Quando o raio incidente chega até o espelho esférico na direção do centro de curvatura, ele é refletido sobre si mesmo.</p><figure id="0a55b9d9-ac09-4d0c-bfd0-c92a5b3200c9" class="image"><a href="https://mundoeducacao.uol.com.br/upload/conteudo/images/raio-passando-no-centro-de-curvatura.jpg"><img style="width:387px" src="https://mundoeducacao.uol.com.br/upload/conteudo/images/raio-passando-no-centro-de-curvatura.jpg"/></a></figure><p id="877cf523-8b84-4b0a-84ab-f86b13b81b01" class=""><strong>4 </strong>– <em><strong>Raio incidente na direção do vértice</strong></em></p><p id="ae7f58dc-9463-4fed-8b70-846239d1c0de" class="">Quando o raio incidente chega até o espelho esférico na direção do vértice, ele é refletido simetricamente em relação ao eixo principal.</p><figure id="4daa3022-1316-42c1-8a51-1da6479ad24a" class="image"><a href="https://mundoeducacao.uol.com.br/upload/conteudo/images/raio-passando-pelo-vertice.jpg"><img style="width:385px" src="https://mundoeducacao.uol.com.br/upload/conteudo/images/raio-passando-pelo-vertice.jpg"/></a></figure><p id="ac599e58-fc8f-4048-9ba7-4bf2f9305351" class="">É bom ficar atento ao fato de que nos espelhos côncavos todos os raios refletidos convergem para um único ponto (foco) situado sobre o eixo principal. Nos espelhos convexos todos os raios refletidos divergem, sendo que os prolongamentos desses raios têm somente um ponto em comum sobre o eixo principal, o foco.</p><h1 id="37f767b4-f22c-4c62-96cc-b801413cefd9" class="block-color-teal_background">Aprofundamento Física</h1><h3 id="15c3c5fd-fb98-4bd1-a952-ebe02b355105" class="">Reflexão de Ondas II - Ecolocalização e radar/sonar  </h3><ul id="30e833a9-7a51-4ccb-96ec-bf996c244f9a" class="bulleted-list"><li style="list-style-type:disc">morcego, radar e sonar usam ecolocalização</li></ul><ul id="4615f902-7850-45d4-84c1-443952e04626" class="bulleted-list"><li style="list-style-type:disc">É a medição da distância entre objetos através do som e quanto tempo leva para ir e voltar</li></ul><ul id="97d50a34-6f78-4661-b2bb-be1cbff0810e" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>m</mi></msub><mo>=</mo><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>S</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">V_m = \frac{ΔS}{Δt}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">Δ</span><span class="mord mathnormal mtight">t</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">Δ</span><span class="mord mathnormal mtight" style="margin-right:0.05764em;">S</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></li></ul><ul id="b2507117-4f39-46a0-8dcd-9bb5385cf16c" class="bulleted-list"><li style="list-style-type:disc"><strong>ΔS = 2d  e Δt = tempo de ida + tempo de volta</strong></li></ul><ul id="1ebb175b-9930-4db1-9d5e-7cfb0e865888" class="bulleted-list"><li style="list-style-type:disc">tal que d = distância da fonte do som/luz até o objeto</li></ul><h1 id="40d9c9e0-411f-4a07-abeb-c6fa052f05ef" class="block-color-orange_background">Química</h1><h3 id="8bbda443-6789-47db-83c9-b144b9f523e9" class="">Lei de Hess</h3><p id="3be00bcf-66a3-41ff-9aa7-55e793e68170" class="">O <strong>ΔH de uma reação não depende do caminho, mas somente dos estados inicial e final.</strong></p><figure id="e0f85ff9-366b-4c52-890f-138a930bdff6" class="image" style="text-align:left"><a href="Resumo%20-%2012%2005%205a20a83072084cdd9215274d63159223/Untitled%203.png"><img style="width:336px" src="Resumo%20-%2012%2005%205a20a83072084cdd9215274d63159223/Untitled%203.png"/></a></figure><ul id="014d9f0c-7ec7-420a-b938-709e9e9555e6" class="toggle"><li><details open=""><summary>Aplicando a lei de Hess</summary><ol type="1" id="0ebe7462-f1bb-484b-b1bf-5b1c64c17293" class="numbered-list" start="1"><li>São dadas 2 ou + equações  com valores de <strong>ΔH</strong></li></ol><ol type="1" id="18dfb11c-91ae-4073-8043-1df147df09cd" class="numbered-list" start="2"><li>É necessário obter o valor de <strong>ΔH de uma nova equação</strong></li></ol><ol type="1" id="da6a49ca-5d27-41c3-b1af-c71c692e6ce7" class="numbered-list" start="3"><li>Monta-se um sistema com as equações de modo que a soma delas dê a equação desejada</li></ol><p id="b1571b79-f4cd-475c-8482-749485598d87" class="">Obs → ao inverter a reação (inteira), ou seja, trocar os produtos pelos reagentes e vice-versa, deve-se inverter o sinal do <strong>ΔH </strong></p></details></li></ul><figure id="dd2be517-c2bf-4657-bf77-0b6c54e80736"><a href="https://youtu.be/YoU1GWt0Ga0" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Lei de Hess - Passo a Passo!</div><div class="bookmark-description">🧪 Curso completo de Química para o ENEM: https://professorgabrielcabral.com.br/
+
+✌ Instagram: @profgabrielcabral
+
+Nesse vídeo aprendemos com muita suavidade a como dominar a Lei de Hess. 
+
+Vem que vem!
+
+#leidehess #enem #profgabrielcabral</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/a3aebd16/img/favicon_144x144.png" class="icon bookmark-icon"/>https://youtu.be/YoU1GWt0Ga0</div></div><img src="https://i.ytimg.com/vi/YoU1GWt0Ga0/maxresdefault.jpg" class="bookmark-image"/></a></figure><h1 id="f287c816-21d6-4180-8d36-a081fc13e524" class="block-color-blue_background">Biologia</h1><h3 id="c7883a40-5345-4201-ab2e-ba250f021498" class="">1ª Lei de Mendel (Monoibridismo)</h3><ul id="7488afbc-1389-4b5f-aaca-e4da4379b4e9" class="bulleted-list"><li style="list-style-type:disc">Cada característica é determinada por um par de alelos </li></ul><ul id="720ddbc2-16e5-48e3-87ed-15b7341fde57" class="bulleted-list"><li style="list-style-type:disc">Dois tipos de alelos: Dominante e recessivo</li></ul><figure id="b9007572-68dc-44a7-8653-75e63d1a735c" class="image" style="text-align:left"><a href="Resumo%20-%2012%2005%205a20a83072084cdd9215274d63159223/Untitled%204.png"><img style="width:288px" src="Resumo%20-%2012%2005%205a20a83072084cdd9215274d63159223/Untitled%204.png"/></a></figure><figure id="bd63b9c0-7dcb-4b4e-9f67-8fd3c19b925a"><a href="https://youtu.be/bxTsEeQ2amE" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">1ª Lei de Mendel de um jeito fácil e bem objetivo.</div><div class="bookmark-description">Aula importantíssima pra você que está começando a estudar genética ou apresenta falhas de compreensão básica do assunto. Falo especificamente sobre a primeira lei de Mendel, o monoibridismo, de vários problemas genéticos humanos que seguem o padrão da primeira lei e ainda dou um macete top para lhe ajudar a resolver as questões de genética que abordam esse tema específico.
+Não marque bobeira se ligue no canal que tem aula nova toda segunda, sempre as 19:30.
+acesse meu site: www.senhorbiologia.com.br
+me siga no instagran: @senhorbiologia
+facebook: @professorluizharmed</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/a3aebd16/img/favicon_144x144.png" class="icon bookmark-icon"/>https://youtu.be/bxTsEeQ2amE</div></div><img src="https://i.ytimg.com/vi/bxTsEeQ2amE/maxresdefault.jpg" class="bookmark-image"/></a></figure><h1 id="6ccc2606-0222-49d1-a89f-722968e8d13b" class="block-color-purple_background">Geografia</h1><h3 id="f8cd12d3-b832-41d6-bd86-877c936aa7b4" class="">Movimentos orogenéticos</h3><ul id="78506dfd-5a97-4f13-9f00-5b2c229c49b7" class="bulleted-list"><li style="list-style-type:disc">Hipóteses da translação dos continentes → Deriva continental. Movimentação das massas continentais (Sial) sobre o estrato de Sima</li></ul><ul id="f673e0a3-8a7c-4e87-9e2f-2883c988636c" class="toggle"><li><details open=""><summary>Tectonismo – lento e prolongado movimento das placas tectônicas
+impulsionadas pelas correntes magmáticas no interior da Terra. Age de duas
+maneiras:</summary><ul id="a7d48b3e-435a-4575-8e43-134b3dd88eb4" class="bulleted-list"><li style="list-style-type:disc">Epirogênese → movimentos verticais (placas se chocam)</li></ul><ul id="7bbc87d3-f342-4bc8-844c-16d3457bd1df" class="bulleted-list"><li style="list-style-type:disc">Orogênese → movimentos horizontais / lateralizados (placas se chocam ou separam) → responsável por vulcões e abalos sísmicos </li></ul></details></li></ul><ul id="b1ea99d2-bbc1-44fd-88fe-18ac322f3814" class="bulleted-list"><li style="list-style-type:disc">Círculo de fogo → Principais focos de vulcões a abalos sísmicos</li></ul><ul id="b6cb2b77-e72d-420d-8011-441d2611b24f" class="toggle"><li><details open=""><summary>Abalos sísmicos – tremores de terra, relacionados a vulcanismo, tectonismo e
+desmoronamentos internos.</summary><ul id="3b9047a9-712a-4d38-80d4-c2b11167ae9c" class="bulleted-list"><li style="list-style-type:disc">Epicentro → ponto onde a energia é liberada com mais força na superfície</li></ul><ul id="9b730b19-0c8e-4526-a5c7-bbbc5db0825e" class="bulleted-list"><li style="list-style-type:disc">Hipocentro → ponto onde a energia é liberada com mais força no encontro das placas</li></ul><ul id="b2a13dbb-03ab-4e6b-9cc4-601368edee5e" class="bulleted-list"><li style="list-style-type:disc">Terremotos - epicentro no continente</li></ul><ul id="3eb87d53-e7d3-49f9-b048-efa3c1d5de2f" class="bulleted-list"><li style="list-style-type:disc">Maremotos – epicentro no oceano (podendo gerar grandes ondas – tsunamis)</li></ul><ul id="7a2ae8b2-ee89-42e4-9453-3f5ebda3025f" class="bulleted-list"><li style="list-style-type:disc">Escala Richter → medição da força de um abalo sísmico</li></ul></details></li></ul><ul id="b74c6c74-5eb0-404e-9502-7f99989d2259" class="bulleted-list"><li style="list-style-type:disc">Vulcanismo – abrange todos os processos que permitem e provocam a ascensão de
+material magmático jovem, do interior da Terra até a superfície.</li></ul><h1 id="47b71935-ba42-4c3e-bb9d-17651080f7ea" class="block-color-pink_background">Sociologia</h1><h3 id="75d9923e-c658-45b3-81a7-a8540ef2c70e" class="">História - Direitos, cidadania e democracia</h3><ul id="1082a86c-09fc-4874-b1ce-1d262f862a9d" class="toggle"><li><details open=""><summary>Medieval</summary><ul id="ef1cb59d-79ad-459e-866a-09e8c4ee24f4" class="bulleted-list"><li style="list-style-type:disc">sociedade estamental (fixa determinada pelo nascimento) e sem direitos</li></ul></details></li></ul><ul id="72dfa2be-d614-4cbd-96d3-d5e543e67867" class="toggle"><li><details open=""><summary>Moderna</summary><ul id="338d54fe-3054-4e4c-8ec7-77e58e352d93" class="bulleted-list"><li style="list-style-type:disc">mudança de mentalidade (teocentrismo → antropocentrismo)</li></ul><ul id="ede4f635-1afd-4094-b014-f0eb2414242f" class="toggle"><li><details open=""><summary>Iluminismo</summary><ul id="17534082-bb61-472f-a0bf-8ae0429aab21" class="bulleted-list"><li style="list-style-type:disc">direitos naturais (vida, liberdade, propriedade)</li></ul><ul id="476348c8-dcc5-45e3-b744-564cde18082d" class="bulleted-list"><li style="list-style-type:disc">tripartição do poder (executivo, legislativo, judiciário)</li></ul><ul id="0856c140-eda7-442c-a2df-c005af4327da" class="bulleted-list"><li style="list-style-type:disc">contrato social (igualdade jurídica e participação política)</li></ul></details></li></ul><ul id="8c682441-b040-4210-b458-e1c772db45c4" class="bulleted-list"><li style="list-style-type:disc">Revolução Francesa → Declaração dos direitos dos Homens e do Cidadão (determina igualdade jurídica) </li></ul></details></li></ul><ul id="33884d3e-cbaa-464f-9632-567ce096c7bc" class="toggle"><li><details open=""><summary>Contemporânea</summary><ul id="5c2353d1-d411-404d-932f-6d38697011b8" class="bulleted-list"><li style="list-style-type:disc">fim da 2ªGuerra Mundial </li></ul><ul id="1be7810c-63f0-4f70-aeae-8382de7ef1ca" class="bulleted-list"><li style="list-style-type:disc">Criação da ONU</li></ul><ul id="fdfe22a0-4b7f-4f93-ad3d-121f7904120e" class="bulleted-list"><li style="list-style-type:disc">Declaração universal dos direitos humanos</li></ul></details></li></ul><h1 id="47e7caea-29d6-4ad0-8ab3-ae5a6162ef8f" class="block-color-yellow_background">História</h1><h3 id="39c2b106-ea1f-445c-9f9e-bcfb491f446f" class="">Ideologias do século XIX</h3><ul id="9d7b3695-77fd-46b8-96a5-7ec9e4449b6f" class="toggle"><li><details open=""><summary>Ideologia</summary><ul id="c976960c-fd86-4288-8d1f-aaf7a8a162d1" class="bulleted-list"><li style="list-style-type:disc">conjunto de ideias (políticas, sociais, religião, econômicas, etc)</li></ul><ul id="46ff17c3-4dff-4dcb-b679-d7752f68f04a" class="bulleted-list"><li style="list-style-type:disc">século XIX → durante 2ª Revolução Industrial (Burguesia X Proletariado)</li></ul><ul id="ac2913df-b13b-4ae5-93d9-c9cb00bbab78" class="bulleted-list"><li style="list-style-type:disc"><strong>Direita*** → propriedade privada, trabalho, sociedade de classes, livre iniciativa, nacionalismo</strong></li></ul><ul id="298476ca-799c-4925-ac48-0316e1fd1eba" class="bulleted-list"><li style="list-style-type:disc"><strong>Esquerda*** → propriedade coletiva, estado tem papel social, fim da sociedade de classes, cidadão tem papel na estrutura social determinada pelo estado (médico em Cuba)</strong></li></ul></details></li></ul><p id="45953a2c-b6d7-4088-82e4-548fe8b93add" class="">
+</p><p id="bbaf676d-43fc-430e-9da9-9fec0e751b4e" class="">
+</p><p id="432b224d-eb16-41c4-b4d4-c729eb439027" class="">*** - importante </p></div></article></body></html>

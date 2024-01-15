@@ -1,0 +1,674 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumo - 22/03</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b85a2271-5a09-4a9b-abaa-8caad18793b8" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_11.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">👃🏻</span></div><h1 class="page-title">Resumo - 22/03</h1></header><div class="page-body"><h1 id="a4d720c5-4ebc-49de-b14b-8e13b6d45f95" class="block-color-brown_background">Matemática</h1><h3 id="f790c8b1-75e7-462c-8d6e-d74dfd77b2db" class="">Polígonos regulares</h3><ul id="47ed31cb-9344-4c5e-89c3-1a749bb1e99e" class="bulleted-list"><li style="list-style-type:disc">São convexos</li></ul><ul id="e08bb09e-5e2c-4bfb-b356-ba29bc2c2e7a" class="bulleted-list"><li style="list-style-type:disc">Número de diagonais:  <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mfrac><mrow><mi>n</mi><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">d = \frac{n(n-3)}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">3</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span> (n = número de vértices/lados)</li></ul><ul id="b0066eae-9527-4f0a-aea9-f7d125071f61" class="bulleted-list"><li style="list-style-type:disc">Soma dos ângulos internos: Si = (n-2) . 180º</li></ul><h1 id="09ce2eb6-9323-45f1-92ff-5316f6904c86" class="block-color-teal_background">Física</h1><h3 id="4acd401f-3fed-44f8-b307-ea21e05458d6" class="">Potência de uma fonte térmica</h3><p id="5cc402e4-9949-413e-ac37-98403d640f85" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>E</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">P = \frac{ΔE}{Δt}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">Δ</span><span class="mord mathnormal mtight">t</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">Δ</span><span class="mord mathnormal mtight" style="margin-right:0.05764em;">E</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></p><p id="75f2e3c9-e7a0-4af7-90e6-60062c4ca811" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>=</mo><mfrac><mi>J</mi><mi>s</mi></mfrac></mrow><annotation encoding="application/x-tex">W = \frac{J}{s}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.09618em;">J</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></p><p id="e96037a6-98f2-411a-8274-554d17f4b6e6" class="">1 cal = 4,2 J</p><p id="a0a0b815-48a9-40f9-a34a-afa08c338c5b" class="">c da água= 1cal/g°C</p><h1 id="c2577d1f-f9a3-4e9f-bbc7-f41e479531b7" class="block-color-orange_background">Aprofundamento Química</h1><h3 id="ab003912-dc4c-41d8-8fe9-d34b52d68a2f" class="">Modelo atômico de Bohr (1913)</h3><ul id="edbb5e80-ce04-49f8-bade-065e482b20c8" class="bulleted-list"><li style="list-style-type:disc">Eletrosfera subdividida em 7 camadas (órbitas ou subníveis), organizados por ordem crescente de energia</li></ul><ul id="beefda49-d18b-483f-a965-3ff25be9c358" class="bulleted-list"><li style="list-style-type:disc">Ao receber energia, salta para camada + energética</li></ul><ul id="c7eb8f45-78ee-4768-9c1f-55fb38c31afe" class="bulleted-list"><li style="list-style-type:disc">Ao retornar para camada menos energética, libera energia em forma de luz</li></ul><h1 id="d40b3b63-f092-4133-8142-422d2fdfd478" class="block-color-blue_background">Biologia</h1><ul id="3ce8335d-ae95-4034-ae91-d8f483cfd74a" class="toggle"><li><details open=""><summary>Estômatos</summary><ul id="ae5ea9b7-2188-43c7-b0d7-f74afb99e704" class="bulleted-list"><li style="list-style-type:disc">Realizam trocas gasosas</li></ul><ul id="d27a5001-bb53-46ce-8b43-6bf6a07ebfe9" class="bulleted-list"><li style="list-style-type:disc">Entrada de <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><msub><mi>O</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">CO_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></li></ul><ul id="9a91853a-ec71-4aa3-becd-8e5e3849efad" class="bulleted-list"><li style="list-style-type:disc">Saída de Oxigênio e vapor d’água (transpiração)</li></ul></details></li></ul><ul id="d4b968cd-06bc-4af4-b40e-08d1d004ac74" class="toggle"><li><details open=""><summary>Cutícula</summary><ul id="7be1f01c-bb94-4a57-9f5b-cc522d08bed3" class="bulleted-list"><li style="list-style-type:disc">Camada de cera na superfície da folha</li></ul><ul id="68d5b52c-fec2-4bd6-9cbe-9f5ffdaab169" class="bulleted-list"><li style="list-style-type:disc">Protege contra danos mecânicos e perda excessiva de água</li></ul><ul id="4c7e8a1d-9ce2-454f-9e14-538d3ff84cab" class="bulleted-list"><li style="list-style-type:disc">Impedir a entrada de microrganismos e substâncias tóxicas na folha</li></ul></details></li></ul><h1 id="5215b692-f4d4-4b35-a1b8-da47cd818d0f" class="block-color-pink_background">Literatura </h1><h3 id="9f0eb018-115a-404b-b243-3e9ed88bb74a" class="">Dom Casmurro</h3><ul id="4abcdd56-80d2-4f37-a5f3-e75080e7220b" class="bulleted-list"><li style="list-style-type:disc">Bento casa com Capitu e fica paranoico com a traição dela (não comprovada)</li></ul><ul id="583d677e-a7da-465e-bc52-02df1bbc23b6" class="bulleted-list"><li style="list-style-type:disc">Narrador (Bento) não confiável</li></ul><h1 id="963ec804-c06e-44df-ad9b-627523ad9d7c" class="block-color-orange_background">Filosofia</h1><h2 id="ca231d02-5883-4175-8d8d-624a11d3af5a" class="">John Locke</h2><ul id="dbdb9a72-5813-4a6d-be04-65fb19277c88" class="bulleted-list"><li style="list-style-type:disc">Tábula rasa – nascemos com a mente em branco. A experiência preenche a mente</li></ul><h3 id="171cbb27-f0bc-4934-b153-a9a32926bf06" class="">Conhecimento</h3><p id="c8559694-5eb7-49f5-aad3-f2cde1abdb2c" class="">Conhecimento</p><p id="be87b36f-bd9d-44be-ba05-a40030082e6f" class="">Duas etapas: experiências / sentidos -&gt; reflexão / ideias</p><table id="695532fc-9e33-42ee-8262-0b202cb7f751" class="simple-table"><tbody><tr id="2cbd71dc-0666-48ce-b0ed-13d12f808dae"><td id="Z]fR" class="">Ideias simples</td><td id="u{];" class="">Ideias complexas</td></tr><tr id="2e6959a0-a8c8-48d6-9107-493267b4d064"><td id="Z]fR" class="">Percepções oriundas dos objetos (textura, aroma, consistência)</td><td id="u{];" class="">Construídas na nossa mente (junção das ideias simples em um conceito)</td></tr><tr id="1da6f6cb-903a-45df-997a-505086dc48ea"><td id="Z]fR" class="">Lisa, doce, consistência média</td><td id="u{];" class="">Maçã</td></tr></tbody></table><table id="133a1237-6c24-45f6-bac8-ef6cb1798c7e" class="simple-table"><tbody><tr id="d59c5972-ce9f-4069-b1e9-1203547ad7d6"><td id="&lt;tr@" class="">Qualidade primárias</td><td id="\hpT" class="">Qualidades secundárias</td></tr><tr id="68b50962-a8d2-421c-bfbe-6ed16d513de0"><td id="&lt;tr@" class="">Iguais para todos (forma, extensão, volume)</td><td id="\hpT" class="">Gosto de cada um (cor, odor, textura)</td></tr></tbody></table><h2 id="23276435-32b6-4185-be86-5dce8d072f64" class="">Francis Bacon</h2><ul id="1dc8e596-0e69-4265-ba96-dbafb6e7f33b" class="bulleted-list"><li style="list-style-type:disc">Conhecimento parte da indução / experimentação</li></ul><ul id="a671db49-68db-4e9e-93ef-1b3e6eafc268" class="bulleted-list"><li style="list-style-type:disc">“Saber é poder” o homem domina a natureza pelo conhecimento</li></ul><ul id="a02332f9-8292-4afb-af4e-d4c75b521ae7" class="toggle"><li><details open=""><summary>Teoria dos ídolos -&gt; devemos superar os ídolos para chegar ao conhecimento (falsas noções, maus hábitos, erros)</summary><ol type="1" id="564f6cc0-d470-42ce-b416-25788a7ad7ed" class="numbered-list" start="1"><li>Tribo: limitações da natureza humana (imaginar, desejar, supor)</li></ol><ol type="1" id="ce122ff7-9841-419a-a869-d765d3219d5d" class="numbered-list" start="2"><li>Caverna: limitações individuais (intelectuais e emocionais)</li></ol><ol type="1" id="6e383eeb-e829-4c72-a9da-8c6b2da2d2dc" class="numbered-list" start="3"><li>Foro / mercado: mau uso da linguagem (discurso)</li></ol><ol type="1" id="1916cb9c-302f-4495-96d8-96b53e262d68" class="numbered-list" start="4"><li>Teatro: falsas concepções científicas (crença)</li></ol></details></li></ul><h1 id="32b1bcbd-e05e-4506-aeb3-15d97799c1f4" class="block-color-purple_background">Gramática</h1><h3 id="416d33ad-90d6-45cb-91eb-d6524f5eb15a" class="">Sujeito indeterminado</h3><ul id="80344472-b2e2-4c1c-9fe4-99a7474cb1e4" class="bulleted-list"><li style="list-style-type:disc">Verbo na 3ª pessoa do plural </li></ul><ul id="fa74b076-9e0a-473b-9357-d6fdfe29c9cc" class="bulleted-list"><li style="list-style-type:disc">Sujeito não pode ser determinado pelo contexto</li></ul><p id="1131cdd8-a230-4ad9-bfff-57d924facba9" class="">“Assaltaram o banco”</p><h3 id="c3b625b6-df37-42fe-9ea6-e4715a53731f" class="">Oração sem sujeito</h3><ul id="48417dc7-d8f2-40e6-b39d-965742ed02be" class="bulleted-list"><li style="list-style-type:disc">Oração apresenta verbo impessoal</li></ul><ul id="541e93d3-7dd2-40ea-bc52-7d33cdc5cd11" class="bulleted-list"><li style="list-style-type:disc">Verbos impessoais são conjugados na 3ª pessoa do singular</li></ul><ul id="149dcc46-8fd2-4166-b593-7978cd753c59" class="bulleted-list"><li style="list-style-type:disc">Fenômenos naturais (”choveu ontem”)</li></ul><ul id="765be4a9-7ddc-4370-a2b3-e93f8674860c" class="toggle"><li><details open=""><summary>Verbo “haver” com sentido de “ocorrer” ou “existir</summary><p id="2a5c4079-fd58-4d11-bd71-723a0f7c8f57" class="">“Existem 5 pessoas na sala” (5 pessoas = sujeito) → “Há 5 pessoas na sala”</p><p id="31405763-a437-42af-9e55-f6841a51023a" class="">“Ocorreram vários acidentes ontem” (vários acidentes = sujeito) → “houve vários acidentes ontem”</p></details></li></ul><h1 id="06e8aaca-f756-4d70-9d5f-22c0d67e65dc" class="block-color-yellow_background">História</h1><h3 id="26d50988-a8db-44d0-b16d-a6cfebfdf41e" class="">União Ibérica e invasões estrangeiras</h3><p id="8b4daf5a-cce3-4ad0-acca-9d65c6709886" class="">D. Sebastião, rei não casado de Portugal que queria manter a fé católica</p><p id="29a27bce-c637-4e76-b028-105121916058" class="">→ Para fazer uma nova cruzada, convocou 20 mil homens soldados e foi a Marrocos</p><p id="d0c6ec14-831d-48dc-a62b-3ebe9de7a6c9" class="">→ Com sua derrota, Portugal ficou sem herdeiro</p><p id="aa4c07e7-1afb-403a-ba35-129874a8557e" class="">→ O rei da Espanha Felipe II (primo de D. Sebastião) clama o trono de Portugal</p><p id="288618e4-f62b-455c-9cdd-3fc3462b1ed4" class="">→ Portugal fica sob domínio Espanhol → Cria-se União Ibérica (1580 -1640)</p><p id="45fdf68f-0e2c-45d2-ad4a-274a2e59a3db" class="">→ Brasil vira colônia espanhola</p><p id="00661af3-27f6-4388-8cc1-6f4e91ef1e31" class="">→ Sebastianismo → crença de que D. Sebastião não morreu, foi vivo para o céu e voltaria para castigar quem vendeu Portugal</p><p id="9f9354ee-d186-44df-966a-027b32f76712" class="">→ Felipe II católico inicia guerra contra Holanda protestante, alegando ser herdeiro da Holanda
+→ Embargo Espanhol sobre cana enviada do Brasil para Holanda</p><p id="637553b5-2bd5-4919-aed7-17f6c4bc738d" class="">→ Holanda invade Salvador (criaram a WIC) e são derrotados em 1624</p><p id="17f398c3-9e6d-4f65-a258-ef43e572b822" class="">→ “Jornada dos vassalos” → Espanhóis que vieram ajudar na guerra</p><p id="ab01d979-5e73-4773-96ac-67760bf7ea4c" class="">→ Holanda volta em 1630 e invade Pernambuco, guerreando por 7 anos</p><p id="260f917f-4ad7-4c1a-b895-aaf105389a69" class="">→ Holanda domina Recife</p><p id="58ffecc8-adde-4bd4-b30a-f5977f6feeb4" class="">→ Produção de cana foi prejudicada, Maurício de Nassau é mandado para estabelecer domínio Holandês e orientar a produção</p><ul id="7019486b-b211-4c1b-8583-5c8e5752c9d1" class="toggle"><li><details open=""><summary>Governo de Maurício de Nassau (1637 - 1644)</summary><ul id="d37f3858-b347-4eff-a849-da9f593da396" class="bulleted-list"><li style="list-style-type:disc">Urbaniza Recife</li></ul><ul id="a7ec5835-2f91-40a6-b392-ac7cade6d816" class="bulleted-list"><li style="list-style-type:disc">Conserta engenhos destruídos</li></ul><ul id="5eb8cb0a-ddb7-42c2-a9bd-e948b0811a63" class="bulleted-list"><li style="list-style-type:disc">Tolerância religiosa dos brasileiros católicos</li></ul><ul id="663713e4-bf88-4070-b20f-d6867854c99c" class="bulleted-list"><li style="list-style-type:disc">Empresta dinheiro aos senhores de engenho</li></ul><ul id="409bab36-7240-4770-92f7-28cc6d178e0e" class="bulleted-list"><li style="list-style-type:disc">Forneceu escravos</li></ul><ul id="37665cb6-38dc-4672-8503-99ca741e8a26" class="bulleted-list"><li style="list-style-type:disc">Decuplica (10x) a produção</li></ul><p id="88e09795-c384-4b84-810e-47040178aa04" class="">É demitido em 1644 por gastar dinheiro com urbanização</p><p id="d9709812-7286-47dc-b366-a15b18cb1271" class="">
+</p></details></li></ul><p id="4ee093a0-34a2-490f-b118-19cc805c0b43" class="">→ Estoura a revolta “Insurreição Pernambucana”</p><p id="bca23cda-73df-407e-927e-5285f28df5a6" class="">→ 1654 - Holanda deixa o Brasil</p><p id="80be80c5-85f8-44ce-ad60-1ec2a5b3e29a" class="">→ Crise do açúcar → Holanda passa a plantar o próprio açúcar</p><h1 id="88a5a153-c338-4c28-b3f0-1e73ddf59c95" class="block-color-brown_background">Aprofundamento Matemática</h1><h3 id="d3d3140a-2b1b-478d-8991-a5cd80bf9ffa" class="">Estudo da reta</h3><ul id="5c47f5f2-5142-4e16-93ad-b7a4164f4a5b" class="toggle"><li><details open=""><summary>Coeficientes</summary><ul id="c0e5bc48-d2d9-4d9f-af53-86d815109c57" class="toggle"><li><details open=""><summary>Angular</summary><ul id="e8c28fc7-b856-448a-9464-e89d2e0ad4d0" class="bulleted-list"><li style="list-style-type:disc">Crescente (m &gt; 0) - ângulo no 1º quadrante (0º &lt; <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span></span><span>﻿</span></span> &lt; 90º)</li></ul><ul id="a299dab4-5505-473b-86dc-992195b48f47" class="bulleted-list"><li style="list-style-type:disc">Decrescente (m &lt; 0) - ângulo no 2º quadrante (90º &lt; <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span></span><span>﻿</span></span> 180º)</li></ul></details></li></ul><ul id="6939a353-7a7f-4bcc-ba43-06314942d9ea" class="bulleted-list"><li style="list-style-type:disc">Linear: coordenada que a reta cruza o eixo y</li></ul></details></li></ul><ul id="8d7238fe-7cf1-4bd5-9e07-7e94275090e9" class="bulleted-list"><li style="list-style-type:disc">(0, b)</li></ul><ul id="0aa995d3-fb0d-405c-9532-2ea6f7fbd15f" class="bulleted-list"><li style="list-style-type:disc">(-b/a, 0) → x = —b</li></ul><ul id="a7dd785f-d806-4ace-8e12-92a593690a99" class="bulleted-list"><li style="list-style-type:disc">m = tg <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span></span><span>﻿</span></span></li></ul><p id="3405344e-3959-4bfb-b352-fd693217508b" class="">Obs: levar como base o exercício 1 da página 105</p><h1 id="bf4a5aee-f9fb-4fb8-a74b-522f189d811a" class="block-color-purple_background">Aprofundamento Geografia</h1><ul id="6bf8f06c-d7a7-4e7b-bd6e-25894b89bd1f" class="bulleted-list"><li style="list-style-type:disc">Crescimento vegetativo do Brasil é positivo</li></ul><ul id="8e38b4a6-90d9-4ab0-bbda-1fa4ec2a92ba" class="toggle"><li><details open=""><summary>Últimos 50 anos</summary><ul id="bb672a79-d842-4f8c-b699-aa22535a251d" class="toggle"><li><details open=""><summary>Queda da natalidade</summary><ul id="f10ecc20-7fcb-412a-8e71-e0db8523dc2c" class="bulleted-list"><li style="list-style-type:disc">Urbanização</li></ul><ul id="57d5950d-28ef-46b2-940c-849221670ab0" class="bulleted-list"><li style="list-style-type:disc">Métodos contraceptivos</li></ul><ul id="f52690e4-e34e-4847-9775-d7963004befa" class="bulleted-list"><li style="list-style-type:disc">Conscientição / Educação sexual</li></ul><ul id="bf9ccae4-2663-477d-a68e-5d5ad1789a59" class="bulleted-list"><li style="list-style-type:disc">Mulher no mercado de trabalho</li></ul><ul id="41f53a39-6207-493a-b26e-2197408a2341" class="bulleted-list"><li style="list-style-type:disc">Modernização da sociedade</li></ul></details></li></ul><ul id="a94a56d7-8cea-496a-9f25-2f18a9837a8e" class="toggle"><li><details open=""><summary>Queda da mortalidade</summary><ul id="fe5c8098-a880-4dac-a568-f9c021bb1657" class="bulleted-list"><li style="list-style-type:disc">Urbanização</li></ul><ul id="5f739259-aa61-41b9-8a71-ea47b2d1c51f" class="bulleted-list"><li style="list-style-type:disc">Saneamento básico</li></ul><ul id="e9c927b1-6724-4c24-ba4e-b96dae5dbe2a" class="bulleted-list"><li style="list-style-type:disc">Evolução da medicina</li></ul><ul id="26a2ed5b-0052-46d1-8d1f-88ba793bd934" class="bulleted-list"><li style="list-style-type:disc">Padrão educacional elevado</li></ul></details></li></ul><p id="5ef9174e-dd43-4f25-a5b9-b31614277574" class="">
+</p></details></li></ul><ul id="f37b12e7-594d-4cb7-8911-caefa6825af5" class="toggle"><li><details open=""><summary>Estrutura da população</summary><ul id="ade88eb4-2ebe-4b87-a318-92a2bb2d0ba9" class="bulleted-list"><li style="list-style-type:disc">Redução do crescimento demográfico</li></ul><ul id="1c4924f2-06d0-4de5-8202-94173bf3e5fc" class="bulleted-list"><li style="list-style-type:disc">Menos jovens</li></ul><ul id="b754b69c-7010-4516-bf3e-31b9dc25ddaf" class="bulleted-list"><li style="list-style-type:disc">Mais adultos (bônus demográfico → adultos - jovens - idosos) → mão de obra</li></ul><ul id="619f96e4-1a09-4189-a82b-a042979aedcd" class="bulleted-list"><li style="list-style-type:disc">Maior população de idosos</li></ul><ul id="1abb6318-8563-4487-a21d-d7724c8cad7e" class="bulleted-list"><li style="list-style-type:disc">Base estreitando</li></ul><p id="ca9dcdb1-1ec2-427c-9ab3-596f37bba917" class="">
+</p></details></li></ul><ul id="a8e661bc-29bc-4f83-83e9-0e8cda1ede30" class="bulleted-list"><li style="list-style-type:disc">Crise da previdência social</li></ul><h3 id="184e62c9-7c0d-4329-af02-d3db72bc8abf" class="">Estrutura da população</h3><ul id="2d8ffba1-1fad-416b-9b47-7eb0b695235c" class="toggle"><li><details open=""><summary>Idade e gênero</summary><ul id="5c90ea59-d265-45b2-bd03-2ec28b3f5594" class="bulleted-list"><li style="list-style-type:disc">Analisadas pela pirâmide etária</li></ul><ul id="18dc0c7d-2f79-4f18-98e1-2dfd1c57d256" class="bulleted-list"><li style="list-style-type:disc">Predomínio de adultos → bônus demográfico</li></ul></details></li></ul><ul id="f76a9922-e737-495e-a4df-58158981559b" class="toggle"><li><details open=""><summary>Maior população feminina (51,8%)</summary><ul id="c4e1951e-648d-4860-bad5-cc7f97609b95" class="bulleted-list"><li style="list-style-type:disc">Jovens e idosos são principalmente mulheres (maior expectativa de vida)</li></ul></details></li></ul><ul id="9cffa5f1-8def-4d84-90b2-c7eba2e8d422" class="toggle"><li><details open=""><summary>Como será o perfil brasileiro nas próximas décadas?</summary><ul id="01acf1eb-a622-4e8d-aed3-a80a8dc63e29" class="bulleted-list"><li style="list-style-type:disc">Crescimento da população até 2047. </li></ul><ul id="5e015a54-f96f-4e87-a464-df4927931df3" class="bulleted-list"><li style="list-style-type:disc">Após isso, tendência é queda</li></ul><ul id="02a8f197-8fcf-4878-991e-22acc2b21dd0" class="bulleted-list"><li style="list-style-type:disc">Crescimento da população idosa</li></ul></details></li></ul><ul id="786c15f1-cabb-4fcb-800d-083e7f405913" class="toggle"><li><details open=""><summary>Consequências do envelhecimento da população</summary><ul id="aa68e854-648a-40c1-a51a-1496e4f01170" class="bulleted-list"><li style="list-style-type:disc">Reformas previdenciárias</li></ul><ul id="ef71af8c-397e-4921-a2e0-b125ac9cf51f" class="bulleted-list"><li style="list-style-type:disc">Falta de mão de obra</li></ul><ul id="bc0aad73-dac3-4a49-9e16-5a22a48586ad" class="bulleted-list"><li style="list-style-type:disc">Contratação e preparação de idosos</li></ul><ul id="8962ac3a-788f-4129-be7d-830a3428fd82" class="bulleted-list"><li style="list-style-type:disc">Infraestrutura e profissionais → aposentadoria e profissionais para auxiliar idosos</li></ul></details></li></ul><p id="29d4c4fa-5ed2-459a-b970-12ba3ed4a4dc" class="">
+</p></div></article></body></html>

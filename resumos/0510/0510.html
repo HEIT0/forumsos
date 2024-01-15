@@ -1,0 +1,672 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumo 05/10 - Queda</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="0feec1a7-4afa-4911-b61b-fdd3a7b56d24" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_space_shuttle_challenger.jpg" style="object-position:center 19.14%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🪂</span></div><h1 class="page-title">Resumo 05/10 - Queda</h1></header><div class="page-body"><blockquote id="9836191c-c13c-499c-a014-28511bad87d5" class=""><strong><em>Nós, da firma Resumos&amp;CIA, nos isentamos de qualquer responsabilidade quanto a este resumo e possíveis ausências de conteúdo para a prova. Use por sua própria conta e risco.</em></strong></blockquote><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Matemática</label> - <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Física</label> - <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Química </label><br>
+<input type="checkbox" id="vehicle2" name="vehicle2" value="Car"><label for="vehicle2"> Biologia</label> - <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Literatura</label> - <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> História </label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Filosofia</label> - <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Itinerário</label> - <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Aprofundamento de Inglês</label><br><ul id="b03e6294-160a-4fa0-93d1-6f6a9e4414d3" class="toggle"><li><details open=""><summary>Conteúdo</summary><nav id="9e9853f3-8e76-4f94-9e6b-eb10e48ca5c6" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#66b1c575-fa0c-4025-a36e-9f9f4d9247fb">Matemática</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#63b7b1b4-1393-4e52-a578-ddef0eec048a">Sequências</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#9665bdfd-c06a-41f7-acff-887fe2baeac6">Progressão Aritmética</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#01ee8852-4e63-462b-a269-d416074b9b3c">Física</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#4e197c22-e9b4-453a-849d-713039d8197f">Exercício 1</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#73d5c3c0-fdb8-417b-9a40-a21d84d35469">Exercício 2</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ec187423-a346-400a-8847-973f87246396">Exercício 4</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#683300cd-14f1-40a1-9e97-d7449be34586">Exercício 2</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#cb0d2b54-2c02-4c3b-aed0-3bfc738f97d0">Exercício 3</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2f043c8c-762f-4ee9-b597-2d171c8e9662">Exercício 4</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#412badc9-333c-44b1-86f2-267c35cfcdd7">Química</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ef3cfc13-69d8-4c5b-bf31-8ac44c672a07">Hipótese de Avogadro e Volume Molar</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#a5b95dab-0882-44e9-98f9-12b08c474378"><strong>Hipótese de Avogadro</strong></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#a83dfef7-b603-46ca-a954-5b82e21546c7">Volume Molar</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#67b9d098-439c-486c-9d46-2cb355f07622">Biologia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d8103eff-9fa6-40d6-9500-745636f92884">Briófitas</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#4eb9dabd-b28a-40c0-b3ef-828c7eeac909">Literatura</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#7561b9cd-38b0-4dd7-a686-34a898cd573c">História</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#08a1311d-fff3-469b-b875-508e05391d7a">Fatores do pioneirismo português</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#983f217c-5a0b-417a-bd72-2eadffa2062d">Filosofia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#766979a2-5524-4949-88c3-7d76b40ffed0">Filosofia Natural </a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#e6b03bea-5306-4bb0-9016-42a002d36fdb">O que é</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#2ca0bd90-2a0a-428e-ac5d-432e2f887455">Mudanças</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1e553cad-1173-4b63-9e1d-1c673d2738ba">Mundo Contemporâneo</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d569673a-4a5c-45ab-a170-599aa1a1b49a"><strong>Dinâmica do trabalho</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7906745e-4ce9-4712-82dd-7a9ce1da036a">Modos de produção</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1796e445-2a5e-48a7-b3a0-7ed9171b94a8">Física do Cosmo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c2ec8505-e2a3-43da-8e5d-7f5a510d1ff8">Aprofundamento de Inglês</a></div></nav></details></li></ul><h1 id="66b1c575-fa0c-4025-a36e-9f9f4d9247fb" class="block-color-yellow_background">Matemática</h1><h2 id="63b7b1b4-1393-4e52-a578-ddef0eec048a" class="">Sequências</h2><p id="185063ec-bc44-4254-aaa7-1f11f9567b3e" class="">Sequência formada por uma lei de formação</p><h2 id="9665bdfd-c06a-41f7-acff-887fe2baeac6" class="">Progressão Aritmética</h2><div id="7e65e3d5-f59a-4cc7-87e2-f87703fd66ed" class="column-list"><div id="14952cf2-83b4-4188-8fc1-8b6d813f5122" style="width:50%" class="column"><p id="ea0a6c18-278a-4208-8718-22a5d489b385" class="">Uma progressão aritmética é uma sequência numérica em que cada termo, a partir do segundo, é igual à soma do termo anterior com uma constante r. O número r é chamado de razão ou diferença comum da progressão aritmética</p><p id="155e5906-18f8-4a7b-84f0-6a4a3d306d98" class=""><strong>Sequência crescente:</strong> (2,5,8,11…) R=3</p><p id="146a5d7b-72e2-4b0e-9253-5263fb0f2d4e" class=""><strong>Sequência decrescente: </strong>(10,7,4,…) R=-3</p><p id="4387bc2c-a7d9-4058-a0e0-edaa84b7aa32" class=""><strong>Sequência constante:</strong> (8,8,8…) R=0</p></div><div id="58b3d5e8-a754-49ae-84bd-12c9f0261499" style="width:50%" class="column"><figure id="47220e66-cfc0-4e5a-8b4e-7029740b44c0" class="image"><a href="Resumo%2005%2010%20-%20Queda%200feec1a74afa4911b61bfdd3a7b56d24/Untitled.png"><img style="width:240px" src="Resumo%2005%2010%20-%20Queda%200feec1a74afa4911b61bfdd3a7b56d24/Untitled.png"/></a></figure></div></div><hr id="66e42bf2-00f6-41f9-b989-675db1e68ef3"/><h1 id="01ee8852-4e63-462b-a269-d416074b9b3c" class="block-color-teal_background">Física</h1><h3 id="4e197c22-e9b4-453a-849d-713039d8197f" class="">Exercício 1</h3><ul id="2358df6e-2e9e-439a-bd38-039e20205398" class="bulleted-list"><li style="list-style-type:disc">O espelho e o macaco sempre vão ficar equilibrado na corda, então a aceleração deles será a mesma (Qualquer dúvida manda no zap)</li></ul><h3 id="73d5c3c0-fdb8-417b-9a40-a21d84d35469" class="">Exercício 2</h3><ul id="6334a39a-6a78-47eb-ab3b-880a7883f2fb" class="bulleted-list"><li style="list-style-type:disc">120 N</li></ul><h3 id="ec187423-a346-400a-8847-973f87246396" class="">Exercício 4</h3><ul id="bd056499-54e1-41ff-9a84-13ade721f393" class="bulleted-list"><li style="list-style-type:disc">84 N</li></ul><h3 id="683300cd-14f1-40a1-9e97-d7449be34586" class="">Exercício 2</h3><ul id="92382774-4b7e-43ee-a868-b3049e41cd07" class="bulleted-list"><li style="list-style-type:disc">8 m/s²</li></ul><h3 id="cb0d2b54-2c02-4c3b-aed0-3bfc738f97d0" class="">Exercício 3</h3><ul id="2946065a-f439-4c50-8956-14dabd5f9d7b" class="bulleted-list"><li style="list-style-type:disc">0,30</li></ul><h3 id="2f043c8c-762f-4ee9-b597-2d171c8e9662" class="">Exercício 4</h3><ul id="d2f98145-320a-4510-b327-f90cb5e06997" class="bulleted-list"><li style="list-style-type:disc">90m</li></ul><hr id="888b2ae3-b513-42fd-9aaa-831db66aa1de"/><h1 id="412badc9-333c-44b1-86f2-267c35cfcdd7" class="block-color-red_background">Química</h1><h2 id="ef3cfc13-69d8-4c5b-bf31-8ac44c672a07" class="">Hipótese de Avogadro e Volume Molar</h2><h3 id="a5b95dab-0882-44e9-98f9-12b08c474378" class=""><strong>Hipótese de Avogadro</strong></h3><p id="a77f7d13-02ff-4651-bd85-2b78c3ea5ca5" class="">A <strong>Hipótese de Avogadro </strong>diz que 2 ou mais gases de <strong>volumes iguais</strong>, ambos nas mesmas condições de <span style="border-bottom:0.05em solid">temperatura e pressão</span>, terão o <strong>MESMO NUMERO DE MOLÉCULAS</strong></p><p id="63810c87-06ba-4052-85a2-bef7c856e6c1" class=""><strong>Exemplo:</strong> Se eu pegar um frasco de Hidrogênio (<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">H_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>) e um com Gás Carbônico (<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><msub><mi>O</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">CO_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>), estando os dois com volume igual e na CNTP (1 atm de pressão e  0º graus <em>célsius</em>), estes terão o mesmo número de moléculas.</p><h3 id="a83dfef7-b603-46ca-a954-5b82e21546c7" class="">Volume Molar</h3><p id="39f14685-abbf-40a8-9a89-dc0516f33bd2" class=""><strong>Volume Molar</strong> é o volume ocupado por <strong>1 mol</strong> (<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6.1</mn><msup><mn>0</mn><mn>23</mn></msup></mrow><annotation encoding="application/x-tex">6.10^{23}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">6.1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">23</span></span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>) na CNTP</p><p id="1255223b-f7fa-4225-9d96-c142558adb5b" class=""><strong>Assim:</strong> 1 mol de qualquer gás na CNTP é igual a: 22,4L</p><hr id="fe24996a-f229-48b2-bfd6-a6e786fc40bf"/><h1 id="67b9d098-439c-486c-9d46-2cb355f07622" class="block-color-teal_background">Biologia</h1><h3 id="d8103eff-9fa6-40d6-9500-745636f92884" class="">Briófitas</h3><table id="0143ceb8-655e-40a8-bd6d-20339a022fd8" class="simple-table"><thead class="simple-table-header"><tr id="198f833e-4da3-4ad8-adfa-c572377a69ab"><th id="=BTj" class="simple-table-header-color simple-table-header"></th><th id="{&lt;Q[" class="simple-table-header-color simple-table-header" style="width:336.15625px">Briófitas</th></tr></thead><tbody><tr id="002ddccb-94a4-4cfb-a7b9-d0eb4b56873e"><th id="=BTj" class="simple-table-header-color simple-table-header">Exemplos</th><td id="{&lt;Q[" class="" style="width:336.15625px">Musgo e Hepáticas</td></tr><tr id="85a3b028-ae13-4037-b7e9-175b7ac6bb25"><th id="=BTj" class="simple-table-header-color simple-table-header">Vaso condutor</th><td id="{&lt;Q[" class="" style="width:336.15625px">Não </td></tr><tr id="c6352c5e-c67f-4493-835b-28e0b7a3ca00"><th id="=BTj" class="simple-table-header-color simple-table-header">Água para fecundação</th><td id="{&lt;Q[" class="" style="width:336.15625px">Sim</td></tr><tr id="aa5598ec-73a0-4c8d-898d-7a32bc0cf954"><th id="=BTj" class="simple-table-header-color simple-table-header">Sementes</th><td id="{&lt;Q[" class="" style="width:336.15625px">Não</td></tr><tr id="16eb4172-414b-4716-9a3d-7795db99df31"><th id="=BTj" class="simple-table-header-color simple-table-header">Flor/Fruto</th><td id="{&lt;Q[" class="" style="width:336.15625px">Não</td></tr><tr id="52d23450-cbb7-4021-8c47-892d8add86a9"><th id="=BTj" class="simple-table-header-color simple-table-header">Fase Duradoura</th><td id="{&lt;Q[" class="" style="width:336.15625px">Gametófito </td></tr></tbody></table><ul id="e174c64c-9a42-41dd-8b34-93b67a0c7233" class="bulleted-list"><li style="list-style-type:disc">Vivem em ambientes terrestres úmidos, quentes e sombreados.</li></ul><ul id="67b29614-f531-4871-8e5f-3ba8dbe1f912" class="bulleted-list"><li style="list-style-type:disc">Não crescem por não ter vaso condutor</li></ul><hr id="0fb1f035-e372-4017-93eb-e2a62fc94d74"/><h1 id="4eb9dabd-b28a-40c0-b3ef-828c7eeac909" class="block-color-brown_background">Literatura</h1><ul id="6dab4d96-b1a7-46af-9026-004b7a235184" class="bulleted-list"><li style="list-style-type:disc">Leonardo, personagem de memórias de um sargento de milícia, é um anti-herói, ou seja, é do bem, mas malandro</li></ul><ul id="19b84e8f-b0a8-4acc-8a5b-8825402c7b51" class="bulleted-list"><li style="list-style-type:disc">Amor e mulher não idealizadas </li></ul><ul id="06aff70a-db8d-4879-beeb-a7259f6157da" class="bulleted-list"><li style="list-style-type:disc">Final feliz</li></ul><ul id="9d084af2-16ff-4364-9deb-f988e4fde623" class="bulleted-list"><li style="list-style-type:disc">Figuras não complexas e é engraçado (um pouco diferente do romantismo)</li></ul><ul id="a1b52d5f-ef21-4ff3-a414-efc5b233b625" class="bulleted-list"><li style="list-style-type:disc">Narrador com certa parcialidade (juízo)</li></ul><ul id="e1a6ff1a-8565-46f3-8d8b-6aa8c061757d" class="bulleted-list"><li style="list-style-type:disc">Leonardo nasceu de uma pisadela e um beliscão</li></ul><hr id="d5b32d75-0707-40ab-990e-1ee48e61d4bd"/><h1 id="7561b9cd-38b0-4dd7-a686-34a898cd573c" class="block-color-brown_background">História</h1><h2 id="08a1311d-fff3-469b-b875-508e05391d7a" class="">Fatores do pioneirismo português</h2><ul id="6cae1d9d-dc5f-49b7-ba33-3ec0cb6487e3" class="bulleted-list"><li style="list-style-type:disc"><strong>Rápida centralização do poder na figura do rei</strong> → primeiro país com rei poderoso  (necessário para liderar/organizar a navegação)</li></ul><ul id="f137a80d-7993-4251-981b-55228ac8e2d5" class="bulleted-list"><li style="list-style-type:disc"><strong>Ótima localização geográfica</strong> → banhado por Oceano Atlântico, entrada pro estreito de Gibraltar que liga o Atlântico e Mediterrâneo, rios navegáveis que desaguam no oceano</li></ul><ul id="eed72b6c-976a-405b-8e65-70e41eb13db9" class="bulleted-list"><li style="list-style-type:disc"><strong>Burguesia mercantil parceira do Estado</strong> → financiou a navegação</li></ul><ul id="2e2e15ff-6110-4ce8-b6ee-1862c139e59f" class="bulleted-list"><li style="list-style-type:disc"><strong>Berço de inventos e avanços náuticos</strong> → melhores cartógrafos, caravela, aprimoraram a bússola e o astrolábio</li></ul><ul id="cdc24f27-0cb8-4a58-a578-aa09b594cc10" class="bulleted-list"><li style="list-style-type:disc"><strong>Escola de Sagres</strong> → escola especializada em ensinar a arte da navegação</li></ul><hr id="ba3c72b7-a90b-4e7e-936b-1fbdfc5bbe62"/><h1 id="983f217c-5a0b-417a-bd72-2eadffa2062d" class="block-color-yellow_background">Filosofia</h1><h2 id="766979a2-5524-4949-88c3-7d76b40ffed0" class="">Filosofia Natural </h2><ul id="dd094c37-1408-4103-856b-0cb53e1a476e" class="bulleted-list"><li style="list-style-type:disc">Na transição da idade média para moderna (Renascimento: resgate da cultura greco-romana, antropocentrismo e racionalismo)</li></ul><h3 id="e6b03bea-5306-4bb0-9016-42a002d36fdb" class="">O que é</h3><p id="c71e85d6-43d9-4f05-9f8e-a5baed36c1af" class="">É o “espírito filosófico” que combinava a cultura greco-romana (matemática, observação) com o renascimento (empirismo). Com as observações superando as explicações escolásticas da religião</p><h3 id="2ca0bd90-2a0a-428e-ac5d-432e2f887455" class="">Mudanças</h3><ul id="f4495ad1-95f5-4617-aaeb-8e7f575ab1c0" class="bulleted-list"><li style="list-style-type:disc">Crença na capacidade humana (túneis, pontes, relógio mecânico, bússola, imprensa) </li></ul><ul id="9343137d-af9c-4ffd-8ae4-c088f3267891" class="bulleted-list"><li style="list-style-type:disc">Geocentrismo → Heliocentrismo (tirando a igreja do foco) </li></ul><hr id="2cd0e8bc-b5a9-4e78-a59c-75e42de6a1e6"/><h1 id="1e553cad-1173-4b63-9e1d-1c673d2738ba" class="block-color-yellow_background">Mundo Contemporâneo</h1><h3 id="d569673a-4a5c-45ab-a170-599aa1a1b49a" class=""><strong>Dinâmica do trabalho</strong></h3><ul id="6f1a0199-9a0c-4eb1-9832-05565af4e95c" class="bulleted-list"><li style="list-style-type:disc"><strong>Trabalho</strong>: dignifica o homem</li></ul><ul id="d1ae9632-89e0-4c7c-9a46-6e8e7c79fe16" class="bulleted-list"><li style="list-style-type:disc"><strong>Trabalho Alienado:</strong> trabalho por dinheiro</li></ul><h3 id="7906745e-4ce9-4712-82dd-7a9ce1da036a" class="">Modos de produção</h3><ul id="bd22ddbf-911c-4173-8003-12ed88474533" class="bulleted-list"><li style="list-style-type:disc"><strong>Toyotismo: </strong>sistema just in time - produzir quando necessário</li></ul><ul id="09660cbe-814e-494c-bffd-742a35aede92" class="bulleted-list"><li style="list-style-type:disc"><strong>Volvismo:</strong> trabalhador parte da empresa (prática nas decisões) - consequência, aumenta a dignidade e a produção do trabalhador</li></ul><h1 id="1796e445-2a5e-48a7-b3a0-7ed9171b94a8" class="block-color-teal_background">Física do Cosmo</h1><p id="f49734ba-bd10-4b37-b5d3-cfaf577df000" class="">A <strong>Guerra das Correntes</strong> (ou Batalha das Correntes) foi uma disputa entre Nikola Tesla e Thomas Edison que ocorreu nas duas últimas décadas do século XIX. Os dois tornaram-se adversários devido à campanha publicitária de Edison pela utilização da corrente contínua para distribuição de eletricidade, em contraposição à corrente alternada, defendida por Westinghouse e Nikola Tesla.</p><p id="4c1ff14a-b53f-4189-bf35-58190e84eab3" class=""><mark class="highlight-gray_background"><a href="https://youtu.be/pYP7OGTdYY8">Vídeo Castanhari (do Tesla)</a></mark><mark class="highlight-gray_background"> </mark>- <mark class="highlight-gray_background"><a href="https://pt.wikipedia.org/wiki/Guerra_das_Correntes">Wikipedia</a></mark><mark class="highlight-gray_background"> (Guerra das correntes)</mark></p><hr id="68ff3da7-c58e-4a64-a6e4-5420eb7078e0"/><h1 id="c2ec8505-e2a3-43da-8e5d-7f5a510d1ff8" class="block-color-pink_background">Aprofundamento de Inglês</h1><table id="43679cd0-e749-47bf-8f30-7938e01a5152" class="simple-table"><thead class="simple-table-header"><tr id="9f939dcd-fc58-4600-a935-e648f70b70f8"><th id="TiEW" class="simple-table-header-color simple-table-header" style="width:356.75px"></th><th id="ECaO" class="simple-table-header-color simple-table-header" style="width:356.75px">Simple past</th><th id="\|cm" class="simple-table-header-color simple-table-header" style="width:356.75px">Past Participle</th><th id=":{TK" class="simple-table-header-color simple-table-header" style="width:356.75px">Tradução</th></tr></thead><tbody><tr id="47251d29-2e39-424e-9dd5-9cd7d9af1bfe"><th id="TiEW" class="simple-table-header-color simple-table-header" style="width:356.75px">To forget</th><td id="ECaO" class="" style="width:356.75px">Forgot</td><td id="\|cm" class="" style="width:356.75px">Forgotten</td><td id=":{TK" class="" style="width:356.75px">esquecer</td></tr><tr id="9473dd31-2531-4043-9d72-a760b76690ae"><th id="TiEW" class="simple-table-header-color simple-table-header" style="width:356.75px">To learn</th><td id="ECaO" class="" style="width:356.75px">learned/learnt</td><td id="\|cm" class="" style="width:356.75px">learned/learnt</td><td id=":{TK" class="" style="width:356.75px">aprender</td></tr><tr id="7022af9b-d19f-4e26-b5a2-1de1d49a3aeb"><th id="TiEW" class="simple-table-header-color simple-table-header" style="width:356.75px">To break</th><td id="ECaO" class="" style="width:356.75px">broke</td><td id="\|cm" class="" style="width:356.75px">broken</td><td id=":{TK" class="" style="width:356.75px">quebras</td></tr><tr id="f5ceb787-fb96-455c-a57a-bd8828675eef"><th id="TiEW" class="simple-table-header-color simple-table-header" style="width:356.75px">to make</th><td id="ECaO" class="" style="width:356.75px">made</td><td id="\|cm" class="" style="width:356.75px">made</td><td id=":{TK" class="" style="width:356.75px">fazer</td></tr><tr id="edf5b9d5-2c54-4b87-b4c1-28e3b9d16a82"><th id="TiEW" class="simple-table-header-color simple-table-header" style="width:356.75px">to hurt</th><td id="ECaO" class="" style="width:356.75px">hurt</td><td id="\|cm" class="" style="width:356.75px">hurt</td><td id=":{TK" class="" style="width:356.75px">machucar</td></tr><tr id="ce69a48c-a835-4e42-a6f1-19d25cdd317e"><th id="TiEW" class="simple-table-header-color simple-table-header" style="width:356.75px">to run</th><td id="ECaO" class="" style="width:356.75px">ran</td><td id="\|cm" class="" style="width:356.75px">run</td><td id=":{TK" class="" style="width:356.75px">correr</td></tr></tbody></table><hr id="31e1de9e-064b-4c11-8bbc-9276a5fef7c1"/><p id="8030b94a-dd83-469e-a23e-073137264de5" class="">Heitor e Magon e Plens e Moraes e Wilson © 2022, all rights reserved</p><p id="89232024-db0f-40d0-bed5-027690b17053" class="">
+</p></div></article></body></html>

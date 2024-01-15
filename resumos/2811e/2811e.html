@@ -1,0 +1,694 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Teste 4A - Treino</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="25ed91b0-b35f-4b89-bd94-127bdc508be0" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_tim_peake_spacewalk.jpg" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">4️⃣</span></div><h1 class="page-title">Teste 4A - Treino</h1></header><div class="page-body"><h1 id="44abad6b-684d-4a23-ab3b-836f5157cdd3" class="block-color-yellow_background">Matemática</h1><h3 id="4fd7ebfd-fd69-423d-825a-38930f113f46" class=""><mark class="highlight-brown_background"> Exercício 1 </mark></h3><p id="c5324318-9d4a-43e2-8101-a90f0d46b99b" class="">A sequência (8 , 2 , a , b , ...) é uma P.G e a sequência (b , 3/16 , c , ...) é uma P.A. Qual é o valor de c?</p><hr id="81c8b135-b6e8-42ac-81ab-951c18c89fdc"/><h3 id="4fdcabfd-7a72-4ad0-b871-e7537d709a29" class=""><mark class="highlight-brown_background"> Exercício 2 </mark></h3><p id="e4d59196-3320-4fc5-a38f-d621474b0a11" class="">Qual a razão, monotonicidade e valor do 6º termo da seguinte P.G.: <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo separator="true">;</mo><mtext> </mtext><mo>−</mo><mn>3</mn><mo separator="true">;</mo><mtext> </mtext><mn>9</mn><mo separator="true">;</mo><mtext> </mtext><mo>…</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1;\  -3;\  9; \ …)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mpunct">;</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">−</span><span class="mord">3</span><span class="mpunct">;</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">9</span><span class="mpunct">;</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span></p><hr id="53f10a35-1f50-47e3-aab7-06da89c82746"/><h3 id="2bda8f4a-385a-4859-b805-f29c4764bae6" class=""><mark class="highlight-brown_background"> Exercício 3 </mark></h3><p id="a8463dd6-9d2d-4ca1-bb82-7049a0e0d0f4" class="">Dado a PG <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>2</mn><mo separator="true">,</mo><mi>x</mi><mo separator="true">,</mo><mn>4.5</mn><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(2,x,4.5,...)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">4.5</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">...</span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span> qual o valor de x?</p><hr id="cf90996e-1d0a-4601-99b3-bb27b8185be9"/><h3 id="d0b163ed-8147-48a2-a300-1d9c6ed5c26c" class=""><mark class="highlight-brown_background"> Exercício 4 </mark></h3><p id="b23c9a9e-8116-4a76-9bde-a997472a8966" class="">Dado a PG <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>2</mn><mo separator="true">,</mo><mn>4</mn><mo separator="true">,</mo><mn>8</mn><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(2,4,8,...)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">8</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">...</span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span> qual o valor do produto dos 4 primeiros termos da PG</p><hr id="3fe5de38-b594-4093-9777-aa22f6681c78"/><h3 id="0bf77500-3e9b-4429-afc5-c9660b31efdc" class=""><mark class="highlight-brown_background"> Exercício 5 </mark></h3><p id="35fdaa78-4486-42d6-afe8-952a24ea9923" class="">Dado a PG <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>2</mn><mo separator="true">,</mo><mn>4</mn><mo separator="true">,</mo><mn>8</mn><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(2,4,8,...)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">8</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">...</span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span> qual o valor da soma dos 4 primeiros termos da PG</p><hr id="ddd904d3-c457-4011-82cb-e93ad9d2d6e0"/><ul id="c29249ac-ea8e-42a0-889b-846b3a0fe010" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 1 </mark></summary><p id="b6082c41-ee02-45d7-ad68-d91065bc8b67" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mfrac><mn>4</mn><mn>16</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">c= \frac{4}{16} = \frac{1}{4}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">16</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">4</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">4</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></p></details></li></ul><ul id="d3158da8-7be1-41a0-aca3-569638ee9b0c" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 2 </mark></summary><p id="dcd19196-9848-4f0d-9c1e-22f53e291202" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mo>−</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">q = -3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">3</span></span></span></span></span><span>﻿</span></span></p><p id="6f372976-f7fa-4a0e-b759-81763bbe53ea" class="">Monotonicidade = Alternante</p><p id="a84c7b0a-5fda-4976-9e02-3baced786072" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>6</mn></msub><mo>=</mo><mo>−</mo><mn>243</mn></mrow><annotation encoding="application/x-tex">a_{6} = -243</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">6</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">243</span></span></span></span></span><span>﻿</span></span></p></details></li></ul><ul id="7c0f1891-8f2a-471d-8bfb-708f2e05f6fa" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 3 </mark></summary><p id="278eb6ef-5527-4a25-92f8-47b311399de6" class="">x = 3</p></details></li></ul><ul id="d84cad16-f19e-40d5-ae15-7d0ede0dfcc0" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 4 </mark></summary><p id="0ae30375-1158-4f96-b53f-3de8902f72e4" class=""> 1024</p></details></li></ul><ul id="e2938916-7161-45eb-97dc-46e53938040d" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 5 </mark></summary><p id="f09d6185-b601-46e9-9280-64945da3ebc1" class=""> 30</p></details></li></ul><hr id="9651954d-f6c4-4947-8770-bb1a3d055bd9"/><h1 id="5fe871c5-b5f3-4429-bdd6-aeda23cd49e3" class="block-color-teal_background">Física</h1><h3 id="e7566b78-73ef-42d2-ba17-1f388066c0e2" class=""><mark class="highlight-brown_background"> Exercício 1 </mark></h3><p id="5bf65273-0347-4aba-9638-320f183c97f2" class="">Em um experimento de laboratório, uma mola de massa desprezível inicialmente comprimida é liberada e, ao distender-se, empurra um carrinho, ao qual está presa, e uma caixa apoiada sobre ele. Antes da distensão da mola, o conjunto estava em repouso. Quando a caixa perde o contato com a mola, sua velocidade tem módulo v em relação ao solo.</p><figure id="459d2502-7e2b-4591-b304-7ff424cf393d" class="image" style="text-align:left"><a href="https://static.mundoeducacao.uol.com.br/mundoeducacao/conteudo/mola-carrinho.jpg"><img style="width:432px" src="https://static.mundoeducacao.uol.com.br/mundoeducacao/conteudo/mola-carrinho.jpg"/></a></figure><p id="da860834-c7be-45d4-b9f5-2c3018170c11" class="">Desprezando-se todos os atritos e sabendo que a massa do carrinho sem a caixa é 5 vezes maior do que a massa da caixa, o módulo da velocidade adquirida pelo carrinho (V), em relação ao solo, no instante em que a mola para de empurrar a caixa é:</p><p id="2c6936f8-a068-4f06-ba7d-de2f3a733827" class="">a) 0,75.v</p><p id="18bcb094-d5ca-4c76-a075-1ef0d2e8bdd1" class="">b) 1,2.v</p><p id="3bd2deb8-710b-456f-8ffc-d16320c4e67a" class="">c) 0,20.v</p><p id="84d671d6-e980-40c5-b81b-8f885038383f" class="">d) 0,70.v</p><p id="076fce6c-c233-474f-81e2-02f2fef6c837" class="">e) 1,6.v</p><hr id="4ae73080-035e-4e62-acfb-35b55dc61473"/><h3 id="078f7b6c-de21-4234-8769-188c68e664a8" class=""><mark class="highlight-brown_background"> Exercício 2 </mark></h3><p id="b75e8247-03d6-448a-80ad-707873e6dad5" class="">Determine a velocidade de recuo de um canhão de duas toneladas que dispara um projétil de 6 kg a uma velocidade de 300 m/s.</p><p id="2bdb94be-ad2f-4e48-b9f9-331063bb7dd1" class="">a) 1,2 m/s</p><p id="03faad3f-e170-4d0c-b90d-769d12cfffdb" class="">b) 1,0 m/s</p><p id="d22ede2a-741b-4733-86ae-37eec50b807c" class="">c) 2,0 m/s</p><p id="6f30fb24-1e74-44b7-afdf-f556ad01f3f8" class="">d) 0,5 m/s</p><p id="8ba0304a-ab18-4a85-bcc7-77d1a7d311dd" class="">e) 0,9 m/s</p><hr id="f89bbd65-78b2-43f1-b18a-895b9949cdd5"/><h3 id="77da7cfe-d763-4a9d-9215-33c4123b5a9d" class=""><mark class="highlight-brown_background"> Exercício 3 </mark></h3><p id="e6f1f085-378a-4fad-8eca-9381c6bcdde8" class="">Um peixe de massa 4 m nada a 2 m/s. Em certo momento, ele vê uma presa de massa m vindo em sentido oposto a 0,5 m/s. Determine a velocidade do conjunto após o momento em que a presa foi devorada.</p><p id="1d014568-faf7-4cce-b9b2-758bfdd90343" class="">a) 2,0 m/s</p><p id="c0d2d8a5-42ed-4cef-862d-9475a8bcc052" class="">b) 2,5 m/s</p><p id="3857c836-d37a-463c-a2d0-6600c02cfee4" class="">c) 1,5 m/s</p><p id="d9c2550d-4b36-4cc5-b16c-daad15d920a6" class="">d) 1,0 m/s</p><p id="639f19cf-f18e-4894-b7db-381ce2a0fc7b" class="">e) 0,5 m/s</p><hr id="935f2feb-ce96-414e-bf77-b506cc5d6c69"/><h3 id="75e8f0c6-f5e3-4238-998b-272796bf2dd1" class=""><mark class="highlight-brown_background"> Exercício 4 </mark></h3><p id="dc924308-ce10-4f6e-839c-3c7f5f68eeeb" class="">Um objeto de 2 kg, inicialmente em repouso sobre um plano horizontal, fica submetido a uma força F resultante, também horizontal, cuja intensidade varia com o tempo de acordo com o gráfico a seguir. Determine a intensidade do impulso da força F entre os instantes t0 = 0 e t = 15 s.</p><figure id="60bbf83d-e7c5-43c6-9a96-dbff6b528658" class="image" style="text-align:left"><a href="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/leifv1.jpg"><img style="width:336px" src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/leifv1.jpg"/></a></figure><p id="ece6933b-2547-4340-ab7f-991650d10ad8" class="">a) 710 N.s</p><p id="45486235-745e-43d2-aacc-08595f679d5c" class="">b) 720 N.s</p><p id="55422664-fdf0-4de5-9b2a-59f2791c7713" class="">c) 730 N.s</p><p id="72d3a027-d25b-41ce-bb7d-86b0fa10f266" class="">d) 740 N.s</p><p id="66c0db77-a171-4136-a324-ea5cf4c8f916" class="">e) 750 N.s</p><hr id="8dac9f61-a9ae-4548-b65c-e7565f8ffddc"/><h3 id="6f3359a2-7fdd-40f3-a818-74f6ecfd3fd5" class=""><mark class="highlight-brown_background"> Exercício 5 </mark></h3><p id="0d34649c-52d2-476f-ba30-9f38b1426b19" class="">Qual o impulso da força do gráfico</p><figure id="b65424cb-2f8c-4f3c-9926-8d5866b81232" class="image" style="text-align:left"><a href="Teste%204A%20-%20Treino%2025ed91b0b35f4b89bd94127bdc508be0/Untitled.png"><img style="width:528px" src="Teste%204A%20-%20Treino%2025ed91b0b35f4b89bd94127bdc508be0/Untitled.png"/></a></figure><hr id="e2eba923-0a0a-418c-9021-07bed09e5114"/><ul id="166f51a9-b9ae-40c9-b772-6e276fb9cae1" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 1 </mark></summary><p id="7ca283bf-c302-4911-be28-fef9d610eaa8" class="">C</p></details></li></ul><ul id="4fd9b0f5-84e8-4a68-8fcd-dcece397d720" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 2 </mark></summary><p id="c47082f4-48a8-448b-b894-890731dfc2e8" class="">E</p><p id="e039be03-8293-4c99-a355-f7d1db4b340b" class="">
+</p></details></li></ul><ul id="26a20888-5e5a-4b2e-81c6-483bd0852ed9" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 3 </mark></summary><p id="424ded85-903c-4f9c-8354-4364e6cfcf53" class="">C</p><p id="0a99c718-e91b-4d1c-b7fd-3747b85d5114" class="">
+</p></details></li></ul><ul id="425e564d-fff1-4e66-840f-82eeb17bd918" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 4 </mark></summary><p id="9c8e7202-55ee-4f2e-95c8-3935c1bc64b8" class="">E</p></details></li></ul><ul id="33ad749a-21c9-4cf8-8480-ad9e5d5a126b" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 5 </mark></summary><p id="64c1bbab-3128-41c2-9835-ec26e3f1fea1" class="">25 Ns</p></details></li></ul><hr id="1220118e-99c5-48b6-9dc8-e37e884eda9b"/><h1 id="57c9623f-7fd1-4a69-b293-5486618bfdda" class="block-color-red_background">Química</h1><h3 id="ae98b995-4981-4acb-9217-ca2caa0051f1" class=""><mark class="highlight-brown_background"> Exercício 1 </mark></h3><p id="de8f4b74-6988-4e1b-ae30-e8c2ca06cc63" class="">Quantos litros de <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>O</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">O_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>, medidos nas CNTP, serão obtidos na decomposição térmica de 98g de <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mi>C</mi><mi>l</mi><msub><mi>O</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">KClO_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mord mathnormal" style="margin-right:0.01968em;">Cl</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>?</p><p id="051d3508-02eb-42c9-a9ab-d22f3d13cc80" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="1.2em"><mrow><mn>2</mn><mi>K</mi><mi>C</mi><mi>l</mi><msub><mi>O</mi><mn>3</mn></msub><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext><mn>2</mn><mi>K</mi><mi>C</mi><mi>l</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>+</mo><mn>3</mn><msub><mi>O</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\large{2KClO_3(s) \implies 2KCl(s) + 3O_2(g)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2em;vertical-align:-0.3em;"></span><span class="mord sizing reset-size6 size7"><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mord mathnormal" style="margin-right:0.01968em;">Cl</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2796266666666667em;"><span style="top:-2.65em;margin-left:-0.02778em;margin-right:0.04166666666666667em;"><span class="pstrut" style="height:2.8em;"></span><span class="sizing reset-size7 size4 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mord mathnormal" style="margin-right:0.01968em;">Cl</span><span class="mopen">(</span><span class="mord mathnormal">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">3</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2796266666666667em;"><span style="top:-2.65em;margin-left:-0.02778em;margin-right:0.04166666666666667em;"><span class="pstrut" style="height:2.8em;"></span><span class="sizing reset-size7 size4 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mclose">)</span></span></span></span></span></span><span>﻿</span></span></p><p id="01b0a97d-19c8-4194-92e6-6b2d0bb7b881" class="">Massas Molares em g/mol: K=39; Cl=35,5; O=16</p><p id="6f02e353-078f-4287-b4ad-db84e6c8efe8" class="">Volume molar dos gases na CNTP: 22,4L/mol </p><p id="697d3485-9098-465e-9009-cde9f0997e15" class="">a) 4,56L</p><p id="eefe05ec-6ac5-4854-8ce8-389c82acfc43" class="">b) 13,44L</p><p id="307d47c6-5288-483f-bd29-16ff141a6dab" class="">c) 26,88L</p><p id="a176be5f-e405-4128-81a3-f12994605bc9" class="">d) 37,64L</p><p id="fa19e242-05ca-4159-acf1-8ebd47f12801" class="">e)  40,0L</p><hr id="0b836cbb-8b4b-48c9-9044-84e01372815d"/><h3 id="0aa6cf88-8f1e-4707-b251-fefc56cbb39e" class=""><mark class="highlight-brown_background"> Exercício 2 </mark></h3><p id="51d979ac-a763-4254-bb2f-ee94d16158d0" class="">CH4(g) + 2 O2(g) → CO2(g) + 2 H2O(g)</p><p id="92ea4e9b-234c-4d34-89ef-f4fce802601e" class="">O volume de CO2, medido a 27ºC e 1atm., produzido na combustão de 960,0 g de metano, é:</p><p id="b3ac10ce-ac4f-42b2-9db7-b307c102e8c4" class="">a) 60,0 L</p><p id="5f64e0c5-1849-4e69-bc27-7514054b3b7f" class="">b) 1620,0 L</p><p id="221be8d3-54fd-4b2e-9017-97809dab313e" class="">c) 1344,0 L</p><p id="944e505f-09e0-4000-86b3-4d6c01710923" class="">d) 1476,0 L</p><p id="814146b0-dace-4dca-a61d-fffc5832dada" class="">e) 960,0 L</p><p id="4b5efde7-7697-4d99-b0e2-74ca7c991816" class=""><strong>Dados:</strong></p><ul id="f6fa55eb-6eda-4efd-a583-700eb37fe823" class="bulleted-list"><li style="list-style-type:disc">massa molar do CH4 = 16,0 g/mol</li></ul><ul id="c4a970b5-da8f-44d4-9f49-87f23972ec30" class="bulleted-list"><li style="list-style-type:disc">constante universal dos gases: R = 0,082 atm.L/mol.K</li></ul><hr id="1a51eba6-70ea-405f-84d6-81d4ac10a804"/><h3 id="41b22852-82af-4c54-9446-e679249ee4f2" class=""><mark class="highlight-brown_background"> Exercício 3 </mark></h3><p id="7e9b6b3e-409b-4a10-b61a-76ac518b0af0" class="">A combustão do gás amoníaco (NH3) é representada pela seguinte equação:</p><p id="20014f83-0340-49dd-a30e-2397b1910bd2" class="">2 NH3(g) + 3/2 O2(g) → N2(g) + 3 H2O(ℓ)</p><p id="7c97da79-12fa-4ed0-a778-1b583dfbba18" class="">A massa de água, em gramas, obtida a partir de 89,6 L de gás amoníaco, nas CNTP, é igual a: (Dados: massa molar (g/mol) – H2O = 18; volume molar nas CNTP = 22,4 L.)</p><p id="39f272e2-fb59-4763-905d-e6afde638bb0" class=""><strong>a) </strong>216.</p><p id="8f0db7e3-6881-4dea-93d1-38c5cbb157d9" class=""><strong>b)</strong> 108.</p><p id="38a875bc-f8ce-4234-94bf-d2d3188361f2" class=""><strong>c) </strong>72.</p><p id="615370d8-a5c3-4acb-abe0-831f506ead67" class=""><strong>d)</strong> 36.</p><hr id="3e96cbe7-a383-4483-8289-4c3eb745662f"/><ul id="798939b8-ae0f-4a80-8488-63d4da666b2e" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 1 </mark></summary><p id="600f7f51-9eba-426d-bd89-8f050ccb4553" class="">C</p></details></li></ul><ul id="5d6bcea4-ad10-436a-929a-1b095abc5100" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 2 </mark></summary><p id="fe8b0ced-7eaa-4bdf-a7e9-fabdce24f2d6" class="">D</p></details></li></ul><ul id="bf885b60-1a63-4bfc-978b-251567ff8e05" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 3 </mark></summary><p id="dfe6eff8-ace5-4f60-ba71-2df021394464" class="">B</p></details></li></ul><h1 id="30dca5a0-fb59-460a-a654-3d9fb719cb88" class="block-color-teal_background">Biologia</h1><h3 id="221988e6-4b61-4a30-859c-630cc51d15a0" class=""><mark class="highlight-brown_background"> Exercício 1 </mark></h3><figure id="2ae5b872-6181-42dc-bb39-57f1c0b8f4bd" class="image" style="text-align:left"><a href="Teste%204A%20-%20Treino%2025ed91b0b35f4b89bd94127bdc508be0/Untitled%201.png"><img style="width:632px" src="Teste%204A%20-%20Treino%2025ed91b0b35f4b89bd94127bdc508be0/Untitled%201.png"/></a></figure><hr id="edda240c-c228-43d4-ab62-175f8a3371bf"/><h3 id="59d03523-f5ce-440b-b97d-ad35f688cc71" class=""><mark class="highlight-brown_background"> Exercício 2 </mark></h3><p id="d92d8547-e71f-4dc8-a441-868a08ea2163" class="">Algumas espécies de orquídeas apresentam flores que mimetizam vespas fêmeas, de forma que vespas machos são atraídas na tentativa de acasalamento. Ao chegarem às flores, os machos frequentemente entram em contato com o pólen da flor, sem prejuízo de suas atividades. Contudo, como não conseguem se acasalar, esses machos procuram novas fêmeas, podendo encontrar novas flores e polinizá-las. Essa interação ecológica pode ser classificada como</p><p id="4d16e24c-7057-467f-af67-45a1b2084d4f" class="">a) comensalismo.
+b) amensalismo.
+c) mutualismo.
+d) parasitismo.
+e) simbiose</p><hr id="e1534a5a-42fa-420c-af57-f0ce016ed268"/><h3 id="254b24f9-f3f8-498e-9824-447b301a0686" class=""><mark class="highlight-brown_background"> Exercício 3 </mark></h3><p id="b169c755-3dba-40da-b411-c2efc10b99e3" class="">As esponjas desempenham papéis importantes em muitos habitat marinhos. A natureza porosa das esponjas as torna uma habitação ideal para vários crustáceos, equinodermos e vermes marinhos. Além disso, alguns caramujos e crustáceos têm, tipicamente, esponjas grudadas em suas conchas e carapaças, tornando-os imperceptíveis aos predadores. Nesse caso, a esponja se beneficia por se nutrir de partículas de alimento liberadas durante a alimentação de seu hospedeiro. As relações ecológicas presentes no texto são</p><p id="9ac67516-3873-4cc1-ade1-51d831890ded" class="">a) protocooperação e competição.</p><p id="e52d7e70-8644-46ab-8334-6358f1dc4a55" class="">b) inquilinismo e protocooperação.</p><p id="74625fa6-c514-40c6-883d-3812dd31001d" class="">c) inquilinismo e parasitismo.</p><p id="ff084e29-2c49-4eee-abaf-d103de4bf864" class="">d) competição e predação.</p><p id="9d299a35-d60b-4178-9bef-266145203d63" class="">e) parasitismo e predação.</p><hr id="02ec81a1-9a86-43c7-b2dd-1fdb175386b4"/><h3 id="081846e0-8c84-431f-9f1a-6e6920ceccd5" class=""><mark class="highlight-brown_background"> Exercício 4 </mark></h3><p id="8b4766f7-8332-408d-80e8-7fc6368aad8a" class="">A rêmora é um peixe que estabelece uma relação bastante íntima com o tubarão, fixando-se em seu corpo e alimentando-se dos restos de alimentos que não foram digeridos pelo temido peixe. Essa relação é chamada de:</p><p id="457f1d04-f506-43af-88a4-d1a361eefa21" class="">a) Inquilinismo.</p><p id="8b8f8da2-0208-4228-9d5c-2fb2d7bb7ac7" class="">b) Competição.</p><p id="c66897e7-cf91-411d-bf05-64f2a493aa53" class="">c) Predação.</p><p id="8fe5f51c-6887-4edf-a263-bf2c1385a356" class="">d) Mutualismo.</p><p id="c820fd50-2b2e-45f2-8463-3a655d019840" class="">e) Comensalismo.</p><hr id="f39dd099-1941-44c0-baa6-a296f09c79d5"/><h3 id="231046f4-da4c-4f9c-b51b-aceff894b932" class=""><mark class="highlight-brown_background"> Exercício 5 </mark></h3><p id="b2caa3b2-710c-4a0b-9923-7c27929efbb0" class="">A ecologia é uma parte da biologia que estuda a relação dos organismos com o meio que os cerca. Os organismos interagem entre si e com todas as partes não vivas do ambiente, tais como solo, água, temperatura e umidade. Essas partes não vivas são chamadas de:</p><p id="6ecc4e27-e64f-4c26-815a-b7c871866ccc" class="">a) fatores abióticos.</p><p id="d8bfd821-dc91-4169-92ca-1a14bb4e3ead" class="">b) fatores bióticos.</p><p id="44d9e6f0-7d1c-4662-a840-3bac181cab8b" class="">c) biosfera.</p><p id="309b1404-34f2-4f1c-b21e-2ad1eaf60daa" class="">d) nicho ecológico.</p><p id="416761ae-f425-4720-954d-266950c3cee3" class="">e) ecossistema.</p><hr id="eb6f54df-06d0-4d6b-9eaa-14f7e364a0a1"/><ul id="46c301f4-4e83-40ab-86b8-8261f1d79804" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 1 </mark></summary><p id="b8c5907e-3754-447c-974c-96ad94819591" class="">Consumidora Primária </p></details></li></ul><ul id="fbab0bd8-7b46-42f7-b0ab-441b3abe2da5" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 2 </mark></summary><p id="3b3a6240-5256-498f-99ef-244cc90fb4dc" class="">A</p></details></li></ul><ul id="08cd2131-b9af-4796-9e4d-14362f81f9e9" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 3 </mark></summary><p id="406131ab-6af0-4ea6-916f-1641bc8e68f8" class="">B</p></details></li></ul><ul id="3c5948ea-49e8-4d40-8f62-de86b70684b1" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 4 </mark></summary><p id="af1dd99d-acd9-4d91-b042-e1ac77c6d307" class="">E</p></details></li></ul><ul id="843c8ca3-791e-4040-ab10-a0fc1828722b" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 5 </mark></summary><p id="627fa7c1-8c34-4a1b-b371-d1424a1ec4c4" class=""> A</p></details></li></ul><h1 id="0d6a1b99-6ab8-4e85-9624-f7b3c8a009f7" class="block-color-brown_background">Literatura</h1><hr id="1482d781-ac25-4e79-97e3-b158a5b260ef"/><h3 id="24bda616-01e2-4b74-9b91-553bdfae7c03" class=""><mark class="highlight-brown_background"> Exercício 1 </mark></h3><p id="10c52ce4-e125-4ac7-b607-2db80c8d4b17" class="">Em um poema escrito em louvor de Iracema, Manuel Bandeira afirma que, ao compor esse livro, Alencar:</p><blockquote id="9dc509c4-3f78-4f8b-a646-2a51802f11d8" class="">“[...] escreveu o que é mais poema Que romance, e poema menos Que um mito, melhor que Vênus.”</blockquote><p id="cc2a146b-759d-42fe-b765-95abcd77e94e" class="">Segundo Bandeira, em Iracema:</p><p id="9a017c51-d022-4bdb-9892-fe6dc2566102" class="">a)Alencar parte da ficção literária em direção à narrativa mítica, dispensando referências a coordenadas e personagens históricas.</p><p id="12ca26d2-108b-4b2d-8739-1a020985b11f" class="">b)o caráter poemático dado ao texto predomina sobre a narrativa em prosa, sendo, por sua vez, superado pela constituição de um mito literário.</p><p id="581d796f-ef8b-486a-89ea-f95ef7a41fd5" class="">c)a mitologia tupi está para a mitologia clássica, predominante no texto, assim como a prosa está para a poesia.</p><p id="fad4a6ed-feed-4f55-89b9-e42be00ca3c3" class="">d)ao fundir romance e poema, Alencar, involuntariamente, produziu uma lenda do Ceará, superior à mitologia clássica.</p><p id="29122b7b-772f-48e5-8cc2-791bf203aef6" class="">e)estabelece-se uma hierarquia de gêneros literários, na qual o termo superior, ou dominante, é a prosa romanesca, e o termo inferior, o mito.</p><hr id="a36278bf-296e-400f-95a3-30cc4dfa3e64"/><h3 id="559b8360-7959-474a-b86e-b22fe71c28b9" class=""><mark class="highlight-brown_background"> Exercício 2 </mark></h3><p id="912f8220-38a9-4965-95bb-3a4e52d5f67a" class="">A próxima questão refere-se ao texto abaixo.</p><p id="7dcf7de6-eca6-453d-b885-5893b191ef34" class=""><em>Verdes mares bravios de minha terra natal, onde canta a jandaia nas frondes da carnaúba;Verdes mares que brilhais como líquida esmeralda aos raios do sol nascente, perlongando as alvas praias ensombradas de coqueiros; Serenai, verdes mares, e alisai docemente a vaga impetuosa para que o barco aventureiro manso resvale à flor das águas.</em></p><p id="7f17db27-c289-43e9-b651-cf9a53397cf0" class="">Esse trecho é o início do romance <em>Iracema</em>, de José de Alencar. Dele, como um todo, é possível afirmar que:</p><p id="7ab11e1c-5ea6-4856-9dac-dfa592b4b797" class="">(A) Iracema é uma lenda criada por Alencar para explicar poeticamente as origens das raças indígenas da América.</p><p id="9b342deb-8140-4e98-916e-951063155fb1" class="">(B) as personagens Iracema, Martim e Moacir participam da luta fratricida entre os Tabajaras e os Pitiguaras.</p><p id="bd78b8f5-bb91-49bc-91d2-d373b0b5b773" class="">(C) o romance, elaborado com recursos de linguagem figurada, é considerado o exemplar mais perfeito da prosa poética na ficção romântica brasileira.</p><p id="47d1ceb0-d345-4dab-be7e-ce0f1c0c370e" class="">(D) o nome da personagem-título é anagrama de América e essa relação caracteriza a obra como um romance histórico.</p><p id="631da1a5-75f4-4500-bdc3-edd636c5bd37" class="">(E) a palavra Iracema é o resultado da aglutinação de duas outras da língua guarani e significa “lábios de fel”.</p><hr id="ad7a3b5f-74c0-49fa-b681-a518d777968c"/><h3 id="14f6f944-9d9c-4b3c-98eb-9be4840b9658" class=""><mark class="highlight-brown_background"> Exercício 3 </mark></h3><p id="c85a9f31-9bb7-4d56-b2f4-bb03e0e25caa" class="">Considere os dois fragmentos extraídos de <em>Iracema</em>, de José de Alencar.</p><p id="49600139-73a5-4052-8a90-5d8aecef1cfc" class=""><strong>I.</strong></p><p id="dc517230-0c93-4229-8274-e350ede4976c" class=""><em>Onde vai a afouta jangada, que deixa rápida a costa cearense, aberta ao fresco terral a grande vela? Onde vai como branca alcíone buscando o rochedo pátrio nas solidões do oceano? Três entes respiram sobre o frágil lenho que vai singrando veloce, mar em fora. Um jovem guerreiro cuja tez branca não cora o sangue americano; uma criança e um rafeiro que viram a luz no berço das florestas, e brincam irmãos, filhos ambos da mesma terra selvagem.</em></p><p id="3f346777-b5ee-4c87-a66c-2fca13e3ab27" class=""><strong>II.</strong></p><p id="5d9f69ee-1ee4-44f3-a5c5-91092f44449c" class=""><em>O cajueiro floresceu quatro vezes depois que Martim partiu das praias do Ceará, levando no frágil barco o filho e o cão fiel. A jandaia não quis deixar a terra onde repousava sua amiga e senhora. O primeiro cearense, ainda no berço, emigrava da terra da pátria. Havia aí a predestinação de uma raça?</em></p><p id="b9e173a0-5f74-4e82-b690-9878fe432d93" class="">Ambos apresentam índices do que poderia ter acontecido no enredo do romance, já que constituem o começo e o fim da narrativa de Alencar. Desse modo, é possível presumir que o enredo apresenta</p><p id="a9207fc3-d4ab-4494-b77a-2bea994f8fb9" class="">A) o relacionamento amoroso de Iracema e Martim, a índia e o branco, de cuja união nasceu Moacir, e que alegoriza o processo de conquista e colonização do Brasil.</p><p id="2362883b-5640-4473-be1c-63966d68bbdc" class="">B) as guerras entre as tribos tabajara e pitiguara pela conquista e preservação do território brasileiro contra o invasor estrangeiro.</p><p id="681e0c78-6de1-4009-966b-ee4bbef708bc" class="">C) o rapto de Iracema pelo branco português Martim como forma de enfraquecer os adversários e levar a um pacto entre o branco colonizador e o selvagem dono da terra.</p><p id="6513f3ac-34d8-45a7-aff7-8ee380a39156" class="">D) a vingança de Martim, desbaratando o povo de Iracema, por ter sido flechado pela índia dos lábios de mel em plena floresta e ter-se tornado prisioneiro de sua tribo.</p><p id="74ea2f38-bb1f-484b-9303-376bec5afb44" class="">E) a morte de Iracema, após o nascimento de Moacir, e seu sepultamento junto a uma carnaúba, na fronde da qual canta ainda a jandaia.</p><hr id="b2390fec-fbba-4d65-ba49-b9dd19fb5a02"/><h3 id="02edbbdb-e24f-4f27-8c1d-b13b72b15ae3" class=""><mark class="highlight-brown_background"> Exercício 4 </mark></h3><p id="9a005042-84c0-4d02-ac01-89e972a9aace" class="">O índio, em alguns romances de José de Alencar, como Iracema e Ubirajara, é</p><p id="c3fa6ed4-6c9d-4974-a5ee-850c438a6f3c" class="">a) retratado com objetividade, numa perspectiva rigorosa e científica.</p><p id="9eb9f981-6b5e-4ff2-8b09-a950e75de073" class="">b) idealizado sobre o pano de fundo da natureza, da qual é o herói épico.</p><p id="ca33d974-ed71-4323-aaf0-053cc52ca4ce" class="">c) pretexto episódico para descrição da natureza.</p><p id="885c67ee-1f59-405b-b982-1ab7e5562669" class="">d) visto com o desprezo do branco preconceituoso, que o considera inferior.</p><p id="53b75884-1075-4063-93f6-cad4af38da84" class="">e) representado como um primitivo feroz e de maus instintos.</p><hr id="aedc6f9b-a9d1-4da9-ba22-3ecf6d5c5f14"/><h3 id="7377447a-f2fe-40a9-8e23-3ac5be8aeec6" class=""><mark class="highlight-brown_background"> Exercício 5 </mark></h3><p id="10f19661-74c7-4933-9977-f4d09e1fd9ac" class="">Sobre Iracema, é incorreto afirmar que</p><p id="d2205054-7d75-4bdc-8d63-81d78b09a800" class="">a) o relacionamento entre Martim e Iracema seria uma alegoria das relações entre metrópole e colônia.</p><p id="c3ce5697-bcc1-4d09-9ed0-0f34588f6105" class="">b) Iracema é descrita de uma forma idealizante, comparada com elementos da natureza, característica própria do Romantismo.</p><p id="61267239-20fd-41d0-8c57-94a24742e488" class="">c) o personagem Martim é lendário; nunca existiu, tratando-se, portanto, de uma figura fictícia.</p><p id="75a53611-2d5f-4d46-9e9f-fabf23496110" class="">d) Moacir, que em tupi quer dizer “filho da dor”, é levado por Martim para a Europa.</p><p id="77c0d299-bfb6-49b8-955f-d6a73020057e" class="">e) o romance é narrado em terceira pessoa, com narrador onisciente.</p><hr id="1215b550-4aa9-4b5e-ad8e-745dbf0fc81e"/><ul id="d4b7fd90-3475-4425-82b7-654fb5290c03" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 1 </mark></summary><p id="a4f640cb-5031-42a0-b01f-065f8ca6511d" class="">B</p></details></li></ul><ul id="186d973c-0bd2-4c9d-aeaa-3c6b48f0db82" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 2 </mark></summary><p id="67c87636-b0ea-420c-8484-1e1abe670f98" class="">C</p></details></li></ul><ul id="2aa2eb8b-7827-456c-8802-8be1de57b44f" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 3 </mark></summary><p id="6a4ca352-96b1-474c-85db-e901bef7bab9" class="">A</p></details></li></ul><ul id="4e2d5aae-24ec-4c1c-9c0b-0e26fa3a4e69" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 4 </mark></summary><p id="454b7dcd-fc93-4ccc-b509-8200d6897405" class="">B</p></details></li></ul><ul id="59314625-fab5-4f13-b79f-0ab1aaa4eb9c" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 5 </mark></summary><p id="85b5f93b-6706-4d49-b1ab-75653e6306cd" class="">C</p></details></li></ul><hr id="6374d555-167b-4f48-ab5f-eac63f2f0d0e"/><h1 id="f13e95fc-49e6-4df5-aec3-dc47ec2484fc" class="block-color-brown_background">História</h1><h3 id="11381590-e48f-40a3-8297-0c42cd0c7e44" class=""><mark class="highlight-brown_background"> Exercício 1 </mark></h3><p id="0385a300-7782-43cc-8f76-8497a7fdb3ec" class="">A Guerra das Duas Rosas acabou contribuindo para o fortalecimento da monarquia absolutista da Inglaterra. Isso aconteceu principalmente porque:</p><p id="986b45f6-9fd3-4d8a-ae80-7a823436c396" class="">a) o Parlamento foi restaurado e os poderes do rei permaneceram enfraquecidos.</p><p id="935b9bff-5ba3-4075-aef1-993db1314e6a" class="">b) houve uma aliança fundamental entre as famílias aristocráticas dos York e dos Lancaster.</p><p id="14a8d58c-7513-4637-8f8a-c4cd1f8a4b99" class="">c) a dinastia dos Lancaster passou a controlar a corte inglesa.</p><p id="36a77f98-c3c2-4989-8347-cda18c03941f" class="">d) a dinastia Tudor começou a ter apoio popular com a ocupação do trono por Henrique VII.</p><p id="5b13fb9a-a865-431a-ade6-efe970bb5bed" class="">e) a dinastia Tudor foi alijada do poder pelos York.</p><p id="ecb5da08-b2e0-48a9-a977-6434cc8133ba" class="">
+</p><hr id="51fd8ba5-83ce-41f7-98bc-71e604b26f98"/><h3 id="ab9a5d43-c82b-4600-85ab-1baf91ffbd19" class=""><mark class="highlight-brown_background"> Exercício 2 </mark></h3><p id="82cb68f3-ef1e-4a1b-a9b8-78b2de8df0dd" class="">Entre as principais ações do monarca Henrique VIII (1491-1547), no período do absolutismo inglês, consta:</p><p id="f78c3ea0-2e26-4dc3-883a-0512f6485b5b" class="">a) o fomento à industrialização das cidades britânicas.</p><p id="239df133-1e25-4f81-847b-88e0649dba2b" class="">b) a conversão ao islamismo.</p><p id="eec52736-8a73-4c7e-940f-6c30ab6bfcaa" class="">c) a criação da Igreja Anglicana, sobrepondo-se à autoridade da Igreja Católica.</p><p id="6a36be81-bd49-4589-8809-aaf6a873c851" class="">d) o apoio às medidas contrarreformistas empreendidas pela Igreja Católica.</p><p id="c6425af0-42e6-4b94-8089-c69588ff5f61" class="">e) a submissão integral ao poder do Parlamento.</p><p id="249e0771-2b10-4ec3-9b1b-516ab80f4124" class="">
+</p><hr id="d141765a-b964-4bfb-aa1c-e4104d77ed8f"/><h3 id="60556ce0-a8f0-4943-8c48-faadf7297b50" class=""><mark class="highlight-brown_background"> Exercício 3 </mark></h3><p id="7e61179a-828d-4142-8125-d7032071ba3c" class="">O Ato de Supremacia, promulgado por Henrique VIII, na Inglaterra, contribuiu para:</p><p id="fb10dd60-44a5-4189-986f-a8d50f07e17e" class="">a) divulgar intensamente a doutrina calvinista no país, sobretudo na região da Escócia.</p><p id="c163091d-d5eb-4ffc-823d-2189a9b4e353" class="">b) iniciar a expansão externa, formando, assim, as bases do império colonial inglês.</p><p id="75cf6739-d4b8-4ca1-9eb7-95cd155ba3da" class="">c) promover a reforma anglicana, ao mesmo tempo que contribuiu para a centralização do governo.</p><p id="f2038508-c16e-467e-8273-3ed367a09fc9" class="">d) implantar o catolicismo no reino, o que foi acompanhado de repressão aos reformistas.</p><p id="d07ed423-ed7b-464c-91b6-eaf6ce774d44" class="">e) restaurar os antigos direitos feudais, que foram limitados pela Magna Carta de 1215.</p><p id="ca99a096-5891-491c-8314-971757c189ac" class="">
+</p><hr id="f00548e2-292e-4c5c-8951-af30f8331e7d"/><h3 id="2957d6b4-0fcd-46c5-920e-b236d8116f5f" class=""><mark class="highlight-brown_background"> Exercício 4 </mark></h3><p id="a3610e3e-0abe-49bd-abd1-6d7788a662b5" class="">Leia o texto abaixo e responda posteriormente ao que é pedido.</p><p id="99ca4785-f646-4051-b8fd-c8ca81a8261e" class="">“Nos anos 1575-1600, Potosí produziu talvez a metade de toda a prata hispano-americana. Tal profusão de prata não teria vindo à tona sem a concomitante abundância de mercúrio de Huancavélica, que naqueles mesmos anos estava também produzindo como nunca havia feito. Outro estimulante para Potosí foi claramente a mão de obra barata fornecida através da <em>mita</em> de Toledo.”</p><p id="8aa94d81-64ff-4122-97f7-66522556faf0" class="">Como indicado no texto, os espanhóis utilizaram um sistema de trabalho denominado <em>mita,</em> que consistia:</p><p id="fa7e9a45-a27c-4403-93bc-387dd9d2a47d" class="">a) no trabalho obrigatório e temporário, mobilizando mão de obra indígena geralmente escolhida por sorteio entre as tribos, sendo deslocada para qualquer região da colônia.</p><p id="fcd8fe93-37ee-465b-b169-72e002d714dd" class="">b) no emprego de tribos inteiras de indígenas, dirigidas por seus chefes naturais, assegurando ainda a instrução cristã dos envolvidos.</p><p id="d0502a9c-eea5-4a03-b51c-a599e8fd4839" class="">c) no trabalho compulsório e permanente de escravos que chegavam ao porto de Toledo.</p><p id="5944ddfa-2072-4674-b6fd-ddbb783dee1f" class="">d) em contratos de servidão realizados entre espanhóis e astecas.</p><p id="aa4732ba-7159-4ebc-b72b-f2a85c8a5088" class="">e) em um sistema de servidão por dívidas, pois com a desintegração da economia tradicional indígena, esses foram obrigados a adquirir produtos vindos da Europa.</p><hr id="70841445-96c1-4aec-a0db-ff855a5752fb"/><h3 id="f499785c-f12b-41bd-9769-7879ffd2da53" class=""><mark class="highlight-brown_background"> Exercício 5 </mark></h3><p id="034b1dd0-faf1-43c7-9b1a-ada5bc2f61a3" class="">(FEI-SP) As duas principais atividades econômicas que Portugal e Espanha incentivaram na América, no início da colonização, foram, respectivamente:</p><p id="d490b394-8d8f-4ef6-b6e5-3d9ba1c9ab54" class="">a)      cacau na América portuguesa e a mineração da prata e do ouro na América espanhola.</p><p id="7e3a648e-985b-4527-9ee7-f4507c75aff9" class="">b)      a mineração na América Portuguesa e a monocultura do tabaco na América espanhola.</p><p id="7f1e4c01-e130-4a2e-b634-ec031f52439f" class="">c)      a monocultura da cana de açúcar na América portuguesa e a pecuária na América espanhola.</p><p id="a6778157-a452-4fb1-8bac-c816d437f2c0" class="">d)     a monocultura da cana de açúcar na América portuguesa e a mineração de ouro e de prata na América espanhola.</p><p id="5a5964fb-6fff-40d9-8c18-91713e9fe7d5" class="">e)      a monocultura do algodão na América portuguesa e a pecuária na América espanhola.</p><hr id="0aaebd16-8944-4aa5-9b98-b57eb0fbd978"/><ul id="dabaf9fd-9165-41ef-bfd6-648d49dbde21" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 1 </mark></summary><p id="19584bbd-671a-498c-b994-449b30325437" class="">D</p></details></li></ul><ul id="63bd697b-ab60-4b34-89f6-4d31aff8cde8" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 2 </mark></summary><p id="cff549eb-072e-4756-806b-4c3ae26f39a1" class="">C</p></details></li></ul><ul id="25ae8878-1e98-4b66-9c13-189d1f7604e6" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 3 </mark></summary><p id="2f38bcb8-e138-446e-97e9-00920c9bcf16" class="">C</p></details></li></ul><ul id="35fa1739-3534-46bd-839f-473e2912fcfb" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 4 </mark></summary><p id="8381193c-c526-49b7-8b39-8c2e24bd6a80" class="">A</p></details></li></ul><ul id="0d01e678-2a22-4bd4-9a54-124e715c434e" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 5 </mark></summary><p id="4dd6f96f-98b7-44bb-9709-17bfcf5a569d" class="">D</p></details></li></ul><hr id="51adca96-3248-4cb3-abf1-718fcf71d944"/><h1 id="ebfb723e-eb41-4baf-a094-f8e3a8febf9d" class="block-color-yellow_background">Filosofia</h1><h3 id="1056955d-80e5-404c-b7ee-f6cfd16782a3" class=""><mark class="highlight-brown_background"> Exercício 1 </mark></h3><p id="84cdb1ac-cf19-4c91-864c-243938ee7d93" class="">Sem leis e sem Estado, você poderia fazer o que quisesse. Os outros também poderiam fazer com você o que quisessem. Esse é o “estado de natureza” descrito por Thomas Hobbes, que, vivendo durante as guerras civis britânicas (1640-60), aprendeu em primeira mão como esse cenário poderia ser assustador. Sem uma autoridade soberana não pode haver nenhuma segurança, nenhuma paz.</p><p id="16cb30c5-f045-4233-92d6-1c2e8d92ebaa" class="">Fonte: LAW, Stephen. Guia Ilustrado Zahar: Filosofia. Rio de Janeiro: Zahar, 2008.</p><p id="4d93ff0b-dbe6-4f67-990e-8d7d65c48499" class="">Considere as afirmações:</p><p id="4a50abeb-a302-4d54-bf98-1798ea4c5377" class="">I. A argumentação hobbesiana em favor de uma autoridade soberana, instituída por um pacto, representa inequivocamente a defesa de um regime político monarquista.</p><p id="483e81db-516a-4259-b5b6-5ec1cdf48b97" class="">II. Dois dos grandes teóricos sobre o “estado de natureza”, Hobbes e Rousseau, partilham a convicção de que o afeto predominante nesse “estado” é o medo.</p><p id="617d041f-89a7-44ed-9295-1f1b46e22265" class="">III. Um traço comum da filosofia política moderna é a idealização de um pacto que estabeleceria a passagem do estado de natureza para o estado de sociedade.</p><p id="ab54f6ca-2a45-45f0-8bfb-4e51dda2bff6" class="">Está(ão) correta(s)</p><p id="98c81e49-af3e-4d56-8c6e-292af79fabc5" class="">a) apenas I.</p><p id="574b94ba-f355-42b6-a85e-5dc4b8c2dec8" class="">b) apenas II.</p><p id="4ee5a57e-a59f-4e53-8fc3-80f50bfbda53" class="">c) apenas III.</p><p id="9c25d657-7551-49a3-ad7e-cad34a662d8e" class="">d) apenas I e II.</p><p id="5537e9b2-58ff-437f-a787-beda0682f7f6" class="">e) apenas II e III.</p><hr id="3e44e00f-4744-436d-94c7-054eaa9916af"/><h3 id="62cf0511-0bb2-470a-a81d-92cac9268e85" class=""><mark class="highlight-brown_background"> Exercício 2 </mark></h3><p id="6bdfd57e-c854-485c-9ad8-0c39578314fb" class="">[...] a condição dos homens fora da sociedade civil (condição esta que podemos adequadamente chamar de estado de natureza) nada mais é do que uma simples guerra de todos contra todos na qual todos os homens têm igual direito a todas as coisas; [...]. HOBBES, Thomas. Do Cidadão. Campinas: Martins Fontes, 1992.
+De acordo com o trecho acima e com o pensamento de Hobbes, assinale a alternativa correta.
+a) Segundo Hobbes, o estado de natureza se confunde com o estado de guerra, pois ambos são uma
+condição original da existência humana.
+b) Para Hobbes, o direito dos homens a todas as coisas está desvinculado da guerra de todos contra
+todos.
+c) Segundo Hobbes, é necessário que a condição humana seja analisada sempre como se os homens
+vivessem em sociedade.
+d) Segundo Hobbes, não há vínculo entre o estado de natureza e a sociedade civil.</p><hr id="a24a7546-56b2-4932-b18e-f22e2055a0f8"/><h3 id="1c874954-5c74-48a7-b9c4-c80a7659fa6a" class=""><mark class="highlight-brown_background"> Exercício 3 </mark></h3><p id="20b1f561-9208-4d0e-b431-1228e6df9098" class="">01. (UNESP) Locke […] admite, a título de direito natural, o direito de propriedade fundado sobre o trabalho e limitado, por consequência, à extensão de terra que um homem pode cultivar, e o poder paterno, sendo a família instituição natural e não política. […] O pacto social não cria nenhum direito novo. É um acordo entre indivíduos que se reúnem para empregar a força coletiva no sentido de executar as leis naturais, renunciando a executá-las por sua própria força.</p><p id="17bde86f-a440-4773-847c-87e1fd55637f" class="">(Émile Bréhier. História da filosofia, 1979.)</p><p id="1c8d65df-ad04-48c7-ac3a-34d5a7dddab7" class="">O excerto apresenta um aspecto da teoria política de Locke, que estabelece</p><p id="2806e33c-77b3-431f-9424-9cc79558fad1" class="">a) A garantia da defesa de bens individuais.</p><p id="7415bf2a-a0f0-4034-aa46-99334c9a4bce" class="">b) A submissão das famílias à decisão coletiva.</p><p id="49447af2-12e9-47c8-9584-507218ab6aec" class="">c) A regulação do Estado conforme a vontade divina.</p><p id="4d131ae2-ddbe-4ba6-be9f-2b57937511e0" class="">d) A ausência de um poder soberano.</p><p id="14075627-22aa-432d-a90a-e3bdcd02f86a" class="">e) A autoridade do governo na divisão de propriedades.</p><hr id="2646932c-8fa3-4125-865c-1f4dd975a6d3"/><h3 id="8cb17938-9297-4361-84f8-cc9e366a838d" class=""><mark class="highlight-brown_background"> Exercício 4 </mark></h3><p id="74720889-6e90-46ea-aa22-38b0162fb8c3" class="">03. (UEL) Leia o texto a seguir.</p><p id="f1b65e6b-9110-4faa-946d-033324f04972" class="">Por conseguinte, todo homem, ao consentir com outros em formar um único corpo político sob um governo único, assume a obrigação, perante todos os membros dessa sociedade, de submeterse à determinação da maioria e acatar a decisão desta. Do contrário, esse pacto original, pelo qual ele, juntamente com outros, se incorpora a uma sociedade, não teria nenhum significado e não seria pacto algum, caso ele fosse deixado livre e sob nenhum outro vínculo além dos que tinha antes no estado de natureza.</p><p id="b5a8c7a5-eecf-447e-9c38-f15d39d9522a" class="">LOCKE, J. Dois tratados sobre o governo.. Trad. Julio Fischer. São Paulo: Martins Fontes, 1998. p. 470.</p><p id="9fb856e2-5496-424d-bc5f-a3c0b2346d8a" class="">Com base no texto e nos conhecimentos sobre o pensamento de John Locke, assinale a alternativa correta.</p><p id="45ee0f8b-e3c2-4ba4-a288-bfe4a1e6583a" class="">a) O ser humano deve superar o estado de natureza fundando a sociedade civil e o Estado, cedendo seus direitos em prol da paz social.</p><p id="706b526f-be0f-4bec-8356-24c49565aaaa" class="">b) Os indivíduos, no estado de natureza, são juízes de si mesmos, fundam o Estado para garantir segurança e direitos individuais por meio das leis.</p><p id="78497fbc-36dd-421a-8389-83836e8c4182" class="">c) O poder do Estado deve ser absoluto para a garantia dos direitos naturais da humanidade, como a vida, a liberdade e a propriedade.</p><p id="05e9ca6d-0cc5-4738-b633-23e96de87094" class="">d) O pacto ou contrato social é o garantidor das liberdades e direitos, sendo o poder legislativo o menos importante, já que é possível sua revogação por aqueles que participam do poder executivo.</p><p id="a17c0f17-2b64-44a6-8922-45fc8d6e5644" class="">e) O ser humano se realiza como um ser possuidor de bens, sendo sua posse o que garante tolerância religiosa, livre-iniciativa econômica e liberdade individual.</p><hr id="ecd7d4c5-f046-4ea8-a853-88e1d0045dcd"/><h3 id="7f60f2df-9588-4c02-a7b3-ea32505f5adc" class=""><mark class="highlight-brown_background"> Exercício 5 </mark></h3><p id="0a7267b8-af34-4a56-a096-d2c8690dabc1" class="">Rousseau, no texto Sobre a origem e os fundamentos da desigualdade entre os homens (1755), estabelece que:</p><p id="c004cb5a-7c63-4ece-81b9-15584e4bf688" class="">
+</p><p id="86cefa39-2ed2-4c4d-8b56-60cce3c14e9a" class="">A) A invenção da propriedade privada, das sociedades e das leis foram acontecimentos que deram origem, diversificaram e aprofundaram as formas de desigualdade.</p><p id="a8ab9992-61ac-4d52-94cc-aa03410de345" class="">B) A desigualdade natural entre os homens é a principal razão da desigualdade social e política.</p><p id="24cd641c-747c-4729-bd47-16952dd2ca87" class="">C) A desigualdade econômica se deve, sobretudo, à inteligência mais aguçada dos ricos.</p><p id="9b4f2b48-580c-4e6c-acd2-0c9b36e666b6" class="">D) A invenção da sociedade e das leis nasceu para garantir os direitos naturais da vida e da propriedade.</p><p id="01be13f2-4899-41e4-b3c2-5335e464044d" class="">E) A invenção da política marcou o fim da desigualdade entre senhores e escravos.</p><hr id="ac825c8b-cfdb-4c21-a942-39b7e1374e47"/><ul id="a1c7e911-e806-47b9-8bc3-dfef8ac2cb2e" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 1 </mark></summary><p id="60fc747d-fcd8-405b-a2eb-17bf01e52a50" class="">A</p></details></li></ul><ul id="ee65af02-07e1-4f8a-924c-44da96d7ef32" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 2 </mark></summary><p id="4e80f8bd-c294-4eeb-9e1d-5f9d3f16f9bd" class="">A</p></details></li></ul><ul id="732e3342-5ad0-4629-981d-db76e3154682" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 3 </mark></summary><p id="e5b52263-f58c-42a8-b743-0b3aef7c2131" class="">A</p></details></li></ul><ul id="09a8de96-adc6-44b8-a391-631d9e7e8d82" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 4 </mark></summary><p id="e66d24d8-962f-4e11-b77c-9f247375e53c" class="">B</p></details></li></ul><ul id="ae1548b3-7140-42c8-9d8c-6bd40ce98f40" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 5 </mark></summary><p id="c2d1e7aa-daa5-45ac-b1d8-d9182e0a6cee" class="">A</p></details></li></ul><hr id="77ebf356-d49c-40b2-8be1-2d59e840ce9a"/><h1 id="b202da74-6100-4dcf-90ac-54371c924a2a" class="block-color-teal_background">Física do Cosmo</h1><h3 id="7227f33a-9bfe-459a-93e2-4342eaa454fc" class=""><mark class="highlight-brown_background"> Exercício 1 </mark></h3><p id="7b6ff567-5e96-42d9-a16b-81a73bbf11e4" class="">Nem sempre é possível escapar da influência gravitacional de um planeta. No caso da Terra, a velocidade mínima de escape para um corpo de massa m é da ordem de 11,2 km/s. Em relação a essa velocidade, é correto afirmar que ela:</p><p id="7d083f55-1f1e-4a2e-8e10-d7d44090a8de" class=""><strong>a)</strong> independe da massa do corpo, mas depende da massa da Terra.</p><p id="5dc6b451-f0b1-4a68-88b4-0d8caa069cfe" class=""><strong>b)</strong> independe da massa da Terra, mas depende da massa do corpo.</p><p id="f33eeeb7-9cbd-42a4-859c-04516205f4a0" class=""><strong>c)</strong> depende da massa da Terra e da massa do corpo.</p><p id="d25c5631-e5f8-4dd2-8cff-189e53200578" class=""><strong>d)</strong> independe da massa da Terra e da massa do corpo.</p><p id="04d99552-9cd1-49c3-ac01-04d144b02efd" class=""><strong>e)</strong> depende da massa do corpo e da massa do Sol.</p><hr id="217e8863-e70f-4b25-8c5c-f6f5c4ad35c6"/><h3 id="5bd1cbaa-9455-44be-9a33-07090c4490b3" class=""><mark class="highlight-brown_background"> Exercício 2 </mark></h3><p id="e4dfb55b-be34-4880-a86e-b8fae76f8f90" class="">Um satélite artificial encontra-se em equilíbrio em uma órbita circular em torno da Terra. Dobrando-se a massa desse satélite, é esperado que o raio <strong>r</strong> de sua órbita:</p><p id="c17c8df6-1e4f-4a45-bf93-43f9068bafcd" class="">a) diminua pela metade.</p><p id="e630e5cd-6f9f-4adc-b8db-8bc28132c979" class="">b) permaneça inalterada.</p><p id="669c889b-d6ce-41a6-b0d2-2d702515630b" class="">c) aumente para 2<strong>r</strong>.</p><p id="0976e18a-d6eb-45da-9bdc-968a6216ff4e" class="">d) diminua para <strong>r/4</strong>.</p><p id="97b0992b-70d4-4f96-8e98-2edbf70988cd" class="">e) aumente para <strong>4r</strong>.</p><hr id="0b59fabc-8877-4c3d-8ce3-ade76dc88a9b"/><h3 id="26762cf1-981e-409b-a427-726ecc11a2cc" class=""><mark class="highlight-brown_background"> Exercício 3 </mark></h3><p id="0a62d733-e40c-49b8-bdc7-84ef198a9202" class="">(PUC-SP) A intensidade da força gravitacional com que a Terra atrai a Lua é F. Se fossem duplicadas a massa da Terra e da Lua e se a distância que as separa fosse reduzida à metade, a nova força seria:</p><p id="de3edeff-96ae-4fa8-894b-12c471198494" class="">a) 16F</p><p id="d2fd6428-3f5c-4b14-b93d-0be6c6696d7e" class="">b) 8F</p><p id="fbe58e53-a713-4185-901b-bdb92414f18e" class="">c) 4F</p><p id="c474df31-1ca2-4f60-acdf-b0763076aedc" class="">d) 2F</p><p id="25e13be3-94dc-4d7f-b63d-7d627bffab47" class="">e) F</p><hr id="0e8dd3de-183f-42a0-a127-277a4ca5decf"/><ul id="7afaa49e-91cf-4963-966f-f8755a07dce1" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 1 </mark></summary><p id="cd7d60c2-bfc0-4d37-97be-81ec8bd5b053" class="">A</p></details></li></ul><ul id="5c34de91-d8e9-420e-85af-41ec1a2f9816" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 2 </mark></summary><p id="e0fd8d89-a98c-47b9-afb0-02cc0f4e6510" class="">B</p></details></li></ul><ul id="2968a229-5546-4e97-8757-a45213402a5e" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 3 </mark></summary><p id="5fa18872-5941-4744-a51e-27bbdac560d6" class="">A</p></details></li></ul><hr id="93518258-9e37-4a22-8c98-e7b2c92be0a6"/><h1 id="cbc07620-c03f-420a-bd69-584ec5e4316c" class="block-color-brown_background">Mundo Contemporâneo</h1><h3 id="705400b7-2bb5-4ad9-9eb7-006a884aa6b2" class=""><mark class="highlight-brown_background"> Exercício 1 </mark></h3><p id="86267f53-32da-4c08-9db1-af502e26055b" class="">Sobre os itens abaixo:</p><figure id="91e6adfd-af87-4913-a544-0ff29f8de185" class="image" style="text-align:left"><a href="Teste%204A%20-%20Treino%2025ed91b0b35f4b89bd94127bdc508be0/Untitled%202.png"><img style="width:361px" src="Teste%204A%20-%20Treino%2025ed91b0b35f4b89bd94127bdc508be0/Untitled%202.png"/></a></figure><p id="86f96ad3-f654-4e73-b8cd-5e680a278d57" class="">A) Estão todos corretos
+B) Estão todos incorretos
+C) Apenas II está incorreto
+D) Apenas III está incorreto</p><hr id="8325a4d3-37c1-40c2-83e9-2b98ab9ca61c"/><h3 id="28c5dadd-06d1-490e-9977-c9a5e339a97d" class=""><mark class="highlight-brown_background"> Exercício 2 </mark></h3><p id="edba830d-b4b9-40e9-94a4-a85fa440b31f" class="">Não é um efeito positivo gerado pelo turismo:
+A) Contribui para a valorização e consequentemente a preservação do patrimônio natural e cultural
+B) Gera empregos exclusivamente indiretos
+C) Maior arrecadação de impostos e taxas
+D) Viabiliza intercâmbio social e cultural, divulgando promovendo a ligação entre povos, línguas, hábitos e gostos diferentes.</p><hr id="56d25a20-1e78-463b-ad86-b5f4dc51e2ca"/><ul id="3e85a42c-fc03-4232-96fc-0cbe6e141d5d" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 1 </mark></summary><p id="964a32b6-b622-4bc0-bdaa-608c277ddc9f" class="">D</p></details></li></ul><ul id="ba752962-ffd6-42a8-805b-c0a63a179d3c" class="toggle"><li><details open=""><summary><mark class="highlight-brown_background"> Resposta 2 </mark></summary><p id="37771124-c792-4d85-bf45-f89f4ad6b887" class="">B</p></details></li></ul><hr id="4994890c-5327-4be8-b654-e2180482c323"/><hr id="814cd360-fdcf-4386-98c3-04527cb0374c"/><p id="597f18de-f6be-4b7a-ab75-52e79ef1eef9" class="block-color-gray_background"><strong>Heitor e Wilson e Kired © 2022, all rights reserved</strong></p><hr id="937ff8ff-16f2-4f7d-a823-0473330694a5"/></div></article></body></html>

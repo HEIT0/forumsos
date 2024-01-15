@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumo 14/10 - Nebulosa</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="558b89a9-3d34-41f0-a55f-31e1bc5d8190" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/webb1.jpg" style="object-position:center 32.28%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🌠</span></div><h1 class="page-title">Resumo 14/10 - Nebulosa</h1></header><div class="page-body"><ul id="45d89377-b223-4e98-8120-43ed761541c4" class="toggle"><li><details open=""><summary><strong>Conteúdos</strong></summary><nav id="3e965f37-29ab-41c9-b40f-e68877850ed9" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#730270fd-cadc-4589-abfb-214c5960e3ec">Matemática </a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f2a6f5ab-fb14-4713-b8da-31b01ee8f795">Definição de Log e suas propriedades (Lembrando):</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f5aa6e84-f83c-42f6-8e9e-e21d4169d2b5">Função Logarítmica</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c7b5bb3b-2bf2-4a83-bdd2-9804214a8337">Física</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#72b298ac-2357-4dc4-89be-85afffb4c464">Trabalho</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#9155d36f-51f3-4dd8-a01c-e63a52f3ce6f">Trabalho da Força Peso</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#13dcaa93-596b-4f6d-b80a-9f425225e826">Química</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ca64e16e-6082-4dd6-ad27-54a53bcd5539">Óxido</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#12bd12b0-d6c2-4cd1-8771-a58a42d04f8a">Óxidos iônicos</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#a31da0cf-231c-444d-a9dd-ec3e2223f662">Óxidos moleculares (covalentes)</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#fb9e164b-6236-4730-ba09-c4d076558d2a">Biologia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7a0762aa-8dcd-4246-921d-b818ac68b4dd">Anfíbios</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#bb8abbea-2391-4706-86fc-6ed59b2527b8">Ecologia</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#145273e5-c9b1-4741-b4c1-c89cbc8ab68a">Características Gerais</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a0c93a1f-2221-4e5b-bd06-85339b70ff9a">Gramática</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b5f142c1-65f2-4a2b-9479-71963cf6974a">Onomatopeia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#df21d0b3-1d14-45fa-9a8a-f905e394ea07">Paronomásia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1e1dc563-fa7c-4117-bf02-1c3109eeca6d">Aliteração</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a9b2671a-5be3-4e24-9a67-065d355f89ee">Assonância</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#192f2529-2911-4c2d-b774-d0162b949874">Geografia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ac1342a0-ceff-4294-a710-e0fde7e86d74">Agricultura</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#dc78abb9-ab93-4345-9446-65ca3a873eb6">Pecuária</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1a0d9b31-193f-416b-a12e-ea8ad4792896">Extrativismo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#f7619526-2b05-4484-83c3-9b8d554ccc24">Sociologia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#27253f56-9450-4fd6-830c-bc72a8afad08">Althusser</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#90024c56-ca87-4f84-b4e6-d523e227b60f">Inglês</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#5a5041c4-41eb-4af6-ad04-446868efbbaf">Frases</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1c925681-16d1-4ef6-ba1c-e79c57cb21e3">Ed. Financeira</a></div></nav></details></li></ul><hr id="bae070d1-ebde-4124-bed1-f1318810476c"/><blockquote id="0bbf2e45-0e59-4626-82d5-5f64414f5d91" class=""><strong>Estava aguardando né?</strong> <em>Nós, da firma Resumos &amp; CIA, nos isentamos de qualquer responsabilidade quanto a este resumo e possíveis ausências de conteúdo para a prova. Use por sua própria conta e risco.</em></blockquote><hr id="765a25a1-5a50-4702-942c-e1be0224b908"/><h1 id="730270fd-cadc-4589-abfb-214c5960e3ec" class="block-color-gray_background">Matemática </h1><h2 id="f2a6f5ab-fb14-4713-b8da-31b01ee8f795" class="">Definição de Log e suas propriedades (Lembrando):</h2><div id="4521f105-5917-44de-b117-a111968f0b11" class="column-list"><div id="24f3e377-e48d-4189-a2eb-b6c9471333d0" style="width:31.25%" class="column"><figure id="537133c7-b4e9-40ce-84b2-7339b2d786e2" class="image"><a href="Resumo%2014%2010%20-%20Nebulosa%20558b89a93d3441f0a55f31e1bc5d8190/Untitled.png"><img style="width:432px" src="Resumo%2014%2010%20-%20Nebulosa%20558b89a93d3441f0a55f31e1bc5d8190/Untitled.png"/></a></figure></div><div id="46200cac-a4ba-444f-bd59-a4ec875cf20f" style="width:68.75%" class="column"><figure id="4c1d2c83-f044-4033-a570-e7fd528ea18d" class="image"><a href="Resumo%2014%2010%20-%20Nebulosa%20558b89a93d3441f0a55f31e1bc5d8190/Untitled%201.png"><img style="width:384px" src="Resumo%2014%2010%20-%20Nebulosa%20558b89a93d3441f0a55f31e1bc5d8190/Untitled%201.png"/></a></figure></div></div><h2 id="f5aa6e84-f83c-42f6-8e9e-e21d4169d2b5" class="">Função Logarítmica</h2><figure id="49c81e3c-e593-41ad-87b5-321f914cd95f" class="image" style="text-align:left"><a href="Resumo%2014%2010%20-%20Nebulosa%20558b89a93d3441f0a55f31e1bc5d8190/Untitled%202.png"><img style="width:500px" src="Resumo%2014%2010%20-%20Nebulosa%20558b89a93d3441f0a55f31e1bc5d8190/Untitled%202.png"/></a><figcaption>Primeiro Caso para base entre 0 e 1 | Segundo Caso para base maior que 1 </figcaption></figure><p id="c2fdca3c-7857-4fc0-9e80-8598786230dc" class=""><strong>Dica:</strong> Se for pra construir gráfico, pegue a função, coloque valores razoáveis numa tabela, e depois coloca no gráfico (Lembrando de passar pela coordenada (1,0) e de verificar o formato do gráfico de acordo com a base do log (i.e. se for maior que 1 é crescente, se menor que 1 e maior que zero é decrescente).</p><p id="6257fb59-e485-4a91-889c-a2256123269e" class=""><strong>Vídeo aula aqui (blz friends?): </strong></p><figure id="3c6334b6-7bc4-4337-b07c-6034361e9069"><a href="https://www.youtube.com/watch?v=MVZKF_W2Hd0" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">LOGARITMO | FUNÇÃO LOGARÍTMICA | EXERCÍCIOS</div><div class="bookmark-description">Logaritmo ficou fácil através dos exercícios feitos na nossa aula. Aula imperdível com as propriedades e operações de Log. Sandro Curió do dicas de mat e você... Rumo ao topo, Friend!</div></div><div class="bookmark-href"><img src="https://www.google.com/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=MVZKF_W2Hd0</div></div><img src="https://i.ytimg.com/vi/MVZKF_W2Hd0/hqdefault.jpg" class="bookmark-image"/></a></figure><hr id="1a36a193-5718-4785-a282-c1eeb8e7f2b9"/><h1 id="c7b5bb3b-2bf2-4a83-bdd2-9804214a8337" class="block-color-teal_background">Física</h1><h3 id="72b298ac-2357-4dc4-89be-85afffb4c464" class="">Trabalho</h3><p id="16a9b66b-3b42-4761-9b9d-1d7a20611832" class=""><strong><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mi>F</mi><mo>×</mo><mi>d</mi><mo>×</mo><mi>c</mi><mi>o</mi><mi>s</mi><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\tau = F×d×cos (\alpha)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">cos</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span></strong></p><p id="5bc7c8db-fb57-40b4-9a18-d6c3038e6ace" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi></mrow><annotation encoding="application/x-tex">\tau</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span></span></span><span>﻿</span></span> = trabalho</p><p id="c302e729-5980-42bd-b74b-afddf91a7111" class="">F = Força</p><p id="f36a5a25-2df0-4932-844d-e99f50fdbdb9" class="">d = deslocamento</p><p id="d678ca70-54f3-4491-88af-c98fcd99002f" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span></span><span>﻿</span></span> = ângulo entre a força (que estamos calculando o trabalho) e a direção do movimento</p><h3 id="9155d36f-51f3-4dd8-a01c-e63a52f3ce6f" class="">Trabalho da Força Peso</h3><p id="7598575f-76e0-48ed-8692-35a50a615513" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>τ</mi><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">\tau _P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.1132em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> = m×g×h</p><p id="c9affafe-e5b4-4d98-9619-c8ba2499744e" class="">m = massa</p><p id="94d49094-d16a-4666-8a4c-85572c959554" class="">g = aceleração da gravidade</p><p id="6e46afa5-703f-4a45-9d8f-4b8733bc3c3c" class="">h = altura</p><p id="7fc8ba87-263a-494e-acaf-a01c96a145c5" class=""><strong>Obs</strong>: se o objeto estiver subindo, o trabalho do peso é negativa (contra o movimento) | Se caindo, força peso é negativa </p><p id="6c4f350f-9a18-4c0f-a3a2-ec509a8bb1d1" class="">Vídeo aula sobre trabalho aqui:</p><figure id="d6a70867-61f0-403e-94c3-e9ff1c5fea44"><a href="https://www.youtube.com/watch?v=3SOzLz9g0uw" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Trabalho de uma força - Aula 01</div></div><div class="bookmark-href"><img src="https://www.google.com/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=3SOzLz9g0uw</div></div><img src="https://i.ytimg.com/vi/3SOzLz9g0uw/hqdefault.jpg" class="bookmark-image"/></a></figure><hr id="153eca9a-f309-4283-aaf6-137eee789390"/><h1 id="13dcaa93-596b-4f6d-b80a-9f425225e826" class="block-color-red_background">Química</h1><h2 id="ca64e16e-6082-4dd6-ad27-54a53bcd5539" class="">Óxido</h2><p id="e28c9c2c-3123-48eb-9eba-3f53e8c0facd" class=""><strong>Fórmula: </strong></p><p id="a169861d-7ff8-4f13-8ff2-ad13c75220a9" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>x</mi></msub><msub><mi>O</mi><mi>y</mi></msub></mrow><annotation encoding="application/x-tex">E_xO_y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></p><p id="1ca9a636-a500-4ea2-9292-c039262b3783" class="">Óxidos são binários (formados por 2 elementos)</p><h3 id="12bd12b0-d6c2-4cd1-8771-a58a42d04f8a" class="">Óxidos iônicos</h3><p id="a04c4baa-fec6-469d-bbdf-1cec646c5ce6" class="">E = Metal</p><p id="b33abc98-498f-475b-8f17-701c70bacc0d" class="">Nome: óxido de E</p><p id="9b4fcfbf-c97e-4414-91f9-c326818ed43f" class="">Carga necessária só caso E seja metal pesado ou de transição</p><h3 id="a31da0cf-231c-444d-a9dd-ec3e2223f662" class="">Óxidos moleculares (covalentes)</h3><p id="f40faa68-59e7-4ca8-b946-3f29c2d9a24a" class="">E = ametal</p><p id="18fbc1e5-4e27-4516-982f-8a43b589a78e" class=""><strong>Nome: </strong> <em>mono/di/tr</em>i <strong>Óxido de</strong> <em>di/tri</em> <strong>E  (Obs: usar o prefixo de acordo com a quantidade de cada um (com E = 1, não usar prefixo)</strong></p><hr id="68733e7b-7aee-426e-8610-29e339b7fb14"/><p id="d150c296-41db-49e5-830a-534b523842b3" class=""><strong>Vídeo aula: </strong></p><figure id="264578c8-fae9-4e0b-99b2-62ce635e597b"><a href="https://www.youtube.com/watch?v=vReMXnACA8Y" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">FUNÇÕES INORGÂNICAS - ÓXIDOS - NOMENCLATURA</div><div class="bookmark-description">FAAAAAAAAAAAAAAAALA, GALEEEEERA!!! Mais um vídeo dessa série maravilhosa de funções inorgânicas!!! No vídeo de hoje, o MONSTRÃO vai DETONAR a nomenclatura dos óxidos com vocês! É novo por aqui? Chega mais que é sucesso TOTAL! Não esqueça de se inscrever pra ficar por dentro de tudo o que acontece no canal!</div></div><div class="bookmark-href"><img src="https://www.google.com/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=vReMXnACA8Y</div></div><img src="https://i.ytimg.com/vi/vReMXnACA8Y/hqdefault.jpg" class="bookmark-image"/></a></figure><hr id="123a86b9-d4cb-4b34-b112-e79a29e43536"/><h1 id="fb9e164b-6236-4730-ba09-c4d076558d2a" class="block-color-teal_background">Biologia</h1><h2 id="7a0762aa-8dcd-4246-921d-b818ac68b4dd" class="">Anfíbios</h2><h3 id="bb8abbea-2391-4706-86fc-6ed59b2527b8" class="">Ecologia</h3><ul id="f095441f-da71-4810-996f-fcedf863fd08" class="bulleted-list"><li style="list-style-type:disc">São importantes para o meio ambiente pois controlam a cadeia alimentar (e.g. comendo insetos transmissores de doenças)</li></ul><ul id="146abf98-c443-4dfb-9e57-672b412ac03d" class="bulleted-list"><li style="list-style-type:disc">E são bioindicadores pois necessitam da umidade para fazer respiração cutânea e são muito sensíveis, por isso, se um lugar que costumava apresentar anfíbios não apresenta mais, o lugar está perdendo umidade ou tem algum problema ambiental</li></ul><h3 id="145273e5-c9b1-4741-b4c1-c89cbc8ab68a" class="">Características Gerais</h3><ul id="db7187ab-c0c8-4d59-ba85-2499b6cb01e2" class="toggle"><li><details open=""><summary><strong>Divididos em:</strong></summary><ul id="561285c6-882a-4f06-9ccb-5ea1d5aa35f6" class="bulleted-list"><li style="list-style-type:disc"><strong>Anuros</strong> → sem cauda (sapo)</li></ul><ul id="53443df7-f733-43c6-92a4-1521f7069fee" class="bulleted-list"><li style="list-style-type:disc"><strong>Urodelos</strong> → caudados (salamandra) </li></ul><ul id="4c39c35e-ef13-4b0a-8110-8a3f49fcc9df" class="bulleted-list"><li style="list-style-type:disc"><strong>Ápodes</strong> → sem pés (cobra-cega)</li></ul></details></li></ul><ul id="f675eeb1-db81-4b58-a82f-5a8962726a46" class="bulleted-list"><li style="list-style-type:disc">Pele úmida, viscosa e sem escamas com glândulas que secretam muco</li></ul><ul id="c2d35f30-b0bf-4201-b261-12e9ae600b28" class="bulleted-list"><li style="list-style-type:disc">Circulação dupla e incompleta</li></ul><ul id="b2492d20-d083-4814-8f51-05364cdf9367" class="bulleted-list"><li style="list-style-type:disc">Esqueleto quase inteiramente ósseo</li></ul><ul id="469eb929-ddb6-49ca-86e7-da6ab055215a" class="bulleted-list"><li style="list-style-type:disc">Respiração branquial, <strong>cutânea</strong> e pulmonar </li></ul><ul id="0c7fb626-303d-414f-89ba-e8a1195409e2" class="bulleted-list"><li style="list-style-type:disc">Fecundação externa e desenvolvimento indireto (lembrar dos girinos)</li></ul><p id="4069d05b-8910-452b-b7c3-eb1d5dc38004" class="">Vídeo aula aqui:</p><figure id="52269ded-1488-46a8-8543-3a2603e117ce"><a href="https://www.youtube.com/watch?v=kiC-SOpVli0" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">ANFÍBIOS - CORDADOS VERTEBRADOS | Biologia com Samuel Cunha</div><div class="bookmark-description">Aula completa sobre ANFÍBIOS - CORDADOS VERTEBRADOS | Biologia com Samuel Cunha 👉 Se esse vídeo te ajudou, não esqueça de se inscrever no canal. :) 👉 Estude na BIOLÂNDA: https://www.biolandia.com.br/ 👉 Receba material grátis: http://bit.ly/CadastroPlataforma Fala, pessoal! Tudo certinho? Aula sobre ANFÍBIOS. Nesta aula falo sobre características gerais, os grupos e alguns conceitos importantes.</div></div><div class="bookmark-href"><img src="https://www.google.com/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=kiC-SOpVli0</div></div><img src="https://i.ytimg.com/vi/kiC-SOpVli0/hqdefault.jpg" class="bookmark-image"/></a></figure><hr id="88afdf80-1deb-4f1b-8ca2-9018a54de6c5"/><h1 id="a0c93a1f-2221-4e5b-bd06-85339b70ff9a" class="block-color-brown_background">Gramática</h1><h3 id="b5f142c1-65f2-4a2b-9479-71963cf6974a" class="">Onomatopeia</h3><ul id="532cac10-51b3-4dea-98b5-4a4b82b0c25b" class="bulleted-list"><li style="list-style-type:disc">Uso de vocábulos para representar sons</li></ul><ul id="bf045e3a-a730-48b5-8502-e154b9a63676" class="bulleted-list"><li style="list-style-type:disc">“ding-dong” / “miau”</li></ul><h3 id="df21d0b3-1d14-45fa-9a8a-f905e394ea07" class="">Paronomásia</h3><ul id="92639003-8a10-43dc-a56a-afdf7117ac9c" class="bulleted-list"><li style="list-style-type:disc">Palavras com som parecidoe significado diferente (trocadilho)</li></ul><ul id="9ba63d5f-d803-4133-a1a4-4ae4f1d5fcb4" class="bulleted-list"><li style="list-style-type:disc">cálice - cale-se</li></ul><h3 id="1e1dc563-fa7c-4117-bf02-1c3109eeca6d" class="">Aliteração</h3><ul id="ed94bb5a-747f-4e3a-b704-d907cbf6a24e" class="bulleted-list"><li style="list-style-type:disc">Repetição do som consonantal</li></ul><ul id="de09ff06-0aef-482d-b340-63a683df4c2e" class="bulleted-list"><li style="list-style-type:disc">O rato roeu a roupa do rei de Roma</li></ul><h3 id="a9b2671a-5be3-4e24-9a67-065d355f89ee" class="">Assonância</h3><ul id="d0e7ce59-7860-48b2-a3eb-c32a10efabda" class="bulleted-list"><li style="list-style-type:disc">Repetição do som vocálico</li></ul><ul id="2cdd1795-aeaa-42c8-a8c6-a18824931b7d" class="bulleted-list"><li style="list-style-type:disc">quem dera viera quimera </li></ul><p id="bb8ba6ea-eca2-40e4-abb2-1eb94395112e" class="">Vídeo aula com as figuras acimas aqui (tem outras que não cai no vídeo, então só pula):</p><figure id="ed1db4a7-2e4a-4d58-aba2-2cfe2e629019"><a href="https://www.youtube.com/watch?v=Hi-2LNNg4SE" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Figuras de Linguagem - Aula 02 [Prof Noslen]</div><div class="bookmark-description">E aí, moçada! Vamos revisar - com muita música - algumas coisinhas sobre anáfora, pleonasmo, neologismo e tudo o que falta sobre Figuras de Linguagem para o ENEM. BORA ESTUDAR! PARTICIPE DO NOSSO GRUPO DE ESTUDOS NO FACEBOOK: facebook.com/groups/grupodonono Guia ENEM 2018 - http://conteudo.professornoslen.com.br/guia-enem-2018 Plataforma de estudos do Nonô - https://professornoslen.com.br GOSTOU DA AULA!?</div></div><div class="bookmark-href"><img src="https://www.google.com/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=Hi-2LNNg4SE</div></div><img src="https://i.ytimg.com/vi/Hi-2LNNg4SE/hqdefault.jpg" class="bookmark-image"/></a></figure><hr id="922dd390-8384-40c2-96c0-1071ecef3695"/><h1 id="192f2529-2911-4c2d-b774-d0162b949874" class="block-color-brown_background">Geografia</h1><h2 id="ac1342a0-ceff-4294-a710-e0fde7e86d74" class="">Agricultura</h2><ul id="88cdb452-d685-4b37-969f-66b208c99fc7" class="toggle"><li><details open=""><summary><strong>Extensiva de antigamente</strong></summary><ul id="032b036e-b253-4552-a62c-a0a8e167426a" class="bulleted-list"><li style="list-style-type:disc">Uso de grandes áreas</li></ul><ul id="be34e1a7-8e67-43c4-bf5b-4cbc52762666" class="bulleted-list"><li style="list-style-type:disc">Esgotamento do solo (uso precário do solo)</li></ul><ul id="e7e6d474-d988-40b9-92e4-83695d1ef9fe" class="bulleted-list"><li style="list-style-type:disc">Baixa produtividade, alta produção (Produtividade = produção/área)</li></ul><ul id="e24bf3b6-9b4e-4e2f-8a03-d4b4e556f394" class="bulleted-list"><li style="list-style-type:disc">Rotação de cultura</li></ul><ul id="f0b84b8a-8455-4a22-a285-8e1ed68d3859" class="bulleted-list"><li style="list-style-type:disc">Coivara → queimada para limpar terreno</li></ul><ul id="dbb6a72f-ac35-429a-8996-959ee332184b" class="bulleted-list"><li style="list-style-type:disc">Pouco uso de tecnologia (países pobres)</li></ul></details></li></ul><ul id="5da810fd-1964-4a60-adbd-5c3c17184345" class="toggle"><li><details open=""><summary><strong>Extensiva atual (plantation) </strong></summary><ul id="125edc45-899a-4ca7-b126-b382d03b7b94" class="bulleted-list"><li style="list-style-type:disc">Sistema lavoura/pecuária</li></ul><ul id="913577e8-f886-48f1-b479-7f82d3f5874d" class="bulleted-list"><li style="list-style-type:disc">Cultura para exportação</li></ul><ul id="e1f14eea-fca0-4dd7-941f-cf2567c026f3" class="bulleted-list"><li style="list-style-type:disc">Agricultura de precisão/tecnologia</li></ul><ul id="f0788d00-5821-42b3-b9fc-da1b362e5ec0" class="bulleted-list"><li style="list-style-type:disc">Organização do espaço agrícola</li></ul><ul id="4718d3f5-af8a-4182-a6fa-05823daf8856" class="bulleted-list"><li style="list-style-type:disc">Plantio direto → uso de folhas/palha para forrar o solo</li></ul></details></li></ul><ul id="a21dab9f-8ec0-45b9-9057-25310860ca2e" class="toggle"><li><details open=""><summary><strong>Intensiva</strong></summary><ul id="ddbecf81-cc2f-4c90-b32f-3008a39dd41f" class="bulleted-list"><li style="list-style-type:disc">Alta produtividade</li></ul><ul id="b0e1cbd7-a857-4d92-b7ec-311a72395172" class="bulleted-list"><li style="list-style-type:disc">Mecanizado</li></ul><ul id="d9d4c41b-5940-4d7c-8cc0-062917382d5a" class="bulleted-list"><li style="list-style-type:disc">Seleção de sementes</li></ul><ul id="23197c32-4ffa-4db6-9861-23cc5561dddb" class="bulleted-list"><li style="list-style-type:disc">Mão de obra qualificada</li></ul><ul id="217470b9-7b84-43e1-bb09-ddc0fdbec1a7" class="bulleted-list"><li style="list-style-type:disc">Alto uso de tecnologia (país rico)</li></ul></details></li></ul><h2 id="dc78abb9-ab93-4345-9446-65ca3a873eb6" class="">Pecuária</h2><ul id="1dcc4738-d0b8-4711-aac0-9c43d76dc57d" class="bulleted-list"><li style="list-style-type:disc">Extensiva (carne de corte) → produção de carne para consumo</li></ul><ul id="708e0fe7-df9b-48b3-b870-9bf4e9349521" class="bulleted-list"><li style="list-style-type:disc">Intensiva → produção de leite e derivados</li></ul><ul id="421c0fb9-db23-49fc-b972-9ad58c427162" class="bulleted-list"><li style="list-style-type:disc">Semi-intensiva → produção de carne de alta qualidade (selecionada)</li></ul><h2 id="1a0d9b31-193f-416b-a12e-ea8ad4792896" class="">Extrativismo</h2><p id="7280e0fa-688c-4c58-aabb-21249a4d70c3" class="">Vegetal → predatório nos países pobres</p><p id="19b551bc-e32d-4151-a5ae-8fb52eea6664" class="">Mineral → Extração de minerais</p><ul id="5f6efb01-bd4c-43b2-9d31-714cf7c49b8c" class="toggle"><li><details open=""><summary>Impactos do extrativismo</summary><ul id="5b24fa95-2f9c-45b8-aba8-6cf33b3a2ea4" class="bulleted-list"><li style="list-style-type:disc">paisagem</li></ul><ul id="96cfedf5-7e3d-4316-bf37-cd3bc218aac1" class="bulleted-list"><li style="list-style-type:disc">vegetação</li></ul><ul id="e0d5b52b-da81-4c19-ba89-21453b3e4780" class="bulleted-list"><li style="list-style-type:disc">contaminação do solo e da água</li></ul><ul id="49f9d757-be56-4774-a270-e19442aa90a9" class="bulleted-list"><li style="list-style-type:disc">comprometimento da biodiversidade</li></ul><ul id="850683b5-c93f-4252-9737-a37cbe871b45" class="bulleted-list"><li style="list-style-type:disc">Erosão</li></ul></details></li></ul><hr id="93dca9bc-b429-4091-b4ab-3a0f2d20d76d"/><h1 id="f7619526-2b05-4484-83c3-9b8d554ccc24" class="block-color-yellow_background">Sociologia</h1><h2 id="27253f56-9450-4fd6-830c-bc72a8afad08" class="">Althusser</h2><p id="eca6cf22-9c17-4665-b229-9ab33dda5034" class="">Questiona se a escola e os educadores devem se preocupar com exclusão social e concentração de renda ou só reproduzir conteúdo</p><ul id="495af609-e6e1-424b-a3ad-9e883155baaf" class="bulleted-list"><li style="list-style-type:disc">Para ele, a escola era parte do aparelho ideológico do estado (A.I.E) que reproduz a ideologia capitalista, dificultando conversas sobre inclusão social</li></ul><ul id="7710656b-e6bd-401a-943f-62e647616a75" class="bulleted-list"><li style="list-style-type:disc"><strong>Aparelho Ideológico do Estado</strong> → difunde os ideias de quem controla o Estado (escola, igreja, sistema jurídico)</li></ul><ul id="8fca9178-cd99-4422-9892-8eb7bd529430" class="bulleted-list"><li style="list-style-type:disc"><strong>Aparelho Repressivo do Estado</strong> → coagem fisicamente quem não concorda com a ideologia do Estado (polícia, exército, prisão)</li></ul><hr id="3ee26e4d-45e8-4eb0-b57d-abbf2e3726cb"/><h1 id="90024c56-ca87-4f84-b4e6-d523e227b60f" class="block-color-pink_background">Inglês</h1><h3 id="5a5041c4-41eb-4af6-ad04-446868efbbaf" class="">Frases</h3><p id="1af48757-1f3c-4c4b-998d-b7f6612e6404" class="">Make up sentences with the verbs:</p><ul id="ebf9ede8-7845-4fff-82f7-36626e43daf4" class="bulleted-list"><li style="list-style-type:disc"><strong>to gather </strong>→ reunir-se</li></ul><ul id="e1fdd0b4-75eb-4471-a2cf-21b90d709c50" class="bulleted-list"><li style="list-style-type:disc"><strong>to draw up </strong>→ preparar </li></ul><ul id="eee36e95-c9a6-4316-a89b-977d5926a58d" class="bulleted-list"><li style="list-style-type:disc"><strong>to prize</strong> → valorizar</li></ul><hr id="0795b766-2c8c-4fd5-87db-89d64e4eabda"/><h1 id="1c925681-16d1-4ef6-ba1c-e79c57cb21e3" class="block-color-purple_background">Ed. Financeira</h1><p id="ff43c621-0a28-4207-9644-e6cb8de15c2e" class="">**<strong>Reserva de Emergência</strong> <strong>→ </strong>Reserva de pelo menos o sustento financeiro de 6 meses</p><p id="d2177335-7bda-4e6d-b1e8-f4bcf7789e69" class=""><strong>Gastos essenciais</strong> <strong>→</strong> gastos que não podem ser dispensados (moradia, alimentação, conta de luz)</p><p id="e8185dc4-6a44-45aa-a861-0c19701be705" class=""><strong>Gastos não essenciais (supérfluos/necessários)</strong> <strong>→</strong> gastos que podem ser dispensados (academia, ida a lanchonete) </p><p id="e506563b-2053-4f02-9e85-b81eaf640686" class=""><strong>Regra dos 30/70 →</strong> 70% da renda para custos de vida e os outros 30% para reservas/investimento</p><p id="e506563b-2053-4f02-9e85-b81eaf640686" class="">Obs:Conteúdo relacionado às conversas da aula...</p><hr id="e0e02dd3-c67c-4d48-806a-fc31b09ebee7"/><p id="770d334f-80b5-4a00-99dc-e00458102200" class="">Heitor e Magon e Wilson <strong>© 2022, all rights reserved </strong></p><p id="542e7eab-9dee-4f89-b06f-bf60ff653b38" class="">
+</p></div></article></body></html>

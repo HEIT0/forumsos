@@ -1,0 +1,674 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumo 17/08 - Keep Calm</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="db1fc776-c9af-43eb-954f-03932dc4d822" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_10.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">😀</span></div><h1 class="page-title">Resumo 17/08 - Keep Calm</h1></header><div class="page-body"><p id="a0e990bc-59c8-4af4-97b4-85429d6078bc" class=""><em>Nós, da firma Resumos&amp;CIA, nos isentamos de qualquer responsabilidade quanto a este resumo e possíveis ausências de conteúdo para a prova. Use por sua própria conta e risco.</em></p><ul id="eea32ccc-78af-42b2-97ed-7275c5e728e4" class="toggle"><li><details open=""><summary>Conteúdo</summary><nav id="b7c94dca-8b4d-4551-a0b9-1332b40ff46d" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#12cef7ed-bb55-4f5a-8324-41c7bbaf88cf">Matemática</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#37cc416d-0495-4de4-a9f7-05154346e736">Física</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#aff97167-0da7-4768-b2c2-1a762a7fccde">Elevadores</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#d8b446fa-9e31-45ce-aa2d-c734cf5db620">Química</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7041c1c2-d210-4fa6-9e3f-d13de95f51ce">Mol</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f1263fc8-f649-40ea-ab16-8ce4d211d745">Massa molar</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ee29c5d3-f9f1-4c55-a808-1c8872862447">Biologia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#9c2c7f05-1b3b-444d-bf43-8dcc030cbc26">Nomenclatura científica</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#db18bb73-d2d7-4afb-a4c1-12055078cc41">Literatura</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ac89a833-eced-4bf1-9dce-79eca2ad16dc"><a href="https://forumsos.heitorszabo.repl.co/resumos/1008/1008.html">Barroco (resumo)</a></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7b3e8621-9327-4739-af8d-2ff7476165e6">Correntes</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#e3f34462-8b93-495f-be74-5a457147be14">Contexto do Brasil</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#e161d515-a2e4-44ec-92e8-15c588597acc">Padre Antônio Vieira</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7f0955ef-dd37-43de-b75f-62f0178e3f7b">Gregório de Matos</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#792b62f1-d266-4f8e-8aab-609529ba118e">Poesias de Gregório </a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#fab4ed13-abf5-44dc-8f09-1d4c269c3f03">História</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#cd2b4f10-6473-46ce-82eb-2f4f039ba4ba">Filosofia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d234c16c-f5e3-4940-b2ca-474af89609b9">Helenismo</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7af8cfea-41e2-4bb8-9539-fe1ef0352f1c">Cinismo / Kynicos </a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a533d5ad-e3a3-4834-b81e-8ba5a2b618b3">Epicurismo </a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ef3fe68c-aea5-4ccd-8ce2-1f66aa4abca0">Física do Cosmo</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#19f68604-3e59-4182-9463-ae7c2a746d6c">Geocentrismo</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#4f3912dc-a140-4764-89c2-efa58497e391">Vantagens</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#90ee34b4-6a8b-4a47-8a3f-b0af7871b079">Desvantagens</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#369e8809-5ef4-4047-89e5-c86b4842a1ac">Aprofundamento de Inglês</a></div></nav></details></li></ul><h1 id="12cef7ed-bb55-4f5a-8324-41c7bbaf88cf" class="block-color-yellow_background">Matemática</h1><div id="587f447c-0cfd-4604-9fff-9512c1a21998" class="column-list"><div id="f9af4130-0d11-4be6-bc4e-3910181a8084" style="width:50%" class="column"><figure id="aa242ac6-479b-4b6a-ae06-7ed2b9db063d" class="image" style="text-align:right"><a href="Untitled.png"><img style="width:432px" src="Untitled.png"/></a></figure></div><div id="1832f79e-8ab3-4a6a-8084-1dfdacfd2e88" style="width:50%" class="column"><figure id="8fe466aa-750b-4153-8b5d-f337a6f0e081" class="image" style="text-align:left"><a href="Untitled%201.png"><img style="width:392px" src="Untitled%201.png"/></a></figure></div></div><p id="015e9c2d-17aa-4d22-8787-6c3edab740e7" class="">O cosseno de um ângulo é a projeção da reta que liga a origem do gráfico com o ponto P na circunferência no eixo x.</p><p id="6d4a0ad0-7e35-4a90-87a6-52b398d10da7" class="">Dica: Desenhe o ciclo e analise-o tendo em mente a imagem 1 e 2 </p><hr id="95c9cc46-46f1-4dd4-bc01-6f14b0db68af"/><h1 id="37cc416d-0495-4de4-a9f7-05154346e736" class="block-color-teal_background">Física</h1><h3 id="aff97167-0da7-4768-b2c2-1a762a7fccde" class="">Elevadores</h3><p id="f2839984-8843-4a0b-bcb4-aa7453d17255" class="">Definimos como força normal a força que o chão faz na pessoa, contrária ao peso, sendo esse a força que a pessoa faz no chão. “A balança pesa a força normal”.</p><p id="fbf86ff1-dba6-46c9-b37f-ed5fe32d5d9f" class="">Se a força resultante do elevador está para cima (acelerando a subida ou brecando a queda), a força normal será maior que o peso (N&gt;P), ou seja, seu “peso” na balança será maior. Nesse caso, teremos que N - P = Fr = m . a</p><p id="27f91533-1fa6-4231-a9e1-97b48a91d369" class="">Se a força resultante do elevador está para baixo(acelerando a descida ou brecando a subida), a força normal será menor que o peso (P&gt;N), ou seja, seu “peso” na balança será menor. Nesse caso, teremos que P - N = Fr = m . a</p><iframe width="600" height="350"
+src="https://www.youtube.com/embed/REH_Hz9MVO8">
+</iframe><hr id="f9d0d7d8-d178-4b6b-90c2-05b62be4fc22"/><h1 id="d8b446fa-9e31-45ce-aa2d-c734cf5db620" class="block-color-red_background">Química</h1><h3 id="7041c1c2-d210-4fa6-9e3f-d13de95f51ce" class="">Mol</h3><p id="54f4b0bf-48a2-4882-a24e-7eb84bf335d3" class="">Um mol é um <strong>número</strong> que representa uma grande quantidade de <strong>partículas</strong></p><p id="2e6a3189-08b3-48e0-8313-88127379a5a3" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>m</mi><mi>o</mi><mi>l</mi><mo>=</mo><mn>6</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>23</mn></msup><mtext> </mtext><mi>u</mi><mi>n</mi><mi>i</mi><mi>d</mi><mi>a</mi><mi>d</mi><mi>e</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">1 mol = 6 × 10^{23}\ unidades </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord mathnormal">m</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">6</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">23</span></span></span></span></span></span></span></span></span><span class="mspace"> </span><span class="mord mathnormal">u</span><span class="mord mathnormal">ni</span><span class="mord mathnormal">d</span><span class="mord mathnormal">a</span><span class="mord mathnormal">d</span><span class="mord mathnormal">es</span></span></span></span></span><span>﻿</span></span></p><h3 id="f1263fc8-f649-40ea-ab16-8ce4d211d745" class="">Massa molar</h3><p id="9a9fb619-b25d-4808-842c-d6f7d6fa0181" class=""><strong>A massa molar é quantos gramas 1 mol de uma partícula pesa</strong>. Ex: 1 mol de água tem o mesmo peso em gramas, numericamente,  do que o peso de apenas 1 molécula de água em unidades padrão de massa (u)</p><p id="00a8deec-2dac-476b-b4f2-1a027e358d7a" class="">Então, se <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow><annotation encoding="application/x-tex">H_2O</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span></span></span></span></span><span>﻿</span></span> sendo <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>=</mo><mn>1</mn><mi>u</mi></mrow><annotation encoding="application/x-tex">H = 1u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord mathnormal">u</span></span></span></span></span><span>﻿</span></span> e <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo>=</mo><mn>16</mn><mi>u</mi></mrow><annotation encoding="application/x-tex">O = 16u </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">16</span><span class="mord mathnormal">u</span></span></span></span></span><span>﻿</span></span> temos que um mol de moléculas de água equivale a x gramas: </p><p id="3ee70330-4e26-4a4b-9832-016b8f4db7bc" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi><mo>=</mo><mn>18</mn><mi>u</mi></mrow><annotation encoding="application/x-tex">H_2O = 18 u </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">18</span><span class="mord mathnormal">u</span></span></span></span></span><span>﻿</span></span></p><p id="301f105c-b820-4e4d-a28e-9906ed3d40b9" class="">1 mol de <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow><annotation encoding="application/x-tex">H_2O</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span></span></span></span></span><span>﻿</span></span> pesa 18 gramas (18g/mol)</p><hr id="14c96a8f-dabe-4ef1-9f34-f9bff41306e7"/><h1 id="ee29c5d3-f9f1-4c55-a808-1c8872862447" class="block-color-teal_background">Biologia</h1><h3 id="9c2c7f05-1b3b-444d-bf43-8dcc030cbc26" class="">Nomenclatura científica</h3><ul id="864229a5-3a4e-46a1-8967-07e094a41350" class="bulleted-list"><li style="list-style-type:disc">Um nome científico é originado pela junção do <strong>Gênero</strong> e da <strong>Espécie</strong> (na vdd é o epíteto) do ser vivo (escritos em <strong>Latim</strong>) </li></ul><ul id="0d86adee-e8ad-4731-be99-93f45cd38dfd" class="bulleted-list"><li style="list-style-type:disc">O <strong>Gênero</strong> é escrito com a <strong>primeira letra maiúscula</strong></li></ul><ul id="777e5c5c-6ea2-4ba5-ad72-521c907c18cb" class="bulleted-list"><li style="list-style-type:disc">A espécie e escrita toda em <strong>letra minúscula </strong></li></ul><ul id="c239a204-3975-4c89-ba28-523eff256c21" class="bulleted-list"><li style="list-style-type:disc">O nome deve estar destacado do texto, <span style="border-bottom:0.05em solid">sublinhado</span>(um risco pra cada palavra) ou em <em>itálico</em></li></ul><ul id="a1fbb3e3-02d9-4a0e-9567-0c064e483e4b" class="bulleted-list"><li style="list-style-type:disc">Geralmente o primeiro termo é um substantivo e o segundo um adjetivo (ou homenageado) </li></ul><hr id="5737ea99-5ce9-4ea0-b669-487707e537f9"/><h1 id="db18bb73-d2d7-4afb-a4c1-12055078cc41" class="block-color-brown_background">Literatura</h1><h3 id="ac89a833-eced-4bf1-9dce-79eca2ad16dc" class=""><a href="https://forumsos.heitorszabo.repl.co/resumos/1008/1008.html">Barroco (resumo)</a></h3><p id="b2e59c53-f867-4c9d-a091-7f32c494d58d" class="">Movimento literário que acontece em Portugal e no Brasil (por influência portuguesa) que apresenta dualidades, jogo de lógica e linguagem rebuscada. <strong>Pecado x Perdão | Paganismo x Catolicismo </strong></p><p id="136ca95d-1b54-41be-8090-c37048b7e1cf" class="">“Carpe diem” do mal → Todos vamos morrer, não sabemos se confiamos na igreja ou na razão, então dane-se: APROVEITEMOS</p><h3 id="7b3e8621-9327-4739-af8d-2ff7476165e6" class="">Correntes</h3><p id="0d64208d-6204-48ca-8b23-01bd5173cbc0" class=""><strong>Conceptista:</strong> “Brinca” com a lógica e argumentação. Jogo de lógica</p><p id="b974e1f4-4dfe-402a-ac77-74dc962c0c3a" class=""><strong>Cultistas:</strong> Usa palavreado difícil e rebuscado e figuras de linguagem. Jogo de palavras.</p><h3 id="e3f34462-8b93-495f-be74-5a457147be14" class="">Contexto do Brasil</h3><p id="163abe1f-0d0d-46ad-9385-831f4841cc5c" class="">Brasil, colônia de Portugal, tinha economia baseada na cana-de-açúcar no nordeste. A arte vinha de Portugal pois aqui não havia faculdade.</p><h3 id="e161d515-a2e4-44ec-92e8-15c588597acc" class="">Padre Antônio Vieira</h3><ul id="988e4fbc-c9cb-45ab-80a4-7def30a9069d" class="bulleted-list"><li style="list-style-type:disc">Nasceu em Portugal e veio para o Brasil </li></ul><ul id="1b98b06f-dd30-478d-88c4-dd90950d7edd" class="bulleted-list"><li style="list-style-type:disc">Escrevia sermões <a href="https://www.notion.so/Resumo-17-08-Keep-Calm-db1fc776c9af43eb954f03932dc4d822">conceptistas</a> (envolvendo a lógica e argumentos)</li></ul><ul id="1b50c964-4ad4-416b-9ac6-e90dc8eec7cd" class="bulleted-list"><li style="list-style-type:disc">Se envolveu com a política defendendo indígenas</li></ul><h3 id="7f0955ef-dd37-43de-b75f-62f0178e3f7b" class="">Gregório de Matos</h3><ul id="499d0371-4611-42d6-9a61-1ac3de412281" class="bulleted-list"><li style="list-style-type:disc">Nascido no Brasil e com formação acadêmica em Portugal</li></ul><ul id="5f298ea1-088a-4ac4-965d-4aa4ff72ff4a" class="bulleted-list"><li style="list-style-type:disc">Fundou a poesia lírica e satírica no País</li></ul><ul id="9d2ffea8-e186-4ffa-a6ea-50ebb33e6ce9" class="bulleted-list"><li style="list-style-type:disc">Irreverente com linguagem pesada (”Boca do Inferno”, seu apelido)</li></ul><h3 id="792b62f1-d266-4f8e-8aab-609529ba118e" class=""><details open=""><summary>Poesias de Gregório </summary></details></h3><div class="indented"><ul id="74ffaf2e-3f2e-4415-8609-34e5688bda8e" class="bulleted-list"><li style="list-style-type:disc"><strong>Lírica Amorosa</strong></li></ul><p id="bcf57266-944e-4377-ba82-e222b7113e02" class="">Carne x Espírito: sentimento de culpa → Mulher era a personificação do pecado (pois remetia ao carnal/sensualidade)</p><ul id="f300b624-93dd-4d79-8336-7063709de0e8" class="bulleted-list"><li style="list-style-type:disc"><strong>Lírica Filosófica</strong></li></ul><p id="ff00eabe-435f-4f3e-b47d-94aa4eaa785d" class="">Relacionado ao Carpe diem: efemeridade da vida</p><ul id="2a51ce67-236c-4f5a-a2a8-bee12447037a" class="bulleted-list"><li style="list-style-type:disc"><strong>Lírica Religiosa</strong></li></ul><p id="efbc6a7e-29ae-447b-ad11-f20a073e5f9f" class="">Culpa, pecado, perdão de Deus: pecar esperando o perdão</p><ul id="5093f033-944e-4a22-9841-3fdae4fdceae" class="bulleted-list"><li style="list-style-type:disc"><strong>Satírica</strong></li></ul><p id="dc3b35a8-bd21-4f48-b39d-c4b5398d21ea" class="">Criticou a sociedade baiana e brasileira (todos) com linguagem pesada (palavrões)</p></div><hr id="7902656c-495b-4a80-9ed8-285c6b2257ae"/><h1 id="fab4ed13-abf5-44dc-8f09-1d4c269c3f03" class="block-color-brown_background">História</h1><ul id="da102bf6-7b68-4723-9248-de4707c6562f" class="bulleted-list"><li style="list-style-type:disc">Teocentrismo - Deus era considerado o centro do universo</li></ul><ul id="5592046d-0b5c-4abd-ab83-fc32f64c9671" class="bulleted-list"><li style="list-style-type:disc">A Igreja monopolizava o conhecimento (camponeses não eram alfabetizados)</li></ul><ul id="28564f17-f505-4869-ba6b-41af423e4325" class="bulleted-list"><li style="list-style-type:disc">Igreja era a instituição mais poderosa da Idade Média (Onipotente, onipresente e onisciente), ela tinha posse do conhecimento e controlava a economia, cultura e sociedade da época no geral (pois todo mundo acreditava em tudo que a Igreja falava e ninguém tinha poder nem conhecimento para contrariar ela)</li></ul><ul id="ad5e860c-59e7-43f5-b76f-f7982b76bbc8" class="toggle"><li><details open=""><summary>Tribunal do Santo Oficio da Inquisição – Fundado para julgar e punir os hereges e suas heresias</summary><ul id="16de3718-894e-4988-83c0-6a85762f1760" class="bulleted-list"><li style="list-style-type:disc">Heresia – Qualquer coisa que desafiava a igreja católica</li></ul><ul id="123bded9-aa6d-425c-94a0-89fc3754eae8" class="bulleted-list"><li style="list-style-type:disc">Herege- quem comete heresia</li></ul><ul id="561a1c30-b26e-4238-b50d-2f33056778f3" class="bulleted-list"><li style="list-style-type:disc">Auto da fé – Cerimônia para matar camponeses em massa</li></ul></details></li></ul><hr id="cd82d9ca-b815-47c8-ad99-02076b04373e"/><h1 id="cd2b4f10-6473-46ce-82eb-2f4f039ba4ba" class="block-color-yellow_background">Filosofia</h1><h2 id="d234c16c-f5e3-4940-b2ca-474af89609b9" class="">Helenismo</h2><ul id="b9b3a94a-9041-4907-98a5-1a2023fae6fd" class="bulleted-list"><li style="list-style-type:disc">Alexandre, o Grande, mistura a cultura clássica grega com a cultura Oriental (persa) e cria o Helenismo</li></ul><ul id="9adb6fbd-385d-41b7-91c7-4ccb69045621" class="toggle"><li><details open=""><summary>Mudanças</summary><ul id="529a0c3c-76f5-4f84-8019-ee2df71b53f8" class="bulleted-list"><li style="list-style-type:disc">Homem da Pólis (faz parte da cidade) → Homem cosmopolita (faz parte de um império)</li></ul><ul id="fc2e2622-8421-4101-8ec7-626b7e6bb245" class="bulleted-list"><li style="list-style-type:disc">foco da filosofia: Política → Ataraxia (busca da paz de espírito)</li></ul></details></li></ul><h2 id="7af8cfea-41e2-4bb8-9539-fe1ef0352f1c" class="">Cinismo / Kynicos </h2><ul id="c3bb86a4-d5eb-495b-88f5-d64b9f468a89" class="bulleted-list"><li style="list-style-type:disc">Significado: Viver como um cão</li></ul><ul id="101bb118-36e4-43e6-b799-dd41b90d45d3" class="bulleted-list"><li style="list-style-type:disc">Principal filósofo: Diógenes de Sínope</li></ul><ul id="b2c29b19-1a84-4d31-a0ea-91d1f646515f" class="bulleted-list"><li style="list-style-type:disc">Desprezava riqueza, convenções sociais, física/matemática e música</li></ul><ul id="f0a7ebe1-9d37-483e-9d48-23add9280c44" class="bulleted-list"><li style="list-style-type:disc">Para ser feliz, deve-se viver com o mínimo necessário</li></ul><h2 id="a533d5ad-e3a3-4834-b81e-8ba5a2b618b3" class="">Epicurismo </h2><ul id="c34cda53-9938-4e52-afff-7eecca6a4244" class="bulleted-list"><li style="list-style-type:disc">Principal filósofo: Epicuro de Samos</li></ul><ul id="0342a0d2-4971-4072-98ba-953e2204fe55" class="bulleted-list"><li style="list-style-type:disc">Filósofos do Jardim (Epicuro montou um jardim fora de Atenas para a galera ser feliz)</li></ul><ul id="fc508eca-f21f-476f-a5b4-7d10e439f5f2" class="bulleted-list"><li style="list-style-type:disc">Filosofia que cuja finalidade era a busca do prazer</li></ul><ul id="afa5e29c-da86-4993-98b3-95325f6c694e" class="bulleted-list"><li style="list-style-type:disc">Prazer não vinha de cargos, riqueza e abundância, e sim da moderação e da superação do medo da morte (como a morte é o fim das sensações e da consciência, não há porque teme-la)</li></ul><hr id="82e60e2e-ce78-48af-9c0f-a74e5b0f18da"/><h1 id="ef3fe68c-aea5-4ccd-8ce2-1f66aa4abca0" class="block-color-teal_background">Física do Cosmo</h1><h3 id="19f68604-3e59-4182-9463-ae7c2a746d6c" class="">Geocentrismo</h3><p id="af819744-0ba6-4338-abe0-3c604461ee5e" class="">Modelo apoiado por Aristóteles e depois melhor desenvolvido por Ptolomeu que acreditava que a Terra era o centro do universo</p><h3 id="4f3912dc-a140-4764-89c2-efa58497e391" class="">Vantagens</h3><ul id="91ab9287-de93-4a63-b080-2d70e6c4145d" class="bulleted-list"><li style="list-style-type:disc">Intuitivo (conforme os sentidos)</li></ul><ul id="f037fb54-951e-48f7-8946-f5211c06e55d" class="bulleted-list"><li style="list-style-type:disc">Ajudava a navegação</li></ul><ul id="39a24559-8dbc-4ec8-a1ce-059a13dd419c" class="bulleted-list"><li style="list-style-type:disc">Permite criar medidas de tempo</li></ul><h3 id="90ee34b4-6a8b-4a47-8a3f-b0af7871b079" class="">Desvantagens</h3><ul id="3a0bfb5a-7df3-4ff3-82e2-31088ee618cd" class="bulleted-list"><li style="list-style-type:disc">Não explica o movimento aparente dos planetas</li></ul><ul id="b1f39e14-8aed-4922-bc27-9f372cd0f58a" class="bulleted-list"><li style="list-style-type:disc">Não explica as estações/eclipses</li></ul><hr id="18d75266-14c5-49e9-8df6-6e6267c2e3a4"/><h1 id="369e8809-5ef4-4047-89e5-c86b4842a1ac" class="block-color-pink_background">Aprofundamento de Inglês</h1><p id="8e620a15-f96c-4a93-ab17-956c6a772983" class="">To tackle → Lidar</p><p id="2c61408e-9663-4f34-a829-3ef327c1a170" class="">To stash → Estocar</p><p id="417767e9-40d1-4bcc-ba5b-2705c356f24f" class="">To curb → coibir, restringir</p><p id="6e8d7515-b442-4f0d-9e0f-cb965a658f0f" class="">To ban → proibir</p><p id="982c3122-06bc-486c-bc43-3c87ec97b141" class="">To model → imitar</p><p id="11566625-0c18-47fc-a8ac-9b936ea0a029" class="">Counterpart → semelhante</p><hr id="8f79c4a0-07cb-47c6-bc3f-6519764674c2"/><p id="974a45eb-62c1-4f0b-837b-05808e32669d" class="">Heitor e Magon © 2022, all rights reserved
+</p><p id="0a5ac8b9-1a56-471c-995a-d5ee77cd6d0d" class="">
+</p><p id="a51c54c2-f4f0-4e67-b23b-4ef9c6006622" class="">
+</p></div></article></body></html>

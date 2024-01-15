@@ -1,0 +1,716 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>24/03 </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ef44de72-ad20-435c-a3b1-4ff922f34bbc" class="page sans"><header><h1 class="page-title">24/03 </h1></header><div class="page-body"><h1 id="081428a2-43a6-4639-bb41-17f7bb1435eb" class="block-color-brown_background">Matemática</h1><h3 id="48f15dd4-daef-4e5f-8877-94077aa782ea" class="">Matriz transposta</h3><ul id="56f9c3d3-ca5a-490d-a4e6-c4260016c9bf" class="bulleted-list"><li style="list-style-type:disc">Inverte coluna e linha</li></ul><figure id="66b8eea1-d167-44e3-9943-ef2e849b67e8" class="image"><a href="24%2003%20ef44de72ad20435ca3b14ff922f34bbc/Untitled.png"><img style="width:624px" src="24%2003%20ef44de72ad20435ca3b14ff922f34bbc/Untitled.png"/></a></figure><figure id="e91d875f-c835-4a05-bb37-1e1dc356c9b3"><a href="https://www.youtube.com/watch?v=3hTlEWrGtf8" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">🔴 MATRIZES: TRANSPOSTA, SIMÉTRICA E ANTISSIMÉTRICA</div><div class="bookmark-description">Neste vídeo eu conceituo e dou alguns exemplos de matrizes transpostas, simétricas e antissimétricas.
+Para obter a transposta, basta inverter linhas e colunas</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/7a427f25/img/favicon_144x144.png" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=3hTlEWrGtf8</div></div><img src="https://i.ytimg.com/vi/3hTlEWrGtf8/hqdefault.jpg" class="bookmark-image"/></a></figure><h1 id="f91b370c-606e-4f47-b34a-edf0c0521c8e" class="block-color-teal_background">Física</h1><h3 id="eea36744-ecfc-47be-9dd3-75386a9a9a98" class="">Aplicações de Espelhos Planos</h3><p id="a6fe30c7-067c-4102-b68d-f77bdbab92f0" class=""><strong>1)</strong> <strong>Translação de espelhos</strong></p><ul id="dc2f3129-f814-47f3-b8fa-b230d5f206bc" class="bulleted-list"><li style="list-style-type:disc">distancia da imagem = 2x distancia do espelho</li></ul><ul id="a50eccde-4965-4ade-bc62-714b9cb757fc" class="bulleted-list"><li style="list-style-type:disc">velocidade da imagem = 2x velocidade de espelho</li></ul><figure id="b5baa0db-0a6d-4d1f-b63a-3c9460109e0d" class="image"><a href="24%2003%20ef44de72ad20435ca3b14ff922f34bbc/Untitled%201.png"><img style="width:240px" src="24%2003%20ef44de72ad20435ca3b14ff922f34bbc/Untitled%201.png"/></a></figure><p id="b3f1a993-695d-4bdc-9913-0d68c8244e81" class=""><strong>2) Rotação de Espelho Planos</strong></p><ul id="c99b39db-96a5-42d6-884b-50d432d4477f" class="bulleted-list"><li style="list-style-type:disc"><strong>β = 2 . α</strong></li></ul><ul id="84524135-73d7-4335-800b-9905992cc675" class="bulleted-list"><li style="list-style-type:disc">α = angulo do espelho</li></ul><ul id="b1005398-65af-446c-9e8f-5e1d72933d52" class="bulleted-list"><li style="list-style-type:disc">β = angulo da imagem</li></ul><figure id="b0bdf1c3-044f-413c-b09f-e66e368aa4ad" class="image"><a href="24%2003%20ef44de72ad20435ca3b14ff922f34bbc/Untitled%202.png"><img style="width:283px" src="24%2003%20ef44de72ad20435ca3b14ff922f34bbc/Untitled%202.png"/></a></figure><p id="79b481f5-868b-44c3-aec6-7f1d34c924e9" class=""><strong>3) Quantidade de imagens formadas</strong></p><p id="1f164284-23bd-414a-8e8a-f8c675262b31" class="">N = <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="1.2em"><mfrac><mrow><mn>360</mn><mtext>º</mtext></mrow><mi>α</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\large{\frac{360º}{α}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.402352em;vertical-align:-0.414em;"></span><span class="mord sizing reset-size6 size7"><span class="mord"><span class="mopen nulldelimiter sizing reset-size7 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8236266666666667em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size7 size4 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size7 size4 mtight"><span class="mord mtight"><span class="mord mtight">360º</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size7 size6"></span></span></span></span></span></span></span><span>﻿</span></span> - 1</p><p id="3658332e-df11-459c-b1fe-2a9f9a683cfb" class="">N = numero de imagens</p><p id="9a326632-eaea-4819-afba-b50e72e7c890" class="">α = angulo entre os espelho</p><figure id="c07b755a-6982-48a2-acd4-644e53341501" class="image"><a href="24%2003%20ef44de72ad20435ca3b14ff922f34bbc/Untitled%203.png"><img style="width:240px" src="24%2003%20ef44de72ad20435ca3b14ff922f34bbc/Untitled%203.png"/></a></figure><figure id="27827a6e-19ef-4657-9ba1-2065542e1046"><a href="https://www.youtube.com/watch?v=0-TbKgjAGig" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">ESPELHO PLANO (II) -  ROTAÇÃO, TRANSLAÇÃO E ASSOCIAÇÃO - ÓPTICA - Aula 4 - Prof.  Boaro</div><div class="bookmark-description">Para DOAÇÕES acesse: http://www.canalfisica.net.br/doacoes/
+Faaaala Galera! ÓPTICA!!! Galera, este é o vídeo da aula 4 de óptica geométrica em que discuto em detalhes com vcs o ESPELHO PLANO - ROTAÇÃO, ASSOCIAÇÃO E TRANSLAÇÃO.
+Segue os links:
+PLAYLIST de ÓPTICA:
+https://www.youtube.com/watch?v=QKPj0f3mN5c&amp;list=PLzjR7HXQnrcejt6bCK57Wxnwa6K9rqt3X&amp;index=1</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/7a427f25/img/favicon_144x144.png" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=0-TbKgjAGig</div></div><img src="https://i.ytimg.com/vi/0-TbKgjAGig/maxresdefault.jpg" class="bookmark-image"/></a></figure><h1 id="48a884e1-62a6-4c86-b699-f66dbce774ed" class="block-color-orange_background">Química</h1><h3 id="99794888-e247-4fe3-9ee3-a25c0ab72a01" class="">Curvas de solubilidade</h3><ul id="331fa331-eb9a-4f53-8285-759a76dd5a6a" class="bulleted-list"><li style="list-style-type:disc">variação do coeficiente de solubilidade (Cs) em função da temperatura</li></ul><ul id="866e0f53-496a-477a-865d-4ae763ba9be2" class="bulleted-list"><li style="list-style-type:disc">Dissolução endotérmica → maior calor maior Cs</li></ul><ul id="0b7d7ec4-826d-4b25-a7d1-a02fdaa84f7e" class="bulleted-list"><li style="list-style-type:disc">Dissolução exotérmica → maior calor menor Cs</li></ul><ul id="d50044a1-4b54-4bea-8748-8754baf27950" class="toggle"><li><details open=""><summary>Dissolução de gases (<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>O</mi><mn>2</mn></msub><mo separator="true">,</mo><mi>C</mi><msub><mi>O</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">O_2, CO_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>, etc) na água</summary><ul id="bc2b6fd1-6006-4b59-86fe-6f3bb28ed48b" class="bulleted-list"><li style="list-style-type:disc">Exotérmica (em águas frias há maior concentração de <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>O</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">O_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></li></ul><ul id="ab942292-819d-402a-8f13-4a4f5360da70" class="bulleted-list"><li style="list-style-type:disc">Quanto maior a pressão, maior Cs</li></ul></details></li></ul><h3 id="70240d41-d136-4733-a293-71fc8e076d14" class="">Constante de Avogadro</h3><p id="0fa78dcc-0471-4c8b-bf1c-2b54dfcb08fb" class="">N = <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6.1</mn><msup><mn>0</mn><mn>23</mn></msup></mrow><annotation encoding="application/x-tex">6 . 10^{23}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">6.1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">23</span></span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></p><p id="49ffc5e5-dc75-4cfb-80e2-a4630be36979" class="">1 mol = <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6.1</mn><msup><mn>0</mn><mn>23</mn></msup></mrow><annotation encoding="application/x-tex">6 . 10^{23}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">6.1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">23</span></span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></p><ul id="67e287f3-ffc3-4049-8f98-36cfb2ab7d9e" class="bulleted-list"><li style="list-style-type:disc">Massa molar (M) → é a massa molar da substância em gramas/mol  </li></ul><ul id="71854a3e-c56f-4b3a-89b5-c621c70a7c1a" class="bulleted-list"><li style="list-style-type:disc">Quantidade de matéria (n) em mol →<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mfrac><mi>m</mi><mi>M</mi></mfrac></mrow><annotation encoding="application/x-tex"> n = \frac{m}{M}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.040392em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span>   (massa da amostra / massa molar)</li></ul><figure id="70c26546-b3be-4885-b7c6-8122ea49de3e"><a href="https://www.youtube.com/watch?v=NGs7TebsgQw" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">SOLUÇÕES - COEFICIENTE DE SOLUBILIDADE E CURVA DE SOLUBILIDADE</div><div class="bookmark-description">FAAAAAAAALA, GALEEEERA! Nesse vídeo, o MONSTRÃO vai detonar os coeficientes e curvas de solubilidade de uma maneira extremamente simples. 
+
+Chegou agora?  Não esqueça de se inscrever pra ficar por dentro de tudo o que acontece no canal!
+
+Já conhece a plataforma de química mais MONSTRUOSA do Brasil?
+http://www.quimicadomonstro.com.br​
+
+BOOORAAAAAA!!!</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/7a427f25/img/favicon_144x144.png" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=NGs7TebsgQw</div></div><img src="https://i.ytimg.com/vi/NGs7TebsgQw/maxresdefault.jpg" class="bookmark-image"/></a></figure><h1 id="ccd3f9f2-3fbc-4827-987a-52d9e840b7f3" class="block-color-blue_background">Biologia  </h1><figure id="ccfd1fda-a1d9-44c2-ab91-55f27d8ad1d1" class="image"><a href="24%2003%20ef44de72ad20435ca3b14ff922f34bbc/Untitled%204.png"><img style="width:576px" src="24%2003%20ef44de72ad20435ca3b14ff922f34bbc/Untitled%204.png"/></a></figure><p id="ea65030c-97ef-480f-b70b-7d658fcbddaf" class="">I- DNA</p><p id="99a0ff63-c5b3-48c7-aa76-3d35fc68ff16" class="">II- RNA</p><p id="ba4ea69f-d821-4782-802f-6c0296770530" class="">III- Nucleotídeos</p><p id="22925321-f23c-41dd-8a20-303428e61572" class="">IV- Aminoácidos</p><ul id="c9a93efa-4f71-47e9-bd87-95e9ac4cf60c" class="bulleted-list"><li style="list-style-type:disc">DNA é formado por nucleotídeos</li></ul><ul id="8d72cd2a-ce09-4a29-b5fb-d20811b83e57" class="bulleted-list"><li style="list-style-type:disc">Replicação do DNA → duplicação de uma fita de DNA</li></ul><ul id="e9609fd3-7f9e-4153-8db4-91f14216b1c5" class="bulleted-list"><li style="list-style-type:disc">A replicação do DNA é semiconservativa, o que significa que <strong>cada fita na dupla hélice atua como modelo para a síntese de uma nova fita complementar</strong>
+. Esse processo tem início com uma molécula e leva a formação de duas moléculas &quot;filhas&quot;, cada uma com uma dupla hélice recém-formada contendo uma fita nova e uma velha.</li></ul><ul id="72334cce-20c8-46ba-bd47-4d215904a218" class="bulleted-list"><li style="list-style-type:disc">Transcrição → criação do RNA a partir de uma fita de DNA</li></ul><ul id="b3d97756-61da-44cb-9a23-9a280903a740" class="bulleted-list"><li style="list-style-type:disc">RNA são cadeias simples, DNA cadeias duplas</li></ul><ul id="0574921c-df4b-418c-bb1e-7954a049430a" class="bulleted-list"><li style="list-style-type:disc">Transcrição → ATGCTAC → UACGAUG </li></ul><ul id="167b8b88-f42c-4522-9066-bf549665ec91" class="toggle"><li><details open=""><summary>Tipos de RNA</summary><ul id="9cd991f3-1004-4589-a753-33ea5078ebaa" class="bulleted-list"><li style="list-style-type:disc">RNA mensageiro → contém mensagem genética</li></ul><ul id="476ec652-94f8-4316-911b-8a8960c7f180" class="bulleted-list"><li style="list-style-type:disc">RNA transportador → transporta aminoácidos</li></ul><ul id="1d3b120d-e739-4fba-9cf1-35342eb7d04e" class="bulleted-list"><li style="list-style-type:disc">RNA ribossômico → forma ribossomos</li></ul></details></li></ul><ul id="c3dc8565-b36d-411d-b055-bba265677250" class="bulleted-list"><li style="list-style-type:disc">Tradução → Sintetização da proteína codificada no RNAm</li></ul><ul id="51fd2fdd-ca43-4260-a694-24f7ab364591" class="bulleted-list"><li style="list-style-type:disc">Proteínas são formadas por aminoácidos</li></ul><figure id="3df1b429-81e1-46b8-b78f-2f5af547f410"><a href="https://www.youtube.com/watch?v=KAB-ZCP_ie8" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Síntese Proteica (Parte 1) - Transcrição | Prof. Samuel Cunha</div><div class="bookmark-description">Faaaaala, pessoal! Tudo certinho?
+
+👉 ESTUDE NA BIOLÂNDIA: https://www.biolandia.com.br/
+♦ TODAS as aulas, apostilas, exercícios comentados e muito mais!
+
+👉 Receba material grátis: http://bit.ly/CadastroPlataforma
+
+Aula completa de síntese de proteínas - síntese proteica -. 
+Ela está dividida em duas partes: transcrição e tradução.
+Qualquer dúvida, pode me chamar!
+
+
+Me acompanhe:
+YOUTUBE: http://www.youtube.com/c/BiologiacomS... 
+FACEBOOK: https://www.facebook.com/biologiacoms...
+INSTAGRAM: https://www.instagram.com/samuelkcunha/
+TWITTER: https://twitter.com/samuelkcunha
+
+Grande abraço</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/7a427f25/img/favicon_144x144.png" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=KAB-ZCP_ie8</div></div><img src="https://i.ytimg.com/vi/KAB-ZCP_ie8/maxresdefault.jpg" class="bookmark-image"/></a></figure><h1 id="c30b690c-42b5-4a73-9be4-bad843331abb" class="block-color-purple_background">Geografia</h1><h3 id="52a985cc-ec76-4426-a56d-c88b3b49f83d" class="">Três poderes</h3><ul id="e1081b38-3300-4a5c-a896-c88ea499a624" class="bulleted-list"><li style="list-style-type:disc">Brasil é constitucional e presidencialista</li></ul><ul id="2f7f9f17-9968-49fb-8f53-5302a7400fb5" class="bulleted-list"><li style="list-style-type:disc">Estado organiza-se em 3 poderes</li></ul><ul id="8205a430-1eed-4dba-b95c-0825f4d1ab9a" class="toggle"><li><details open=""><summary>Três poderes</summary><ul id="852f068b-5e53-492a-850b-28eacc4998f6" class="bulleted-list"><li style="list-style-type:disc">Executivo → presidente, governadores e prefeitos → executam as lei</li></ul><ul id="62c6e3b0-fe67-4a03-bc58-b4d079522eba" class="bulleted-list"><li style="list-style-type:disc">Legislativo → congresso nacional, deputados estaduais e vereadores → criam as leis</li></ul><ul id="4770a7e9-a672-48a6-a05e-db3e6700c566" class="bulleted-list"><li style="list-style-type:disc">Judiciário → STF e juízes → aplicam as leis</li></ul></details></li></ul><ul id="99cc1d9b-68c5-4116-8db7-169cb14bcf83" class="bulleted-list"><li style="list-style-type:disc">PRESIDENTE DA CÂMARA DOS DEPUTADOS – ARTHUR LIRA (PP – AL)</li></ul><ul id="cbf743dd-eadd-41de-8840-0bd64416d641" class="bulleted-list"><li style="list-style-type:disc"> PRESIDENTE DO SENADO – RODRIGO PACHECO (DEM – MG)</li></ul><figure id="0159df78-11a2-454d-b51e-14d9f307cd52"><a href="https://youtu.be/9ltvYAN7R74" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Como funcionam os Três Poderes do Brasil | EXAMINANDO</div><div class="bookmark-description">Ministro que sai, ministro que entra. É um troca-troca de cargos, posições e funções que é comum ficar confuso e sem entender como funciona o sistema político brasileiro. No #EXAMINANDO explicamos o que é a #Democracia dos Três #Poderes e como ela é aplicada aqui no Brasil.
+
+Gostou? Então não se esquece de se inscrever no canal, clicar no sino e deixar o seu like para muito mais EXAMINANDO!
+
+➡️ Acesse a plataforma de educação digital da EXAME, com cursos exclusivos: http://bit.ly/exame-academy
+
+➡️ Tenha relatórios e análises completas do mercado, empresas e ações na palma da mão: http://bit.ly/investpro-exame
+
+➡️ Conheça o canal com as principais notícias e tendências em investimentos: http://bit.ly/exame-invest
+
+_____________________________
+
+Para descobrir as melhores oportunidades para seu dinheiro render, abra uma conta gratuita no maior banco de investimentos da América Latina: o BTG Pactual Digital - https://bit.ly/YTContaBTG</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/9318de79/img/favicon_144x144.png" class="icon bookmark-icon"/>https://youtu.be/9ltvYAN7R74</div></div><img src="https://i.ytimg.com/vi/9ltvYAN7R74/maxresdefault.jpg" class="bookmark-image"/></a></figure><h1 id="6c62eccf-3b4e-43dd-ba2f-3924af505c98" class="block-color-pink_background">Sociologia</h1><h3 id="a872e422-9d50-497c-b0f0-9dae15cf8e17" class="">Escolas de Antropologia</h3><ul id="e88cd293-6c4c-43ca-b276-084cbb2a24fa" class="bulleted-list"><li style="list-style-type:disc">Funcionalismo de Malinowski: cultura está ligada a necessidades básicas (alimentação, proteção, reprodução). Pesquisa envolve observação participante.</li></ul><ul id="e845cd20-75c7-4fb3-bb32-337a3d2f1424" class="bulleted-list"><li style="list-style-type:disc">Estruturalismo de Levi-Strauss: foco em aspectos subjetivos e imaginários dos seres humanos (linguagem, gostos, sons, etc).</li></ul><ul id="b2c6e47f-b977-4ff8-93d2-f4dc8eca63d1" class="bulleted-list"><li style="list-style-type:disc">Antropologia contemporânea: enfatiza a alteridade e a busca para entender o pensamento do outro.</li></ul><h1 id="e0c85fd3-3c08-48ce-9449-88be203a7b26" class="block-color-red_background">Inglês</h1><h3 id="286d398d-00ee-41f8-9438-743d5009ebfb" class="">Make sentences</h3><ul id="c91308b0-ef16-4e96-9982-95f3d68eeac2" class="bulleted-list"><li style="list-style-type:disc">The most = o mais / a mais</li></ul><ul id="ce11ea63-d2d8-4bf1-a91e-3c173c732785" class="bulleted-list"><li style="list-style-type:disc">The least  = o menos / a menos</li></ul><ul id="9e9e1a60-5989-4e98-8f3f-eaed37ff10c9" class="bulleted-list"><li style="list-style-type:disc">Less than = menos … que</li></ul><ul id="3f73c3dc-6ca4-450c-8985-166058a246b0" class="bulleted-list"><li style="list-style-type:disc">More than = mais … que</li></ul><ul id="4b989f16-31a0-4dff-9372-84df356b8d0e" class="bulleted-list"><li style="list-style-type:disc">As - As = tão … como / quanto</li></ul><h1 id="02526989-b2a2-4a82-876d-f75e8bd7a71e" class="block-color-yellow_background">História</h1><h2 id="aabe336a-7184-47c9-8a30-1770f25da779" class="">Iluminismo </h2><h3 id="4daac588-fc3d-402c-88ff-8a1f1007df9b" class="">Introdução</h3><ul id="04caae4d-aa09-47ca-9fc1-428ad3eb9b42" class="bulleted-list"><li style="list-style-type:disc">“século das luzes” / “ilustração”</li></ul><ul id="f100f213-0122-4c09-9483-24e7b422786f" class="bulleted-list"><li style="list-style-type:disc">luz do conhecimento X trevas da ignorância</li></ul><ul id="129eaad0-608f-43c6-ae65-0e7aca8d86ae" class="bulleted-list"><li style="list-style-type:disc">XVI - XVIII → Europa mergulhada em fanatismo político, religioso e econômico (absolutismo, conflitos religiosos e mercantilismo)</li></ul><h3 id="ecc2bc48-e7a4-4eab-8d74-012c9a0aefdf" class="">Definição</h3><ul id="b9cd4400-a79b-418e-b745-8ab2de93d942" class="bulleted-list"><li style="list-style-type:disc">Corrente filosófica criada na França, defendia a razão e a ciência como formas de combater as trevas (fanatismo)</li></ul><ul id="8a6c405e-893f-4bca-81df-b964921ad039" class="bulleted-list"><li style="list-style-type:disc">Doutrina que abalou as estruturas do antigo regime</li></ul><ul id="c65e9992-bf5f-4e86-aa8d-0c3ccd357ea5" class="bulleted-list"><li style="list-style-type:disc">Progressista, liberal e burguesa</li></ul><h3 id="04968e0f-8e65-4520-af3b-3a6882466e27" class="">Características</h3><ul id="1e4c1be7-bc08-4d08-9c34-af91dae4a42d" class="bulleted-list"><li style="list-style-type:disc">Racionalismo</li></ul><ul id="8421b193-f350-404f-a0a1-b002c89a2474" class="bulleted-list"><li style="list-style-type:disc">Cientificismo</li></ul><ul id="8d734777-7e2c-4545-93ac-368f48cbd054" class="bulleted-list"><li style="list-style-type:disc">Empirismo</li></ul><ul id="98e36ea7-bde7-469d-84a9-e75339a2a124" class="bulleted-list"><li style="list-style-type:disc">Liberalismo político, econômico, físico e de expressão</li></ul><ul id="af0926a9-f668-4fb8-b7d8-b6f9a0734899" class="bulleted-list"><li style="list-style-type:disc">Anticlerical (anti religião)</li></ul><ul id="24d9e8de-b59c-4650-958a-8aacdd0dcaad" class="bulleted-list"><li style="list-style-type:disc">Antiabsolutista</li></ul><h3 id="a8649b85-61c4-4779-a84c-0dbc157bdffc" class="">Despostismo esclarecido</h3><ul id="c34d4131-7260-41ba-be4b-5fc50d377c05" class="bulleted-list"><li style="list-style-type:disc">Reis e rainhas vque aderiram à filosofia iluminsta (reis filósofos) </li></ul><ul id="80a8b48c-67b3-4275-8415-2b49ff11c8e9" class="bulleted-list"><li style="list-style-type:disc">Moldaram seus países ao pensamento iluminsta</li></ul><ul id="a840eff6-1564-473a-bbf9-28231267bc62" class="toggle"><li><details open=""><summary>Déspotas </summary><ul id="7d86b56f-3ea3-4b06-b330-3495481ce463" class="toggle"><li><details open=""><summary>Catarina a Grande (Rússia)</summary><ul id="648b8fbd-df76-417a-a01d-62bbeba00253" class="bulleted-list"><li style="list-style-type:disc">Estado laico</li></ul><ul id="c3f45bde-2545-4848-8661-304a79b4b423" class="bulleted-list"><li style="list-style-type:disc">Ensino gratuito (incluindo mulheres)</li></ul><ul id="a8bcf450-9030-42aa-93c5-2a9b0d84687f" class="bulleted-list"><li style="list-style-type:disc">Feiras de ciência </li></ul><ul id="6f1b1d27-be3e-4ab9-9485-88f2f6c19b69" class="bulleted-list"><li style="list-style-type:disc">Liberdade de imprensa</li></ul></details></li></ul><ul id="22b7fcd1-fd56-4223-9a78-c73cb5ea19d3" class="toggle"><li><details open=""><summary>Imperador José II (Áustria) </summary><ul id="b5d51588-a9e2-4531-a06b-fac1d33165be" class="bulleted-list"><li style="list-style-type:disc">Estado laico</li></ul><ul id="b0631111-df26-4020-908f-2fcb89aa0bdb" class="bulleted-list"><li style="list-style-type:disc">Ensino gratuito</li></ul><ul id="1f915fa4-a5d9-448c-a8a1-c917abac2696" class="bulleted-list"><li style="list-style-type:disc">Feiras de ciência </li></ul><ul id="d2b18364-4182-44dd-ae16-f0a3718c963c" class="bulleted-list"><li style="list-style-type:disc">Liberdade de imprensa</li></ul><ul id="e9e7bd38-d33e-4ba9-999c-4ce6bf4a8cff" class="bulleted-list"><li style="list-style-type:disc">Liberalismo econômico</li></ul></details></li></ul><ul id="8458106b-2151-4ac6-a2dd-46d65e669285" class="toggle"><li><details open=""><summary>Marquês de Pombal (1º ministro de Portugal) → Medidas pombalinas </summary><ul id="fa7c1fa9-d8db-47ad-8f6f-1239cef6fc58" class="bulleted-list"><li style="list-style-type:disc">Liberal para Portugal, absolutista para o Brasil</li></ul><ul id="cb72ed47-8ad2-44a5-9137-dec8a0752b34" class="bulleted-list"><li style="list-style-type:disc">Reconstruiu Portugal pós-terremoto</li></ul><ul id="82fde09a-c66b-4b68-816c-366f23215235" class="bulleted-list"><li style="list-style-type:disc">Ensino público</li></ul><ul id="fdbf6fb5-8287-41d4-8b11-c28d2aaa3814" class="bulleted-list"><li style="list-style-type:disc">Universidade de Coimbra</li></ul><ul id="e0edc6f1-61ab-4d17-a523-053ca0086a15" class="bulleted-list"><li style="list-style-type:disc">Quebrou tratado de Methuen</li></ul><ul id="1d9d77b6-28e7-479e-9b05-31340965e306" class="bulleted-list"><li style="list-style-type:disc">Industrialização</li></ul><ul id="66019a6c-6f6a-41aa-b0f9-25dc47aa0c0f" class="bulleted-list"><li style="list-style-type:disc">Bolsas de estudo</li></ul><ul id="7b36171f-e0b0-4159-b7ae-65af4ba40ee0" class="bulleted-list"><li style="list-style-type:disc">Expulsou a ordem dos jesuítas de Brasil e Portugal</li></ul><p id="6acade72-850e-4dfa-81ca-9622a713b01f" class="">
+</p></details></li></ul></details></li></ul><h3 id="c0637ff7-e2a2-4182-b84b-0ffd95d40dab" class="">Pensadores</h3><ul id="079bc8ed-1f5c-4b2d-883f-776c9ab594c6" class="bulleted-list"><li style="list-style-type:disc">Rousseau → Contratualista / desigualdade entre os homens (culpa da propriedade privada)</li></ul><ul id="c86fd920-b039-4101-b8c0-0b28ce342dd5" class="bulleted-list"><li style="list-style-type:disc">John Locke → Contratualista</li></ul><ul id="c1d1d23b-d208-4f2d-a529-4585216ed308" class="bulleted-list"><li style="list-style-type:disc">Montesquieu → 3 poderes</li></ul><ul id="74e8fe24-b0a0-48be-9d26-8340f64d5424" class="bulleted-list"><li style="list-style-type:disc">Voltaire → antiabsolutista, anticlerical e liberal</li></ul><ul id="85b16e70-cc8a-41a8-82bb-4bdd70ba8dbb" class="bulleted-list"><li style="list-style-type:disc">Adam Smith → Liberalismo econômico (não intervenção do Estado na economia)</li></ul><figure id="3edbb583-4c8f-4b2b-96b5-2f687c4fce52"><a href="https://www.youtube.com/watch?v=g-wzrLRloOk" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">ILUMINISMO</div><div class="bookmark-description">Contatos Profissionais e Parcerias:
+hilarioxavier@zipmail.com.br
+
+http://hilarioehistoria.blogspot.com.br/</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/7a427f25/img/favicon_144x144.png" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=g-wzrLRloOk</div></div><img src="https://i.ytimg.com/vi/g-wzrLRloOk/hqdefault.jpg" class="bookmark-image"/></a></figure><h1 id="a0186950-5f35-419e-90f0-9ed1a6d42c55" class="block-color-teal_background">Aprofundamento física</h1><p id="e383e132-c1db-4f74-be3d-06d7120f8c58" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>λ</mi><mtext> </mtext><mo>×</mo><mi>f</mi></mrow><annotation encoding="application/x-tex">V = \lambda \ × f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">λ</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span></span><span>﻿</span></span></p><h2 id="cedb5627-d760-47b6-8f1c-2db524900f46" class="">Espectro eletromagnético</h2><ul id="9a08b0e7-fb68-4288-8bdc-815275c740cb" class="bulleted-list"><li style="list-style-type:disc">Classifica as ondas eletromagnéticas de acordo com sua frequência <figure id="edbba9e1-f778-4e01-971c-94feb5653770" class="image"><a href="24%2003%20ef44de72ad20435ca3b14ff922f34bbc/Untitled%205.png"><img style="width:384px" src="24%2003%20ef44de72ad20435ca3b14ff922f34bbc/Untitled%205.png"/></a></figure></li></ul><ul id="647eaae7-7e50-4bb8-9b56-79f9941fde23" class="bulleted-list"><li style="list-style-type:disc">Todas as ondas eletromagnéticas possuem a mesma velocidade no vácuo</li></ul><ul id="613c3624-e006-4eb9-b9a9-9e80c112c377" class="bulleted-list"><li style="list-style-type:disc">lambda inversamente proporcional à frequência</li></ul><ul id="c57e7c01-ee65-4bfd-b101-c16cb600d309" class="bulleted-list"><li style="list-style-type:disc">Fotón é o pacote / partícula de luz</li></ul><ul id="e133c0bb-e2ee-4c21-b594-dbb415dc46c1" class="bulleted-list"><li style="list-style-type:disc">E = h . f              unid [ J ]</li></ul><ul id="83dc312d-7585-4e66-90a0-93ec0414272d" class="bulleted-list"><li style="list-style-type:disc">h → constante de planck</li></ul></div></article></body></html>

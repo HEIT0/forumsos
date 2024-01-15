@@ -1,0 +1,681 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>05/05</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="80274fcc-bdd4-450c-bb9b-f303bcbf1239" class="page sans"><header><h1 class="page-title">05/05</h1></header><div class="page-body"><h1 id="eea3c699-8563-40c4-a083-3f963404aa6c" class="block-color-brown_background">Matemática</h1><h3 id="ec060257-d36f-4bcc-9c8a-9e414d7c8397" class="">Determinante</h3><ul id="0a674f2f-e129-4355-8e26-143b1ef7b692" class="bulleted-list"><li style="list-style-type:disc">Só pode ser obtida de matrizes quadradas</li></ul><ul id="9eb1952a-36c0-4cb9-beb3-3eb8e5edf2cf" class="toggle"><li><details open=""><summary>2ª ordem</summary><ul id="e8eee023-1a85-4787-9d73-dd1009986c17" class="bulleted-list"><li style="list-style-type:disc">Soma dos produtos das diagonais.</li></ul><ul id="1b2ef0f0-de7a-41fd-918d-9d8a27b01ad8" class="bulleted-list"><li style="list-style-type:disc">Diagonal primária mantém o sinal no resultado final</li></ul><ul id="fb2b13d0-fd67-474c-a8d0-9319be1505ff" class="bulleted-list"><li style="list-style-type:disc">Diagonal secundária inverte o sinal no resultado final</li></ul></details></li></ul><ul id="42dd6f7f-56cc-4deb-97b5-1ed43e3bba21" class="toggle"><li><details open=""><summary>3ª ordem</summary><ul id="90910c7c-f0ed-42ab-8d58-9b0f08dd6754" class="bulleted-list"><li style="list-style-type:disc">Diagonais secundárias inverte o sinal resultado</li></ul><figure id="44188a16-fb64-4507-a2f3-97bfe61a83b7" class="image"><a href="05%2005%2080274fccbdd4450cbb9bf303bcbf1239/Untitled.png"><img style="width:469px" src="05%2005%2080274fccbdd4450cbb9bf303bcbf1239/Untitled.png"/></a></figure></details></li></ul><ul id="2b1bf3d1-a346-46c1-b974-938c8e881439" class="toggle"><li><details open=""><summary>4ª ordem</summary><ul id="f716aa50-a469-4a96-8a89-5f66edc639ed" class="bulleted-list"><li style="list-style-type:disc">Teorema de Laplace</li></ul><ul id="bf1efd09-48d1-4a01-ad58-ea5ed9eef63d" class="bulleted-list"><li style="list-style-type:disc">Escolher linha ou coluna com mais zeros</li></ul><ul id="92e7bdf0-5170-47fa-9af4-af480a803723" class="bulleted-list"><li style="list-style-type:disc">O determinante da matriz será a soma de cada elemento da linha ou coluna vezes seu respectivo cofator</li></ul><ul id="c8e586d8-205a-4dbf-876a-0575b619f264" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>e</mi><mi>t</mi><mo>=</mo><msub><mi>a</mi><mn>11</mn></msub><mi mathvariant="normal">.</mi><msub><mi>A</mi><mn>11</mn></msub><mo>+</mo><msub><mi>a</mi><mn>12</mn></msub><mi mathvariant="normal">.</mi><msub><mi>A</mi><mn>12</mn></msub><mo>+</mo><msub><mi>a</mi><mn>13</mn></msub><mi mathvariant="normal">.</mi><msub><mi>A</mi><mn>13</mn></msub><mo>+</mo><mo>…</mo></mrow><annotation encoding="application/x-tex">Det = a_{11} . A_{11} +  a_{12} . A_{12} + a_{13} . A_{13} + …</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">De</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">11</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">.</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">11</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">12</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">.</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">12</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">13</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">.</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">13</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.12em;vertical-align:0em;"></span><span class="minner">…</span></span></span></span></span><span>﻿</span></span></li></ul><ul id="8f803fad-1c4e-4c63-b4e9-6f75827c4595" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mo stretchy="false">(</mo><mo>−</mo><mn>1</mn><msup><mo stretchy="false">)</mo><mrow><mi>i</mi><mo>+</mo><mi>j</mi></mrow></msup><mi mathvariant="normal">.</mi><mtext> </mtext><mi>D</mi><mi>e</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>m</mi><mi>i</mi><mi>n</mi><mi>a</mi><mi>n</mi><mi>t</mi><mi>e</mi><mtext> </mtext><mi>d</mi><mi>a</mi><mtext> </mtext><mi>m</mi><mi>a</mi><mi>t</mi><mi>r</mi><mi>i</mi><mi>z</mi><mtext> </mtext><mi>r</mi><mi>e</mi><mi>s</mi><mi>t</mi><mi>a</mi><mi>n</mi><mi>t</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">A_{ij} = (-1)^{i+j} . \ Determinante \ da \ matriz \ restante</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">ij</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0746639999999998em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">−</span><span class="mord">1</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span></span></span></span></span><span class="mord">.</span><span class="mspace"> </span><span class="mord mathnormal">De</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">er</span><span class="mord mathnormal">minan</span><span class="mord mathnormal">t</span><span class="mord mathnormal">e</span><span class="mspace"> </span><span class="mord mathnormal">d</span><span class="mord mathnormal">a</span><span class="mspace"> </span><span class="mord mathnormal">ma</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mspace"> </span><span class="mord mathnormal">res</span><span class="mord mathnormal">t</span><span class="mord mathnormal">an</span><span class="mord mathnormal">t</span><span class="mord mathnormal">e</span></span></span></span></span><span>﻿</span></span></li></ul><figure id="c93e125c-4f48-4071-88c7-61e41ff68ec1"><div class="source"><a href="https://www.youtube.com/watch?v=czrer_VI1EA">https://www.youtube.com/watch?v=czrer_VI1EA</a></div></figure></details></li></ul><h1 id="102253ef-6e50-4094-bcf4-6b7251fd1a10" class="block-color-teal_background">Física </h1><h2 id="13f192fd-2f30-433f-9035-f152950d6abd" class="">Princípios da Óptica Geométrica</h2><ul id="6da29486-70a1-497e-8622-41b7b2730cb7" class="bulleted-list"><li style="list-style-type:disc">Luz - Agente física responsável pela nossa percepção de cores e objetos.</li></ul><ul id="a8e44227-e013-4115-9d74-df1b3af6ec88" class="bulleted-list"><li style="list-style-type:disc">Dualidade Onda-Partícula (Onda eletromagnética - Fóton)</li></ul><ul id="11a5970e-ee8c-4410-83dc-d62647f012b3" class="toggle"><li><details open=""><summary>Velocidade da luz</summary><ul id="762bdb34-548c-4869-a755-8c7b7c73bb74" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">C = </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span></span><span>﻿</span></span><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mtext>  </mtext><mi mathvariant="normal">.</mi><mtext>  </mtext><mn>1</mn><msup><mn>0</mn><mn>8</mn></msup><mi>m</mi><mi mathvariant="normal">/</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">3 \ \  .\ \ 10^8 m/s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord">3</span><span class="mspace"> </span><span class="mspace"> </span><span class="mord">.</span><span class="mspace"> </span><span class="mspace"> </span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">8</span></span></span></span></span></span></span></span><span class="mord mathnormal">m</span><span class="mord">/</span><span class="mord mathnormal">s</span></span></span></span></span><span>﻿</span></span>        (vácuo)</li></ul><ul id="5d6e16b9-9060-40f4-aaba-b07ed2c49f44" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>a</mi><mi>r</mi></mrow></msub><mo>=</mo><mn>2</mn><mo separator="true">,</mo><mn>9</mn><mtext>  </mtext><mi mathvariant="normal">.</mi><mtext>  </mtext><mn>1</mn><msup><mn>0</mn><mn>8</mn></msup><mi>m</mi><mi mathvariant="normal">/</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">V_{ar} = 2,9 \ \ .  \ \ 10^8 m/s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">9</span><span class="mspace"> </span><span class="mspace"> </span><span class="mord">.</span><span class="mspace"> </span><span class="mspace"> </span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">8</span></span></span></span></span></span></span></span><span class="mord mathnormal">m</span><span class="mord">/</span><span class="mord mathnormal">s</span></span></span></span></span><span>﻿</span></span></li></ul><ul id="a6ff56ca-06dc-4a57-a0fc-529197c8d4b1" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mover accent="true"><mi>a</mi><mo>ˊ</mo></mover><mi>g</mi><mi>u</mi><mi>a</mi></mrow></msub><mo>=</mo><mn>2</mn><mo separator="true">,</mo><mn>25</mn><mtext>  </mtext><mi mathvariant="normal">.</mi><mtext>  </mtext><mn>1</mn><msup><mn>0</mn><mn>8</mn></msup><mi>m</mi><mi mathvariant="normal">/</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">V_{água} = 2,25 \ \ . \ \ 10^8 m/s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord accent mtight"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord mathnormal mtight">a</span></span><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord mtight">ˊ</span></span></span></span></span></span></span><span class="mord mathnormal mtight">gu</span><span class="mord mathnormal mtight">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">25</span><span class="mspace"> </span><span class="mspace"> </span><span class="mord">.</span><span class="mspace"> </span><span class="mspace"> </span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">8</span></span></span></span></span></span></span></span><span class="mord mathnormal">m</span><span class="mord">/</span><span class="mord mathnormal">s</span></span></span></span></span><span>﻿</span></span></li></ul></details></li></ul><ul id="8456a996-c7b7-49b1-85e7-0ce0f9a0bdca" class="bulleted-list"><li style="list-style-type:disc">Ano-luz → distância percorrida pela luz em um ano = <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mo separator="true">,</mo><mn>5</mn><mtext>  </mtext><mi mathvariant="normal">.</mi><mtext>  </mtext><mn>1</mn><msup><mn>0</mn><mn>15</mn></msup><mi>m</mi></mrow><annotation encoding="application/x-tex">9,5 \ \  . \ \  10^{15} m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="mord">9</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">5</span><span class="mspace"> </span><span class="mspace"> </span><span class="mord">.</span><span class="mspace"> </span><span class="mspace"> </span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">15</span></span></span></span></span></span></span></span></span><span class="mord mathnormal">m</span></span></span></span></span><span>﻿</span></span></li></ul><ul id="d16edba5-c6d9-414d-8866-41b0e33b6463" class="toggle"><li><details open=""><summary>Fontes de luz</summary><ul id="6756722c-0fd5-43f0-89e2-b0a740cdef2e" class="toggle"><li><details open=""><summary>Primário → emite luz própria </summary><ul id="0e75dfef-9e87-401f-ac51-e044e2d0e7c5" class="bulleted-list"><li style="list-style-type:disc">Incandescente (T &gt; 600ºC)</li></ul><ul id="05c28449-eb96-44c5-8d2c-8ae899cc9eee" class="bulleted-list"><li style="list-style-type:disc">Luminescente (T &lt; 600ºC)</li></ul></details></li></ul><ul id="d45816db-c6b5-4c64-bcd9-695998970ad8" class="bulleted-list"><li style="list-style-type:disc">Secundária → reflete a luz de outras fontes</li></ul></details></li></ul><ul id="0d55117b-e859-451e-bb58-e4b13765f039" class="toggle"><li><details open=""><summary>Meios de propagação</summary><ul id="870c6fb6-6538-4e34-819b-1964d4a9c451" class="bulleted-list"><li style="list-style-type:disc">Transparente → permite passagem total dos raios de luz (visualização nítida)</li></ul><ul id="65602db9-06e1-401c-991e-90186170eedd" class="bulleted-list"><li style="list-style-type:disc">Translúcido → permite a passagem parcial dos raios de luz </li></ul><ul id="d1297ecc-52f0-4a05-a67f-965580c355f8" class="bulleted-list"><li style="list-style-type:disc">Opaco → não permite a passagem dos raios de luz</li></ul></details></li></ul><ul id="4b6ffb50-8dd0-4669-ad3d-4e028206a3e2" class="toggle"><li><details open=""><summary>Tipos de feixes</summary><ul id="50b05030-6c19-419a-8062-0160d51bb4d4" class="bulleted-list"><li style="list-style-type:disc">Feixes paralelos (Laser, Sol)</li></ul><ul id="7ea1309e-4c73-424b-8280-790f859cc730" class="bulleted-list"><li style="list-style-type:disc">Feixes divergentes (farol) → Se espalham a partir de um ponto</li></ul><ul id="83945420-d622-410b-8430-8760f90021b8" class="bulleted-list"><li style="list-style-type:disc">Feixes convergente (lupa) → Se unem em um ponto</li></ul></details></li></ul><h3 id="56c1635e-98cc-4d24-ad71-b4945c295b93" class="">Princípios</h3><ul id="d408ae83-5f98-4268-967f-f8c93b76106d" class="toggle"><li><details open=""><summary>1º Princípio da reversibilidade</summary><p id="bf38a9b6-e653-40d3-bcc7-58b8ef4fe551" class="">“Os trajetos são iguais”</p><ul id="116d03ad-b759-4494-82b6-caf98be29163" class="bulleted-list"><li style="list-style-type:disc">Se você vê alguém no espelho, ela também te vê</li></ul></details></li></ul><ul id="d8eb2337-fbc0-48a1-b6be-c0591ced7549" class="toggle"><li><details open=""><summary>2º Princípio da Independência</summary><p id="78f4f4b6-5ab6-4376-b74c-19f9cde2daf1" class="">“Os raios mantém suas cores”</p><ul id="f9561f79-2f09-470f-9d7d-4aabde7f1407" class="bulleted-list"><li style="list-style-type:disc">Se dois raios se chocam, eles mantém seus trajetos e cores</li></ul></details></li></ul><ul id="9ef04a21-4e83-4b6d-b726-5f04ff4a99a6" class="toggle"><li><details open=""><summary>3º Princípio da Propagação Retilínea</summary><h2 id="a8d99112-d2a5-4261-aa5d-2ee52d755326" class=""><strong>Câmara Escura</strong></h2><figure id="27e72eec-09f0-40cd-bdc5-92ae0390b869" class="image"><a href="https://forumsos.heitorszabo.repl.co/resumos/0303s/Resumo%20-%2003%2003%20Oh%20f239617d8f8c4372a2265d081c869eda/Untitled%204.png"><img style="width:576px" src="https://forumsos.heitorszabo.repl.co/resumos/0303s/Resumo%20-%2003%2003%20Oh%20f239617d8f8c4372a2265d081c869eda/Untitled%204.png"/></a></figure><p id="4146b397-9e7f-4fe8-9b9f-720749671dd7" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>o</mi><mi>i</mi></mfrac><mo>=</mo><mfrac><mi>p</mi><mrow><mi>p</mi><mtext>’</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{o}{i}= \frac{p}{p’}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.040392em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">o</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.228608em;vertical-align:-0.481108em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7475em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mtight">’</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.481108em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></p><h3 id="151c5311-ed18-4ecc-a680-4a52243df636" class="">Sombra</h3><figure id="48cc5a41-07b0-46e0-a8cd-a13f8bf5e20e" class="image"><a href="https://forumsos.heitorszabo.repl.co/resumos/0303s/Resumo%20-%2003%2003%20Oh%20f239617d8f8c4372a2265d081c869eda/image.png"><img src="https://forumsos.heitorszabo.repl.co/resumos/0303s/Resumo%20-%2003%2003%20Oh%20f239617d8f8c4372a2265d081c869eda/image.png"/></a></figure><p id="1bc8bc36-a0d2-4a64-bea2-1b1ae20c3b13" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>x</mi><mrow><mi>x</mi><mtext>’</mtext></mrow></mfrac><mo>=</mo><mfrac><mi>y</mi><mrow><mi>y</mi><mtext>’</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{x}{x’}= \frac{y}{y’}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.040392em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mord mtight">’</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.228608em;vertical-align:-0.481108em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7475em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mord mtight">’</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.481108em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></p></details></li></ul><h3 id="928da645-a272-4755-a652-6b8743594325" class="">Cor de um corpo</h3><ul id="facbeca9-d25a-45f1-9920-d383079e3f04" class="bulleted-list"><li style="list-style-type:disc">A cor de um corpo corresponde à <strong>cor refletida</strong> pelo corpo</li></ul><ul id="98b5bac2-afe7-4d06-8368-1cd6225ea889" class="bulleted-list"><li style="list-style-type:disc">O restante é absorvido</li></ul><h1 id="b0028895-3c69-4d1c-858c-0be8c8190a1e" class="block-color-orange_background">Química</h1><h3 id="2deebe2b-f0d9-4c60-9971-3078970d1f43" class="">Termoquímica</h3><ul id="be6461d5-0887-4701-b273-5a7872bed661" class="bulleted-list"><li style="list-style-type:disc">Energia nas transformações</li></ul><ul id="207ec616-eb35-4e40-b13f-43ff58eb642b" class="toggle"><li><details open=""><summary>Entalpia (H)</summary><ul id="f488ea57-28d7-453d-b16d-52648d72e35b" class="bulleted-list"><li style="list-style-type:disc">Energia pertencente a matéria (molécula) segundo seu estado de agregação. Não é mensurável , mas é tabelada.</li></ul><ul id="9bd106aa-80f7-41c6-94ea-b2f95325b562" class="bulleted-list"><li style="list-style-type:disc">Variação de entalpia → <strong><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><msub><mi>H</mi><mi>P</mi></msub><mo>−</mo><msub><mi>H</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">ΔH = H_P - H_R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></strong><strong> (mensurável)</strong></li></ul><ul id="319611b0-dec3-4629-9744-b9604d9e0513" class="bulleted-list"><li style="list-style-type:disc">adota-se <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mrow><mi>s</mi><mi>u</mi><mi>b</mi><mi>s</mi><mi>t</mi><mover accent="true"><mi>a</mi><mo>^</mo></mover><mi>n</mi><mi>c</mi><mi>i</mi><mi>a</mi><mtext> </mtext><mi>s</mi><mi>i</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>e</mi><mi>s</mi></mrow></msub></mrow><annotation encoding="application/x-tex">H_{substância \ simples}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">b</span><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">t</span><span class="mord accent mtight"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord mathnormal mtight">a</span></span><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord mtight">^</span></span></span></span></span></span></span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">c</span><span class="mord mathnormal mtight">ia</span><span class="mspace mtight"><span class="mtight"> </span></span><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">im</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">pl</span><span class="mord mathnormal mtight">es</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> = 0 (exceto variações alotrópicas raras como <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>O</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">O_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>, diamante, etc…)</li></ul></details></li></ul><ul id="e71b3d05-03a5-473d-9409-4cf1de6fbcdc" class="toggle"><li><details open=""><summary>Tipos de transformação</summary><ul id="863df307-f2d0-40f7-9ed9-886ef4c30555" class="toggle"><li><details open=""><summary>Endotérmica </summary><ul id="2127afda-cd0d-48f1-9198-f1b6b37a36eb" class="bulleted-list"><li style="list-style-type:disc">absorve calor</li></ul><ul id="e1286701-ad0f-4a84-b794-32fe2a0e7956" class="bulleted-list"><li style="list-style-type:disc">R + Q → P
+<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">H_P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> &gt; <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">H_R  </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> 
+<strong>ΔH &gt; 0</strong></li></ul></details></li></ul><ul id="3f824796-1c11-4071-8bfa-e2afc6e35b04" class="toggle"><li><details open=""><summary>Exotérmica</summary><ul id="a15c5f65-766b-495e-abf9-02b5f16f978f" class="bulleted-list"><li style="list-style-type:disc">libera calor</li></ul><ul id="6fbc94c5-70e8-45a8-b166-5b6a97894135" class="bulleted-list"><li style="list-style-type:disc">R → P + Q
+<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">H_R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> &gt; <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">H_P   </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>
+<strong>ΔH &lt; 0</strong></li></ul></details></li></ul></details></li></ul><h3 id="9b381246-6971-4480-9c63-c59a56a87cc1" class="">Calor de reação</h3><ol type="1" id="beeb1b5c-e945-4c3d-9afd-34c68b4d4e37" class="numbered-list" start="1"><li>Calor de combustão <strong><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mi>C</mi></msub></mrow><annotation encoding="application/x-tex">ΔH_C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></strong></li></ol><ol type="1" id="04061d58-23cf-4173-8c2e-d0d6134b7820" class="numbered-list" start="2"><li>Calor de vaporização <strong><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mrow><mi>v</mi><mi>a</mi><mi>p</mi></mrow></msub></mrow><annotation encoding="application/x-tex">ΔH_{vap}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></strong></li></ol><ol type="1" id="acdc5838-61c6-4958-b0df-0652db3c2557" class="numbered-list" start="3"><li>Calor de neutralização <strong><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">ΔH_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></strong></li></ol><ul id="2548d8c2-e472-467f-9bd3-3ef831bf9c85" class="toggle"><li><details open=""><summary>4. Calor de formação <strong><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mi>f</mi></msub></mrow><annotation encoding="application/x-tex">ΔH_f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></strong></summary><ul id="efe62e54-d7bd-4bf2-b627-6f53029268c3" class="bulleted-list"><li style="list-style-type:disc">forma substância composta partindo de cada substância simples que a compõe</li></ul><ul id="3e48202b-deab-4c05-9c32-7af146be8c9c" class="bulleted-list"><li style="list-style-type:disc">Ex: <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><mo>+</mo><mn>1</mn><mi mathvariant="normal">/</mi><mn>2</mn><mtext> </mtext><msub><mi>O</mi><mn>2</mn></msub><mo>→</mo><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow><annotation encoding="application/x-tex">H_2 + 1/2 \ O_2 → H_2O</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1/2</span><span class="mspace"> </span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span></span></span></span></span><span>﻿</span></span></li></ul><ul id="f299861e-65b3-4b1e-ae43-a1249eb04ddb" class="bulleted-list"><li style="list-style-type:disc">ametais <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">X_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> e metais M</li></ul><ul id="f12eb99a-8770-49ba-aa7b-58ca6f0ea785" class="bulleted-list"><li style="list-style-type:disc">Adota-se <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mrow><mi>s</mi><mi>u</mi><mi>b</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>s</mi><mi>i</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>e</mi><mi>s</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">H_{subs. simples}=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">b</span><span class="mord mathnormal mtight">s</span><span class="mord mtight">.</span><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">im</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">pl</span><span class="mord mathnormal mtight">es</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></span><span>﻿</span></span> (exceto variações alotrópicas mais raras <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>O</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">O_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>, Carbono diamante, etc…)</li></ul><ul id="0ce824cd-dd07-4f44-be16-eeaa11072519" class="toggle"><li><details open=""><summary>Conclusão: </summary><ul id="2f4ca80f-adb6-4f12-8cd9-76a6c1abed0f" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mi>f</mi></msub><mo>=</mo><msub><mi>H</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">ΔH_f = H_p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> (produto)</li></ul><ul id="280f8713-5215-462e-a72b-f9d5fadbb567" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mrow><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow></msub><mo>=</mo><msub><mi>H</mi><mrow><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow></msub><mo>−</mo><mo stretchy="false">(</mo><msub><mi>H</mi><msub><mi>H</mi><mn>2</mn></msub></msub><mo>+</mo><msub><mi>H</mi><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mn>2</mn><mtext> </mtext><msub><mi>O</mi><mn>2</mn></msub></mrow></msub><mo stretchy="false">)</mo><mo>=</mo><msub><mi>H</mi><mrow><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow></msub></mrow><annotation encoding="application/x-tex">ΔH_{H_2O} = H_{H_2O} - (H_{H_2}+H_{1/2 \ O_2})= H_{H_2O}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.93343em;vertical-align:-0.2501em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.08125em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">O</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.93343em;vertical-align:-0.2501em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.08125em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">O</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.0001em;vertical-align:-0.2501em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.08125em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.1052em;vertical-align:-0.3551999999999999em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1/2</span><span class="mspace mtight"><span class="mtight"> </span></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.02778em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.93343em;vertical-align:-0.2501em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.08125em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">O</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></li></ul></details></li></ul><ul id="fd8defe0-4ef8-4293-b700-a3fa8e9f6d01" class="bulleted-list"><li style="list-style-type:disc">Baseado nesse conceito foi possível obter uma tabela de valores de entalpia <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mi>f</mi></msub></mrow><annotation encoding="application/x-tex">H_f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> (de formação)</li></ul><p id="7d606bd5-8164-4e7e-a5ea-c41565ca14ee" class="">
+</p></details></li></ul><h1 id="abd10044-05aa-465d-a1e2-3efd51294170" class="block-color-blue_background">Biologia</h1><h3 id="af84a702-d804-4f2b-a325-a41782e91a27" class="">1ª Lei de Mendel (Monoibridismo / Lei da segregação)</h3><ul id="b2131cc0-9920-495a-aecf-bab762cd6213" class="bulleted-list"><li style="list-style-type:disc">Cada característica é determinada por um par de alelos </li></ul><ul id="1dc4165a-5098-4450-8fe2-d3a70763ee75" class="bulleted-list"><li style="list-style-type:disc">Dois tipos de alelos: Dominante e recessivo</li></ul><ul id="07871d3b-52a9-4ccd-937f-b3ced20d875a" class="bulleted-list"><li style="list-style-type:disc">Gene dominante: é expresso mesmo em dose simples no genótipo (V)</li></ul><ul id="82aa4b6a-3aa0-415a-92e8-5dd5a61509d7" class="bulleted-list"><li style="list-style-type:disc">Gene recessivo: Só é expresso em dose dupla (v)</li></ul><ul id="2c3dfd07-7ace-4c0d-a590-35ff83dfe6f4" class="bulleted-list"><li style="list-style-type:disc">Genótipo: VV, vv, Vv</li></ul><ul id="2e0f7cdc-36cb-4550-b232-afcc0a0fc21c" class="bulleted-list"><li style="list-style-type:disc">Fenótipo: característica</li></ul><ul id="2f03e60b-7e73-468a-adcb-98692730fd23" class="bulleted-list"><li style="list-style-type:disc">Heterozigoto: Vv</li></ul><ul id="1f2f9539-0ec7-4e4e-8682-0a6aeac40738" class="bulleted-list"><li style="list-style-type:disc">Homozigoto: VV, vv</li></ul><h1 id="e49b45b7-5e03-4bd7-8955-ff5b5feba8e4" class="block-color-purple_background">Geografia</h1><h3 id="e444b8d3-7621-465e-b70e-6a52ca4b8c96" class="">Movimentos orogenéticos</h3><ul id="e1f12e69-929d-4c1a-ae46-b09b6e5e7de8" class="bulleted-list"><li style="list-style-type:disc">Hipóteses da translação dos continentes → Deriva continental. Movimentação das massas continentais (Sial) sobre o estrato de Sima</li></ul><ul id="7a47fb37-8301-47fc-ab38-87caa159d802" class="toggle"><li><details open=""><summary>Tectonismo – lento e prolongado movimento das placas tectônicas
+impulsionadas pelas correntes magmáticas no interior da Terra. Age de duas
+maneiras:</summary><ul id="13dee182-97b5-440e-ad82-be87ed845dc4" class="bulleted-list"><li style="list-style-type:disc">Epirogênese → movimentos verticais (placas se chocam)</li></ul><ul id="d656dd41-406f-44ca-836d-5820b8a64214" class="bulleted-list"><li style="list-style-type:disc">Orogênese → movimentos horizontais / lateralizados (placas se chocam ou separam) → responsável por vulcões e abalos sísmicos </li></ul></details></li></ul><ul id="e4e6e6c0-a302-4f1c-82d3-41407a0d4af6" class="bulleted-list"><li style="list-style-type:disc">Círculo de fogo → Principais focos de vulcões a abalos sísmicos</li></ul><ul id="f28ff4fc-69f2-4d2e-806b-7151fddd7a3c" class="toggle"><li><details open=""><summary>Abalos sísmicos – tremores de terra, relacionados a vulcanismo, tectonismo e
+desmoronamentos internos.</summary><ul id="06e43bd2-4d3e-4d22-b269-8be3efa51f08" class="bulleted-list"><li style="list-style-type:disc">Epicentro → ponto onde a energia é liberada com mais força na superfície</li></ul><ul id="0706a934-f7c1-42aa-af8d-563e836d241c" class="bulleted-list"><li style="list-style-type:disc">Hipocentro → ponto onde a energia é liberada com mais força no encontro das placas</li></ul><ul id="442b5d3b-4a52-4225-9be6-2293330248f0" class="bulleted-list"><li style="list-style-type:disc">Terremotos - epicentro no continente</li></ul><ul id="506f9144-fa9d-4ebf-a40a-c4e1d029b4cd" class="bulleted-list"><li style="list-style-type:disc">Maremotos – epicentro no oceano (podendo gerar grandes ondas – tsunamis)</li></ul><ul id="96af8414-40ce-4092-9352-f68fd4e6da3c" class="bulleted-list"><li style="list-style-type:disc">Escala Richter → medição da força de um abalo sísmico</li></ul></details></li></ul><ul id="9d12b563-cac3-46d7-aaf8-590880adf2b5" class="bulleted-list"><li style="list-style-type:disc">Vulcanismo – abrange todos os processos que permitem e provocam a ascensão de
+material magmático jovem, do interior da Terra até a superfície.</li></ul><h1 id="480d00de-36ba-4507-8656-7760cef2620d" class="block-color-pink_background">Sociologia</h1><h3 id="5257c3b7-c2f4-4876-84c3-7340b560931d" class="">Democracia e Cidadania</h3><ul id="ddfed97e-37cb-47d8-95ff-895362650493" class="toggle"><li><details open=""><summary>Conceitos iniciais </summary><ul id="3d15d357-afe8-43be-8496-0f5fed9d7896" class="bulleted-list"><li style="list-style-type:disc">Democracia: regime político em que a soberania é exercida pelo povo. Atualmente, é representativa.</li></ul><ul id="70bacba1-941e-4410-920c-d9b207926a5e" class="bulleted-list"><li style="list-style-type:disc">Cidadania: é o exercício dos direitos civis, políticos e sociais estabelecidos na constituição de um país</li></ul></details></li></ul><ul id="b2c524ec-98e4-4bf3-88b5-49cb2da47531" class="toggle"><li><details open=""><summary>Historicamente</summary><ul id="4ce89d4d-3086-40c0-aa1b-076534d05be6" class="toggle"><li><details open=""><summary>Atenas</summary><ul id="52dc3eef-48da-453f-9165-84897d0308d5" class="bulleted-list"><li style="list-style-type:disc">democracia - cidadão = homem maior de idade, filho de pais atenienses </li></ul><ul id="d456bdc1-1ef0-4745-8c57-16090e2ce892" class="bulleted-list"><li style="list-style-type:disc">Isocracia → todos com direito a cargo público </li></ul><ul id="f3502368-ae8f-4adf-9904-a43aa6bc8744" class="bulleted-list"><li style="list-style-type:disc">Isegoria → direito a manifestações</li></ul><p id="b3d20722-efd2-461e-97e5-14a9e4c7b33a" class="">
+</p></details></li></ul><ul id="9ed71666-8806-46c0-bc72-c203966dac13" class="toggle"><li><details open=""><summary>Roma (período republicano)</summary><ul id="9cde8812-16a1-47e9-908d-338ab2d9bd2c" class="bulleted-list"><li style="list-style-type:disc">Disputa plebeus X patrícios</li></ul><ul id="10c474fb-3ba6-4610-a161-d0cb8a98df06" class="bulleted-list"><li style="list-style-type:disc">Busca por direitos → plebeus fazem greves e fogem</li></ul><ul id="b111aa53-dea6-48bd-9d23-3d99ef88ed6c" class="bulleted-list"><li style="list-style-type:disc">tribuno da plebe → direitos políticos</li></ul><ul id="dbdc8041-6ef7-4da7-b4d7-a6fd0d1d0fd4" class="bulleted-list"><li style="list-style-type:disc">lei das 12 tábuas → lei escrita </li></ul><ul id="932cbdda-a40d-4be7-89b3-d6f8214c57eb" class="bulleted-list"><li style="list-style-type:disc">lei politeia → proíbe escravidão por dívida</li></ul></details></li></ul></details></li></ul><h1 id="8851c023-4244-4538-ad7d-c48245104bf9" class="block-color-teal_background">Física Aprofundamento</h1><h2 id="c04a0794-ad61-4f1e-bfda-c8a6e5dace55" class="">Ondulatória</h2><ul id="b448c98e-2757-4303-9f7f-a9cee97ae006" class="bulleted-list"><li style="list-style-type:disc">Onda é uma perturbação que se propaga por um meio, transportando energia. (não transporta matéria.</li></ul><h3 id="9b757a47-0a74-4820-98da-d95e6ab6f8a1" class="">Classificação das ondas</h3><p id="351c6fd2-8abb-4529-8b47-6168675d28df" class="">
+</p><div id="3f23a2ea-c9ec-4eb2-86e9-0805206fc998" class="column-list"><div id="375de24e-6d99-442c-84b8-df47e049bb95" style="width:31.25%" class="column"><figure id="3678c75c-7d5d-41c7-81da-0f239cd8e21b" class="image" style="text-align:left"><a href="05%2005%2080274fccbdd4450cbb9bf303bcbf1239/Untitled%201.png"><img style="width:528px" src="05%2005%2080274fccbdd4450cbb9bf303bcbf1239/Untitled%201.png"/></a></figure></div><div id="c4a609f9-01d5-4ba2-ac9b-7111a255ab3c" style="width:68.75%" class="column"><p id="1a1384d5-feeb-4e36-b1d2-7e709542e566" class="">Amplitude (A): é a distância entre o eixo central e o ponto mais alto (crista) ou mais baixo da onda (vale). </p><p id="5c7241b5-7436-4308-9f19-796da2343708" class="">Comprimento de onda (λ): é a medida de um ciclo completo da onda, que pode ser medido entre duas cristas, dois vales ou entre uma crista e um vale. </p><p id="1f93a3e2-b7b2-4cd1-996f-c34452a9b59c" class="">Frequência (f): é a quantidade de ciclos em um determinado intervalo de tempo. Se as cristas e os vales estão muito próximos, isso significa que a frequência da onda é alta, do contrário, a frequência é baixa. Sua unidade de medida no S.I. é o hertz (Hz).</p><p id="0259dcad-965d-46ee-927d-e5f5a7030576" class="">Período (T): é o intervalo de tempo para se completar um ciclo de onda. Por isso, o período é medido no intervalo de um comprimento de onda. </p><p id="476b8603-5b1a-4ca6-83f7-d44fc3a21928" class="">Velocidade de propagação (v): muda dependendo do meio onde a onda está, e é dada pela equação fundamental da ondulatória: V = λ/T = λ . f</p></div></div><h2 id="62cb5f20-6cc0-4e4e-8723-377def55cc1f" class="">Espectro eletromagnético</h2><ul id="7b9afd52-11fa-4398-8b7a-2ab7ef22f400" class="bulleted-list"><li style="list-style-type:disc">Classifica as ondas eletromagnéticas de acordo com sua frequência <figure id="4efb82f9-ed7a-48fa-bed6-7a1fdf75b207" class="image"><a href="05%2005%2080274fccbdd4450cbb9bf303bcbf1239/Untitled%202.png"><img style="width:384px" src="05%2005%2080274fccbdd4450cbb9bf303bcbf1239/Untitled%202.png"/></a></figure></li></ul><ul id="4c5a7ba4-0a8f-48dd-9449-a9361d5878ef" class="bulleted-list"><li style="list-style-type:disc">Todas as ondas eletromagnéticas possuem a mesma velocidade no vácuo</li></ul><ul id="34b7071c-db4c-4664-9c7a-1681f83c13d9" class="bulleted-list"><li style="list-style-type:disc">não precisam de meio para se propagar</li></ul><ul id="344ae0c3-5836-463e-ac30-92bc5f56ed57" class="bulleted-list"><li style="list-style-type:disc">lambda inversamente proporcional à frequência</li></ul><ul id="a0282616-6e89-413e-9897-f5018ad41804" class="bulleted-list"><li style="list-style-type:disc">Fotón é o pacote / partícula de luz</li></ul><ul id="75419041-1e16-42ca-87e5-4d9815f08431" class="bulleted-list"><li style="list-style-type:disc">E = h . f              unid [ J ]</li></ul><ul id="7935fe1a-ee15-45c0-add9-28ffafc52451" class="bulleted-list"><li style="list-style-type:disc">h → constante de planck</li></ul><h1 id="0ee2b85c-9d55-44d9-8c45-9cbaddaa5cc5" class="block-color-gray_background">Inglês</h1><p id="20979595-8f91-415f-8602-3fc302d57bfd" class="">Make up sentences with</p><p id="1e173d4c-f17f-4372-9e13-7c9d28a9454a" class="">Some: Tomas have some friends</p><p id="1f59c952-00b9-4368-b38e-686132b9c1f0" class="">Any: Tomas doesnt have any friends</p><p id="2fb853ad-5c74-4dd1-a6be-94ed3ad0b9bf" class="">No: Tomas have no friend</p><h1 id="b6a2fd60-8c2d-44f2-ae11-1be3a7dba9f0" class="block-color-yellow_background">História</h1><h3 id="a9549b2e-3e84-4c59-a46d-55304223db37" class="">Era Napoleônica</h3><ul id="a27393eb-a0f3-4961-b624-a720275c5953" class="toggle"><li><details open=""><summary>1812 - Batalha da Rússia</summary><ul id="25c63fd5-d35a-4dd3-b8cf-7529487d052f" class="bulleted-list"><li style="list-style-type:disc">Russos usam tática da terra arrasada</li></ul><ul id="f0da9917-23cb-4e89-990b-a773a0a1c2cd" class="bulleted-list"><li style="list-style-type:disc">Napoleão perde e é preso</li></ul><p id="fe207633-3a5f-4234-9309-1caf4fb96358" class="">
+</p></details></li></ul></div></article></body></html>
